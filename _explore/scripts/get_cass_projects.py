@@ -79,7 +79,7 @@ if response.status_code == 200:
                     # Find the first line matching 'url: https://github.com(.*)' after 'label: Repository'
                     for j in range(i + 1, len(lines)):
                         github_match = re.match(r"(.*)url: https://github.com(.*)", lines[j])
-                        gitlab_match = re.match(r"(.*)url: https://gitlab.com(.*)", lines[j])
+                        gitlab_match = re.match(r"(.*)url: https://gitlab.*com(.*)", lines[j])
                         if github_match:
                             part_after_url = github_match.group(2).strip().lstrip('/').lower()
                             part_after_url = re.sub(r'\.git$', '', part_after_url)

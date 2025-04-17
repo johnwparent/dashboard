@@ -1,6 +1,15 @@
 {
     "https://github.com": {
         "apiEnvKey": "GITHUB_API_TOKEN",
+        "repoType": "github",
+        "extraRepos": [
+            "anlsys/aml",
+            "deephyper/deephyper",
+            "e4s-project/e4s",
+            "ebugger/empirical-roofline-toolkit",
+            "flang-compiler/flang",
+            "sandialabs/albany"
+        ],
         "memberOrgs": [],
         "non-CASS repos": [
             "anlsys/aml",
@@ -13,11 +22,11 @@
         "orgs": [],
         "repoType": "github",
         "repos": [
-            "alpine-dav/ascent",
             "amrex-codes/amrex",
+            "alpine-dav/ascent",
             "berkeleylab/caffeine",
-            "ceed/libceed",
             "chip-spv/chipstar",
+            "ceed/libceed",
             "darshan-hpc/darshan",
             "diatomic/diy",
             "dyninst/dyninst",
@@ -25,29 +34,30 @@
             "hdfgroup/hdf5",
             "hypre-space/hypre",
             "icl-utk-edu/magma",
+            "icl-utk-edu/magma",
             "icl-utk-edu/papi",
-            "kitware/vtk-m",
             "kokkos/kokkos",
             "kokkos/kokkos-kernels",
+            "kitware/vtk-m",
             "libensemble/libensemble",
+            "llvm/llvm-project",
             "llnl/sundials",
             "llnl/zfp",
-            "llvm/llvm-project",
             "mfem/mfem",
+            "ornladios/adios2",
             "open-mpi/ompi",
             "openaccusergroup/openaccv-v",
             "openmp-validation-and-verification/openmp_vv",
-            "ornladios/adios2",
+            "pmodels/mpich",
             "parallel-netcdf/pnetcdf",
             "pghysels/strumpack",
-            "pmodels/mpich",
-            "spack/spack",
             "stanfordlegion/legion",
+            "spack/spack",
             "trilinos/trilinos",
             "uo-oaciss/tau2",
             "visit-dav/visit",
-            "xiaoyeli/superlu",
             "xiaoyeli/superlu_dist",
+            "xiaoyeli/superlu",
             "xiaoyeli/superlu_mt",
             "xsdk-project"
         ]
@@ -59,6 +69,7 @@
         "repoType": "gitlab",
         "repos": [
             "hpctoolkit/hpctoolkit",
+            "paraview/paraview",
             "petsc/petsc"
         ]
     }

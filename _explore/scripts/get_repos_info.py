@@ -25,6 +25,7 @@ for hostUrl, hostInfo in inputLists.data.items():
 
     orglist = hostInfo["orgs"]
     repolist = hostInfo["repos"]
+    extrarepolist = hostInfo["extraRepos"]
 
     # Initialize query manager
     '''
@@ -66,25 +67,26 @@ for hostUrl, hostInfo in inputLists.data.items():
     # Iterate through independent repos
     print("%s: Adding independent repos..." % (hostUrl))
     print("%s: Gathering data across multiple queries..." % (hostUrl))
-    for repo in repolist:
-        print("\n'%s'" % (repo))
+    for projectlist in repolist, extrarepolist:
+        for repo in projectlist:
+            print("\n'%s'" % (repo))
 
-        r = repo.split("/")
-        try:
-            outObj = queryMan.queryGitHubFromFile(
-                queryPathInd, {"ownName": r[0], "repoName": r[1]}
-            )
-        except Exception as error:
-            print("Warning: Could not complete '%s'" % (repo))
-            print(error)
-            continue
+            r = repo.split("/")
+            try:
+                outObj = queryMan.queryGitHubFromFile(
+                    queryPathInd, {"ownName": r[0], "repoName": r[1]}
+                )
+            except Exception as error:
+                print("Warning: Could not complete '%s'" % (repo))
+                print(error)
+                continue
 
-        # Update collective data
-        repoKey = outObj["data"]["repository"]["nameWithOwner"]
-        # TODO maybe handle each hostURL differently?
-        dataCollector.data["data"][repoKey] = outObj["data"]["repository"]
+            # Update collective data
+            repoKey = outObj["data"]["repository"]["nameWithOwner"]
+            # TODO maybe handle each hostURL differently?
+            dataCollector.data["data"][repoKey] = outObj["data"]["repository"]
 
-        print("'%s' Done!" % (repo))
+            print("'%s' Done!" % (repo))
 
     print("\n%s: Collective data gathering Part2of2 complete!" % (hostUrl))
 
