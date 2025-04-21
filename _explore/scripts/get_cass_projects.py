@@ -53,6 +53,27 @@ def update_nested_list_in_json(file_path, key_path, new_list):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+def read_nested_list_in_json(file_path, key_path):
+    try:
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        # Traverse the nested keys to find the list
+        nested_data = data
+        for key in key_path[:-1]:  # Navigate through the keys, excluding the last one
+            if key in nested_data:
+                nested_data = nested_data[key]
+            else:
+                print(f"Key '{key}' not found in the JSON file.")
+                return
+  
+        final_key = key_path[-1]
+        if final_key in nested_data and isinstance(nested_data[final_key], list):
+            return nested_data[final_key]
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 # Send a GET request to the GitHub API
 response = requests.get(url)
 
@@ -96,9 +117,15 @@ if response.status_code == 200:
                             gitlab_list.append((part_after_url))
                             break
 
-                    # Sort the lists alphabetically by part_after_url
-                    github_list.sort(key=lambda x: x[0])
-                    gitlab_list.sort(key=lambda x: x[0])
+    key_path = ['https://github.com', 'extraRepos']
+    extraRepo_list = read_nested_list_in_json(file_to_update, key_path)
+
+    # TODO REMOVE github_list.append when gitlab scraper is ready
+    # see get_repos_info.py
+    for item in gitlab_list:
+        github_list.append(item)
+    for item in extraRepo_list:
+        github_list.append(item)       
 
     # Update the projects with github repo urls
     key_path = ['https://github.com', 'repos']
@@ -107,6 +134,14 @@ if response.status_code == 200:
     # Update the projects with gitlab repo urls
     key_path = ['https://gitlab.com', 'repos']
     update_nested_list_in_json(file_to_update, key_path, gitlab_list)
+
+    # Also add the repos from "extraRepos" already in input_lists.json
+    # following code needs revision to append to github_list the repos
+    # from "file_to_update" in "extraRepos"
+
+    # Sort the lists alphabetically by part_after_url
+    github_list.sort(key=lambda x: x[0])
+    gitlab_list.sort(key=lambda x: x[0])
 
 else:
     print(f"Failed to retrieve contents: {response.status_code}")
