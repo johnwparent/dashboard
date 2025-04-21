@@ -48,9 +48,3 @@ jobs:
         author_email: 41898282+github-actions[bot]@users.noreply.github.com
         message: 'Committing new products found in CASS _software'
 
-    - name: Create Pull Request
-      if: ${{ steps.check-for-changes.outputs.has-changes == true }}
-        echo "Create pull request."
-
-      uses: peter-evans/create-pull-request@v7
-
