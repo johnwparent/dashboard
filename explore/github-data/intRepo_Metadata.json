@@ -76,6 +76,12 @@
         ],
         "website": ""
     },
+    "E4S-Project/e4s": {
+        "description": "E4S for Spack",
+        "name": "E4S-Project/e4s",
+        "topics": null,
+        "website": "https://e4s.readthedocs.io"
+    },
     "HDFGroup/hdf5": {
         "description": "Official HDF5\u00ae Library Repository",
         "name": "HDFGroup/hdf5",
@@ -91,6 +97,12 @@
             "nosql"
         ],
         "website": "https://www.hdfgroup.org/"
+    },
+    "HPCToolkit/hpctoolkit": {
+        "description": "HPCToolkit performance tools: measurement and analysis components",
+        "name": "HPCToolkit/hpctoolkit",
+        "topics": null,
+        "website": ""
     },
     "Kitware/VTK-m": {
         "description": "Mirror of https://gitlab.kitware.com/vtk/vtk-m",
@@ -181,11 +193,39 @@
         "topics": null,
         "website": "http://tau.uoregon.edu"
     },
+    "anlsys/aml": {
+        "description": "Building Blocks for Explicit Memory Management on Complex Architectures",
+        "name": "anlsys/aml",
+        "topics": null,
+        "website": "https://argo-aml.readthedocs.io/"
+    },
     "darshan-hpc/darshan": {
         "description": "  Darshan I/O characterization tool",
         "name": "darshan-hpc/darshan",
         "topics": null,
         "website": null
+    },
+    "deephyper/deephyper": {
+        "description": "DeepHyper: Scalable Asynchronous Neural Architecture and Hyperparameter Search for Deep Neural Networks",
+        "name": "deephyper/deephyper",
+        "topics": [
+            "automl",
+            "scalability",
+            "neural-architecture-search",
+            "hyperparameter-optimization",
+            "python",
+            "tensorflow",
+            "keras",
+            "deep-learning",
+            "hpc",
+            "machine-learning",
+            "multi-fidelity",
+            "pytorch",
+            "uncertainty-quantification",
+            "mpi",
+            "raylib"
+        ],
+        "website": "https://deephyper.readthedocs.io"
     },
     "diatomic/diy": {
         "description": "data-parallel out-of-core library",
@@ -203,6 +243,23 @@
             "binary-analysis"
         ],
         "website": "http://www.dyninst.org"
+    },
+    "ebugger/Empirical-Roofline-Toolkit": {
+        "description": "Forked from https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/",
+        "name": "ebugger/Empirical-Roofline-Toolkit",
+        "topics": null,
+        "website": null
+    },
+    "flang-compiler/flang": {
+        "description": "Flang is a Fortran language front-end designed for integration with LLVM.",
+        "name": "flang-compiler/flang",
+        "topics": [
+            "fortran",
+            "compiler",
+            "llvm",
+            "fortran-compiler"
+        ],
+        "website": ""
     },
     "ginkgo-project/ginkgo": {
         "description": "Numerical linear algebra software package",
@@ -326,6 +383,14 @@
         ],
         "website": "https://adios2.readthedocs.io/en/latest/index.html"
     },
+    "petsc/petsc": {
+        "description": "Mirror of https://gitlab.com/petsc/petsc",
+        "name": "petsc/petsc",
+        "topics": [
+            "petsc"
+        ],
+        "website": "https://petsc.org"
+    },
     "pghysels/STRUMPACK": {
         "description": "Structured Matrix Package (LBNL)",
         "name": "pghysels/STRUMPACK",
@@ -352,6 +417,16 @@
             "hpc"
         ],
         "website": "http://www.mpich.org"
+    },
+    "sandialabs/Albany": {
+        "description": "Sandia National Laboratories' Albany multiphysics code",
+        "name": "sandialabs/Albany",
+        "topics": [
+            "scr-1341",
+            "snl-applications",
+            "snl-science-libs"
+        ],
+        "website": ""
     },
     "spack/spack": {
         "description": "A flexible package manager that supports multiple versions, configurations, platforms, and compilers.",

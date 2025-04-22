@@ -329,6 +329,12 @@
                 "totalCount": 7
             }
         },
+        "E4S-Project/e4s": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
         "HDFGroup/hdf5": {
             "repositoryTopics": {
                 "nodes": [
@@ -397,6 +403,12 @@
                     }
                 ],
                 "totalCount": 9
+            }
+        },
+        "HPCToolkit/hpctoolkit": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
             }
         },
         "Kitware/VTK-m": {
@@ -674,10 +686,128 @@
                 "totalCount": 0
             }
         },
+        "anlsys/aml": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
         "darshan-hpc/darshan": {
             "repositoryTopics": {
                 "nodes": [],
                 "totalCount": 0
+            }
+        },
+        "deephyper/deephyper": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/automl",
+                        "topic": {
+                            "name": "automl"
+                        },
+                        "url": "https://github.com/topics/automl"
+                    },
+                    {
+                        "resourcePath": "/topics/scalability",
+                        "topic": {
+                            "name": "scalability"
+                        },
+                        "url": "https://github.com/topics/scalability"
+                    },
+                    {
+                        "resourcePath": "/topics/neural-architecture-search",
+                        "topic": {
+                            "name": "neural-architecture-search"
+                        },
+                        "url": "https://github.com/topics/neural-architecture-search"
+                    },
+                    {
+                        "resourcePath": "/topics/hyperparameter-optimization",
+                        "topic": {
+                            "name": "hyperparameter-optimization"
+                        },
+                        "url": "https://github.com/topics/hyperparameter-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/python",
+                        "topic": {
+                            "name": "python"
+                        },
+                        "url": "https://github.com/topics/python"
+                    },
+                    {
+                        "resourcePath": "/topics/tensorflow",
+                        "topic": {
+                            "name": "tensorflow"
+                        },
+                        "url": "https://github.com/topics/tensorflow"
+                    },
+                    {
+                        "resourcePath": "/topics/keras",
+                        "topic": {
+                            "name": "keras"
+                        },
+                        "url": "https://github.com/topics/keras"
+                    },
+                    {
+                        "resourcePath": "/topics/deep-learning",
+                        "topic": {
+                            "name": "deep-learning"
+                        },
+                        "url": "https://github.com/topics/deep-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/machine-learning",
+                        "topic": {
+                            "name": "machine-learning"
+                        },
+                        "url": "https://github.com/topics/machine-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/multi-fidelity",
+                        "topic": {
+                            "name": "multi-fidelity"
+                        },
+                        "url": "https://github.com/topics/multi-fidelity"
+                    },
+                    {
+                        "resourcePath": "/topics/pytorch",
+                        "topic": {
+                            "name": "pytorch"
+                        },
+                        "url": "https://github.com/topics/pytorch"
+                    },
+                    {
+                        "resourcePath": "/topics/uncertainty-quantification",
+                        "topic": {
+                            "name": "uncertainty-quantification"
+                        },
+                        "url": "https://github.com/topics/uncertainty-quantification"
+                    },
+                    {
+                        "resourcePath": "/topics/mpi",
+                        "topic": {
+                            "name": "mpi"
+                        },
+                        "url": "https://github.com/topics/mpi"
+                    },
+                    {
+                        "resourcePath": "/topics/raylib",
+                        "topic": {
+                            "name": "raylib"
+                        },
+                        "url": "https://github.com/topics/raylib"
+                    }
+                ],
+                "totalCount": 15
             }
         },
         "diatomic/diy": {
@@ -716,6 +846,47 @@
                             "name": "binary-analysis"
                         },
                         "url": "https://github.com/topics/binary-analysis"
+                    }
+                ],
+                "totalCount": 4
+            }
+        },
+        "ebugger/Empirical-Roofline-Toolkit": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "flang-compiler/flang": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/fortran",
+                        "topic": {
+                            "name": "fortran"
+                        },
+                        "url": "https://github.com/topics/fortran"
+                    },
+                    {
+                        "resourcePath": "/topics/compiler",
+                        "topic": {
+                            "name": "compiler"
+                        },
+                        "url": "https://github.com/topics/compiler"
+                    },
+                    {
+                        "resourcePath": "/topics/llvm",
+                        "topic": {
+                            "name": "llvm"
+                        },
+                        "url": "https://github.com/topics/llvm"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran-compiler",
+                        "topic": {
+                            "name": "fortran-compiler"
+                        },
+                        "url": "https://github.com/topics/fortran-compiler"
                     }
                 ],
                 "totalCount": 4
@@ -1173,6 +1344,20 @@
                 "totalCount": 9
             }
         },
+        "petsc/petsc": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/petsc",
+                        "topic": {
+                            "name": "petsc"
+                        },
+                        "url": "https://github.com/topics/petsc"
+                    }
+                ],
+                "totalCount": 1
+            }
+        },
         "pghysels/STRUMPACK": {
             "repositoryTopics": {
                 "nodes": [
@@ -1276,6 +1461,34 @@
                     }
                 ],
                 "totalCount": 4
+            }
+        },
+        "sandialabs/Albany": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/scr-1341",
+                        "topic": {
+                            "name": "scr-1341"
+                        },
+                        "url": "https://github.com/topics/scr-1341"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-applications",
+                        "topic": {
+                            "name": "snl-applications"
+                        },
+                        "url": "https://github.com/topics/snl-applications"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-science-libs",
+                        "topic": {
+                            "name": "snl-science-libs"
+                        },
+                        "url": "https://github.com/topics/snl-science-libs"
+                    }
+                ],
+                "totalCount": 3
             }
         },
         "spack/spack": {

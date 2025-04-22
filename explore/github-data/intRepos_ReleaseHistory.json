@@ -655,6 +655,37 @@
                 ]
             }
         },
+        "E4S-Project/e4s": {
+            "releases": {
+                "nodes": [
+                    {
+                        "name": "E4S 24.11",
+                        "publishedAt": "2025-01-21T22:43:09Z",
+                        "tagName": "v24.11"
+                    },
+                    {
+                        "name": "E4S 24.05",
+                        "publishedAt": "2024-05-06T19:07:02Z",
+                        "tagName": "v24.05"
+                    },
+                    {
+                        "name": "E4S 24.02",
+                        "publishedAt": "2024-02-14T23:34:12Z",
+                        "tagName": "v24.02"
+                    },
+                    {
+                        "name": "E4S 23.11",
+                        "publishedAt": "2023-11-09T20:59:12Z",
+                        "tagName": "v23.11"
+                    },
+                    {
+                        "name": "E4S 23.08",
+                        "publishedAt": "2023-08-31T19:54:19Z",
+                        "tagName": "v23.08"
+                    }
+                ]
+            }
+        },
         "HDFGroup/hdf5": {
             "releases": {
                 "nodes": [
@@ -712,6 +743,57 @@
                         "name": "1.14.1-2",
                         "publishedAt": "2023-05-12T13:46:16Z",
                         "tagName": "hdf5-1_14_1-2"
+                    }
+                ]
+            }
+        },
+        "HPCToolkit/hpctoolkit": {
+            "releases": {
+                "nodes": [
+                    {
+                        "name": "Release-2022.05.15",
+                        "publishedAt": "2022-05-19T15:46:30Z",
+                        "tagName": "release-2022.05.15"
+                    },
+                    {
+                        "name": "Release-2022.04.15",
+                        "publishedAt": "2022-04-27T03:57:44Z",
+                        "tagName": "release-2022.04"
+                    },
+                    {
+                        "name": "Release-2021.05.15",
+                        "publishedAt": "2021-06-09T22:44:52Z",
+                        "tagName": "release-2021.05"
+                    },
+                    {
+                        "name": "Release-2020.08",
+                        "publishedAt": "2020-08-10T17:45:04Z",
+                        "tagName": "release-2020.08"
+                    },
+                    {
+                        "name": "Release 2018.09",
+                        "publishedAt": "2018-10-01T02:38:47Z",
+                        "tagName": "release-2018.09"
+                    },
+                    {
+                        "name": "Release 2017.10",
+                        "publishedAt": "2017-10-11T13:57:17Z",
+                        "tagName": "release-2017.10"
+                    },
+                    {
+                        "name": "Release 2017.06",
+                        "publishedAt": "2017-07-01T04:13:36Z",
+                        "tagName": "release-2017.06"
+                    },
+                    {
+                        "name": "Release 2016.12",
+                        "publishedAt": "2017-01-02T05:38:29Z",
+                        "tagName": "release-2016.12"
+                    },
+                    {
+                        "name": "",
+                        "publishedAt": "2017-01-02T05:44:54Z",
+                        "tagName": "pre-newarch"
                     }
                 ]
             }
@@ -1336,9 +1418,146 @@
                 "nodes": []
             }
         },
+        "anlsys/aml": {
+            "releases": {
+                "nodes": [
+                    {
+                        "name": "0.2.1",
+                        "publishedAt": "2023-05-11T19:03:12Z",
+                        "tagName": "v0.2.1"
+                    },
+                    {
+                        "name": "0.2.0",
+                        "publishedAt": "2021-12-02T02:14:04Z",
+                        "tagName": "v0.2.0"
+                    },
+                    {
+                        "name": "0.1.0",
+                        "publishedAt": "2021-12-03T05:24:34Z",
+                        "tagName": "v0.1.0"
+                    }
+                ]
+            }
+        },
         "darshan-hpc/darshan": {
             "releases": {
                 "nodes": []
+            }
+        },
+        "deephyper/deephyper": {
+            "releases": {
+                "nodes": [
+                    {
+                        "name": "0.10.0",
+                        "publishedAt": "2025-03-28T15:33:22Z",
+                        "tagName": "0.10.0"
+                    },
+                    {
+                        "name": "0.9.3",
+                        "publishedAt": "2025-03-10T08:03:20Z",
+                        "tagName": "0.9.3"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.9.2",
+                        "publishedAt": "2025-02-17T19:03:06Z",
+                        "tagName": "0.9.2"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.9.1",
+                        "publishedAt": "2025-01-14T12:49:29Z",
+                        "tagName": "0.9.1"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.9.0",
+                        "publishedAt": "2024-12-16T09:45:17Z",
+                        "tagName": "0.9.0"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.8.1",
+                        "publishedAt": "2024-10-30T08:35:11Z",
+                        "tagName": "0.8.1"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.8.0",
+                        "publishedAt": "2024-09-09T14:15:33Z",
+                        "tagName": "0.8.0"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.7.0",
+                        "publishedAt": "2024-04-04T08:01:13Z",
+                        "tagName": "0.7.0"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.6.0",
+                        "publishedAt": "2023-08-21T15:25:33Z",
+                        "tagName": "0.6.0"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.5.0",
+                        "publishedAt": "2023-03-02T12:26:44Z",
+                        "tagName": "0.5.0"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.4.2",
+                        "publishedAt": "2022-07-12T07:44:28Z",
+                        "tagName": "0.4.2"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.4.0",
+                        "publishedAt": "2022-06-09T08:03:53Z",
+                        "tagName": "0.4.0"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.3.3",
+                        "publishedAt": "2021-10-29T11:29:08Z",
+                        "tagName": "0.3.3"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.3.2",
+                        "publishedAt": "2021-10-25T06:34:20Z",
+                        "tagName": "0.3.2"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.3.0",
+                        "publishedAt": "2021-10-12T08:55:10Z",
+                        "tagName": "0.3.0"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.2.5",
+                        "publishedAt": "2021-06-10T09:08:51Z",
+                        "tagName": "0.2.5"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.2.1",
+                        "publishedAt": "2020-11-26T17:48:12Z",
+                        "tagName": "0.2.1"
+                    },
+                    {
+                        "name": "Changelog - DeepHyper 0.2.0",
+                        "publishedAt": "2020-11-16T09:50:12Z",
+                        "tagName": "0.2.0"
+                    },
+                    {
+                        "name": "DeepHyper 0.1.13",
+                        "publishedAt": "2020-11-01T17:36:53Z",
+                        "tagName": "0.1.13"
+                    },
+                    {
+                        "name": "0.1.12",
+                        "publishedAt": "2020-10-16T08:20:23Z",
+                        "tagName": "0.1.12"
+                    },
+                    {
+                        "name": "0.1.2",
+                        "publishedAt": "2019-12-02T14:19:24Z",
+                        "tagName": "0.1.2"
+                    },
+                    {
+                        "name": "0.1.1",
+                        "publishedAt": "2019-09-05T14:28:04Z",
+                        "tagName": "0.1.1"
+                    }
+                ]
             }
         },
         "diatomic/diy": {
@@ -1469,6 +1688,37 @@
                         "name": "Dyninst 9.1.0",
                         "publishedAt": "2016-06-29T21:28:36Z",
                         "tagName": "v9.1.0"
+                    }
+                ]
+            }
+        },
+        "ebugger/Empirical-Roofline-Toolkit": {
+            "releases": {
+                "nodes": []
+            }
+        },
+        "flang-compiler/flang": {
+            "releases": {
+                "nodes": [
+                    {
+                        "name": "March 2019 Binary Release",
+                        "publishedAt": "2019-04-03T13:42:11Z",
+                        "tagName": "flang_20190329"
+                    },
+                    {
+                        "name": "December 2018 Binary Release",
+                        "publishedAt": "2019-01-01T07:48:43Z",
+                        "tagName": "flang_20181226"
+                    },
+                    {
+                        "name": "September 2018 binary release",
+                        "publishedAt": "2018-10-01T05:05:44Z",
+                        "tagName": "flang_20180921"
+                    },
+                    {
+                        "name": "June 2018 binary release",
+                        "publishedAt": "2018-06-12T10:27:55Z",
+                        "tagName": "flang_20180612"
                     }
                 ]
             }
@@ -2742,6 +2992,11 @@
                 ]
             }
         },
+        "petsc/petsc": {
+            "releases": {
+                "nodes": []
+            }
+        },
         "pghysels/STRUMPACK": {
             "releases": {
                 "nodes": [
@@ -2985,6 +3240,17 @@
                         "name": "",
                         "publishedAt": "2023-07-25T17:38:09Z",
                         "tagName": "v3.4"
+                    }
+                ]
+            }
+        },
+        "sandialabs/Albany": {
+            "releases": {
+                "nodes": [
+                    {
+                        "name": "Old_master_support_end: this tag marks end of Albany support prior to pruning of everything but LandIce and DemoPDEs",
+                        "publishedAt": "2020-04-22T17:17:24Z",
+                        "tagName": "Old_master_support_end"
                     }
                 ]
             }
