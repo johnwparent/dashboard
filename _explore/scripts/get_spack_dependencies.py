@@ -135,7 +135,7 @@ def read_input_list(input_file):
     with open(input_file, "r+") as f:
         package_manifest = json.loads(f.read())
     packages = []
-    for qualified_repo in package_manifest["https://github.com"]["repos"]:
+    def check_add_valid_repo(qualified_repo):
         repo_pkg = qualified_repo.split("/")
         if len(repo_pkg) > 1:
             _, package = repo_pkg
@@ -143,6 +143,10 @@ def read_input_list(input_file):
             package = repo_pkg[0]
         if sr.PATH.exists(package):
             packages.append(package)
+    for qualified_repo in package_manifest["https://github.com"]["repos"]:
+        check_add_valid_repo(qualified_repo)
+    for qualified_repo in package_manifest["https://gitlab.com"]["repos"]:
+        check_add_valid_repo(qualified_repo)
     return packages
 
 
