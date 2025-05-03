@@ -26,6 +26,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
     // default for filtered package(s)
     let displayed_package = 'all';
+    let member_filter = 'Both';
+    let transitive_deps = false;
 
     const chart = d3
       .select('.' + areaID)
@@ -196,7 +198,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
       // Adds nodes
       node
-        .selectAll('circle')
+        .selectAll('data-group')
         .data(nodes)
         .join('circle')
         .style('cursor', 'pointer')
@@ -262,15 +264,43 @@ function draw_force_graph(areaID, adjacentAreaID) {
         });
     }
 
+
+
+
+
+
+
+    // chart
+    //   .append('g')
+    //   .attr('class', 'labels')
+    //   .selectAll('text')
+    //   .data(nodes)
+    //   .join('text')
+    //   .attr('dx', (d) => d.cx)
+    //   .attr('dy', '.35em')
+    //   .text((d) => {
+    //     if (d.internal) {
+    //       return d.id
+    //     }
+    //     else {
+    //       return null
+    //     }
+    //   })
+
     // Matches node and link location to where the simulation says the points should be
     simulation.on('tick', () => {
+      if (displayed_package != 'all') {
+        node
+          .select('circle#'+displayed_package)
+          .attr('x', width / 2)
+          .attr('y', height / 2);
+      }
       link
         .selectAll('line')
         .attr('x1', (d) => d.source.x)
         .attr('y1', (d) => d.source.y)
         .attr('x2', (d) => d.target.x)
         .attr('y2', (d) => d.target.y);
-
       node
         .selectAll('circle')
         .attr('cx', (d) => d.x)
@@ -329,8 +359,44 @@ function draw_force_graph(areaID, adjacentAreaID) {
         .attr('text-anchor', 'start');
     }
 
-
     updateLegend(labels)
+
+    const transitiveButton = chart
+    .append('g')
+    .attr('transform', `translate(350, -382)`);
+
+  const transitiveButtonCircle = transitiveButton
+    .append('circle')
+    .attr('r', legendRectSize / 2)
+    .attr('cx', legendRectSize / 2)
+    .attr('cy', 2 - legendRectSize / 2)
+    .attr('fill', transitive_deps ? 'lightblue' : 'white')
+    .attr('stroke', transitive_deps ? 'white' : 'black')
+    .style('cursor', 'pointer')
+    .on('click', () => {
+      transitive_deps = !transitive_deps;
+      if (transitive_deps) {
+        transitiveButtonCircle.attr('fill', 'lightblue');
+        transitiveButtonCircle.attr('stroke', 'white');
+      }
+      else {
+        transitiveButtonCircle.attr('fill', 'white');
+        transitiveButtonCircle.attr('stroke', 'black');
+      }
+      if (currentOption == "depView") {
+        dependencies();
+      }
+      else {
+        redraw();
+      }
+    });
+
+  transitiveButton
+    .append('text')
+    .attr('x', legendRectSize + legendSpacing)
+    .text('Show transitive deps')
+    .attr('text-anchor', 'start');
+
     const options = {};
 
     // Options for graph view
@@ -376,8 +442,34 @@ function draw_force_graph(areaID, adjacentAreaID) {
       currentOption = o.name;
       options[o.name].function();
       updateLegend(options[o.name].labels);
-
     }
+
+    const memberArray = ["Both", "Member", "External", ]
+
+    const memberSlider = d3
+      .sliderLeft()
+      .domain([0, 2])
+      .step(1)
+      .tickFormat((d) => {
+        return memberArray[Math.round(d)];
+      })
+      .ticks(2)
+      .height(25)
+      .on('onchange', (val) => {
+        member_filter = memberArray[Math.round(val)];
+        if(currentOption == "depView")
+        {
+          dependencies()
+        }
+        else {
+          redraw()
+        }
+      });
+
+    chart.append('g')
+      .attr('transform', `translate(-450, -400)`)
+      .call(memberSlider);
+
 
     // Finds all nodes and links in a certain depth and marks nodes by distance from node (not technically a tree)
     function getBFSTree(node, depth) {
@@ -443,20 +535,16 @@ function draw_force_graph(areaID, adjacentAreaID) {
       return linkArray;
     }
 
-    // Switches to view where packages are connected based on dependencies. Number of links represents number of shared packages
-    function dependencies() {
-      tmpNodes = data.dependency_nodes;
-      tmpLinks = data.dependency_links;
-      // Uses original data to create a list of internal repos connected by shared dependencies
+    function selectNodesLinksForPackage(nodes, links) {
+      let newlinks = links;
       if (displayed_package != 'all') {
-        tmpLinks = tmpLinks.filter((d) => {
+        newlinks = links.filter((d) => {
           const pkgIsSource = d.source.id == displayed_package;
-          const pkgIsTarget = d.target.id == displayed_package;
-          return pkgIsSource || pkgIsTarget;
+          return pkgIsSource;
         })
       }
       if (!(ACTIVE_VARIATIONS === undefined || Object.keys(ACTIVE_VARIATIONS).length == 0)){
-        tmpLinks = tmpLinks.filter((d)=> {
+        newlinks = newlinks.filter((d)=> {
           let filter = false;
           for(var cond in ACTIVE_VARIATIONS) {
             var is_arr = Array.isArray(ACTIVE_VARIATIONS[cond]);
@@ -477,10 +565,65 @@ function draw_force_graph(areaID, adjacentAreaID) {
           return filter;
         })
       }
-      tmpNodes = tmpNodes.filter((d) => tmpLinks.some((o) => d.id == o.source.id || d.id == o.target.id));
+      if (transitive_deps && displayed_package != 'all') {
+        allNodes = new Set(nodes.filter((d) => newlinks.some((o) => d.id == o.source.id || d.id == o.target.id)));
+        tmpLinks = links.filter((d) => {
+          const tmpNodeArr = Array.from(allNodes);
+          return tmpNodeArr.some((o) => {
+            return o.id == d.source.id || o.id == d.target.id
+          })
+        })
+        newNodes = new Set(nodes.filter((d) => tmpLinks.some((o) => d.id == o.source.id || d.id == o.target.id)));
+        while(newNodes.difference(allNodes).size) {
+          allNodes = newNodes.union(allNodes);
+          tmpLinks = links.filter((d) => {
+            const tmpNodeArr = Array.from(allNodes)
+            return tmpNodeArr.some((o) => {
+              return o.id == d.source.id || o.id == d.target.id
+            })
+          })
+          newNodes = new Set(nodes.filter((d) => tmpLinks.some((o) => d.id == o.source.id || d.id == o.target.id)));
+        }
+        newlinks = tmpLinks;
+      }
+      if (member_filter != 'Both') {
+        if (member_filter == 'Member') {
+          newlinks = newlinks.filter((d) => {
+            member = true;
+            if ((!d.source.internal) || (!d.target.internal)) {
+              // always want to keep our requested package in the graph
+              member = false;
+            }
+            return member;
+          })
+        }
+        else {
+          newlinks = newlinks.filter((d) => {
+            nonmember = true;
+            if ((d.source.internal) || (d.target.internal)) {
+              // always want to keep our requested package in the graph
+              pkgIsTarget = d.source.id == displayed_package;
+              targetIsInternal = d.target.internal
+              if ((!pkgIsTarget || targetIsInternal) || displayed_package == 'all') {
+                nonmember = false;
+              }
+            }
+            return nonmember;
+          })
+        }
+      }
+      nodes = nodes.filter((d) => newlinks.some((o) => d.id == o.source.id || d.id == o.target.id));
+      return {
+        nodes: nodes,
+        links: newlinks
+      }
+    }
 
-      const newNodes = tmpNodes;
-      const newLinks = tmpLinks;
+    // Switches to view where packages are connected based on dependencies. Number of links represents number of shared packages
+    function dependencies() {
+      newNodesLinks = selectNodesLinksForPackage(data.dependency_nodes, data.dependency_links)
+      const newNodes = newNodesLinks.nodes;
+      const newLinks = newNodesLinks.links;
 
       simulation.nodes(newNodes);
       simulation.force('link').links(newLinks).distance(30);
@@ -586,36 +729,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
         tmpNodes = data.dependency_nodes;
         tmpLinks = data.dependency_links;
       }
-      tmpLinks = tmpLinks.filter((d) => {
-        const pkgIsSource = d.source.id == pkg;
-        const pkgIsTarget = d.target.id == pkg;
-        return pkgIsSource || pkgIsTarget;
-      })
-
-      if (!(ACTIVE_VARIATIONS === undefined || Object.keys(ACTIVE_VARIATIONS).length == 0)){
-        tmpLinks = tmpLinks.filter((d)=> {
-          let filter = false;
-          for(var cond in ACTIVE_VARIATIONS) {
-            var is_arr = Array.isArray(ACTIVE_VARIATIONS[cond]);
-            if (is_arr) {
-              for (var check of d.condition[cond]) {
-                var filt = ACTIVE_VARIATIONS[cond].includes(check);
-                if (filt) {
-                  filter = true;
-                }
-              }
-            }
-            else {
-              if (ACTIVE_VARIATIONS[cond] == d.condition[cond]) {
-                filter = true;
-              }
-            }
-          }
-          return filter;
-        })
-      }
-      const linksToKeep = tmpLinks;
-      const nodesToKeep = tmpNodes.filter((d) => linksToKeep.some((o) => d.id == o.source.id || d.id == o.target.id));
+      newNodesLinks = selectNodesLinksForPackage(tmpNodes, tmpLinks)
+      const nodesToKeep = newNodesLinks.nodes;
+      const linksToKeep = newNodesLinks.links;
 
       simulation.nodes(nodesToKeep);
       simulation.force('link').links(linksToKeep).distance(60);
@@ -713,40 +829,10 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
     // Recomputes and draws the original view
     function redraw() {
-      tmpNodes = data.dependent_nodes;
-      tmpLinks = data.dependent_links;
       // Uses original data to create a list of internal repos connected by shared dependencies
-      if (displayed_package != 'all') {
-        tmpLinks = tmpLinks.filter((d) => {
-          const pkgIsSource = d.source.id == displayed_package;
-          const pkgIsTarget = d.target.id == displayed_package;
-          return pkgIsSource || pkgIsTarget;
-        })
-      }
-      if (!(ACTIVE_VARIATIONS === undefined || Object.keys(ACTIVE_VARIATIONS).length == 0)){
-        tmpLinks = tmpLinks.filter((d)=> {
-          let filter = false;
-          for(var cond in ACTIVE_VARIATIONS) {
-            var is_arr = Array.isArray(ACTIVE_VARIATIONS[cond]);
-            if (is_arr) {
-              for (var check of d.condition[cond]) {
-                var filt = ACTIVE_VARIATIONS[cond].includes(check);
-                if (filt) {
-                  filter = true;
-                }
-              }
-            }
-            else {
-              if (ACTIVE_VARIATIONS[cond] == d.condition[cond]) {
-                filter = true;
-              }
-            }
-          }
-          return filter;
-        })
-      }
-      const newNodes = tmpNodes.filter((d) => tmpLinks.some((o) => d.id == o.source.id || d.id == o.target.id));
-      const newLinks = tmpLinks;
+      newNodesLinks = selectNodesLinksForPackage(data.dependent_nodes, data.dependent_links)
+      const newNodes = newNodesLinks.nodes;
+      const newLinks = newNodesLinks.links;
 
       simulation.nodes(newNodes);
       simulation.force('link').links(newLinks).distance(30);
@@ -858,8 +944,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
       if (displayed_package != 'all') {
         tmpLinks = tmpLinks.filter((d) => {
           const pkgIsSource = d.source.id == displayed_package;
-          const pkgIsTarget = d.target.id == displayed_package;
-          return pkgIsSource || pkgIsTarget;
+          return pkgIsSource;
         })
       }
       else {
@@ -1065,8 +1150,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
           )
           && node != "languages"
         ) {
-          const source_node = dependent_nodes.find((d) => d.id == node);
-          const tgt_node = dependent_nodes.find((d) => d.id == pkg);
+          const tgt_node = dependent_nodes.find((d) => d.id == node);
+          const source_node = dependent_nodes.find((d) => d.id == pkg);
           dependent_links.push({ source: source_node, target: tgt_node, value: 1, condition: obj1[pkg][node] });
         }
       }

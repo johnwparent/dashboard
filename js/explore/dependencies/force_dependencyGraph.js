@@ -29,11 +29,71 @@ function draw_force_graph(areaID, adjacentAreaID) {
     let colorLanguage = false;
     let orgSelected = false;
 
+    // default for filtered package(s)
+    let displayed_package = 'all';
+    let member_filter = 'both';
+    let transitive_deps = false;
+
     const chart = d3
       .select('.' + areaID)
       .attr('width', width)
       .attr('height', height)
       .attr('viewBox', [-width / 2, -height / 2, width, height]);
+
+      const pkg_names = data.nodes.map((d) => {
+        let pkgName = d.id.split("/")[1];
+        return {name: pkgName, id: d.id}
+      });
+      const pkg_selector = chart
+        .append("foreignObject")
+        .attr("width", 200)
+        .attr("height", 500)
+        .attr('y', -400)
+        .attr('x', -520)
+        .append("xhtml:div");
+
+      pkg_selector
+        .append('input')
+        .attr('type', 'text')
+        .attr('placeholder', 'Package Search..')
+        .attr('id', 'pkg_search')
+        .on('keyup', () => {
+          const input = document.getElementById("pkg_search");
+          const filter = input.value.toUpperCase();
+          const div = document.getElementById("pkg_select_dropdown");
+          const a = div.getElementsByTagName("option");
+          for (let i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        })
+
+      const pkg_dropdown = pkg_selector
+        .append('select')
+          .attr('id', 'pkg_select_dropdown');
+
+      pkg_dropdown
+        .selectAll('option')
+        .data(pkg_names)
+        .join('option')
+          .attr('value', (d) => d.id)
+          .text((d) => d.name);
+
+      pkg_dropdown
+        .insert('option', ':first-child')
+        .attr('value', 'all')
+        .attr('selected', 'selected')
+        .text('all packages')
+
+      pkg_dropdown.on('change', () => {
+        d = document.getElementById("pkg_select_dropdown").value;
+        displayed_package = d;
+        options[currentOption].function()
+      });
 
     // Should always represent the current set of nodes and links being displayed
     let nodes = data.nodes;
@@ -265,42 +325,74 @@ function draw_force_graph(areaID, adjacentAreaID) {
       updateLegend(labels);
     }
 
-    const colorButton = chart
+    const transitiveButton = chart
       .append('g')
-      .attr('transform', `translate(${width / 2 - margin.right - 150},${80 - (height / 2 - margin.bottom)})`);
+      .attr('transform', `translate(350, -320)`);
 
-    const colorButtonCircle = colorButton
+
+    const transitiveButtonCircle = transitiveButton
       .append('circle')
       .attr('r', legendRectSize / 2)
       .attr('cx', legendRectSize / 2)
       .attr('cy', 2 - legendRectSize / 2)
-      .attr('fill', colorLanguage ? 'lightblue' : 'white')
-      .attr('stroke', colorLanguage ? 'white' : 'black')
+      .attr('fill', transitive_deps ? 'lightblue' : 'white')
+      .attr('stroke', transitive_deps ? 'white' : 'black')
       .style('cursor', 'pointer')
       .on('click', () => {
-        // Since orgs do not have languages, we do not want colorByLanguage to be called
-        if (!orgSelected) {
-          if (colorLanguage) {
-            colorLanguage = !colorLanguage;
-            colorButtonCircle.attr('fill', 'white');
-            colorButtonCircle.attr('stroke', 'black');
-            colorByLanguage(colorLanguage);
-            updateLegend(labels);
-          } else {
-            colorLanguage = !colorLanguage;
-            colorButtonCircle.attr('fill', 'lightblue');
-            colorButtonCircle.attr('stroke', 'white');
-            colorByLanguage(colorLanguage);
-            updateLegend(languages, languageColors);
-          }
+        transitive_deps = !transitive_deps;
+        if (transitive_deps) {
+          transitiveButtonCircle.attr('fill', 'lightblue');
+          transitiveButtonCircle.attr('stroke', 'white');
         }
+        else {
+          transitiveButtonCircle.attr('fill', 'white');
+          transitiveButtonCircle.attr('stroke', 'black');
+        }
+        redraw();
       });
 
-    colorButton
+    transitiveButton
       .append('text')
       .attr('x', legendRectSize + legendSpacing)
-      .text('Color by Language')
+      .text('Show transitive deps')
       .attr('text-anchor', 'start');
+
+    // const colorButton = chart
+    //   .append('g')
+    //   .attr('transform', `translate(${width / 2 - margin.right - 150},${80 - (height / 2 - margin.bottom)})`);
+
+    // const colorButtonCircle = colorButton
+    //   .append('circle')
+    //   .attr('r', legendRectSize / 2)
+    //   .attr('cx', legendRectSize / 2)
+    //   .attr('cy', 2 - legendRectSize / 2)
+    //   .attr('fill', colorLanguage ? 'lightblue' : 'white')
+    //   .attr('stroke', colorLanguage ? 'white' : 'black')
+    //   .style('cursor', 'pointer')
+    //   .on('click', () => {
+    //     // Since orgs do not have languages, we do not want colorByLanguage to be called
+    //     if (!orgSelected) {
+    //       if (colorLanguage) {
+    //         colorLanguage = !colorLanguage;
+    //         colorButtonCircle.attr('fill', 'white');
+    //         colorButtonCircle.attr('stroke', 'black');
+    //         colorByLanguage(colorLanguage);
+    //         updateLegend(labels);
+    //       } else {
+    //         colorLanguage = !colorLanguage;
+    //         colorButtonCircle.attr('fill', 'lightblue');
+    //         colorButtonCircle.attr('stroke', 'white');
+    //         colorByLanguage(colorLanguage);
+    //         updateLegend(languages, languageColors);
+    //       }
+    //     }
+    //   });
+
+    // colorButton
+    //   .append('text')
+    //   .attr('x', legendRectSize + legendSpacing)
+    //   .text('Color by Language')
+    //   .attr('text-anchor', 'start');
 
     const options = {};
 
@@ -370,6 +462,26 @@ function draw_force_graph(areaID, adjacentAreaID) {
         updateLegend(options[o.name].labels);
       }
     }
+
+    const memberArray = ["both", "member", "external", ]
+
+    const memberSlider = d3
+      .sliderLeft()
+      .domain([0, 2])
+      .step(1)
+      .tickFormat((d) => {
+        return memberArray[Math.round(d)];
+      })
+      .ticks(2)
+      .height(25)
+      .on('onchange', (val) => {
+        member_filter = memberArray[Math.round(val)];
+        redraw();
+      });
+
+    chart.append('g')
+      .attr('transform', `translate(420, -370)`)
+      .call(memberSlider);
 
     // Finds all nodes and links in a certain depth and marks nodes by distance from node (not technically a tree)
     function getBFSTree(node, depth) {
@@ -565,13 +677,82 @@ function draw_force_graph(areaID, adjacentAreaID) {
       orgSelected = false;
     }
 
+    function selectNodesLinksForPackage(nodes, links) {
+      if (displayed_package != 'all') {
+        newlinks = links.filter((d) => {
+          const pkgIsSource = d.source.id == displayed_package;
+          const pkgIsTarget = d.target.id == displayed_package;
+          return pkgIsSource || pkgIsTarget;
+        })
+      }
+      else {
+        newlinks = links;
+      }
+      if (transitive_deps && displayed_package != 'all') {
+        allNodes = new Set(nodes.filter((d) => newlinks.some((o) => d.id == o.source.id || d.id == o.target.id)));
+        tmpLinks = links.filter((d) => {
+          const tmpNodeArr = Array.from(allNodes);
+          return tmpNodeArr.some((o) => {
+            return o.id == d.source.id || o.id == d.target.id
+          })
+        })
+        newNodes = new Set(nodes.filter((d) => tmpLinks.some((o) => d.id == o.source.id || d.id == o.target.id)));
+        while(newNodes.difference(allNodes).size) {
+          allNodes = newNodes.union(allNodes);
+          tmpLinks = links.filter((d) => {
+            const tmpNodeArr = Array.from(allNodes)
+            return tmpNodeArr.some((o) => {
+              return o.id == d.source.id || o.id == d.target.id
+            })
+          })
+          newNodes = new Set(nodes.filter((d) => tmpLinks.some((o) => d.id == o.source.id || d.id == o.target.id)));
+        }
+        newlinks = tmpLinks;
+      }
+      if (member_filter != 'both') {
+        if (member_filter == 'member') {
+          newlinks = newlinks.filter((d) => {
+            member = true;
+            if ((!d.source.notPackage && d.source.package) || (!d.target.notPackage && d.target.package)) {
+              // always want to keep our requested package in the graph
+              const pkgIsSource = d.source.id == displayed_package;
+              const pkgIsTarget = d.target.id == displayed_package;
+              if ((!(pkgIsSource || pkgIsTarget)) || displayed_package == 'all') {
+                member = false;
+              }
+            }
+            return member;
+          })
+        }
+        else {
+          newlinks = newlinks.filter((d) => {
+            nonmember = false;
+            if ((!d.source.notPackage && d.source.package) && (!d.target.notPackage && d.target.package)) {
+              // always want to keep our requested package in the graph
+              const pkgIsSource = d.source.id == displayed_package;
+              const pkgIsTarget = d.target.id == displayed_package;
+              if ((pkgIsSource || pkgIsTarget) || displayed_package == 'all') {
+                nonmember = true;
+              }
+            }
+            return nonmember;
+          })
+        }
+      }
+      nodes = nodes.filter((d) => newlinks.some((o) => d.id == o.source.id || d.id == o.target.id));
+      return {
+        nodes: nodes,
+        links: newlinks
+      }
+    }
+
     // Recomputes and draws the original view
     function redraw() {
-      const newNodes = data.nodes;
-      const newLinks = data.links;
-
+      newNodesLinks = selectNodesLinksForPackage(data.nodes, data.links)
+      const newNodes = newNodesLinks.nodes;
+      const newLinks = newNodesLinks.links;
       simulation.nodes(newNodes);
-      simulation.force('link').links(newLinks).distance(10);
+      simulation.force('link').links(newLinks).distance(40);
       simulation.force('charge').strength(-20);
 
       node
