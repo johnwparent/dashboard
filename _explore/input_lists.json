@@ -24,7 +24,6 @@
             "diatomic/diy",
             "dyninst/dyninst",
             "ginkgo-project/ginkgo",
-            "hdfgroup/hdf5",
             "hypre-space/hypre",
             "kokkos/kokkos",
             "kokkos/kokkos-kernels",
