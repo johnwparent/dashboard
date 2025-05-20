@@ -172,6 +172,14 @@ function renderSingleRepoHTML(repo, pulls, issues) {
       <a href="${repo.url}/network"> <span class="fa fa-code-fork"></span>Forks : ${repo.forks.totalCount} </a>
 
       ${
+        repo.cdash
+          ? `
+          <a href="${repo.cdash}"> <span class="cdash-icon"></span>CDash Dashboard </a>
+      `
+          : ''
+      }
+
+      ${
         repo.homepageUrl
           ? `
         <a href="${repo.homepageUrl}"> <span class="fa fa-globe"></span>Project Website </a>
@@ -322,6 +330,15 @@ function renderRepoListHtml() {
           ? `
         <a href="${repo.homepageUrl}" title="Project Website">
           <span class="fa fa-globe"></span>
+        </a>
+      `
+          : ''
+      }
+            ${
+        repo.cdash
+          ? `
+        <a href="${repo.cdash}" title="CDash Dashboard">
+          <span class="cdash-icon"></span>
         </a>
       `
           : ''
