@@ -17,6 +17,7 @@
         "repos": [
             "ornladios/adios2",
             "amrex-codes/amrex",
+            "alpine-dav/ascent",
             "berkeleylab/caffeine",
             "chip-spv/chipstar",
             "darshan-hpc/darshan",
@@ -25,6 +26,7 @@
             "ginkgo-project/ginkgo",
             "hdfgroup/hdf5",
             "hypre-space/hypre",
+            "kokkos/kokkos",
             "kokkos/kokkos-kernels",
             "stanfordlegion/legion",
             "ceed/libceed",
