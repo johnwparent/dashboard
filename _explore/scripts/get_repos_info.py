@@ -17,7 +17,7 @@ dataCollector.data = {"data": {}}
 cdash_mapping = {}
 with open(os.path.join(cdash_data_path, "cass_member_cdashes.csv")) as f:
     for line in f.readlines():
-        repo, cdash_url = line.split(",")
+        repo, cdash_url = line.strip("\n").split(",")
         cdash_mapping[repo] = cdash_url
 
 # Read input lists of organizations and independent repos of interest

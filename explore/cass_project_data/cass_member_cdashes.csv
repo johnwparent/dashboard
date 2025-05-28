@@ -1,16 +1,16 @@
 Repo,CDash URL
 spack/spack,https://cdash.spack.io
 kokkos/kokkos,https://my.cdash.org/index.php?project=Kokkos
-trilinos/trilinos,https://trilinos-cdash.sandia.gov
-llnl/zfp,https://open.cdash.org/index.php?project=zfp
-hdfgroup/hdf5,https://my.cdash.org/index.php?project=HDF5
+trilinos/Trilinos,https://trilinos-cdash.sandia.gov
+LLNL/zfp,https://open.cdash.org/index.php?project=zfp
+HDfGroup/hdf5,https://my.cdash.org/index.php?project=HDF5
 visit-dav/visit,https://cdash.hpcvis.com
 ginkgo-project/ginkgo,https://my.cdash.org/index.php?project=Ginkgo%20Project
 kokkos/kokkos-kernels,https://my.cdash.org/index.php?project=Kokkos%20Kernels
-sandialabs/albany,https://my.cdash.org/index.php?project=Albany
-ornladios/adios2,https://open.cdash.org/index.php?project=ADIOS
-alpine-dav/ascent,https://my.dash.org/index.php?project=AscentParaViewTests
+sandialabs/Albany,https://my.cdash.org/index.php?project=Albany
+ornladios/ADIOS2,https://open.cdash.org/index.php?project=ADIOS
+Alpine-DAV/ascent,https://my.dash.org/index.php?project=AscentParaViewTests
 xiaoyeli/superlu_dist,https://my.cdash.org/index.php?project=superlu_dist
 diatomic/diy,https://open.cdash.org/index.php?project=diy
 viskores/viskores,https://open.cdash.org/index.php?project=Viskores
-e4s-project/e4s,https://cdash.spack.io
+E4S-Project/e4s,https://cdash.spack.io
