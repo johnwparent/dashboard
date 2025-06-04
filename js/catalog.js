@@ -174,7 +174,7 @@ function renderSingleRepoHTML(repo, pulls, issues) {
       ${
         repo.cdash
           ? `
-          <a href="${repo.cdash}"> <span class="cdash-icon"></span>CDash Dashboard </a>
+          <a href="${repo.cdash}"> <img src="${window.config.baseUrl}/assets/images/logos/cdash.svg" height="20" width="20" class="cdash-icon"></img>   CDash Dashboard </a>
       `
           : ''
       }
@@ -334,12 +334,10 @@ function renderRepoListHtml() {
       `
           : ''
       }
-            ${
+      ${
         repo.cdash
           ? `
-        <a href="${repo.cdash}" title="CDash Dashboard">
-          <span class="cdash-icon"></span>
-        </a>
+          <a href="${repo.cdash}"><img src="${window.config.baseUrl}/assets/images/logos/cdash.svg" height="20" width="20"></img></a>
       `
           : ''
       }
@@ -524,6 +522,9 @@ function setVisibleRepo(newValue, shouldPushState) {
                             category[count]['language'] = '';
                           }
                           category[count]['forks'] = reposInfoObj[repo].forks.totalCount;
+                          if (reposInfoObj[repo].cdash) {
+                            category[count]['cdash'] = reposInfoObj[repo].cdash
+                          }
                         }
                       }
                     }
