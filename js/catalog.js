@@ -323,7 +323,7 @@ function renderRepoListHtml() {
         <span class="fa fa-code-fork"></span> ${repo.forks}
       </a>
       <a href="/explore/spack-dependencies/?package=${repo.name}" title="Dependency Network">
-        <span class="fa fa-code-github"></span>
+        <span class="fa fa-pie-chart"></span>
       </a>
       ${
         repo.homepageUrl
