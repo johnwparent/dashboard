@@ -1668,7 +1668,7 @@
             },
             "homepageUrl": "http://llvm.org",
             "issues_Closed": {
-                "totalCount": 58507
+                "totalCount": 58508
             },
             "issues_Open": {
                 "totalCount": 25576
@@ -1696,19 +1696,19 @@
                 "name": "LLVM"
             },
             "pullRequests_Closed": {
-                "totalCount": 5826
+                "totalCount": 5827
             },
             "pullRequests_Merged": {
-                "totalCount": 47660
+                "totalCount": 47665
             },
             "pullRequests_Open": {
-                "totalCount": 4635
+                "totalCount": 4634
             },
             "repositoryTopics": {
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 32787
+                "totalCount": 32789
             },
             "url": "https://github.com/llvm/llvm-project"
         },
@@ -1781,7 +1781,7 @@
                 "totalCount": 3063
             },
             "issues_Open": {
-                "totalCount": 718
+                "totalCount": 719
             },
             "languages": {
                 "totalCount": 13
@@ -2114,7 +2114,7 @@
                 "totalCount": 6439
             },
             "issues_Open": {
-                "totalCount": 2492
+                "totalCount": 2493
             },
             "languages": {
                 "totalCount": 20
@@ -2139,13 +2139,13 @@
                 "name": "Python"
             },
             "pullRequests_Closed": {
-                "totalCount": 4428
+                "totalCount": 4429
             },
             "pullRequests_Merged": {
-                "totalCount": 36206
+                "totalCount": 36210
             },
             "pullRequests_Open": {
-                "totalCount": 861
+                "totalCount": 857
             },
             "repositoryTopics": {
                 "totalCount": 11
