@@ -172,6 +172,14 @@ function renderSingleRepoHTML(repo, pulls, issues) {
       <a href="${repo.url}/network"> <span class="fa fa-code-fork"></span>Forks : ${repo.forks.totalCount} </a>
 
       ${
+        repo.cdash
+          ? `
+          <a href="${repo.cdash}"> <img src="${window.config.baseUrl}/assets/images/logos/cdash.svg" height="20" width="20" class="cdash-icon"></img>   CDash Dashboard </a>
+      `
+          : ''
+      }
+
+      ${
         repo.homepageUrl
           ? `
         <a href="${repo.homepageUrl}"> <span class="fa fa-globe"></span>Project Website </a>
@@ -323,6 +331,13 @@ function renderRepoListHtml() {
         <a href="${repo.homepageUrl}" title="Project Website">
           <span class="fa fa-globe"></span>
         </a>
+      `
+          : ''
+      }
+      ${
+        repo.cdash
+          ? `
+          <a href="${repo.cdash}"><img src="${window.config.baseUrl}/assets/images/logos/cdash.svg" height="20" width="20"></img></a>
       `
           : ''
       }
@@ -507,6 +522,9 @@ function setVisibleRepo(newValue, shouldPushState) {
                             category[count]['language'] = '';
                           }
                           category[count]['forks'] = reposInfoObj[repo].forks.totalCount;
+                          if (reposInfoObj[repo].cdash) {
+                            category[count]['cdash'] = reposInfoObj[repo].cdash
+                          }
                         }
                       }
                     }
