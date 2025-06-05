@@ -181,7 +181,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
     if (package_queried) {
       const package = urlParams.get('package');
-      draw_variant_picker(d);
+      draw_variant_picker(package);
       redraw_for_package(package);
     }
     else {
