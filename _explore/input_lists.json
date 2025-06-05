@@ -50,7 +50,7 @@
             "uo-oaciss/tau2",
             "trilinos/trilinos",
             "visit-dav/visit",
-            "viskores/viskores",
+            "kitware/vtk-m",
             "xsdk-project",
             "llnl/zfp",
             "hpctoolkit/hpctoolkit",
