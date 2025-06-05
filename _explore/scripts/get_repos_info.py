@@ -1,15 +1,24 @@
 from scraper.github import queryManager as qm
+import os
 from os import environ as env
 import sys
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/intReposInfo.json" % ghDataDir
+cdash_data_path = os.path.normpath(os.path.join(ghDataDir, "..", "cass_project_data"))
 queryPath = "../queries/org-Repos-Info.gql"
 queryPathInd = "../queries/repo-Info.gql"
 
 # Initialize data collector
 dataCollector = qm.DataManager(datfilepath, False)
 dataCollector.data = {"data": {}}
+
+# setup cdash repo context
+cdash_mapping = {}
+with open(os.path.join(cdash_data_path, "cass_member_cdashes.csv")) as f:
+    for line in f.readlines():
+        repo, cdash_url = line.strip("\n").split(",")
+        cdash_mapping[repo] = cdash_url
 
 # Read input lists of organizations and independent repos of interest
 inputLists = qm.DataManager("../input_lists.json", True)
@@ -58,6 +67,8 @@ for hostUrl, hostInfo in inputLists.data.items():
             repoKey = repo["nameWithOwner"]
             # TODO maybe handle each hostURL differently?
             dataCollector.data["data"][repoKey] = repo
+            if repoKey in cdash_mapping:
+                dataCollector.data["data"][repoKey]["cdash"] = cdash_mapping[repoKey]
 
         print("'%s' Done!" % (org))
 
@@ -83,6 +94,8 @@ for hostUrl, hostInfo in inputLists.data.items():
         repoKey = outObj["data"]["repository"]["nameWithOwner"]
         # TODO maybe handle each hostURL differently?
         dataCollector.data["data"][repoKey] = outObj["data"]["repository"]
+        if repoKey in cdash_mapping:
+            dataCollector.data["data"][repoKey]["cdash"] = cdash_mapping[repoKey]
 
         print("'%s' Done!" % (repo))
 
