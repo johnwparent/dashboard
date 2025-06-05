@@ -7,7 +7,8 @@
             "amr",
             "high-performance-computing",
             "hpsf",
-            "scientific-computing"
+            "scientific-computing",
+            "adaptive-mesh-refinement"
         ],
         "website": "https://amrex-codes.github.io/amrex"
     },
@@ -242,7 +243,7 @@
             "symtab",
             "binary-analysis"
         ],
-        "website": "http://www.dyninst.org"
+        "website": "http://www.paradyn.org"
     },
     "ebugger/Empirical-Roofline-Toolkit": {
         "description": "Forked from https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/",
@@ -328,7 +329,7 @@
             "blas",
             "hpsf"
         ],
-        "website": ""
+        "website": "https://kokkos.org"
     },
     "llvm/llvm-project": {
         "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",

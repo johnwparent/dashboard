@@ -37,9 +37,16 @@
                             "name": "scientific-computing"
                         },
                         "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/adaptive-mesh-refinement",
+                        "topic": {
+                            "name": "adaptive-mesh-refinement"
+                        },
+                        "url": "https://github.com/topics/adaptive-mesh-refinement"
                     }
                 ],
-                "totalCount": 5
+                "totalCount": 6
             }
         },
         "Alpine-DAV/ascent": {

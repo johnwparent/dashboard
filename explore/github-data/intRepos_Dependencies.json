@@ -1219,6 +1219,32 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "clap",
+                                    "repository": {
+                                        "nameWithOwner": "clap-rs/clap"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "clap",
+                                    "repository": {
+                                        "nameWithOwner": "clap-rs/clap"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -1298,23 +1324,9 @@
                             "nodes": [
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "actions/cache",
-                                    "repository": {
-                                        "nameWithOwner": "actions/cache"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "hendrikmuhs/ccache-action",
-                                    "repository": {
-                                        "nameWithOwner": "hendrikmuhs/ccache-action"
                                     }
                                 },
                                 {
@@ -1404,13 +1416,6 @@
                                     "repository": {
                                         "nameWithOwner": "docker/setup-buildx-action"
                                     }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "styfle/cancel-workflow-action",
-                                    "repository": {
-                                        "nameWithOwner": "styfle/cancel-workflow-action"
-                                    }
                                 }
                             ]
                         }
@@ -1420,8 +1425,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#f34b7d",
-                        "name": "C++"
+                        "color": "#185619",
+                        "name": "LLVM"
                     }
                 ]
             }
@@ -1546,6 +1551,33 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "ssciwr/doxygen-install",
+                                    "repository": {
+                                        "nameWithOwner": "ssciwr/doxygen-install"
                                     }
                                 }
                             ]
@@ -4957,6 +4989,54 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "PIP",
+                                    "packageName": "cffi",
+                                    "repository": {
+                                        "nameWithOwner": "python-cffi/cffi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -4973,6 +5053,13 @@
                                 {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact/merge",
                                     "repository": {
                                         "nameWithOwner": "actions/upload-artifact"
                                     }
@@ -5028,6 +5115,19 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "eic/trigger-gitlab-ci",
+                                    "repository": {
+                                        "nameWithOwner": "eic/trigger-gitlab-ci"
                                     }
                                 }
                             ]
@@ -5129,6 +5229,13 @@
                                     "packageName": "pandas",
                                     "repository": {
                                         "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "rich",
+                                    "repository": {
+                                        "nameWithOwner": "Textualize/rich"
                                     }
                                 },
                                 {
@@ -5493,6 +5600,33 @@
                                     "packageName": "codecov/codecov-action",
                                     "repository": {
                                         "nameWithOwner": "codecov/codecov-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "openjournals/openjournals-draft-action",
+                                    "repository": {
+                                        "nameWithOwner": "openjournals/openjournals-draft-action"
                                     }
                                 }
                             ]
@@ -6104,13 +6238,6 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "crate-ci/typos",
-                                    "repository": {
-                                        "nameWithOwner": "crate-ci/typos"
-                                    }
                                 }
                             ]
                         }
@@ -6196,6 +6323,26 @@
                                     "packageName": "mxschmitt/action-tmate",
                                     "repository": {
                                         "nameWithOwner": "mxschmitt/action-tmate"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "crate-ci/typos",
+                                    "repository": {
+                                        "nameWithOwner": "crate-ci/typos"
                                     }
                                 }
                             ]
@@ -6876,6 +7023,13 @@
                                     "packageName": "beautifulsoup4",
                                     "repository": {
                                         "nameWithOwner": "wention/BeautifulSoup4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "certifi",
+                                    "repository": {
+                                        "nameWithOwner": "certifi/python-certifi"
                                     }
                                 },
                                 {
@@ -7602,6 +7756,87 @@
                                     "repository": {
                                         "nameWithOwner": "weiwei/junitparser"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ml-dtypes",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nanobind",
+                                    "repository": {
+                                        "nameWithOwner": "wjakob/nanobind"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "packaging",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/packaging"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pexpect",
+                                    "repository": {
+                                        "nameWithOwner": "pexpect/pexpect"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "psutil",
+                                    "repository": {
+                                        "nameWithOwner": "giampaolo/psutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ptyprocess",
+                                    "repository": {
+                                        "nameWithOwner": "pexpect/ptyprocess"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pybind11",
+                                    "repository": {
+                                        "nameWithOwner": "pybind/pybind11"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "swig",
+                                    "repository": {
+                                        "nameWithOwner": "nightlark/swig-pypi"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "junitparser",
+                                    "repository": {
+                                        "nameWithOwner": "weiwei/junitparser"
+                                    }
                                 }
                             ]
                         }
@@ -7849,7 +8084,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-reredirects",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "documatt/sphinx-reredirects"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -7965,7 +8202,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-reredirects",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "documatt/sphinx-reredirects"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -9649,6 +9888,13 @@
                                 },
                                 {
                                     "packageManager": "NPM",
+                                    "packageName": "@vscode/debugprotocol",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/vscode-debugadapter-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
                                     "packageName": "@vscode/vsce",
                                     "repository": {
                                         "nameWithOwner": "microsoft/vscode-vsce"
@@ -10120,13 +10366,6 @@
                                     "packageName": "foreground-child",
                                     "repository": {
                                         "nameWithOwner": "tapjs/foreground-child"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "form-data",
-                                    "repository": {
-                                        "nameWithOwner": "form-data/form-data"
                                     }
                                 }
                             ]
@@ -11242,6 +11481,13 @@
                                 },
                                 {
                                     "packageManager": "NPM",
+                                    "packageName": "@vscode/debugprotocol",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/vscode-debugadapter-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
                                     "packageName": "@vscode/vsce",
                                     "repository": {
                                         "nameWithOwner": "microsoft/vscode-vsce"
@@ -11658,9 +11904,23 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "dataclasses",
+                                    "repository": {
+                                        "nameWithOwner": "ericvsmith/dataclasses"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "docutils",
                                     "repository": {
                                         "nameWithOwner": "jwilk-mirrors/docutils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "importlib-resources",
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_resources"
                                     }
                                 },
                                 {
@@ -12271,26 +12531,6 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "stenongithub/gitlab-mirror-and-ci-action",
-                                    "repository": {
-                                        "nameWithOwner": "stenongithub/gitlab-mirror-and-ci-action"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
                                 }
                             ]
                         }
@@ -12733,6 +12973,19 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
@@ -12876,6 +13129,19 @@
                                     "packageName": "styfle/cancel-workflow-action",
                                     "repository": {
                                         "nameWithOwner": "styfle/cancel-workflow-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "mshick/add-pr-comment",
+                                    "repository": {
+                                        "nameWithOwner": "mshick/add-pr-comment"
                                     }
                                 }
                             ]
