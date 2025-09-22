@@ -2723,7 +2723,7 @@
                 ]
             }
         },
-        "Kitware/VTK-m": {
+        "Viskores/viskores": {
             "dependencyGraphManifests": {
                 "nodes": [
                     {

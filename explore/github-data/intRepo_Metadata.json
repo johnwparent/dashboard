@@ -105,9 +105,9 @@
         "topics": null,
         "website": ""
     },
-    "Kitware/VTK-m": {
+    "Viskores/viskores": {
         "description": "Mirror of https://gitlab.kitware.com/vtk/vtk-m",
-        "name": "Kitware/VTK-m",
+        "name": "Viskores/viskores",
         "topics": null,
         "website": null
     },

@@ -442,7 +442,7 @@
             },
             "url": "https://github.com/HPCToolkit/hpctoolkit"
         },
-        "Kitware/VTK-m": {
+        "Viskores/viskores": {
             "createdAt": "2019-06-03T18:26:09Z",
             "defaultBranchRef": {
                 "name": "master"
@@ -471,7 +471,7 @@
                 "totalCount": 70
             },
             "name": "VTK-m",
-            "nameWithOwner": "Kitware/VTK-m",
+            "nameWithOwner": "Viskores/viskores",
             "owner": {
                 "avatarUrl": "https://avatars.githubusercontent.com/u/87549?v=4",
                 "login": "Kitware"
@@ -495,7 +495,7 @@
             "stargazers": {
                 "totalCount": 31
             },
-            "url": "https://github.com/Kitware/VTK-m"
+            "url": "https://github.com/Viskores/viskores"
         },
         "LLNL/sundials": {
             "createdAt": "2017-10-05T17:20:03Z",

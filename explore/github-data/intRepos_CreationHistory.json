@@ -40,7 +40,7 @@
             "firstCommitAt": "2022-08-18T21:50:53Z",
             "initBeforeGitHubRepo": false
         },
-        "Kitware/VTK-m": {
+        "Viskores/viskores": {
             "createdAt": "2019-06-03T18:26:09Z",
             "firstCommitAt": "2014-02-04T20:08:03Z",
             "initBeforeGitHubRepo": true

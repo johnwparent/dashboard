@@ -813,7 +813,7 @@
                 ]
             }
         },
-        "Kitware/VTK-m": {
+        "Viskores/viskores": {
             "releases": {
                 "nodes": []
             }
