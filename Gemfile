@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'openssl', '~> 3.1.2'
+gem 'liquid', '~> 4.0.4'
 gem 'jekyll'
 gem 'jekyll-feed'
 gem 'jekyll-sitemap'
@@ -13,4 +15,4 @@ gem 'csv'
 gem 'base64'
 gem 'bigdecimal'
 #[github-pages]
-gem 'github-pages', group: :jekyll_plugins
+gem 'github-pages', '> 230', group: :jekyll_plugins

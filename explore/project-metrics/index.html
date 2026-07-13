@@ -1,25 +1,190 @@
 ---
 title: Project Metric Visualizations Landing
 layout: default
-js:
-  - js/explore/helpers.js
 ---
 <h2 class="page-header text-center" id="projectTitle">Project Sustainability Metric Visualizations</h2>
 
-<!-- Preset vis display areas -->
-<main id="content" class="text-center">
-    <div class="metric-container">
-        <h1>Welcome to the CORSA Software Sustainability Metric Visualizer</h1>
-        <p>Select the Getting started guide to learn about how to use the visualizer, or jump right in and start visualizing your software sustainability metrics.</p>
-        
-        <div class="metric-link-buttons">
-            <a href="{{ 'explore/project-metrics/getting-started/index.html' | relative_url }}" class="metric-guide-link">
-                How to setup your project
-            </a>
-
-            <a href="{{ '/explore/project-metrics/metrics/index.html' | relative_url }}" class="metric-ui-link">
-                Start Rendering Metrics
-            </a>
-        </div>
+<!-- Hero -->
+<div class="pm-hero row">
+  <div class="col-md-6 col-sm-12 pm-hero-text">
+    <h1 class="pm-hero-heading">Visualize sustainability metrics for C/C++ software projects</h1>
+    <p class="pm-hero-subtitle">Analyze clang-tidy and CDash output to understand project health, complexity, and sustainability across files and functions.</p>
+    <div class="pm-hero-actions">
+      <a href="{{ '/explore/project-metrics/metrics/index.html' | relative_url }}" class="pm-btn-primary">Open metric visualizer</a>
+      <a href="{{ 'explore/project-metrics/getting-started/index.html' | relative_url }}" class="pm-hero-secondary-link">Getting started guide &rarr;</a>
     </div>
-</main>
+  </div>
+
+  <div class="col-md-6 col-sm-12 pm-hero-preview-col">
+    <div class="pm-preview-card">
+      <div class="pm-preview-card-header">
+        <div class="pm-preview-header-left">
+          <span class="pm-preview-card-title">Project summary</span>
+          <span class="pm-preview-filename">metrics.out &middot; 541 files</span>
+        </div>
+        <span class="pm-preview-badge pm-badge-high">&#9679; High</span>
+      </div>
+      <div class="pm-preview-stats">
+        <div class="pm-preview-stat-box">
+          <span class="pm-preview-stat-value">1,652</span>
+          <span class="pm-preview-stat-label">Functions</span>
+        </div>
+        <div class="pm-preview-stat-box">
+          <span class="pm-preview-stat-value">13.48</span>
+          <span class="pm-preview-stat-label">Avg. complexity</span>
+        </div>
+        <div class="pm-preview-stat-box">
+          <span class="pm-preview-stat-value">35%</span>
+          <span class="pm-preview-stat-label">Over threshold</span>
+        </div>
+      </div>
+      <div class="pm-preview-chart-section">
+        <div class="pm-preview-chart-title">Complexity distribution</div>
+        <div class="pm-preview-chart">
+          <div class="pm-preview-bar-wrap">
+            <div class="pm-preview-bar" style="height:72%;background-color:#1a3a6b;"></div>
+            <span class="pm-preview-bar-label">0–5</span>
+          </div>
+          <div class="pm-preview-bar-wrap">
+            <div class="pm-preview-bar" style="height:60%;background-color:#1f4fa0;"></div>
+            <span class="pm-preview-bar-label">6–10</span>
+          </div>
+          <div class="pm-preview-bar-wrap">
+            <div class="pm-preview-bar" style="height:48%;background-color:#2166c0;"></div>
+            <span class="pm-preview-bar-label">11–20</span>
+          </div>
+          <div class="pm-preview-bar-wrap">
+            <div class="pm-preview-bar" style="height:28%;background-color:#dc3545;"></div>
+            <span class="pm-preview-bar-label">21–40</span>
+          </div>
+          <div class="pm-preview-bar-wrap">
+            <div class="pm-preview-bar" style="height:14%;background-color:#dc3545;"></div>
+            <span class="pm-preview-bar-label">41+</span>
+          </div>
+        </div>
+      </div>
+      <div class="pm-preview-list-section">
+        <div class="pm-preview-chart-title">Top complex functions</div>
+        <ul class="pm-preview-list">
+          <li>
+            <span class="pm-preview-fn-name">do_copy_objects</span>
+            <span class="pm-preview-fn-right">
+              <span class="pm-preview-fn-score">103</span>
+              <span class="pm-preview-severity pm-severity-critical">&#9679; Critical</span>
+            </span>
+          </li>
+          <li>
+            <span class="pm-preview-fn-name">HSTBmake_table</span>
+            <span class="pm-preview-fn-right">
+              <span class="pm-preview-fn-score">71</span>
+              <span class="pm-preview-severity pm-severity-high">&#9679; High</span>
+            </span>
+          </li>
+          <li>
+            <span class="pm-preview-fn-name">H5Z__nbit_compress</span>
+            <span class="pm-preview-fn-right">
+              <span class="pm-preview-fn-score">10</span>
+              <span class="pm-preview-severity pm-severity-low">&#9679; Low</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Accordions -->
+<div class="pm-accordion-section">
+
+  <details class="pm-accordion">
+    <summary class="pm-accordion-summary">
+      How it works
+      <span class="pm-accordion-chevron fa fa-chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="pm-accordion-body">
+      <div class="pm-steps">
+        <div class="pm-step">
+          <div class="pm-step-title">1. Generate metrics</div>
+          <p>Run clang-tidy on your C/C++ project or submit builds to CDash to collect complexity and sustainability metrics</p>
+        </div>
+        <div class="pm-step">
+          <div class="pm-step-title">2. Provide data</div>
+          <p>Upload your metrics file, connect a CDash build URL, or try the tool with sample data</p>
+        </div>
+        <div class="pm-step">
+          <div class="pm-step-title">3. Explore results</div>
+          <p>Analyze visualizations, filter and sort results, and identify high-risk areas in your codebase</p>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="pm-accordion">
+    <summary class="pm-accordion-summary">
+      What you can analyze
+      <span class="pm-accordion-chevron fa fa-chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="pm-accordion-body">
+      <p class="pm-accordion-subtitle">Comprehensive metrics to understand code complexity and sustainability</p>
+      <div class="pm-feature-grid">
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-bar-chart" aria-hidden="true"></span>
+          <div class="pm-feature-title">Project overview</div>
+          <div class="pm-feature-desc">High-level metrics and insights</div>
+        </div>
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-file-code-o" aria-hidden="true"></span>
+          <div class="pm-feature-title">File-level complexity</div>
+          <div class="pm-feature-desc">Per-file analysis and trends</div>
+        </div>
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-line-chart" aria-hidden="true"></span>
+          <div class="pm-feature-title">Function-level complexity</div>
+          <div class="pm-feature-desc">Individual function metrics</div>
+        </div>
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-exclamation-circle" aria-hidden="true"></span>
+          <div class="pm-feature-title">Methods over threshold</div>
+          <div class="pm-feature-desc">High-risk function detection</div>
+        </div>
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-code-fork" aria-hidden="true"></span>
+          <div class="pm-feature-title">Branch count</div>
+          <div class="pm-feature-desc">Control flow complexity</div>
+        </div>
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-code" aria-hidden="true"></span>
+          <div class="pm-feature-title">Lines of code</div>
+          <div class="pm-feature-desc">Function and file size metrics</div>
+        </div>
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-database" aria-hidden="true"></span>
+          <div class="pm-feature-title">CDash build integration</div>
+          <div class="pm-feature-desc">Continuous analysis support</div>
+        </div>
+        <div class="pm-feature-tile">
+          <span class="pm-feature-icon fa fa-arrow-up" aria-hidden="true"></span>
+          <div class="pm-feature-title">Sustainability indicators</div>
+          <div class="pm-feature-desc">Long-term maintainability</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="pm-accordion">
+    <summary class="pm-accordion-summary">
+      Turn raw metrics to actionable insights
+      <span class="pm-accordion-chevron fa fa-chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="pm-accordion-body">
+      <p class="pm-accordion-subtitle">Transform project metric output into clear summaries, charts, and ranked results so maintainers know where to inspect first.</p>
+      <ul class="pm-insights-list">
+        <li><span class="fa fa-check-circle" aria-hidden="true"></span> Summary cards for project health at a glance</li>
+        <li><span class="fa fa-check-circle" aria-hidden="true"></span> Complexity distribution to spot risk concentration</li>
+        <li><span class="fa fa-check-circle" aria-hidden="true"></span> Top complex functions ranked by score</li>
+        <li><span class="fa fa-check-circle" aria-hidden="true"></span> Severity badges that read in any color mode</li>
+      </ul>
+    </div>
+  </details>
+
+</div>

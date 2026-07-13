@@ -263,7 +263,7 @@ function findCommonPath(paths) {
     return '/';
   }
   if (restore_paths) {
-    result.replace('/', '\\')
+    return result.replace(/\//g, '\\');
   }
   return result;
 }

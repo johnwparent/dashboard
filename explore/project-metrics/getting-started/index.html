@@ -1,116 +1,259 @@
 ---
-title: Project Metric Visualizations Getting Started
+title: Getting Started - Project Metric Visualizations
 layout: default
-js:
-  - js/explore/helpers.js
 ---
-<h2 class="page-header text-center" id="projectTitle">Project Sustainability Metric Visualizations: Getting Started</h2>
 
-<!-- Preset vis display areas -->
-<main id="content" class="text-center">
-    <div class="metric-guide-container">
-        <div class="metric-guide-nav-bar">
-            <a href="/explore/project-metrics/index.html" class="metric-guide-back-button">← Back to Metric Landing Page</a>
-            
-            <a href="/explore/project-metrics/metrics/index.html" class="metric-start-ui-button">Go to Metric Visualizer →</a>
+<!-- Page header -->
+<div class="gs-page-header">
+  <h1 class="gs-page-title">Set up your project for metric visualization</h1>
+  <p class="gs-page-subtitle">This guide helps you generate and provide the data required by the CORSA Software Sustainability Metric Visualizer. You can upload local clang-tidy output or connect metrics from a CDash build.</p>
+  <div class="gs-header-actions">
+    <a href="{{ '/explore/project-metrics/metrics/' | relative_url }}" class="gs-btn-primary">Open metric visualizer</a>
+    <a href="{{ '/explore/project-metrics/' | relative_url }}" class="gs-link-back">Back to main page &larr;</a>
+  </div>
+</div>
+
+<!-- Two-column layout -->
+<div class="gs-layout">
+
+  <!-- Sticky TOC -->
+  <aside class="gs-toc-sidebar" aria-label="Table of contents">
+    <nav class="gs-toc">
+      <div class="gs-toc-heading">Table of contents</div>
+      <ul class="gs-toc-list">
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li>
+          <a href="#setup">Setting up your project</a>
+          <ul>
+            <li><a href="#option-a">Option A: Local file upload</a></li>
+            <li><a href="#option-b">Option B: CDash integration</a></li>
+          </ul>
+        </li>
+        <li><a href="#generate-output">Generate clang-tidy output</a></li>
+        <li>
+          <a href="#using-visualizer">Using the Metric Visualizer</a>
+          <ul>
+            <li><a href="#providing-data">Providing Data</a></li>
+            <li><a href="#using-dashboard">Using the Dashboard</a></li>
+            <li><a href="#data-alternatives">Data Alternatives</a></li>
+          </ul>
+        </li>
+        <li><a href="#next-steps">Next steps</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <div class="gs-content">
+
+    <!-- Prerequisites -->
+    <section id="prerequisites" class="gs-section">
+      <h2>Prerequisites</h2>
+      <ul class="gs-checklist">
+        <li><i class="fa fa-check-circle" aria-hidden="true"></i> A C/C++ project with source code</li>
+        <li><i class="fa fa-check-circle" aria-hidden="true"></i> CMake build system configured</li>
+        <li><i class="fa fa-check-circle" aria-hidden="true"></i> clang-tidy installed and accessible</li>
+        <li><i class="fa fa-check-circle" aria-hidden="true"></i> CTest configured <span class="gs-badge">CDash path only</span></li>
+        <li><i class="fa fa-check-circle" aria-hidden="true"></i> CDash account or build URL <span class="gs-badge">CDash path only</span></li>
+        <li><i class="fa fa-check-circle" aria-hidden="true"></i> A modern browser (Chrome or Firefox recommended)</li>
+      </ul>
+      <div class="gs-callout gs-callout--note">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+        <div><strong>Note:</strong> clang-tidy is commonly distributed with LLVM/Clang packages. Some systems may install it as a separate package. See the <a href="https://clang.llvm.org/extra/clang-tidy/">clang-tidy docs</a> for installation details.</div>
+      </div>
+    </section>
+
+    <!-- Setting up your project -->
+    <section id="setup" class="gs-section">
+      <h2>Setting up your project</h2>
+      <p>The visualizer needs metric data produced from your project. The fastest path is uploading a local metrics file. For recurring builds or CI workflows, connect a CDash build.</p>
+
+      <!-- Summary cards -->
+      <div class="gs-path-cards">
+        <div class="gs-path-card">
+          <h4>Local file upload</h4>
+          <p class="gs-path-card-best"><strong>Best for:</strong> Quick testing, one-time analysis, local experimentation</p>
+          <ol>
+            <li>Generate clang-tidy output</li>
+            <li>Save the metrics file</li>
+            <li>Upload it to the visualizer</li>
+          </ol>
         </div>
-        
-        <h1>Setup your project for metric visualization</h1>
-        <p>Welcome! This guide will quickly walk you through getting your project setup to produce output used for metric visualizations</p>
-
-        ---
-
-        <h2>Prerequisites</h2>
-        
-        <div class="metric-guide-step">
-            <ul>
-                <li>A C/C++ project</li>
-                <li>CMake</li>
-                <li>run-clang-tidy</li>
-            </ul>
-            <p>Note: run-clang-tidy is typically distributed as part of <a href=https://clang.llvm.org/extra/clang-tidy>clang-tidy</a> for use on compliation databases</p>
-            <p>Note: A CMake build system is assumed for use with CTest, CDash, and to obtain the compile_commands.json file run-clang-tidy consumes. However clang-tidy can be invoked on projects
-                using any build system if care is taken to produce a compatible clang tidy analysis output file.
-            </p>
+        <div class="gs-path-card">
+          <h4>CDash integration</h4>
+          <p class="gs-path-card-best"><strong>Best for:</strong> Recurring builds, CI workflows, persistent project dashboards</p>
+          <ol>
+            <li>Configure CMake/CTest</li>
+            <li>Submit results to CDash</li>
+            <li>Connect the CDash build URL</li>
+          </ol>
         </div>
+      </div>
 
-        <h2>Setting up your project</h2>
-        <div class="metric-guide-step">
-            <h3>Producing Metrics</h3>
-            <p>The files required for this software metric visualization are produced by running clang-tidy on a codebase (or single file). This can be done numerous ways, of which we will cover two here
-                but so long as a compatible clang-tidy output file is produced, the mechanism by which that file is generated is immaterial with regard to using this dashboard.
-            </p>
-            <h4>CTest && CDash</h4>
-            <p>CTest is one of the easiest ways to drive the production of a clang-tidy analysis output file.<br>
-                If you're not currently using CTest with your CMake system, no problem, you can configure a CTest dashboard client setup without needing to define any tests.
-            This <a href="http://github.com/johnwparent/corsa-metric-dashboard-submission-template/archive/refs/heads/main.tar.gz">template</a> contains CML code that can be copy and pasted into an existing CTest dashboard client script to produce clang-tidy output. If you're not already using
-            CDash for your CMake projects, follow the instructions below to set that up. <br>
-            Download that gist, replace the boilerplate entries that need replacing (should be denoted by @@ on either side of the token that needs replacing) append it to your dashboard script, and run `ctest -S &lt;script name&gt;.
-            This should upload a compatible clang-tidy output file to your CDash instance, and you're ready to use the dashboard.
+      <!-- Tabs -->
+      <div class="gs-tabs" role="tablist">
+        <button class="gs-tab-btn gs-tab-btn--active" data-tab="tab-option-a" role="tab" aria-selected="true">Local file upload</button>
+        <button class="gs-tab-btn" data-tab="tab-option-b" role="tab" aria-selected="false">CDash integration</button>
+      </div>
 
-            <h4>CMake Script Mode/Manual</h4>
-            <p>If you do not have an existing CTest/CDash configuration, you can easily produce the required clang-tidy output file by simply downloading the gist linked above,
-                running the CMake Language Code as a standalone script via `cmake -p` (after following the environmental setup instructions) and produce a compatible clang-tidy output file, which can be uploaded to the dashboard manually.
-            </p>
-             <p>Similarly, if you do not use CMake at all, you can run clang-tidy as you see fit, compose the output into a single file, and that should be compatible with this dashboard.</p>
-        </div>
-    
-        <h2>Setting Up A CDash project</h2>
-        <div class="metric-guide-step">
-            <p>CDash instances can be self hosted a number of ways, but we will only cover using my.cdash.org here, as it is a publically available CDash instance</p>
-            <p>To create an account and initial project on CDash, follow the getting started instructions <a href="https://www.cdash.org/hosting/">here</a>.
-            <br>
-            Once complete, you now have an established CDash project! Lets get some builds on there. To configure your CMake project to work with CDash, we create what is called a CTest Dashboard client script, this is
-            just a CMake Language script that CTest will execute and submit the results of to your CDash instance. <br>
-            For a very detailed description of what that entails, you can visit the <a href="https://cmake.org/cmake/help/latest/manual/ctest.1.html#dashboard-client-configuration">CMake Docs</a>, but for the purposes of this 
-            guide, we'll just be creating a very basic driver script.
-            <br>
-            From the landing page for your CDash project, click the setting tab in the upper right hand corner, and select the "project" dropdown option. From the project settings page, click the "Miscellaneous" tab. The first "setting"
-            should be one that says "Download CTest Config", and to the right should be a file url. Download that CML file, it will form the base of your dashboard submission script. 
-            You'll then want to download the gist linked above, and incorporate the rest of the CML code from that gist into your dasboard client script. 
-            Once that is done, you can simply run `ctest -S &lt;script name&gt;` and you should see CTest drive the configure, build, and upload to CDash from your project.
-        </div>
+      <!-- Option A -->
+      <div class="gs-tab-panel" id="tab-option-a" role="tabpanel">
+        <h3 id="option-a">Option A: Local file upload</h3>
+        <p class="gs-section-note">Best for quick testing or one-time analysis.</p>
 
-        <h2>Using the Metric Visualizer</h2>
-        <div class="metric-guide-step">
-            <h3>Providing Data</h3>
-            <p>The landing page of the visualizer contains a UI to provide the visualizer with the software analysis output it will use to create the visualization.
-                There are two options for uploading this information to the visualizer:
-                <ul>
-                    <li>Local File Upload</li>
-                    <li>CDash Build URL</li>
-                </ul>
-                To use the file upload, simply click the upload button or drag and drop the clang-tidy output file you produced to the UI element. Your software metrics should be rendered once the upload is complete.
-                <br>
-                Alternatively, if you are using CDash, and uploading your metric information as a file, you can simply provide the URL to the specific CDash build, and the dashboard will fetch and render
-                that software metric data, if any, included in the build.
-                <br>
-            </p>
-            <p>You can also provide the dashboard a CDash project url (the url for the CDash landing page for a project). The visualizer will then provide a calendar to select a range, or single date.
-                The dashboard will then fetch all available clang-tidy build metrics from those dates and render the data for each build within the given date range that has a valid clang-tidy output file.
-            </p>
-            <h3>Using the Dashboard</h3>
-            <p>Once the data has been loaded, you can begin to view it. To begin, the metrics are displayed per file, starting with the worst metric score, and descending to the best. Each data entry in the UI is a
-                clickable dropdown. Clicking the item will display a breakdown of sub-metrics that compose the larger score.
-                The top of the UI will contain the averages of each of these sub-metrics for the entirety of the project data that was uploaded.
-            </p>
-            <p>
-                There are two views, by file, and by function. By file is the default and will display the metrics for each file. The function view can be toggled via the "view" UI, and displays the metrics for each function, and associates the function with its file.
-            </p>
-            <p>The displayed functions/files can be filtered via the include and exclude filters. Including a string in one of these filters will display either only file names or function signatures containing that string or only those
-                not containing said string dependent on the selected filter.
-            </p>
-            <p>
-                The data can also be sorted, by default this is done on the cognitive-complexity metric, but can be switched to any of the available sub-metrics. The displayed sort order can also be toggled between ascending and descending.
-            </p>
-            <h3>Data Alternatives</h3>
-            <p>If you would like a dashboard that permanently points to your clang-tidy results, as they are available in CDash, you can simply use query parameters 
-                to construct the url to the dashboard like so <br>
-                <pre>https://corsa.center/dashboard/explore/project-metrics/metrics/index.html?bid=3127130&cdash=my.cdash.org</pre>
-                using the <pre>bid</pre> parameter to specify a CDash build ID and <pre>cdash</pre> to specify the url to your CDash instance.
-                This can be a convenient way to display CI pipeline results or to include the metrics for a given release or main branch as part of a release or readme.
-            </p>
+        <div class="gs-steps">
+          <div class="gs-step">
+            <div class="gs-step-num">1</div>
+            <div class="gs-step-body">
+              <h4>Build or configure your project</h4>
+              <p>Prepare your C/C++ project using your usual build workflow.</p>
+              <pre class="gs-code"><code>cmake -S . -B build
+cmake --build build</code></pre>
+            </div>
+          </div>
+
+          <div class="gs-step">
+            <div class="gs-step-num">2</div>
+            <div class="gs-step-body">
+              <h4>Generate clang-tidy output</h4>
+              <p>Run clang-tidy or your configured analysis workflow to generate metrics output.</p>
+              <pre class="gs-code"><code>clang-tidy path/to/file.cpp -- -Iinclude</code></pre>
+              <p>For whole-project analysis, use <code class="gs-inline-code">run-clang-tidy</code> with your compile commands database:</p>
+              <pre class="gs-code"><code>run-clang-tidy -p build/ 2&gt;&amp;1 | tee metrics.out</code></pre>
+            </div>
+          </div>
+
+          <div class="gs-step">
+            <div class="gs-step-num">3</div>
+            <div class="gs-step-body">
+              <h4>Save the output file</h4>
+              <p>Save the generated output as a <code class="gs-inline-code">.out</code> or <code class="gs-inline-code">.txt</code> file. This is the file you will upload to the visualizer.</p>
+            </div>
+          </div>
+
+          <div class="gs-step">
+            <div class="gs-step-num">4</div>
+            <div class="gs-step-body">
+              <h4>Upload to the visualizer</h4>
+              <p>Open the Metric Visualizer, choose <strong>I have metrics file</strong>, and drag-and-drop or select your output file. Metrics will render immediately — no data leaves your browser.</p>
+            </div>
+          </div>
         </div>
-    
-    </div>
-</main>
+      </div>
+
+      <!-- Option B -->
+      <div class="gs-tab-panel gs-tab-panel--hidden" id="tab-option-b" role="tabpanel">
+        <h3 id="option-b">Option B: CDash integration</h3>
+        <p class="gs-section-note">Best for recurring builds and CI workflows.</p>
+
+        <div class="gs-steps">
+          <div class="gs-step">
+            <div class="gs-step-num">1</div>
+            <div class="gs-step-body">
+              <h4>Set up a CDash project</h4>
+              <p>Create a project on <a href="https://my.cdash.org">my.cdash.org</a> (or self-host). From your project's settings page, download the CTest config file — it becomes the base of your dashboard script.</p>
+            </div>
+          </div>
+
+          <div class="gs-step">
+            <div class="gs-step-num">2</div>
+            <div class="gs-step-body">
+              <h4>Configure CMake/CTest</h4>
+              <p>Download the <a href="https://github.com/johnwparent/corsa-metric-dashboard-submission-template/archive/refs/heads/main.tar.gz">submission template</a> and append it to your dashboard client script, replacing the <code class="gs-inline-code">@@TOKEN@@</code> placeholders with your project values.</p>
+              <pre class="gs-code"><code># Run your CTest dashboard script
+ctest -S dashboard.cmake</code></pre>
+            </div>
+          </div>
+
+          <div class="gs-step">
+            <div class="gs-step-num">3</div>
+            <div class="gs-step-body">
+              <h4>Submit results to CDash</h4>
+              <p>Run the dashboard script to configure, build, and upload clang-tidy results to your CDash instance. Confirm the build appears in your CDash project dashboard.</p>
+            </div>
+          </div>
+
+          <div class="gs-step">
+            <div class="gs-step-num">4</div>
+            <div class="gs-step-body">
+              <h4>Connect the CDash build URL</h4>
+              <p>Open the Metric Visualizer, choose <strong>I have CDash URL</strong>, and paste the URL of your CDash build. The visualizer will fetch and render any attached clang-tidy metrics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Generate clang-tidy output -->
+    <section id="generate-output" class="gs-section">
+      <h2>Generate clang-tidy output</h2>
+      <p>The visualizer expects clang-tidy analysis output that includes project, file, or function-level metrics enabled by the <code class="gs-inline-code">readability-function-cognitive-complexity</code> and <code class="gs-inline-code">readability-function-size</code> checks.</p>
+
+      <div class="gs-callout gs-callout--warning">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <div><strong>Warning:</strong> Large projects may take longer to analyze depending on the number of files and build configuration. Consider running analysis on a subset of files first.</div>
+      </div>
+      <div class="gs-callout gs-callout--tip">
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+        <div><strong>Tip:</strong> If you want results to persist over time and be comparable across builds, use the CDash workflow instead of one-time file upload.</div>
+      </div>
+    </section>
+
+    <!-- Using the Metric Visualizer -->
+    <section id="using-visualizer" class="gs-section">
+      <h2>Using the Metric Visualizer</h2>
+
+      <h3 id="providing-data">Providing Data</h3>
+      <p>The visualizer supports three data input methods:</p>
+      <ul class="gs-feature-list">
+        <li><strong>Local file upload</strong> — Drag and drop or select your clang-tidy output file. No data is sent to any server.</li>
+        <li><strong>CDash build URL</strong> — Paste the URL of a specific CDash build. The visualizer fetches and renders any clang-tidy metrics attached to that build.</li>
+        <li><strong>CDash project URL</strong> — Provide your CDash project's landing page URL and select a date range. All builds with clang-tidy output in that period are loaded.</li>
+      </ul>
+
+      <h3 id="using-dashboard">Using the Dashboard</h3>
+      <p>Once data is loaded, metrics are displayed per file (default), sorted by worst cognitive complexity score descending. Each entry is a collapsible row — click any row to see a breakdown of sub-metrics.</p>
+      <ul class="gs-feature-list">
+        <li><strong>File view / Function view</strong> — Toggle between per-file and per-function displays using the View control.</li>
+        <li><strong>Filters</strong> — Use the include/exclude filters to show only files or functions matching a name or path fragment.</li>
+        <li><strong>Sort</strong> — Sort by cognitive complexity or any sub-metric, ascending or descending.</li>
+      </ul>
+
+      <h3 id="data-alternatives">Data Alternatives</h3>
+      <p>For a permanent deep-link to a specific CDash build's metrics, use query parameters to construct a direct URL:</p>
+      <pre class="gs-code"><code>https://corsa.center/dashboard/explore/project-metrics/metrics/?bid=3127130&amp;cdash=my.cdash.org</code></pre>
+      <p>Use <code class="gs-inline-code">bid</code> to specify a CDash build ID and <code class="gs-inline-code">cdash</code> to specify your CDash instance hostname. This is useful for embedding CI pipeline results in a README or release page.</p>
+    </section>
+
+    <!-- Next steps -->
+    <section id="next-steps" class="gs-section">
+      <h2>Next steps</h2>
+      <p>Once your data is ready, open the visualizer to explore project summary metrics, charts, and detailed file or function results.</p>
+      <div class="gs-bottom-actions">
+        <a href="{{ '/explore/project-metrics/metrics/' | relative_url }}" class="gs-btn-primary">Open metric visualizer</a>
+        <a href="{{ '/explore/project-metrics/' | relative_url }}" class="gs-link-back">Back to main page</a>
+      </div>
+    </section>
+
+  </div><!-- /.gs-content -->
+</div><!-- /.gs-layout -->
+
+<script>
+(function () {
+  document.querySelectorAll('.gs-tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var tabId = btn.dataset.tab;
+      document.querySelectorAll('.gs-tab-btn').forEach(function (b) {
+        b.classList.remove('gs-tab-btn--active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.gs-tab-panel').forEach(function (p) {
+        p.classList.add('gs-tab-panel--hidden');
+      });
+      btn.classList.add('gs-tab-btn--active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById(tabId).classList.remove('gs-tab-panel--hidden');
+    });
+  });
+}());
+</script>
