@@ -17,15 +17,15 @@
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
-      "data": "<p><strong>Enhanced License Detection:</strong> \u2713</p>\n<p class=\"sub-detail\">License: MIT</p>\n<p class=\"sub-detail\">Category: Permissive</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> Not yet collected</p>\n<p><strong>OSI License Validation:</strong> Yes \u2713</p>\n<p><strong>License Exception Handling:</strong> Not yet collected</p>\n<p><strong>FAIR Metadata Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 2/5</p>"
+      "data": "<p><strong>Enhanced License Detection:</strong> \u2717</p>\n<p class=\"sub-detail\">License: Unknown</p>\n<p class=\"sub-detail\">Category: None</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> Not yet collected</p>\n<p><strong>OSI License Validation:</strong> Unknown \u2717</p>\n<p><strong>License Exception Handling:</strong> Not yet collected</p>\n<p><strong>FAIR Metadata Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 1 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 326 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Inactive \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> v0.1.0 (654 days ago), 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 8 (bus factor: 3)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 2/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 0 commits (52 weeks) \u2717</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Unknown \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> v0.1.0 (661 days ago), 0/yr \u2717</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 1/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
-      "data": "<p><strong>Response Time Tracking:</strong> 169 hours \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> 591 hours \u2713</p>\n<p><strong>Pull Request Flow Assessment:</strong> 88% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 1.50 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 268 hours</p>\n<p><strong>Score:</strong> 3/7</p>"
+      "data": "<p><strong>Response Time Tracking:</strong> None \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> None \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> None \u2717</p>\n<p><strong>Support Request Closure Analysis:</strong> None \u2717</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/7</p>"
     },
     "4.2.5": {
       "title": "Outreach",
@@ -59,7 +59,7 @@
     },
     "4.3.2": {
       "title": "Development Practices",
-      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 0/5 \u2717</p>\n<p><strong>Testing Framework Excellence:</strong> Not yet collected</p>\n<p><strong>Code Review Quality Analysis:</strong> Not yet collected</p>\n<p><strong>Development Tool Integration:</strong> Not yet collected</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 0/6 \u2717</p>\n<p><strong>Testing Framework Excellence:</strong> Not yet collected</p>\n<p><strong>Code Review Quality Analysis:</strong> Not yet collected</p>\n<p><strong>Development Tool Integration:</strong> Not yet collected</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.3": {
       "title": "Reproducibility",
@@ -71,7 +71,7 @@
     },
     "4.3.5": {
       "title": "Accessibility",
-      "data": "<p><strong>Portable Build System Detection:</strong> \u2713</p><p class=\"sub-detail\">CMake</p>\n<p><strong>Container Availability Assessment:</strong> \u2717</p>\n<p><strong>Architecture Compatibility Analysis:</strong> Not yet collected</p>\n<p><strong>Platform Documentation Evaluation:</strong> Not yet collected</p>\n<p><strong>Deployment Environment Testing:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>Portable Build System Detection:</strong> \u2717</p>\n<p><strong>Container Availability Assessment:</strong> \u2717</p>\n<p><strong>Architecture Compatibility Analysis:</strong> Not yet collected</p>\n<p><strong>Platform Documentation Evaluation:</strong> Not yet collected</p>\n<p><strong>Deployment Environment Testing:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.6": {
       "title": "Maintainability and Understandability",

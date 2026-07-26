@@ -21,11 +21,11 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 558 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 0 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> v1.3.0 (59 days ago), 3/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 19 (bus factor: 1)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 4/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 574 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 1 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> v1.3.0 (66 days ago), 3/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 19 (bus factor: 1)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 4/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
-      "data": "<p><strong>Response Time Tracking:</strong> 6221 hours \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> 24406 hours \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> 90% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 0.08 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 22 hours</p>\n<p><strong>Score:</strong> 2/7</p>"
+      "data": "<p><strong>Response Time Tracking:</strong> 1165 hours \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> 2752 hours \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> 90% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 1.33 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 44 hours</p>\n<p><strong>Score:</strong> 2/7</p>"
     },
     "4.2.5": {
       "title": "Outreach",
@@ -59,7 +59,7 @@
     },
     "4.3.2": {
       "title": "Development Practices",
-      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 5/6 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> Not yet collected</p>\n<p><strong>Code Review Quality Analysis:</strong> Not yet collected</p>\n<p><strong>Development Tool Integration:</strong> Not yet collected</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 4/6 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> Not yet collected</p>\n<p><strong>Code Review Quality Analysis:</strong> Not yet collected</p>\n<p><strong>Development Tool Integration:</strong> Not yet collected</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.3.3": {
       "title": "Reproducibility",

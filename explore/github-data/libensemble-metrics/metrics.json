@@ -21,11 +21,11 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 451 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 1 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> v1.6.0 (136 days ago), 1/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 18 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 3/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 455 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 5 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> v1.6.1 (5 days ago), 2/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 18 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 3/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
-      "data": "<p><strong>Response Time Tracking:</strong> 1891 hours \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> 5471 hours \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> 67% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 0.50 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 69 hours</p>\n<p><strong>Score:</strong> 2/7</p>"
+      "data": "<p><strong>Response Time Tracking:</strong> 9262 hours \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> 5471 hours \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> 67% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 0.33 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 104 hours</p>\n<p><strong>Score:</strong> 2/7</p>"
     },
     "4.2.5": {
       "title": "Outreach",
@@ -63,7 +63,7 @@
     },
     "4.3.3": {
       "title": "Reproducibility",
-      "data": "<p><strong>FAIR4RS Compliance Assessment:</strong> \u2717</p>\n<p><strong>Containerization Excellence:</strong> \u2717</p>\n<p><strong>Version Control Best Practices:</strong> \u2713</p><p class=\"sub-detail\">v1.6.0, v1.5.0</p>\n<p><strong>Environment Management:</strong> \u2717</p>\n<p><strong>Reproducibility Documentation:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>FAIR4RS Compliance Assessment:</strong> \u2717</p>\n<p><strong>Containerization Excellence:</strong> \u2717</p>\n<p><strong>Version Control Best Practices:</strong> \u2713</p><p class=\"sub-detail\">v1.6.1, v1.6.0</p>\n<p><strong>Environment Management:</strong> \u2717</p>\n<p><strong>Reproducibility Documentation:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.3.4": {
       "title": "Usability",
