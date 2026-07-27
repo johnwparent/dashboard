@@ -69,6 +69,7 @@
             "xiaoyeli/superlu",
             "xiaoyeli/superlu_mt",
             "uo-oaciss/tau2",
+            "multilevel-nn/torchbraid",
             "trilinos/trilinos",
             "visit-dav/visit",
             "viskores/viskores",
