@@ -1500,16 +1500,6 @@
             "login": "jmlarson1",
             "name": "Jeffrey Larson"
         },
-        "joewallwork": {
-            "avatarUrl": "https://avatars.githubusercontent.com/u/22053413?u=6ed1ffb2cda2e0f4bedc0799e92289817f038aab&v=4",
-            "contributedLabRepositories": {
-                "nodes": [
-                    "petsc/petsc"
-                ]
-            },
-            "login": "joewallwork",
-            "name": "Joe Wallwork"
-        },
         "johannrudi": {
             "avatarUrl": "https://avatars.githubusercontent.com/u/5181827?u=d4e30fccacf917a7e553b2577fc4fd967484433a&v=4",
             "contributedLabRepositories": {
