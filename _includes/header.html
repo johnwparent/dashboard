@@ -1,61 +1,55 @@
-<nav id="header-slim" class="navbar navbar-default">
+<header class="site-header">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Corsa home">
+    <img src="{{ 'assets/images/logos/corsa-logo.png' | relative_url }}" alt="Corsa" />
+  </a>
 
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <a href="https://corsa.center" id="logo" class="pull-left">
-        <img src="{{ 'assets/images/logos/corsa-logo.png' | relative_url }}" alt="CASS" style="max-height: 50px;"/>
-      </a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <div id="catalog"
+      {% if page.url == "/catalog/" or page.url == "/" %} class="nav-item active"
+      {% else %} class="nav-item"
+      {% endif %}>
+      <a href="{{ 'catalog' | relative_url }}">Catalog</a>
     </div>
 
-    <div id="siteNavbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right navbar-collapse">
-        <li id="catalog"
-            {% if page.url == "/catalog/" or page.url == "/" %} class="active dropdown"
-            {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="{{ 'catalog' | relative_url }}">Catalog</a>
-        </li>
-        <li id="explore"
-            {% if page.url == "/explore/" %} class="active dropdown"
-            {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="{{ 'explore' | relative_url }}">Explore</a>
-          <div class="dropdown-content">
-            <p><a class="navbar-normal" href="{{ 'explore/dependencies' | relative_url }}">Dependencies</a></p>
-            <p><a class="navbar-normal" href="{{ 'explore/spack-dependencies' | relative_url }}">Spack Dependencies</a></p>
-            <!--p><a class="navbar-normal" href="{{ 'explore/popular-repos' | relative_url }}">Popular Repositories</a></p-->
-            <p><a class="navbar-normal" href="{{ 'explore/project-metrics' | relative_url }}">Project Metric Visualizer</a></p>
-            <p><a class="navbar-normal" href="{{ 'explore/dependents' | relative_url }}">Project Dependent Visualizer</a></p>
-          </div>
-        </li>
-        <li id="about"
-            {% if page.url == "/about/" %} class="active dropdown"
-            {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="{{ 'about' | relative_url }}">About</a>
-          <div class="dropdown-content">
-            <p><a class="navbar-normal" href="{{ 'about/faq' | relative_url }}">FAQ</a></p>
-            <p><a class="navbar-normal" href="{{ 'about/licenses' | relative_url }}">Licenses Guide</a></p>
-          </div>
-        </li>                
-        <li id="news"
-            {% if page.url == "/news/" %} class="active dropdown"
-            {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="{{ 'news' | relative_url }}">News</a>
-          <div class="dropdown-content">
-            <p><a class="navbar-normal" href="{{ 'news/archive' | relative_url }}">Archive</a></p>
-          </div>
-        </li>
-        <li id="github-button"><a href="https://github.com/cass-community"><span class="fa fa-github fa-lg"></span></a></li>
-        <li id="twitter-button"><a href="https://twitter.com/{{site.twitter.username}}"><span class="fa fa-twitter fa-lg"></span></a></li>
-      </ul>
+    <div id="explore"
+      {% if page.url contains "/explore/" %} class="nav-item active has-dropdown"
+      {% else %} class="nav-item has-dropdown"
+      {% endif %}>
+      <a href="{{ 'explore' | relative_url }}">Explore</a>
+      <div class="site-dropdown" aria-label="Explore menu">
+        <a {% if page.url contains "/explore/dependencies/" %}class="active"{% endif %} href="{{ 'explore/dependencies' | relative_url }}">Dependencies</a>
+        <a {% if page.url contains "/explore/spack-dependencies/" %}class="active"{% endif %} href="{{ 'explore/spack-dependencies' | relative_url }}">Spack Dependencies</a>
+        <a {% if page.url contains "/explore/project-metrics/" %}class="active"{% endif %} href="{{ 'explore/project-metrics' | relative_url }}">Project Metric Visualizer</a>
+        <a {% if page.url contains "/explore/dependents/" %}class="active"{% endif %} href="{{ 'explore/dependents' | relative_url }}">Project Dependent Visualizer</a>
+      </div>
     </div>
 
-  </div>
-</nav>
+    <div id="about"
+      {% if page.url contains "/about/" %} class="nav-item active has-dropdown"
+      {% else %} class="nav-item has-dropdown"
+      {% endif %}>
+      <a href="{{ 'about' | relative_url }}">About</a>
+      <div class="site-dropdown" aria-label="About menu">
+        <a {% if page.url contains "/about/faq/" %}class="active"{% endif %} href="{{ 'about/faq' | relative_url }}">FAQ</a>
+        <a {% if page.url contains "/about/licenses/" %}class="active"{% endif %} href="{{ 'about/licenses' | relative_url }}">Licenses Guide</a>
+      </div>
+    </div>
 
-<span id="forkongithub"><a alt="Fork me on GitHub" title="Fork me on GitHub" href="{{site.repo_url}}" target="_blank">Fork me on GitHub</a></span>
+    <div id="news"
+      {% if page.url contains "/news/" %} class="nav-item active has-dropdown"
+      {% else %} class="nav-item has-dropdown"
+      {% endif %}>
+      <a href="{{ 'news' | relative_url }}">News</a>
+      <div class="site-dropdown" aria-label="News menu">
+        <a {% if page.url contains "/news/archive/" %}class="active"{% endif %} href="{{ 'news/archive' | relative_url }}">Archive</a>
+      </div>
+    </div>
 
+    <a class="icon-link" href="https://github.com/cass-community" aria-label="GitHub">
+      <img src="{{ 'assets/images/github-icon.svg' | relative_url }}" alt="" aria-hidden="true" />
+    </a>
+    <a class="icon-link" href="https://twitter.com/{{ site.twitter.username }}" aria-label="Twitter">
+      <span class="fa fa-twitter fa-lg" aria-hidden="true"></span>
+    </a>
+  </nav>
+</header>

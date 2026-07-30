@@ -10,6 +10,12 @@ redirect_to: catalog/?category=all
   window.location.replace("{{ 'catalog/?category=all' | relative_url }}");
 </script>
 
+<p class="page-title">
+  Opening the catalog...
+  <br />
+  <a href="{{ 'catalog/?category=all' | relative_url }}">Continue to the catalog</a>
+</p>
+
 <noscript>
   <p class="page-title">
     Welcome to the CORSA sustainability dashboard—a hub for showcasing the sustainability of scientific open source projects.<br />

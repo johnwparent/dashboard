@@ -25,8 +25,13 @@
         get phDesc() { return document.getElementById('ph-desc'); },
         get phDeps() { return document.getElementById('ph-stat-deps'); },
         get phOrgs() { return document.getElementById('ph-stat-orgs'); },
+        get infoFile() { return document.getElementById('dv-info-file'); },
+        get infoVersion() { return document.getElementById('dv-info-version'); },
+        get infoUpdated() { return document.getElementById('dv-info-updated'); },
+        get infoFormat() { return document.getElementById('dv-info-format'); },
         
         get listSort() { return document.getElementById('list-sort-select'); },
+        get listSearch() { return document.getElementById('list-search-input'); },
         get listDepth() { return document.getElementById('list-depth-select'); },
         get toggleGroupOrg() { return document.getElementById('toggle-group-org'); },
         get toggleLeafNodes() { return document.getElementById('toggle-leaf-nodes'); },
@@ -45,6 +50,7 @@
         get btnRadial() { return document.getElementById('btn-view-radial'); },
         
         get citationsContainer() { return document.getElementById('citations-container'); },
+        get citationCount() { return document.getElementById('dv-citation-count'); },
         
         get inspEmpty() { return document.getElementById('inspector-empty'); },
         get inspContent() { return document.getElementById('inspector-content'); },
@@ -248,6 +254,7 @@
         
         if(els.phTitle) els.phTitle.textContent = root.label;
         if(els.phDesc) els.phDesc.textContent = root.data.description || root.data.originUrl;
+        updateProjectInfoTooltip(root);
         
         const consumers = rawGraphData.nodes.filter(n => n.type === 'consumer');
         if(els.phDeps) els.phDeps.textContent = consumers.length;
@@ -268,6 +275,20 @@
         if(els.inspEmpty) els.inspEmpty.style.display = 'block';
         if(els.inspContent) els.inspContent.style.display = 'none';
         currentSelectedNodeId = null;
+    }
+
+    function formatInfoDate(value) {
+        const date = value ? new Date(value) : null;
+        if (!date || isNaN(date)) return '-';
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+    }
+
+    function updateProjectInfoTooltip(root) {
+        const d = root.data || {};
+        if (els.infoFile) els.infoFile.textContent = `${root.label || 'project'}-dependents.json`;
+        if (els.infoVersion) els.infoVersion.textContent = d.version || d.versionInfo || d.releaseVersion || d.tag || 'v0.5.5';
+        if (els.infoUpdated) els.infoUpdated.textContent = formatInfoDate(d.lastUpdate || d.updated || d.generatedAt || '2026-03-03');
+        if (els.infoFormat) els.infoFormat.textContent = 'JSON';
     }
 
     window.setGraphLayout = function(layout) {
@@ -300,9 +321,19 @@
         }
 
         const sortBy = els.listSort ? els.listSort.value : 'stars';
+        const searchTerm = els.listSearch ? els.listSearch.value.trim().toLowerCase() : '';
         const maxDepth = els.listDepth ? parseInt(els.listDepth.value) : 10;
         
         let nodes = rawGraphData.nodes.filter(n => n.type === 'consumer' && n.data.depth <= maxDepth);
+
+        if (searchTerm) {
+            nodes = nodes.filter(n => {
+                const owner = (n.data.packageOwner || '').toLowerCase();
+                const label = (n.label || '').toLowerCase();
+                return label.includes(searchTerm) || owner.includes(searchTerm);
+            });
+            listLimit = Math.max(listLimit, LIST_INCREMENT);
+        }
         
         if (els.toggleLeafNodes && els.toggleLeafNodes.checked) {
             nodes = nodes.filter(n => {
@@ -349,6 +380,8 @@
             visibleNodes.forEach(n => html += buildTableRow(n));
         }
 
+        if (!html) html = `<tr><td colspan="5" class="dv-empty-table-message">No matching packages or owners found.</td></tr>`;
+
         els.tableBody.innerHTML = html;
         if(els.listLoadMore) els.listLoadMore.style.display = listLimit < nodes.length ? 'block' : 'none';
     }
@@ -370,7 +403,7 @@
         
         return `
             <tr onclick="inspectNode('${n.id}')" style="${currentSelectedNodeId === n.id ? 'background: #1a1a1a;' : ''}">
-                <td style="font-weight: bold; color: #007bff;">${n.label} ${isFork} ${isLeaf}</td>
+                <td class="dv-package-cell">${n.label} ${isFork} ${isLeaf}</td>
                 <td>${d.packageOwner}</td>
                 <td>L${d.depth}</td>
                 <td>${d.stars || 0}</td>
@@ -546,6 +579,10 @@
         cy.animate({ fit: { padding: 50 }, duration: 400 });
     };
 
+    window.exploreNode = function() {
+        if (currentSelectedNodeId) focusNodeInGraph(currentSelectedNodeId);
+    };
+
     window.exportImage = function() {
         if(!cy || currentDisplayMode !== 'graph') return;
         const b64 = cy.png({ full: true, scale: 2, bg: '#121212' });
@@ -665,9 +702,13 @@
         });
         
         let html = '';
-        for (let doi in papersMap) {
-            const data = papersMap[doi];
-            
+        const paperEntries = Object.entries(papersMap);
+        if (els.citationCount) {
+            const label = paperEntries.length === 1 ? 'publication found' : 'publications found';
+            els.citationCount.textContent = `${paperEntries.length} ${label}`;
+        }
+
+        for (let [doi, data] of paperEntries) {
             let usagesHtml = data.usages.map(node => {
                 let pathArr = [];
                 let currId = node.id;
@@ -682,18 +723,14 @@
                     loops--;
                 }
                 
-                let pathStr = pathArr.join(' <span style="color: #666; margin: 0 4px;">→</span> ');
+                let pathStr = pathArr.join(' <span class="dv-chain-arrow">→</span> ');
 
                 return `
-                <li style="background: #252526; padding: 15px; border-radius: 6px; border: 1px solid #333; margin-bottom: 10px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <span style="color: #007bff; font-weight: bold; font-size: 1.1rem;">${node.label}</span>
-                        <button class="dv-btn-small" onclick="focusNodeInGraph('${node.id}')">View in Graph</button>
+                <li class="dv-cited-by">
+                    <div class="dv-cited-by-chain">
+                        <div>${node.label} <span class="dv-chain-arrow">|</span> Dependency chain: ${pathStr || node.label}</div>
                     </div>
-                    <div style="font-size: 0.95rem; color: #ccc;">
-                        <span style="color: #888; text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 4px;">Dependency Chain:</span>
-                        <div style="font-family: monospace; font-size: 1rem;">${pathStr}</div>
-                    </div>
+                    <button class="dv-btn-small" onclick="focusNodeInGraph('${node.id}')">View in graph</button>
                 </li>`;
             }).join('');
 
@@ -701,12 +738,13 @@
             <div class="dv-citation-card">
                 <h4 class="dv-citation-title">${data.paper.title}</h4>
                 <div class="dv-citation-meta"><strong>Journal:</strong> ${data.paper.journal} | <strong>DOI:</strong> ${doi}</div>
-                <div style="margin-top: 10px; margin-bottom: 20px;">
-                    <a href="${data.paper.url || data.paper.joss_pdf || ('https://doi.org/' + doi)}" target="_blank" class="dv-btn-small" style="text-decoration: none; display: inline-block;">Read Original Paper</a>
+                <div class="dv-citation-actions">
+                    <a href="${data.paper.url || data.paper.joss_pdf || ('https://doi.org/' + doi)}" target="_blank">Read Original Paper</a>
+                    <button class="dv-copy-doi" type="button" onclick="navigator.clipboard.writeText('${doi}')">Copy DOI</button>
                 </div>
-                <div>
-                    <strong style="font-size: 1rem; color: #fff; display: block; margin-bottom: 10px;">Cited by Downstream Consumers:</strong>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
+                <div class="dv-citation-consumers">
+                    <strong>CITED BY DOWNSTREAM CONSUMERS</strong>
+                    <ul>
                         ${usagesHtml}
                     </ul>
                 </div>

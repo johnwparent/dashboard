@@ -8,7 +8,7 @@ layout: compress
     {% include head.html %}
   </head>
 
-  <body class="static-text">
+  <body class="static-text{% if page.body_class %} {{ page.body_class }}{% endif %}">
     {% include header.html %}
 
     <!-- prettier-ignore -->
