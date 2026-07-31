@@ -2,8 +2,8 @@ name: Run data update
 
 on:
    workflow_dispatch:
-   schedule:
-     - cron: "0 2 * * *"  # Run daily at 2:00 AM UTC
+  #  schedule:
+  #    - cron: "0 2 * * *"  # Run daily at 2:00 AM UTC
   
 jobs:
   update:
