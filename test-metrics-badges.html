@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metrics Badge Layout - HDF5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f7fa;
+    }
+
+    /* ── Repo header (unchanged from existing design) ── */
+    .page-header { margin-top: 20px; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+    .title { font-size: 32px; font-weight: 600; color: #0366d6; text-decoration: none; }
+    .title:hover { text-decoration: underline; }
+    .subtitle { font-size: 16px; color: #586069; text-decoration: none; margin: 0 15px; }
+    .subtitle:hover { color: #0366d6; }
+    .stats { margin: 20px 0; }
+    .stats a { color: #586069; text-decoration: none; margin: 0 15px; font-size: 14px; }
+    .stats a:hover { color: #0366d6; }
+    blockquote {
+      padding: 15px 20px; margin: 20px auto; max-width: 800px;
+      border-left: 4px solid #dfe2e5; background: #f6f8fa;
+      color: #586069; font-size: 16px; text-align: center;
+    }
+    .text-center { text-align: center; }
+
+    /* ── Metrics container ── */
+    .metrics-container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+
+    .metrics-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    /* ── Dimension card ── */
+    .dimension {
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .dimension-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      cursor: default;
+    }
+
+    .dimension-icon { font-size: 20px; }
+
+    .dimension-header h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .impact-header      { background: linear-gradient(135deg, #5f27cd 0%, #a29bfe 100%); }
+    .sustainability-header { background: linear-gradient(135deg, #0c7e57 0%, #6ee7b7 100%); }
+    .quality-header     { background: linear-gradient(135deg, #0284c7 0%, #7dd3fc 100%); }
+
+    .dimension-header { cursor: pointer; }
+    .dimension-header:hover { filter: brightness(1.05); }
+
+    /* accordion toggle arrow */
+    .accordion-arrow {
+      margin-left: 8px;
+      font-size: 12px;
+      opacity: 0.8;
+      transition: transform 0.2s ease;
+    }
+    .dimension.collapsed .accordion-arrow { transform: rotate(-90deg); }
+    .dimension.collapsed .chip-grid,
+    .dimension.collapsed .detail-panel,
+    .dimension.collapsed .no-data-note { display: none; }
+
+    .header-legend { display: none; }
+
+    /* ── Chip grid ── */
+    .chip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 8px;
+      padding: 16px 20px;
+    }
+
+    /* ── Individual chip (card style) ── */
+    .chip {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px 11px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: default;
+      border: 1.5px solid transparent;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+      user-select: none;
+    }
+
+    .chip.has-data {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: #166534;
+      cursor: pointer;
+    }
+    .chip.has-data:hover {
+      background: #dcfce7;
+      box-shadow: 0 2px 6px rgba(22,101,52,0.15);
+      transform: translateY(-1px);
+    }
+    .chip.has-data.active {
+      background: #bbf7d0;
+      border-color: #4ade80;
+      box-shadow: 0 0 0 3px rgba(74,222,128,0.2);
+    }
+
+    .chip.no-data {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+      color: #94a3b8;
+      cursor: not-allowed;
+    }
+
+    /* top row: number · title · score · chevron */
+    .chip-header {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .chip-num {
+      font-size: 10px;
+      font-weight: 700;
+      opacity: 0.65;
+      flex-shrink: 0;
+    }
+
+    .chip-label {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+    }
+
+    .chip-score {
+      flex-shrink: 0;
+      font-size: 10px;
+      font-weight: 700;
+      background: rgba(22,101,52,0.12);
+      color: #166534;
+      padding: 1px 5px;
+      border-radius: 10px;
+    }
+
+    .chip-expand {
+      font-size: 10px;
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+
+    /* bottom row: key facts */
+    .chip-facts {
+      font-size: 10.5px;
+      font-weight: 400;
+      color: #4d7c5a;
+      line-height: 1.4;
+      border-top: 1px solid rgba(22,101,52,0.12);
+      padding-top: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .chip.no-data .chip-facts {
+      color: #b0bec5;
+      border-top-color: #e2e8f0;
+      font-style: italic;
+    }
+
+    /* ── Detail panel ── */
+    .detail-panel {
+      display: none;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      padding: 16px 20px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #374151;
+      animation: slideDown 0.15s ease;
+    }
+
+    .detail-panel.visible { display: block; }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .detail-header {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .detail-content p { margin: 4px 0; }
+    .detail-content strong { color: #1e293b; }
+    .detail-content a { color: #0284c7; }
+
+    /* ── No-data summary line ── */
+    .no-data-note {
+      font-size: 11px;
+      color: #94a3b8;
+      padding: 0 20px 14px;
+      font-style: italic;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .chip { max-width: 100%; }
+      .header-legend { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Repo header -->
+  <h2 class="page-header text-center">
+    <a class="title" href="https://github.com/HDFGroup/hdf5" title="View Project on GitHub">hdf5</a>
+    <br>
+    <a class="subtitle" href="https://github.com/HDFGroup" title="View Owner on GitHub">
+      <span class="fa fa-user-circle"></span> HDFGroup
+    </a>
+    <span class="subtitle" title="Primary Language">
+      <span class="fa fa-code"></span> C
+    </span>
+    <a class="subtitle" href="https://opensource.org/licenses/BSD-3-Clause" title="BSD 3-Clause License">
+      <span class="fa fa-balance-scale"></span> BSD-3-Clause
+    </a>
+  </h2>
+
+  <p class="stats text-center">
+    <a href="https://github.com/HDFGroup/hdf5"><span class="fa fa-github"></span> GitHub Page</a>
+    <a href="https://github.com/HDFGroup/hdf5/stargazers"><span class="fa fa-star"></span> 523 stars</a>
+    <a href="https://github.com/HDFGroup/hdf5/network"><span class="fa fa-code-fork"></span> 234 forks</a>
+    <a href="https://www.hdfgroup.org/"><span class="fa fa-globe"></span> Project Website</a>
+  </p>
+
+  <blockquote>
+    HDF5 is a data model, library, and file format for storing and managing data.
+    It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O
+    and for high volume and complex data.
+  </blockquote>
+
+  <!-- Metrics section -->
+  <div class="metrics-container">
+    <h2 class="metrics-title">Metrics</h2>
+
+    <!-- 4.1 Impact -->
+    <div class="dimension">
+      <div class="dimension-header impact-header" onclick="toggleDimension(this)">
+        <span class="dimension-icon">📊</span>
+        <h3>4.1 Impact</h3>
+        <span class="fa fa-chevron-down accordion-arrow"></span>
+      </div>
+      <div class="chip-grid" id="impact-chips"></div>
+      <div class="detail-panel" id="impact-detail">
+        <div class="detail-header" id="impact-detail-title"></div>
+        <div class="detail-content" id="impact-detail-body"></div>
+      </div>
+      <div class="no-data-note" id="impact-no-data-note"></div>
+    </div>
+
+    <!-- 4.2 Sustainability -->
+    <div class="dimension">
+      <div class="dimension-header sustainability-header" onclick="toggleDimension(this)">
+        <span class="dimension-icon">♻️</span>
+        <h3>4.2 Sustainability</h3>
+        <span class="fa fa-chevron-down accordion-arrow"></span>
+      </div>
+      <div class="chip-grid" id="sustainability-chips"></div>
+      <div class="detail-panel" id="sustainability-detail">
+        <div class="detail-header" id="sustainability-detail-title"></div>
+        <div class="detail-content" id="sustainability-detail-body"></div>
+      </div>
+      <div class="no-data-note" id="sustainability-no-data-note"></div>
+    </div>
+
+    <!-- 4.3 Quality -->
+    <div class="dimension">
+      <div class="dimension-header quality-header" onclick="toggleDimension(this)">
+        <span class="dimension-icon">🏆</span>
+        <h3>4.3 Quality</h3>
+        <span class="fa fa-chevron-down accordion-arrow"></span>
+      </div>
+      <div class="chip-grid" id="quality-chips"></div>
+      <div class="detail-panel" id="quality-detail">
+        <div class="detail-header" id="quality-detail-title"></div>
+        <div class="detail-content" id="quality-detail-body"></div>
+      </div>
+      <div class="no-data-note" id="quality-no-data-note"></div>
+    </div>
+  </div>
+
+  <script>
+    // ── Metrics data (mirrors hdf5-metrics/metrics.json) ──────────────────────
+    const metrics = {
+      impact: {
+        "4.1.1": { title: "Software Citation and Adoption", short: "Citation & Adoption", data: null },
+        "4.1.2": { title: "Field Research Impact",          short: "Field Research",      data: null }
+      },
+      sustainability: {
+        "4.2.1": {
+          title: "Codes of Conduct, Governance, and Contributor Guidelines",
+          short: "CoC & Governance",
+          data: `<p><strong>Code of Conduct:</strong> <a href="https://github.com/HDFGroup/hdf5/blob/develop/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a></p>
+                 <p><strong>Governance:</strong> Not found</p>
+                 <p><strong>Contributing Guidelines:</strong> <a href="https://github.com/HDFGroup/hdf5/blob/develop/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+                 <p><strong>Score:</strong> 2/3</p>`
+        },
+        "4.2.2": {
+          title: "Open-Source Licensing and FAIR Compliance",
+          short: "Licensing & FAIR",
+          data: `<p><strong>License:</strong> Other</p>
+                 <p><strong>OSI Approved:</strong> Unknown</p>
+                 <p><strong>Compliance Score:</strong> 2/3 (67%)</p>
+                 <p>License file exists: ✓ &nbsp; License identified: ✓ &nbsp; OSI approved: ?</p>`
+        },
+        "4.2.3": {
+          title: "Active Maintenance",
+          short: "Active Maintenance",
+          data: `<p><strong>Status:</strong> Active</p>
+                 <p><strong>Last Commit:</strong> 0 days ago</p>
+                 <p><strong>Commits (52 weeks):</strong> 462 (51 active weeks)</p>
+                 <p><strong>Trend:</strong> Stable</p>
+                 <p><strong>Latest Release:</strong> 2.1.1 (20 days ago)</p>
+                 <p><strong>Releases (last year):</strong> 4</p>
+                 <p><strong>Contributors:</strong> 30 (bus factor: 2)</p>
+                 <p><strong>Score:</strong> 4/5 (80%)</p>`
+        },
+        "4.2.4":  { title: "Engagement",                          short: "Engagement",            data: null },
+        "4.2.5":  { title: "Outreach",                            short: "Outreach",              data: null },
+        "4.2.6":  { title: "Welcomeness",                         short: "Welcomeness",           data: null },
+        "4.2.7":  { title: "Collaboration",                       short: "Collaboration",         data: null },
+        "4.2.8":  { title: "Financial Sustainability",            short: "Financial",             data: null },
+        "4.2.9":  { title: "Institutional & Organizational Support", short: "Institutional Support", data: null },
+        "4.2.10": { title: "Project Longevity and Community Health", short: "Community Health",   data: null }
+      },
+      quality: {
+        "4.3.1": { title: "Reliability and Robustness",           short: "Reliability",           data: null },
+        "4.3.2": { title: "Development Practices",                short: "Dev Practices",         data: null },
+        "4.3.3": { title: "Reproducibility",                      short: "Reproducibility",       data: null },
+        "4.3.4": { title: "Usability",                            short: "Usability",             data: null },
+        "4.3.5": { title: "Accessibility",                        short: "Accessibility",         data: null },
+        "4.3.6": { title: "Maintainability and Understandability", short: "Maintainability",      data: null },
+        "4.3.7": { title: "Performance and Efficiency",           short: "Performance",           data: null }
+      }
+    };
+
+    // ── Extract score string (e.g. "80%" or "2/3") ───────────────────────────
+    function extractScore(html) {
+      if (!html) return null;
+      let m = html.match(/\((\d+)%\)/);
+      if (m) return m[1] + '%';
+      m = html.match(/Score:\s*(\d+\/\d+)/);
+      if (m) return m[1];
+      return null;
+    }
+
+    // ── Extract top key-value facts from data HTML ────────────────────────────
+    const SKIP_KEYS = new Set(['score', 'compliance score']);
+    function extractFacts(html, max) {
+      if (!html) return [];
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      const facts = [];
+      div.querySelectorAll('p').forEach(p => {
+        const strong = p.querySelector('strong');
+        if (!strong) return;
+        const key = strong.textContent.replace(':', '').trim();
+        if (SKIP_KEYS.has(key.toLowerCase())) return;
+        const val = p.textContent.replace(strong.textContent, '').trim();
+        if (!val) return;
+        // Shorten the key for display
+        const shortKey = key.replace('(52 weeks)', '').replace(' (last year)', '/yr').trim();
+        const shortVal = val.length > 22 ? val.slice(0, 20) + '…' : val;
+        facts.push(`${shortKey}: ${shortVal}`);
+      });
+      return facts.slice(0, max || 3);
+    }
+
+    // ── Render chips for one dimension ────────────────────────────────────────
+    function renderDimension(dimension, metricsObj) {
+      const grid       = document.getElementById(`${dimension}-chips`);
+      const panel      = document.getElementById(`${dimension}-detail`);
+      const panelTitle = document.getElementById(`${dimension}-detail-title`);
+      const panelBody  = document.getElementById(`${dimension}-detail-body`);
+      const noDataNote = document.getElementById(`${dimension}-no-data-note`);
+
+      let activeChip = null;
+      let pendingCount = 0;
+
+      Object.entries(metricsObj)
+        .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+        .forEach(([num, info]) => {
+          const hasData = !!info.data;
+          if (!hasData) pendingCount++;
+
+          const chip = document.createElement('div');
+          chip.className = `chip ${hasData ? 'has-data' : 'no-data'}`;
+          chip.title = info.title;
+
+          const score = extractScore(info.data);
+          const facts = hasData ? extractFacts(info.data) : [];
+          const factsText = facts.length ? facts.join(' · ') : 'Pending data collection';
+
+          chip.innerHTML =
+            `<div class="chip-header">` +
+              `<span class="chip-num">${num}</span>` +
+              `<span class="chip-label">${info.short}</span>` +
+              (score ? `<span class="chip-score">${score}</span>` : '') +
+              (hasData ? `<span class="chip-expand fa fa-chevron-down"></span>` : '') +
+            `</div>` +
+            `<div class="chip-facts">${factsText}</div>`;
+
+          if (hasData) {
+            chip.addEventListener('click', () => {
+              const opening = chip !== activeChip;
+
+              if (activeChip) {
+                activeChip.classList.remove('active');
+                const prev = activeChip.querySelector('.chip-expand');
+                if (prev) prev.className = 'chip-expand fa fa-chevron-down';
+              }
+
+              if (opening) {
+                activeChip = chip;
+                chip.classList.add('active');
+                chip.querySelector('.chip-expand').className = 'chip-expand fa fa-chevron-up';
+                panelTitle.textContent = `${num} ${info.title}`;
+                panelBody.innerHTML = info.data;
+                panel.classList.add('visible');
+              } else {
+                activeChip = null;
+                panel.classList.remove('visible');
+              }
+            });
+          }
+
+          grid.appendChild(chip);
+        });
+
+      if (pendingCount > 0) {
+        noDataNote.textContent =
+          `${pendingCount} metric${pendingCount > 1 ? 's' : ''} pending data collection`;
+      }
+    }
+
+    renderDimension('impact',         metrics.impact);
+    renderDimension('sustainability', metrics.sustainability);
+    renderDimension('quality',        metrics.quality);
+
+    function toggleDimension(header) {
+      header.closest('.dimension').classList.toggle('collapsed');
+    }
+  </script>
+</body>
+</html>

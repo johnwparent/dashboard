@@ -243,7 +243,8 @@ function renderSingleRepo(queryParam) {
 }
 
 /**
- * Load and display sustainability metrics for a repository
+ * Load and display sustainability metrics for a repository.
+ * Tries the new per-package CASS format first; falls back to the legacy flat format.
  * @param {string} repoName repository name (owner/repo format)
  */
 function loadSustainabilityMetrics(repoName) {
@@ -485,12 +486,28 @@ function renderSustainabilityMetrics(metrics) {
       if (opening) {
         card.classList.add('active');
         activeCard = card;
-        panel.querySelector('.pw-detail-title').textContent = `${itemNum}  ${itemDef ? itemDef.title : ''}`;
+        const titleEl = panel.querySelector('.pw-detail-title');
+        const sectionDesc = SECTION_DESCRIPTIONS[itemNum];
+        const titleText = `${itemNum} ${itemDef ? itemDef.title : ''}`;
+        if (sectionDesc) {
+          const sup = `<sup class="metric-help" tabindex="0" role="button" `
+            + `aria-label="About ${escapeAttr(titleText)}" `
+            + `data-desc="${escapeAttr(sectionDesc)}">?</sup>`;
+          titleEl.innerHTML = titleText + sup;
+          attachTooltipHandlers(titleEl);
+        } else {
+          titleEl.textContent = titleText;
+        }
 
         let bodyHTML = data || '';
         if (!data && itemDef && itemDef.subMetrics) {
-          bodyHTML = itemDef.subMetrics.map(sm => `<p class="pw-pending-sub">${sm}</p>`).join('') +
-            '<p class="pw-pending-note">Data collection not yet implemented for this metric.</p>';
+          bodyHTML = itemDef.subMetrics.map(sm => {
+            const desc = SUBMETRIC_DESCRIPTIONS[sm];
+            const sup = desc
+              ? `<sup class="metric-help" tabindex="0" role="button" aria-label="About ${escapeAttr(sm)}" data-desc="${escapeAttr(desc)}">?</sup>`
+              : '';
+            return `<p class="pw-pending-sub">${sm}${sup}</p>`;
+          }).join('') + '<p class="pw-pending-note">Data collection not yet implemented for this metric.</p>';
         } else if (!data) {
           bodyHTML = '<p class="pw-pending-note">Data collection pending.</p>';
         }
@@ -499,9 +516,12 @@ function renderSustainabilityMetrics(metrics) {
         // Colorize ✓ and ✗ symbols
         bodyHTML = bodyHTML.replace(/✓/g, '<span style="color:#16a34a;font-weight:600">✓</span>');
         bodyHTML = bodyHTML.replace(/✗/g, '<span style="color:#dc2626;font-weight:600">✗</span>');
+        // Inject sub-metric help tooltips for collected sections
+        if (data) bodyHTML = addSubmetricTooltips(bodyHTML);
 
         const body = panel.querySelector('.pw-detail-body');
         body.innerHTML = bodyHTML;
+        attachTooltipHandlers(body);
         body.querySelectorAll('p').forEach(p => {
           if (p.classList.contains('sub-detail')) return;
           const t = p.textContent;
@@ -528,6 +548,313 @@ function getScoreLabel(score) {
   if (score >= 40) return 'Fair';
   if (score >= 20) return 'Needs Improvement';
   return 'Limited Data';
+}
+
+// ─── CASS v3 per-package metrics rendering ────────────────────────────────────
+
+/**
+ * Brief descriptions for each CASS v3 section, sourced from the
+ * CASS Sustainability Metrics Report v3.
+ */
+const SECTION_DESCRIPTIONS = {
+  '4.1.1': 'Measures how frequently and accurately the software is cited in academic literature and adopted across research ecosystems, including DOI tracking and dependency analysis.',
+  '4.1.2': "Assesses the software's contribution to scientific discoveries and research outcomes within specific research domains.",
+  '4.2.1': 'Evaluates the presence and quality of governance documents, codes of conduct, and contributor guidelines that define community behavior and decision-making processes.',
+  '4.2.2': "Assesses the clarity and permissiveness of the project's license and its alignment with FAIR (Findable, Accessible, Interoperable, Reusable) principles for research software.",
+  '4.2.3': 'Measures the level of ongoing development activity including commit frequency, release cadence, and responsiveness to maintenance signals.',
+  '4.2.4': 'Evaluates how responsive and active the project team is in addressing issues, pull requests, and community support requests.',
+  '4.2.5': 'Measures efforts to attract new contributors, retain existing ones, and grow the project community through events and training materials.',
+  '4.2.6': 'Assesses the quality and inclusiveness of community interactions, including communication tone, contributor journey support, and leadership diversity.',
+  '4.2.7': 'Evaluates cross-project dependencies, interoperability with other tools, and participation in the broader scientific software ecosystem.',
+  '4.2.8': 'Measures the diversity and stability of funding sources, including grants, corporate sponsors, and institutional support.',
+  '4.2.9': 'Assesses organizational backing through dedicated RSE positions, institutional commitments, and career development pathways for research software engineers.',
+  '4.2.10': 'Evaluates long-term sustainability indicators including contributor diversity, activity trends, and community resilience over time.',
+  '4.3.1': 'Measures code correctness and safety through static analysis, security scanning, test coverage, and adherence to coding standards.',
+  '4.3.2': 'Evaluates the maturity of CI/CD pipelines, testing frameworks, code review processes, and development tooling.',
+  '4.3.3': 'Assesses whether the software can be reliably built and executed across different environments, including containerization and FAIR4RS compliance.',
+  '4.3.4': 'Measures how accessible the software is to its intended users, including documentation quality, installation ease, and user experience.',
+  '4.3.5': 'Evaluates the ability to build and run across diverse computing platforms, architectures, and deployment environments.',
+  '4.3.6': 'Assesses code complexity, documentation quality, knowledge distribution among contributors, and long-term code evolution patterns.',
+  '4.3.7': 'Measures computational performance, resource utilization, scalability, and environmental impact across different hardware platforms and architectures.',
+};
+
+/**
+ * Descriptions for each CASS v3 sub-metric, sourced from the
+ * CASS Sustainability Metrics Report v3.
+ */
+const SUBMETRIC_DESCRIPTIONS = {
+  // 4.1.1 Software Citation and Adoption
+  "Enhanced Citations and Mentions": "Advanced tools, including Semantic Scholar's enhanced API (2024), OpenAlex's comprehensive scholarly database, and AI-powered citation extraction from preprints and grey literature.",
+  "Improved DOI Tracking": "Integration with Software Heritage, Zenodo enhanced APIs, and emerging platforms like DataCite for comprehensive software publication tracking.",
+  "Comprehensive Citation Metadata": "Enhanced CITATION.cff and codemeta.json detection with validation tools and automated metadata quality assessment for machine-readable software citation.",
+  "Advanced Dependency Analysis": "Multi-platform ecosystem mapping including Spack, conda-forge, PyPI, CRAN, Bioconductor, and domain-specific package managers.",
+  "AI-Enhanced Training Detection": "Machine learning-powered analysis of educational content across platforms including Coursera, edX, institutional repositories, and GitHub Classroom materials.",
+  // 4.1.2 Field Research Impact
+  "AI-Enhanced Publication Analysis": "Large language model-powered analysis of scientific literature to identify software-enabled discoveries and methodological innovations.",
+  "Comprehensive Institutional Tracking": "Advanced web scraping and API integration with major research facilities, national laboratories, and computational centers.",
+  "Impact Narrative Extraction": "Natural language processing to identify and categorize impact claims from publications, facility reports, and research announcements.",
+  // 4.2.1 Codes of Conduct, Governance, and Contributor Guidelines
+  "Enhanced Document Detection": "Advanced file scanning for CODE_OF_CONDUCT.md, CONTRIBUTING.md, GOVERNANCE.md, and variant naming conventions using GitHub Contents API.",
+  "Governance Keyword Analysis": "Natural language processing to detect governance-related keywords, decision-making processes, and community structure indicators.",
+  "OpenSSF Badge Integration": "Automated assessment of OpenSSF Best Practices Badge completion status, particularly governance documentation requirements.",
+  "CHAOSS Governance Metrics": "Implementation of standardized CHAOSS governance health indicators, including decision-making transparency and community participation metrics.",
+  "Governance Effectiveness Assessment": "Analysis of issue resolution patterns, decision implementation tracking, and community participation in governance processes.",
+  // 4.2.2 Open-Source Licensing and FAIR Compliance
+  "Enhanced License Detection": "Advanced SPDX license identification with improved parsing of license exceptions (e.g., 'Apache 2.0 with LLVM exceptions').",
+  "Automated FAIR4RS Assessment": "Integration with FAIR-IMPACT project tools, including FAIRsoft and F-UJI Extended Service for quantitative FAIR compliance checking.",
+  "OSI License Validation": "Comprehensive comparison against the Open Source Initiative-approved license list with automated compliance scoring.",
+  "License Exception Handling": "Specialized tools for detecting and correctly categorizing license modifications and exceptions that standard APIs miss.",
+  "FAIR Metadata Assessment": "Automated evaluation of research software metadata quality, documentation completeness, and interoperability standards.",
+  // 4.2.3 Active Maintenance
+  "Commit Activity Pattern Analysis": "Evaluation of commit frequency, seasonal trends, and gaps using 20-day rolling windows to forecast contributor activity.",
+  "Maintenance Mode Indicator Detection": "Automated identification of archive status flags, maintenance mode labels, and explicit abandonment announcements in README files or repository descriptions.",
+  "Activity Trend Monitoring": "Tracking of overall project activity patterns to distinguish stable mature projects from concerning declines that may indicate abandonment risk.",
+  "Release Pattern Assessment": "Examination of release frequency, versioning schemes, semantic versioning compliance, and the ratio of feature development to bug fixes over time.",
+  "Multi-Channel Communication Activity": "Observation of mailing lists, forums, Slack/Discord channels, and other community platforms for signs of active engagement.",
+  "Contributor Abandonment Forecasting": "Probabilistic modeling based on recent contribution patterns to identify contributors at risk of abandonment using survival analysis techniques.",
+  // 4.2.4 Engagement
+  "Response Time Tracking": "Measurement of time to first response for issues, pull requests, and discussions, filtering automated bot responses and tracking by contributor type.",
+  "Issue Resolution Analysis": "Tracking of issue resolution time, the ratio of open to closed issues, and identification of persistent backlogs indicating maintainer overload.",
+  "Pull Request Flow Assessment": "Analysis of pull request opening and closing patterns, time to merge, and the ratio of PRs accepted versus closed without merge.",
+  "Support Request Closure Analysis": "Tracking the ratio of closed versus opened support requests over time to identify trends in community responsiveness and maintainer capacity.",
+  "Engagement Quality Metrics": "Analysis of interaction patterns focusing on depth and quality of maintainer responses, including comprehensiveness, actionability, and follow-through.",
+  "Communication Pattern Analysis": "Examination of response consistency across issue types, contributor types, and channels to identify potential gaps or biases in engagement.",
+  "Community Participation Assessment": "Analysis of issue resolution by non-core members, indicating distributed decision-making and community empowerment beyond core maintainer teams.",
+  // 4.2.5 Outreach
+  "New Contributor Tracking": "Measurement of new contributors making their first contribution across code commits, issue creation, pull requests, and code reviews, tracking trends over time.",
+  "Contributor Retention Analysis": "Comprehensive tracking of contributor progression from first-time to casual to repeat contributors, including cohort analysis.",
+  "Contributor Lifecycle Mapping": "Longitudinal analysis tracking individual contributor trajectories from initial discovery through sustained participation.",
+  "Contribution Type Diversity": "Assessment of contribution types beyond code, including documentation, community management, event participation, mentorship, and translation.",
+  "Good First Issue Effectiveness": "Analysis of newcomer-labeled issues and their impact on new contributor attraction, monitoring frequency, resolution rates, and time-to-claim metrics.",
+  "External Event Participation": "Tracking of project representation at conferences, workshops, and meetups, including correlation with new contributor activity spikes.",
+  "Training Material Integration": "Detection of project inclusion in educational content across Coursera, edX, institutional repositories, and university curricula.",
+  "Onboarding Infrastructure Assessment": "Evaluation of onboarding resources, getting-started guides, contribution pathways, and mentorship program structure.",
+  // 4.2.6 Welcomeness
+  "CHAOSS Community Experience Metrics": "Assessments based on the CHAOSS framework, including measures related to welcoming, learning, contributing, and proposing changes.",
+  "Response Quality and Tone Analysis": "Evaluating communication quality in community support, considering tone, clarity, acknowledgment of contributions, and constructiveness.",
+  "Communication Sentiment Analysis": "Automated tracking of sentiment in community channels to identify general tone, potential conflict, and changes in interaction quality.",
+  "Contributor Journey Mapping": "Automated analysis of onboarding success rates, retention patterns, contributor role progression, and common disengagement points.",
+  "Language and Communication Review": "Analyzing documentation and communications for clarity, adherence to communication standards, and use of welcoming language.",
+  "Leadership Role Representation": "Analyzing the distribution of leadership roles among different contributor demographics, locations, and organizational affiliations.",
+  "Decision-Making Visibility": "Evaluating the accessibility of decision-making processes, meeting summaries, roadmap transparency, and community input in major decisions.",
+  // 4.2.7 Collaboration
+  "Cross-project Reference Detection": "AI-powered analysis of GitHub Issues and PRs for collaboration mentions, cross-project references, and shared development activities.",
+  "Interoperability Assessment": "Automated analysis of API standards compliance, data format standardization, and integration capabilities.",
+  "Collaboration Network Analysis": "Network analysis of contributor overlaps, shared dependencies, and cross-project communication patterns.",
+  "Standards Compliance Tracking": "Assessment of adherence to domain-specific standards and protocols for scientific software interoperability.",
+  // 4.2.8 Financial Sustainability
+  "Enhanced Funding Documentation Analysis": "AI-powered parsing of README.md, FUNDING.yml, and documentation for comprehensive sponsorship and funding acknowledgment detection.",
+  "Institutional Affiliation Tracking": "Advanced analysis of contributor organizational diversity using GitHub Users API and institutional email domain analysis.",
+  "NIH R50 Award Tracking": "Specific monitoring for NIH Research Software Engineer award recipients and similar dedicated funding mechanisms.",
+  "Corporate Sponsorship Detection": "Automated detection of corporate funding, in-kind contributions, and industry partnership indicators.",
+  "Funding Portfolio Analysis": "Comprehensive assessment of funding source diversity, amounts, and temporal distribution patterns.",
+  // 4.2.9 Institutional & Organizational Support
+  "RSE Position Detection": "Automated identification of contributors with dedicated RSE titles or research software career positions using LinkedIn API and institutional directory analysis.",
+  "Institutional Support Tracking": "Analysis of funding acknowledgments for institutional software development commitments and career pathway indicators.",
+  "Career Development Indicators": "Detection of professional development activities, RSE community participation, and career advancement opportunities.",
+  "NIH R50 Award Integration": "Specific tracking of NIH Research Software Engineer award recipients and similar dedicated career funding mechanisms.",
+  "Institutional Policy Analysis": "Assessment of institutional policies supporting research software development and RSE career recognition.",
+  // 4.2.10 Project Longevity and Community Health
+  "Comprehensive Activity Analysis": "Multi-dimensional tracking of commit history, release frequency, issue resolution patterns, and community engagement indicators.",
+  "Contributor Viability Assessment": "Analysis of contributor diversity, retention patterns, knowledge distribution, and succession planning indicators.",
+  "Maintenance Mode Detection": "Automated detection of sustainability warning indicators, including pinned maintenance notices, archive status, and reduced activity patterns.",
+  "Community Health Trends": "Longitudinal analysis of community engagement patterns, contributor onboarding success, and long-term participation trends.",
+  "Project Lifecycle Assessment": "Classification of project maturity stages with appropriate sustainability indicators for each lifecycle phase.",
+  // 4.3.1 Reliability and Robustness
+  "Advanced Static Analysis": "Modern tools like DeepSource, CodeAnt.ai, or SemGrep with AI-powered analysis achieving improved false positive rates compared to traditional tools.",
+  "Enhanced Security Analysis": "Comprehensive vulnerability detection using SAST/DAST tools, dependency vulnerability scanning, and automated security patch recommendations.",
+  "CERT Guidelines Compliance": "Automated assessment of CERT Secure Coding Guidelines adherence with a specific focus on memory safety, input validation, and error handling.",
+  "Test Coverage Excellence": "Advanced coverage analysis including branch coverage, mutation testing, and coverage quality assessment beyond simple percentage metrics.",
+  "Reliability Trend Analysis": "Longitudinal tracking of defect density, Mean Time Between Failures (MTBF), and reliability improvement patterns.",
+  // 4.3.2 Development Practices
+  "CI/CD Effectiveness Assessment": "Analysis of pipeline success rates, build performance, deployment frequency, and automation quality using GitHub Actions, GitLab CI, or other platform APIs.",
+  "Testing Framework Excellence": "Comprehensive evaluation of testing practices, including unit, integration, performance, and security testing coverage.",
+  "Code Review Quality Analysis": "Assessment of review participation, review thoroughness, defect detection rates, and knowledge sharing through review processes.",
+  "Development Tool Integration": "Analysis of linter configuration, code formatting consistency, dependency management, and development environment standardization.",
+  "Community Contribution Facilitation": "Evaluation of how development practices support external contributions and community engagement.",
+  // 4.3.3 Reproducibility
+  "FAIR4RS Compliance Assessment": "Automated evaluation using FAIR-IMPACT project tools, including FAIRsoft and F-UJI Extended Service for quantitative FAIR compliance scoring.",
+  "Containerization Excellence": "Analysis of Docker, Singularity, or other container configurations with emphasis on build success, documentation quality, and reproducibility testing.",
+  "Version Control Best Practices": "Assessment of semantic versioning, release management, dependency pinning, and reproducible build configurations.",
+  "Environment Management": "Evaluation of dependency management practices, environment specification completeness, and cross-platform compatibility.",
+  "Reproducibility Documentation": "Analysis of installation instructions, usage examples, and reproducibility claims with validation testing where possible.",
+  // 4.3.4 Usability
+  "User Experience Assessment": "Integration with validated instruments like the User Experience Questionnaire (UEQ) with psychometric validation across 30+ languages.",
+  "Documentation Completeness Analysis": "Automated evaluation of installation instructions, API documentation, tutorial availability, and user guide quality.",
+  "Accessibility Feature Detection": "Analysis of internationalization support, UI accessibility features, alternative text for images, and inclusive design practices.",
+  "Installation Success Tracking": "Automated testing of installation procedures across different platforms, package managers, and computing environments.",
+  "Usage Analytics Integration": "Assessment of user engagement patterns, common user pathways, and usability pain points through analytics where available.",
+  // 4.3.5 Accessibility (Portability)
+  "Portable Build System Detection": "Analysis of installation scripts and portable build systems (e.g., Spack, Conda, CMake) with cross-platform compatibility assessment.",
+  "Container Availability Assessment": "Evaluation of Docker, Singularity container availability and functionality across different container platforms.",
+  "Architecture Compatibility Analysis": "Assessment of compatibility with accelerators, modern architectures, and diverse hardware configurations.",
+  "Platform Documentation Evaluation": "Analysis of setup documentation quality across different platforms, clusters, and computing environments.",
+  "Deployment Environment Testing": "Automated testing of software deployment across representative computing environments.",
+  // 4.3.6 Maintainability and Understandability
+  "Advanced Complexity Analysis": "Modern tools assessing cyclomatic complexity, cognitive complexity, nesting depth, and maintainability indices with AI-powered insights.",
+  "Code Quality Assessment": "Comprehensive analysis of code duplication, design patterns, architectural consistency, and technical debt indicators.",
+  "Documentation Quality Evaluation": "Assessment of code comments, API documentation, architectural documentation, and developer onboarding materials.",
+  "Knowledge Distribution Analysis": "Evaluation of code ownership patterns, contributor knowledge distribution, and bus factor assessment for maintainability risks.",
+  "Refactoring and Evolution Tracking": "Analysis of code evolution patterns, refactoring frequency, and maintenance burden trends over time.",
+  // 4.3.7 Performance and Efficiency
+  "Performance Benchmarking Integration": "Automated assessment using established benchmark suites, including HPC Challenge, SPEC benchmarks, and domain-specific performance tests.",
+  "Environmental Impact Assessment": "Integration with ISO/IEC 21031:2024 SCI specification for carbon footprint measurement and energy efficiency optimization.",
+  "Resource Utilization Analysis": "Comprehensive monitoring of CPU efficiency, memory usage patterns, I/O performance, and GPU utilization optimization.",
+  "Scalability Assessment": "Analysis of parallel computing support, distributed system capabilities, and performance scaling characteristics.",
+  "Optimization Practice Evaluation": "Assessment of compiler optimization usage, profiling tool integration, and performance-focused development practices.",
+  "Memory Efficiency Analysis": "Profiling tools (Valgrind, Heaptrack) to measure memory footprint, leak detection, and allocation patterns.",
+  "I/O Performance Profiling": "Darshan and parallel I/O benchmarks for characterizing file system access patterns and throughput.",
+  "Algorithmic Complexity Assessment": "Static analysis tools to identify computational complexity, with validation through scaling studies.",
+  "Power Measurement Integration": "RAPL (Running Average Power Limit) interface, NVML for GPU power, and external power meters for energy consumption validation.",
+  "Performance Portability Assessment": "Consistent benchmarking across CPU architectures (x86, ARM, POWER), GPU vendors (NVIDIA, AMD, Intel), and accelerators.",
+};
+
+/**
+ * Escape a string for use in an HTML attribute value.
+ * @param {string} str
+ * @returns {string}
+ */
+function escapeAttr(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+/**
+ * Post-process a CASS section's HTML string to insert a clickable "?"
+ * superscript after each sub-metric label that has a known description.
+ * Only targets main-metric rows (<p><strong>Label:</strong>), not sub-detail rows.
+ * @param {string} html Raw HTML string from metrics.json data field
+ * @returns {string} HTML string with tooltip superscripts injected
+ */
+function addSubmetricTooltips(html) {
+  return html.replace(
+    /<p(?! class)[^>]*><strong>([^<]+):<\/strong>/g,
+    (match, label) => {
+      const desc = SUBMETRIC_DESCRIPTIONS[label.trim()];
+      if (!desc) return match;
+      const sup = `<sup class="metric-help" tabindex="0" role="button" `
+        + `aria-label="About ${escapeAttr(label.trim())}" `
+        + `data-desc="${escapeAttr(desc)}">?</sup>`;
+      return `<p><strong>${label}${sup}:`;
+    }
+  );
+}
+
+/**
+ * Create and attach a single shared tooltip element to the document body.
+ * Safe to call multiple times — only creates the element once.
+ */
+function initMetricTooltips() {
+  if (document.getElementById('metric-tooltip')) return;
+  const tt = document.createElement('div');
+  tt.id = 'metric-tooltip';
+  tt.setAttribute('role', 'tooltip');
+  document.body.appendChild(tt);
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('metric-help')) {
+      tt.style.display = 'none';
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') tt.style.display = 'none';
+  });
+}
+
+/**
+ * Wire up click/keyboard handlers on every .metric-help element inside container.
+ * @param {HTMLElement} container
+ */
+function attachTooltipHandlers(container) {
+  initMetricTooltips();
+  const tt = document.getElementById('metric-tooltip');
+
+  container.querySelectorAll('.metric-help').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      tt.textContent = el.getAttribute('data-desc');
+      tt.style.display = 'block';
+      // Position above the icon; clamp to viewport left edge
+      const rect = el.getBoundingClientRect();
+      const ttW = tt.offsetWidth;
+      const left = Math.max(8, rect.left + rect.width / 2 - ttW / 2);
+      const top = rect.top - tt.offsetHeight - 10;
+      tt.style.left = left + 'px';
+      tt.style.top = top + 'px';
+    });
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        el.click();
+      }
+    });
+  });
+}
+
+/**
+ * Render the new CASS v3 per-package metrics.json format.
+ * Sections with collected data show their HTML; stub sections show a placeholder.
+ * Each sub-metric label gets a "?" superscript tooltip sourced from SUBMETRIC_DESCRIPTIONS.
+ * @param {Object} metrics Parsed metrics.json object
+ */
+function renderCassMetrics(metrics) {
+  const metricsSection = document.getElementById('metrics-section');
+  if (!metricsSection) return;
+
+  const dimensions = [
+    { key: 'impact',         label: '4.1 Impact' },
+    { key: 'sustainability', label: '4.2 Sustainability' },
+    { key: 'quality',        label: '4.3 Quality' },
+  ];
+
+  let html = `
+    <h3>Sustainability Metrics</h3>
+    <div class="sustainability-overview">
+      <div class="metric-score-card">
+        <h4>Overall Sustainability Score</h4>
+        <div class="score-circle">
+          <span class="score-value">${metrics.overall_score != null ? metrics.overall_score : '–'}/100</span>
+        </div>
+        <p class="score-label">${getScoreLabel(metrics.overall_score || 0)}</p>
+      </div>
+    </div>
+  `;
+
+  dimensions.forEach(({ key, label }) => {
+    const sections = metrics[key];
+    if (!sections) return;
+
+    const sortedEntries = Object.entries(sections).sort((a, b) =>
+      a[0].localeCompare(b[0], undefined, { numeric: true })
+    );
+
+    html += `<div class="metric-dimension">
+      <div class="dimension-header"><h3>${label}</h3></div>
+      <div class="dimension-content">`;
+
+    sortedEntries.forEach(([num, info]) => {
+      if (!info || !info.data) {
+        html += `<div class="metric-subsection metric-subsection--stub">
+          <h4>${num} ${info ? info.title : ''}</h4>
+          <p class="metric-stub-note">Not yet collected</p>
+        </div>`;
+      } else {
+        const processedData = addSubmetricTooltips(info.data);
+        html += `<div class="metric-subsection">
+          <h4>${num} ${info.title}</h4>
+          <div class="metric-data">${processedData}</div>
+        </div>`;
+      }
+    });
+
+    html += `</div></div>`;
+  });
+
+  metricsSection.innerHTML = html;
+  attachTooltipHandlers(metricsSection);
 }
 
 /////////////////////////////////////////////////////////

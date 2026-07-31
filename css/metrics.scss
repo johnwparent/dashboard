@@ -458,3 +458,117 @@
 @media (max-width: 600px) {
   .pw-card-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
 }
+
+/* ── CASS v3 per-package metrics ─────────────────────────────────────────── */
+
+.metric-dimension {
+  margin: 24px 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dimension-header {
+  background: #005A5B;
+  padding: 10px 18px;
+}
+
+.dimension-header h3 {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dimension-content {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+.metric-subsection {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+.metric-subsection h4 {
+  color: #24292e;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.metric-subsection--stub {
+  opacity: 0.55;
+}
+
+.metric-stub-note {
+  color: #6a737d;
+  font-style: italic;
+  font-size: 12px;
+  margin: 0;
+}
+
+.metric-data p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #24292e;
+  line-height: 1.5;
+}
+
+.metric-data p.sub-detail {
+  margin-left: 14px;
+  color: #6a737d;
+  font-size: 12px;
+}
+
+/* ── Sub-metric help tooltip ─────────────────────────────────────────────── */
+
+sup.metric-help {
+  cursor: pointer;
+  color: #005A5B;
+  font-size: 8px;
+  font-weight: 700;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  padding: 0 2.5px;
+  margin-left: 3px;
+  vertical-align: super;
+  line-height: 1;
+  display: inline-block;
+  transition: background-color 0.15s, color 0.15s;
+  user-select: none;
+}
+
+sup.metric-help:hover,
+sup.metric-help:focus {
+  background-color: #005A5B;
+  color: white;
+  outline: none;
+}
+
+#metric-tooltip {
+  display: none;
+  position: fixed;
+  background: #24292e;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  max-width: 280px;
+  z-index: 9999;
+  line-height: 1.45;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .dimension-content {
+    grid-template-columns: 1fr;
+  }
+}

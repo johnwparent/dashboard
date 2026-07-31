@@ -24,23 +24,34 @@ jobs:
           buildcache: false
           color: false
           spack_path: spack
-      - name: Download sustainability metrics from metrics repo
+      - name: Download sustainability metrics
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Download the latest sustainability-metrics artifact from corsa-center/metrics
-          ARTIFACT_URL=$(gh api repos/corsa-center/metrics/actions/artifacts \
-            --jq '[.artifacts[] | select(.name == "sustainability-metrics" and .expired == false)] | sort_by(.created_at) | last | .archive_download_url')
+          RUN_ID=$(gh run list \
+            --repo corsa-center/metrics \
+            --workflow collect-and-sync.yml \
+            --status success \
+            --limit 1 \
+            --json databaseId \
+            --jq '.[0].databaseId // empty')
 
-          if [ -n "$ARTIFACT_URL" ] && [ "$ARTIFACT_URL" != "null" ]; then
-            echo "Downloading metrics artifact..."
-            gh api "$ARTIFACT_URL" > /tmp/metrics.zip
-            unzip -o /tmp/metrics.zip -d explore/github-data/
-            echo "Sustainability metrics updated"
-          else
-            echo "::warning::No sustainability-metrics artifact found in corsa-center/metrics"
+          if [ -z "$RUN_ID" ]; then
+            echo "::warning::No successful metrics run found in corsa-center/metrics — skipping"
+            exit 0
           fi
 
+          echo "Clearing existing metrics files before download"
+          rm -rf explore/github-data/*-metrics/
+
+          echo "Downloading sustainability-metrics artifact from run $RUN_ID"
+          gh run download "$RUN_ID" \
+            --repo corsa-center/metrics \
+            --name sustainability-metrics \
+            --dir explore/github-data
+
+          echo "Packages updated:"
+          ls -d explore/github-data/*-metrics/ 2>/dev/null || echo "  (none)"
       - name: Run update script
         run:
           ./_explore/scripts/UPDATE.sh
@@ -71,7 +82,17 @@ jobs:
           git checkout "${DEPLOY_BRANCH}"
           git branch --set-upstream-to=origin/"${DEPLOY_BRANCH}" "${DEPLOY_BRANCH}"
           git pull
-          git merge "${UPDATE_BRANCH}"
+          git merge "${UPDATE_BRANCH}" -X theirs
+
+          # Force-include metrics files from the update branch.
+          # A prior explicit deletion in main causes git merge to skip them;
+          # checking them out directly overrides that.
+          git checkout "${UPDATE_BRANCH}" -- explore/github-data/
+          git add explore/github-data/
+          if ! git diff --staged --quiet; then
+            git commit -m "Sync metrics files from ${UPDATE_BRANCH} branch"
+          fi
+
           git push --set-upstream origin "${DEPLOY_BRANCH}"
         env:
           DEPLOY_BRANCH: ${{ vars.DEPLOY_BRANCH }}

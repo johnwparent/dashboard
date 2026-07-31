@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metrics Pinwheel Cards - HDF5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0; padding: 20px; background: #f5f7fa;
+    }
+
+    /* ── Repo header ── */
+    .page-header { margin-top: 20px; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+    .title { font-size: 32px; font-weight: 600; color: #0366d6; text-decoration: none; }
+    .title:hover { text-decoration: underline; }
+    .subtitle { font-size: 16px; color: #586069; text-decoration: none; margin: 0 15px; }
+    .subtitle:hover { color: #0366d6; }
+    .stats { margin: 20px 0; }
+    .stats a { color: #586069; text-decoration: none; margin: 0 15px; font-size: 14px; }
+    .stats a:hover { color: #0366d6; }
+    blockquote {
+      padding: 15px 20px; margin: 20px auto; max-width: 800px;
+      border-left: 4px solid #dfe2e5; background: #f6f8fa;
+      color: #586069; font-size: 16px; text-align: center;
+    }
+    .text-center { text-align: center; }
+
+    /* ── Metrics section ── */
+    .metrics-section { max-width: 1000px; margin: 32px auto; padding: 0 16px; }
+
+    .metrics-title {
+      text-align: center; font-size: 22px; font-weight: 700; color: #1a202c;
+      margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0;
+    }
+
+    /* ── Dimension accordion ── */
+    .dimension {
+      background: #fff; border-radius: 10px; margin-bottom: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden;
+    }
+
+    .dimension-header {
+      display: flex; align-items: center; gap: 10px; padding: 12px 20px;
+      cursor: pointer; user-select: none;
+    }
+    .dimension-header:hover { filter: brightness(1.06); }
+
+    .dimension-icon { font-size: 18px; }
+
+    .dimension-header h3 {
+      margin: 0; font-size: 15px; font-weight: 600; color: #fff; flex: 1;
+    }
+
+    .accordion-arrow { font-size: 11px; color: rgba(255,255,255,0.75); transition: transform 0.2s; }
+    .dimension.collapsed .accordion-arrow { transform: rotate(-90deg); }
+
+    .impact-header      { background: linear-gradient(135deg, #5f27cd, #a29bfe); }
+    .sustainability-header { background: linear-gradient(135deg, #0c7e57, #6ee7b7); }
+    .quality-header     { background: linear-gradient(135deg, #0284c7, #7dd3fc); }
+
+    /* ── Card grid ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+      gap: 10px;
+      padding: 14px 16px;
+    }
+
+    .dimension.collapsed .card-grid,
+    .dimension.collapsed .detail-panel,
+    .dimension.collapsed .pending-note { display: none; }
+
+    /* ── Individual metric card ── */
+    .metric-card {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 10px 10px;
+      text-align: center;
+      cursor: default;
+      transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .metric-card {
+      cursor: pointer;
+    }
+    .metric-card:hover {
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .metric-card.active {
+      border-color: currentColor;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+    }
+
+    .card-num {
+      font-size: 10px; font-weight: 700; color: #94a3b8; letter-spacing: 0.02em;
+    }
+
+    .card-title {
+      font-size: 11px; font-weight: 500; color: #374151; line-height: 1.35;
+      min-height: 28px; display: flex; align-items: center; justify-content: center;
+    }
+
+    .card-score {
+      font-size: 10px; font-weight: 600; margin-top: 2px;
+    }
+    .card-score .score-total {
+      color: #94a3b8; font-weight: 400;
+    }
+
+    /* ── Detail panel ── */
+    .detail-panel {
+      display: none;
+      background: #f8fafc; border-top: 1px solid #e2e8f0;
+      padding: 14px 18px; font-size: 13px; color: #374151; line-height: 1.75;
+      animation: slideDown 0.15s ease;
+    }
+    .detail-panel.visible { display: block; }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .detail-header {
+      font-size: 13px; font-weight: 600; color: #1e293b;
+      margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .detail-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .detail-content p { margin: 4px 0; }
+    .detail-content strong { color: #1e293b; }
+    .detail-content a { color: #0284c7; }
+    /* "Not yet collected" rows — bold label stays bold but turns grey */
+    .detail-content .not-collected { color: #94a3b8; }
+    .detail-content .not-collected strong { color: #94a3b8; }
+    .detail-content .sub-detail {
+      margin: 1px 0 5px 18px;
+      font-size: 11.5px;
+      color: #64748b;
+      border-left: 2px solid #e2e8f0;
+      padding-left: 8px;
+    }
+    /* Pending sub-metric rows */
+    .detail-content .pending-sub {
+      color: #94a3b8;
+      font-style: italic;
+      margin: 3px 0;
+    }
+    .detail-content .pending-sub::before {
+      content: '○ ';
+      opacity: 0.6;
+    }
+    .detail-pending-note {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed #e2e8f0;
+      font-size: 11px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    .pending-note {
+      font-size: 11px; color: #94a3b8; font-style: italic;
+      padding: 0 16px 12px; text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Repo header -->
+  <h2 class="page-header text-center">
+    <a class="title" href="https://github.com/HDFGroup/hdf5">hdf5</a><br>
+    <a class="subtitle" href="https://github.com/HDFGroup">
+      <span class="fa fa-user-circle"></span> HDFGroup
+    </a>
+    <span class="subtitle"><span class="fa fa-code"></span> C</span>
+    <a class="subtitle" href="https://opensource.org/licenses/BSD-3-Clause">
+      <span class="fa fa-balance-scale"></span> BSD-3-Clause
+    </a>
+  </h2>
+
+  <p class="stats text-center">
+    <a href="https://github.com/HDFGroup/hdf5"><span class="fa fa-github"></span> GitHub Page</a>
+    <a href="https://github.com/HDFGroup/hdf5/stargazers"><span class="fa fa-star"></span> 523 stars</a>
+    <a href="https://github.com/HDFGroup/hdf5/network"><span class="fa fa-code-fork"></span> 234 forks</a>
+    <a href="https://www.hdfgroup.org/"><span class="fa fa-globe"></span> Project Website</a>
+  </p>
+
+  <blockquote>
+    HDF5 is a data model, library, and file format for storing and managing data.
+    It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O
+    and for high volume and complex data.
+  </blockquote>
+
+  <!-- Metrics -->
+  <div class="metrics-section">
+    <h2 class="metrics-title">Metrics</h2>
+    <div id="metrics-root"></div>
+  </div>
+
+  <script>
+    // ── Data ─────────────────────────────────────────────────────────────────
+    const DIMENSIONS = [
+      {
+        id: 'impact', label: '4.1 Impact', icon: '📊',
+        headerClass: 'impact-header',
+        color: '#7c3aed', muted: '#ddd6fe',
+        items: [
+          { num: '4.1.1', blades: 5, short: 'Citation & Adoption', title: 'Software Citation and Adoption', data: null,
+            subMetrics: ['Enhanced Citations and Mentions','Improved DOI Tracking','Comprehensive Citation Metadata','Advanced Dependency Analysis','AI-Enhanced Training Detection'] },
+          { num: '4.1.2', blades: 3, short: 'Field Research', title: 'Field Research Impact', data: null,
+            subMetrics: ['AI-Enhanced Publication Analysis','Comprehensive Institutional Tracking','Impact Narrative Extraction'] }
+        ]
+      },
+      {
+        id: 'sustainability', label: '4.2 Sustainability', icon: '♻️',
+        headerClass: 'sustainability-header',
+        color: '#059669', muted: '#a7f3d0',
+        items: [
+          { num: '4.2.1', blades: 5, short: 'CoC & Governance', title: 'Codes of Conduct (CoC), Governance, and Contributor Guidelines',
+            data: `<p><strong>Enhanced Document Detection:</strong> 2/3 ✓</p>
+                   <p class="sub-detail">Code of Conduct: <a href="https://github.com/HDFGroup/hdf5/blob/develop/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a></p>
+                   <p class="sub-detail">Governance: Not found</p>
+                   <p class="sub-detail">Contributing Guidelines: <a href="https://github.com/HDFGroup/hdf5/blob/develop/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+                   <p><strong>Governance Keyword Analysis:</strong> Not yet collected</p>
+                   <p><strong>OpenSSF Scorecard:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/HDFGroup/hdf5">7.2/10</a> (12/18 checks passed) ✓</p>
+                   <p><strong>CHAOSS Governance Metrics:</strong> Not yet collected</p>
+                   <p><strong>Governance Effectiveness Assessment:</strong> Not yet collected</p>
+                   <p><strong>Score:</strong> 2/5</p>` },
+          { num: '4.2.2', blades: 5, short: 'Licensing & FAIR', title: 'Open-Source Licensing and FAIR Compliance',
+            data: `<p><strong>Enhanced License Detection:</strong> ✓</p>
+                   <p class="sub-detail">License: Other</p>
+                   <p class="sub-detail">Category: Unknown</p>
+                   <p><strong>Automated FAIR4RS Assessment:</strong> Not yet collected</p>
+                   <p><strong>OSI License Validation:</strong> Unknown ✗</p>
+                   <p><strong>License Exception Handling:</strong> Not yet collected</p>
+                   <p><strong>FAIR Metadata Assessment:</strong> Not yet collected</p>
+                   <p><strong>Score:</strong> 1/5</p>` },
+          { num: '4.2.3', blades: 6, short: 'Active Maintenance', title: 'Active Maintenance',
+            data: `<p><strong>Commit Activity Pattern Analysis:</strong> Active ✓</p>
+                   <p class="sub-detail">Last Commit: 0 days ago</p>
+                   <p class="sub-detail">Commits (52 weeks): 432</p>
+                   <p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags ✓</p>
+                   <p><strong>Activity Trend Monitoring:</strong> Stable ✓</p>
+                   <p><strong>Release Pattern Assessment:</strong> 4/yr ✓</p>
+                   <p class="sub-detail">Latest Release: 2.1.1 (20 days ago)</p>
+                   <p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>
+                   <p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>
+                   <p class="sub-detail">Contributors: 30 (bus factor: 2)</p>
+                   <p><strong>Score:</strong> 4/6</p>` },
+          { num: '4.2.4', blades: 7, short: 'Engagement', title: 'Engagement',
+            data: `<p><strong>Response Time Tracking:</strong> 9 hours ✓</p>
+                   <p><strong>Issue Resolution Analysis:</strong> 1078 hours ✗</p>
+                   <p><strong>Pull Request Flow Assessment:</strong> 80% merge rate ✓</p>
+                   <p class="sub-detail">Median PR Cycle Time: 89 hours</p>
+                   <p><strong>Support Request Closure Analysis:</strong> 5.00 open/closed ratio ✗</p>
+                   <p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>
+                   <p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>
+                   <p><strong>Community Participation Assessment:</strong> Not yet collected</p>
+                   <p><strong>Score:</strong> 2/7</p>` },
+          { num: '4.2.5', blades: 8, short: 'Outreach', title: 'Outreach', data: null,
+            subMetrics: ['New Contributor Tracking','Contributor Retention Analysis','Contributor Lifecycle Mapping','Contribution Type Diversity','Good First Issue Effectiveness','External Event Participation','Training Material Integration','Onboarding Infrastructure Assessment'] },
+          { num: '4.2.6', blades: 7, short: 'Welcomeness', title: 'Welcomeness', data: null,
+            subMetrics: ['CHAOSS Community Experience Metrics','Response Quality and Tone Analysis','Communication Sentiment Analysis','Contributor Journey Mapping','Language and Communication Review','Leadership Role Representation','Decision-Making Visibility'] },
+          { num: '4.2.7', blades: 5, short: 'Collaboration', title: 'Collaboration', data: null,
+            subMetrics: ['Advanced Dependency Analysis','Cross-project Reference Detection','Interoperability Assessment','Collaboration Network Analysis','Standards Compliance Tracking'] },
+          { num: '4.2.8', blades: 5, short: 'Financial', title: 'Financial Sustainability', data: null,
+            subMetrics: ['Enhanced Funding Documentation Analysis','Institutional Affiliation Tracking','NIH R50 Award Tracking','Corporate Sponsorship Detection','Funding Portfolio Analysis'] },
+          { num: '4.2.9', blades: 5, short: 'Institutional', title: 'Institutional & Organizational Support', data: null,
+            subMetrics: ['RSE Position Detection','Institutional Support Tracking','Career Development Indicators','NIH R50 Award Integration','Institutional Policy Analysis'] },
+          { num: '4.2.10', blades: 5, short: 'Community Health', title: 'Project Longevity and Community Health', data: null,
+            subMetrics: ['Comprehensive Activity Analysis','Contributor Viability Assessment','Maintenance Mode Detection','Community Health Trends','Project Lifecycle Assessment'] }
+        ]
+      },
+      {
+        id: 'quality', label: '4.3 Quality', icon: '🏆',
+        headerClass: 'quality-header',
+        color: '#0284c7', muted: '#bae6fd',
+        items: [
+          { num: '4.3.1', blades: 5, short: 'Reliability', title: 'Reliability and Robustness', data: null,
+            subMetrics: ['Advanced Static Analysis','Enhanced Security Analysis','CERT Guidelines Compliance','Test Coverage Excellence','Reliability Trend Analysis'] },
+          { num: '4.3.2', blades: 5, short: 'Dev Practices',   title: 'Development Practices',
+            data: `<p><strong>CI/CD Effectiveness Assessment:</strong> 2/6 ✓</p>
+                   <p class="sub-detail">Workflow success rate, deployment frequency, release frequency</p>
+                   <p><strong>Testing Framework Excellence:</strong> Not yet collected</p>
+                   <p><strong>Code Review Quality Analysis:</strong> Not yet collected</p>
+                   <p><strong>Development Tool Integration:</strong> Not yet collected</p>
+                   <p><strong>Community Contribution Facilitation:</strong> ✗</p>
+                   <p class="sub-detail">OpenSSF Badge: <a href="https://www.bestpractices.dev/projects/7802">In_progress</a> (100%)</p>
+                   <p><strong>Score:</strong> 1/5</p>` },
+          { num: '4.3.3', blades: 5, short: 'Reproducibility', title: 'Reproducibility',
+            data: `<p><strong>FAIR4RS Compliance Assessment:</strong> No ✗</p>
+                   <p><strong>Containerization Excellence:</strong> No ✗</p>
+                   <p><strong>Version Control Best Practices:</strong> No ✗</p>
+                   <p><strong>Environment Management:</strong> No ✗</p>
+                   <p><strong>Reproducibility Documentation:</strong> Not yet collected</p>
+                   <p><strong>Score:</strong> 0/5</p>` },
+          { num: '4.3.4', blades: 5, short: 'Usability', title: 'Usability', data: null,
+            subMetrics: ['User Experience Assessment','Documentation Completeness Analysis','Accessibility Feature Detection','Installation Success Tracking','Usage Analytics Integration'] },
+          { num: '4.3.5', blades: 5, short: 'Accessibility',   title: 'Accessibility',
+            data: `<p><strong>Portable Build System Detection:</strong> CMakeLists.txt ✓</p>
+                   <p><strong>Container Availability Assessment:</strong> No ✗</p>
+                   <p><strong>Architecture Compatibility Analysis:</strong> Not yet collected</p>
+                   <p><strong>Platform Documentation Evaluation:</strong> Not yet collected</p>
+                   <p><strong>Deployment Environment Testing:</strong> Not yet collected</p>
+                   <p><strong>Score:</strong> 1/5</p>` },
+          { num: '4.3.6', blades: 5, short: 'Maintainability', title: 'Maintainability and Understandability', data: null,
+            subMetrics: ['Advanced Complexity Analysis','Code Quality Assessment','Documentation Quality Evaluation','Knowledge Distribution Analysis','Refactoring and Evolution Tracking'] },
+          { num: '4.3.7', blades: 10, short: 'Performance', title: 'Performance and Efficiency', data: null,
+            subMetrics: ['Performance Benchmarking Integration','Environmental Impact Assessment','Resource Utilization Analysis','Scalability Assessment','Optimization Practice Evaluation','Memory Efficiency Analysis','I/O Performance Profiling','Algorithmic Complexity Assessment','Power Measurement Integration','Performance Portability Assessment'] }
+        ]
+      }
+    ];
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+    const SCORE_KEYS = new Set(['score', 'compliance score']);
+
+    // Count actual sub-item <p> lines (excludes the Score line itself).
+    function countSubItems(html) {
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      let n = 0;
+      div.querySelectorAll('p').forEach(p => {
+        const strong = p.querySelector('strong');
+        if (!strong) return;
+        if (!SCORE_KEYS.has(strong.textContent.replace(':', '').trim().toLowerCase())) n++;
+      });
+      return n || 4;
+    }
+
+    // Returns { filled, total, label }.
+    // Denominator ≤ 20 → use as-is (real discrete checks).
+    // Denominator > 20 → percentage-style score; count actual sub-items instead.
+    function parseScore(html) {
+      if (!html) return null;
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      const text = div.textContent || div.innerText || '';
+      const m = text.match(/Score:\s*(\d+)\/(\d+)/);
+      if (!m) return null;
+      const raw = +m[1], denom = +m[2];
+      if (denom <= 20) {
+        // Count ✗ marks in non-sub-detail <p><strong> rows to find failing count
+        const div2 = document.createElement('div');
+        div2.innerHTML = html;
+        let failing = 0;
+        div2.querySelectorAll('p').forEach(p => {
+          if (p.classList.contains('sub-detail')) return;
+          if (!p.querySelector('strong')) return;
+          if (SCORE_KEYS.has(p.querySelector('strong').textContent.replace(':', '').trim().toLowerCase())) return;
+          if (p.textContent.includes('✗')) failing++;
+        });
+        return { filled: raw, failing, total: denom, label: `${raw}/${denom}` };
+      }
+      // Composite percentage — map onto actual sub-item count
+      const total = countSubItems(html);
+      return { filled: Math.round(raw / denom * total), failing: 0, total, label: `${raw}/${denom}` };
+    }
+
+    // ── Pinwheel SVG builder ──────────────────────────────────────────────────
+    // Three blade states:
+    //   0 .. filled-1            → color  (passing)
+    //   filled .. filled+failing-1 → muted  (collected but failing / not meeting standard)
+    //   filled+failing .. total-1  → gray   (not yet collected)
+    function pinwheelSVG(filled, failing, total, color, muted) {
+      const S  = 64;
+      const cx = S / 2, cy = S / 2;
+      const R  = S * 0.41;
+      const ri = S * 0.13;
+      const sw = S * 0.13;
+      const rw = S * 0.065;
+      const leanX = S * 0.09;
+
+      const bPath = [
+        `M ${-rw} ${-ri}`,
+        `C ${-sw * 1.1} ${-(ri + R) * 0.42}, ${-sw * 0.3 + leanX} ${-R * 0.82}, ${leanX} ${-R}`,
+        `C ${sw * 0.7 + leanX} ${-R * 0.82}, ${sw * 1.0} ${-(ri + R) * 0.42}, ${rw} ${-ri}`,
+        'Z'
+      ].join(' ');
+
+      const GRAY = '#d1d5db';
+      const parts = [];
+
+      for (let i = 0; i < total; i++) {
+        const deg = (360 / total) * i;
+        let fill;
+        if      (i < filled)          fill = color;   // passing
+        else if (i < filled + failing) fill = muted;   // failing / not meeting standard
+        else                           fill = GRAY;    // not yet collected
+        parts.push(
+          `<path d="${bPath}" fill="${fill}" `+
+          `transform="translate(${cx},${cy}) rotate(${deg.toFixed(1)})"/>`
+        );
+      }
+
+      // Hub cap (white circle in center)
+      const hubR = ri * 0.75;
+      parts.push(`<circle cx="${cx}" cy="${cy}" r="${hubR}" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>`);
+
+      return `<svg width="${S}" height="${S}" viewBox="0 0 ${S} ${S}" `+
+             `xmlns="http://www.w3.org/2000/svg">${parts.join('')}</svg>`;
+    }
+
+    // ── Build UI ──────────────────────────────────────────────────────────────
+    const root = document.getElementById('metrics-root');
+
+    DIMENSIONS.forEach(dim => {
+      // Dimension wrapper
+      const dimEl = document.createElement('div');
+      dimEl.className = 'dimension';
+
+      // Header
+      const hdr = document.createElement('div');
+      hdr.className = `dimension-header ${dim.headerClass}`;
+      hdr.innerHTML =
+        `<span class="dimension-icon">${dim.icon}</span>` +
+        `<h3>${dim.label}</h3>` +
+        `<span class="fa fa-chevron-down accordion-arrow"></span>`;
+      hdr.addEventListener('click', () => dimEl.classList.toggle('collapsed'));
+      dimEl.appendChild(hdr);
+
+      // Card grid
+      const grid = document.createElement('div');
+      grid.className = 'card-grid';
+
+      // Detail panel (shared within dimension)
+      const panel     = document.createElement('div');
+      panel.className = 'detail-panel';
+      const panelHdr  = document.createElement('div');
+      panelHdr.className = 'detail-header';
+      panelHdr.innerHTML = `<span class="detail-dot" style="background:${dim.color}"></span><span class="detail-title-text"></span>`;
+      const panelBody = document.createElement('div');
+      panelBody.className = 'detail-content';
+      panel.appendChild(panelHdr);
+      panel.appendChild(panelBody);
+
+      let activeCard = null;
+
+      dim.items.forEach(item => {
+        const score    = parseScore(item.data);
+        const blades   = item.blades || 4;
+        const filled   = item.data ? (score ? score.filled  : blades) : 0;
+        const failing  = item.data ? (score ? score.failing : 0)      : 0;
+        const total    = score ? score.total : blades;
+        const scoreStr = score ? score.label : null;
+
+        // For pending metrics: grey pinwheel, greyed sub-metric list in detail
+        const isPending = !item.data;
+        const pwColor   = isPending ? '#cbd5e1' : dim.color;
+        const pwMuted   = isPending ? '#e2e8f0' : dim.muted; // failing = light dim color
+
+        const card = document.createElement('div');
+        card.className = 'metric-card' + (item.data ? ' has-data' : '');
+        card.style.color = isPending ? '#94a3b8' : dim.color;
+        card.title = item.title;
+
+        const collected = filled + failing;  // sub-metrics with any data
+        const scoreHTML = item.data
+          ? `<span>${filled}/${collected} ●</span>` +
+            (collected < total ? `<span class="score-total"> /${total}</span>` : '')
+          : `<span class="score-total">○ pending</span>`;
+
+        card.innerHTML =
+          pinwheelSVG(filled, failing, total, pwColor, pwMuted) +
+          `<div class="card-num">${item.num}</div>` +
+          `<div class="card-title">${item.short}</div>` +
+          `<div class="card-score">${scoreHTML}</div>`;
+
+        // Build detail content — either real data or pending sub-metric list
+        const getDetailHTML = () => {
+          if (item.data) return item.data;
+          if (item.subMetrics && item.subMetrics.length) {
+            return item.subMetrics.map(sm => `<p class="pending-sub">${sm}</p>`).join('') +
+              `<p class="detail-pending-note">Data collection not yet implemented for this metric.</p>`;
+          }
+          return `<p class="detail-pending-note">Data collection pending.</p>`;
+        };
+
+        card.addEventListener('click', () => {
+          const opening = card !== activeCard;
+
+          if (activeCard) { activeCard.classList.remove('active'); activeCard = null; }
+          panel.classList.remove('visible');
+
+          if (opening) {
+            card.classList.add('active');
+            activeCard = card;
+            panelHdr.querySelector('.detail-title-text').textContent = `${item.num}  ${item.title}`;
+            panelBody.innerHTML = getDetailHTML();
+            // Grey out bold labels on "Not yet collected" lines
+            panelBody.querySelectorAll('p').forEach(p => {
+              if (p.textContent.includes('Not yet collected')) p.classList.add('not-collected');
+            });
+            panel.classList.add('visible');
+          }
+        });
+
+        grid.appendChild(card);
+      });
+
+      // Pending note
+      const pending = dim.items.filter(i => !i.data).length;
+      const note = document.createElement('div');
+      note.className = 'pending-note';
+      if (pending > 0) note.textContent = `${pending} metric${pending > 1 ? 's' : ''} pending collection`;
+
+      dimEl.appendChild(grid);
+      dimEl.appendChild(panel);
+      dimEl.appendChild(note);
+      root.appendChild(dimEl);
+    });
+  </script>
+</body>
+</html>

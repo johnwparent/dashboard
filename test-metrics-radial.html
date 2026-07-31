@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metrics Radial - HDF5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0; padding: 20px; background: #f5f7fa;
+    }
+
+    /* ── Repo header (unchanged) ── */
+    .page-header { margin-top: 20px; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+    .title { font-size: 32px; font-weight: 600; color: #0366d6; text-decoration: none; }
+    .title:hover { text-decoration: underline; }
+    .subtitle { font-size: 16px; color: #586069; text-decoration: none; margin: 0 15px; }
+    .subtitle:hover { color: #0366d6; }
+    .stats { margin: 20px 0; }
+    .stats a { color: #586069; text-decoration: none; margin: 0 15px; font-size: 14px; }
+    .stats a:hover { color: #0366d6; }
+    blockquote {
+      padding: 15px 20px; margin: 20px auto; max-width: 800px;
+      border-left: 4px solid #dfe2e5; background: #f6f8fa;
+      color: #586069; font-size: 16px; text-align: center;
+    }
+    .text-center { text-align: center; }
+
+    /* ── Metrics section ── */
+    .metrics-section {
+      max-width: 820px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+
+    .metrics-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    /* ── Chart + legend layout ── */
+    .chart-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* ── SVG chart ── */
+    #metrics-svg {
+      width: 360px;
+      height: 360px;
+      overflow: visible;
+    }
+
+    .seg {
+      cursor: pointer;
+      transition: opacity 0.12s;
+    }
+    .seg:hover { opacity: 0.78; }
+    .seg.no-data-seg { cursor: default; }
+    .seg.no-data-seg:hover { opacity: 1; }
+
+    /* ── Dimension legend ── */
+    .dim-legend {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .dim-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .dim-swatch {
+      width: 28px; height: 10px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .dim-count {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    /* ── Status key ── */
+    .status-key {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      font-size: 11px;
+      color: #64748b;
+      margin-top: -4px;
+    }
+
+    .status-key span { display: flex; align-items: center; gap: 5px; }
+    .key-swatch {
+      width: 12px; height: 12px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ── Detail panel ── */
+    .detail-panel {
+      display: none;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.75;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      animation: fadeUp 0.15s ease;
+    }
+    .detail-panel.visible { display: block; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .detail-header {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .detail-dim-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .detail-content p { margin: 4px 0; }
+    .detail-content strong { color: #1e293b; }
+    .detail-content a { color: #0284c7; }
+
+    /* ── Responsive ── */
+    @media (max-width: 420px) {
+      #metrics-svg { width: 300px; height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Repo header -->
+  <h2 class="page-header text-center">
+    <a class="title" href="https://github.com/HDFGroup/hdf5" title="View Project on GitHub">hdf5</a><br>
+    <a class="subtitle" href="https://github.com/HDFGroup" title="View Owner on GitHub">
+      <span class="fa fa-user-circle"></span> HDFGroup
+    </a>
+    <span class="subtitle" title="Primary Language">
+      <span class="fa fa-code"></span> C
+    </span>
+    <a class="subtitle" href="https://opensource.org/licenses/BSD-3-Clause" title="BSD 3-Clause License">
+      <span class="fa fa-balance-scale"></span> BSD-3-Clause
+    </a>
+  </h2>
+
+  <p class="stats text-center">
+    <a href="https://github.com/HDFGroup/hdf5"><span class="fa fa-github"></span> GitHub Page</a>
+    <a href="https://github.com/HDFGroup/hdf5/stargazers"><span class="fa fa-star"></span> 523 stars</a>
+    <a href="https://github.com/HDFGroup/hdf5/network"><span class="fa fa-code-fork"></span> 234 forks</a>
+    <a href="https://www.hdfgroup.org/"><span class="fa fa-globe"></span> Project Website</a>
+  </p>
+
+  <blockquote>
+    HDF5 is a data model, library, and file format for storing and managing data.
+    It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O
+    and for high volume and complex data.
+  </blockquote>
+
+  <!-- Metrics -->
+  <div class="metrics-section">
+    <h2 class="metrics-title">Metrics</h2>
+    <div class="chart-layout">
+
+      <svg id="metrics-svg" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-opacity="0.35"/>
+          </filter>
+        </defs>
+        <!-- JS fills this in -->
+      </svg>
+
+      <div class="dim-legend" id="dim-legend"></div>
+
+      <div class="status-key">
+        <span><span class="key-swatch" style="background:#6b7280; opacity:0.35"></span>Pending</span>
+        <span><span class="key-swatch" style="background:#059669"></span>Data collected (click to view)</span>
+      </div>
+
+      <div class="detail-panel" id="detail-panel">
+        <div class="detail-header" id="detail-title">
+          <span class="detail-dim-dot" id="detail-dot"></span>
+          <span id="detail-title-text"></span>
+        </div>
+        <div class="detail-content" id="detail-body"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // ── Data ─────────────────────────────────────────────────────────────────
+    const DIMENSIONS = [
+      {
+        id: 'impact', label: '4.1 Impact',
+        color: '#7c3aed', muted: '#ddd6fe',
+        items: [
+          { num: '4.1.1', title: 'Software Citation and Adoption', data: null },
+          { num: '4.1.2', title: 'Field Research Impact',          data: null }
+        ]
+      },
+      {
+        id: 'sustainability', label: '4.2 Sustainability',
+        color: '#059669', muted: '#a7f3d0',
+        items: [
+          { num: '4.2.1', title: 'Codes of Conduct, Governance, and Contributor Guidelines',
+            data: `<p><strong>Code of Conduct:</strong> <a href="https://github.com/HDFGroup/hdf5/blob/develop/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a></p>
+                   <p><strong>Governance:</strong> Not found</p>
+                   <p><strong>Contributing Guidelines:</strong> <a href="https://github.com/HDFGroup/hdf5/blob/develop/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+                   <p><strong>Score:</strong> 2/3</p>` },
+          { num: '4.2.2', title: 'Open-Source Licensing and FAIR Compliance',
+            data: `<p><strong>License:</strong> Other</p>
+                   <p><strong>OSI Approved:</strong> Unknown</p>
+                   <p><strong>Compliance Score:</strong> 2/3 (67%)</p>
+                   <p>License file: ✓ &nbsp; License identified: ✓ &nbsp; OSI approved: ?</p>` },
+          { num: '4.2.3', title: 'Active Maintenance',
+            data: `<p><strong>Status:</strong> Active</p>
+                   <p><strong>Last Commit:</strong> 0 days ago</p>
+                   <p><strong>Commits (52 weeks):</strong> 462 (51 active weeks)</p>
+                   <p><strong>Trend:</strong> Stable</p>
+                   <p><strong>Latest Release:</strong> 2.1.1 (20 days ago)</p>
+                   <p><strong>Releases (last year):</strong> 4</p>
+                   <p><strong>Contributors:</strong> 30 (bus factor: 2)</p>
+                   <p><strong>Score:</strong> 4/5 (80%)</p>` },
+          { num: '4.2.4',  title: 'Engagement',                             data: null },
+          { num: '4.2.5',  title: 'Outreach',                               data: null },
+          { num: '4.2.6',  title: 'Welcomeness',                            data: null },
+          { num: '4.2.7',  title: 'Collaboration',                          data: null },
+          { num: '4.2.8',  title: 'Financial Sustainability',               data: null },
+          { num: '4.2.9',  title: 'Institutional & Organizational Support', data: null },
+          { num: '4.2.10', title: 'Project Longevity and Community Health', data: null }
+        ]
+      },
+      {
+        id: 'quality', label: '4.3 Quality',
+        color: '#0284c7', muted: '#bae6fd',
+        items: [
+          { num: '4.3.1', title: 'Reliability and Robustness',            data: null },
+          { num: '4.3.2', title: 'Development Practices',                 data: null },
+          { num: '4.3.3', title: 'Reproducibility',                       data: null },
+          { num: '4.3.4', title: 'Usability',                             data: null },
+          { num: '4.3.5', title: 'Accessibility',                         data: null },
+          { num: '4.3.6', title: 'Maintainability and Understandability', data: null },
+          { num: '4.3.7', title: 'Performance and Efficiency',            data: null }
+        ]
+      }
+    ];
+
+    // ── Chart constants ───────────────────────────────────────────────────────
+    const CX = 180, CY = 180;
+    const R_OUT = 158, R_IN = 100;   // outer and inner radius of donut
+    const GAP_SM = 2.5;              // degrees between metrics in same dimension
+    const GAP_LG = 14;               // degrees between dimensions
+    const NS = 'http://www.w3.org/2000/svg';
+
+    const totalMetrics = DIMENSIONS.reduce((s, d) => s + d.items.length, 0);
+    const totalCollected = DIMENSIONS.reduce((s, d) => s + d.items.filter(i => i.data).length, 0);
+
+    const gapTotal =
+      DIMENSIONS.reduce((s, d) => s + Math.max(0, d.items.length - 1) * GAP_SM, 0) +
+      DIMENSIONS.length * GAP_LG;
+    const arcPer = (360 - gapTotal) / totalMetrics;
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+    function toXY(cx, cy, r, deg) {
+      const rad = deg * Math.PI / 180;
+      return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+    }
+
+    function arcPath(startDeg, endDeg) {
+      const p1 = toXY(CX, CY, R_OUT, startDeg);
+      const p2 = toXY(CX, CY, R_OUT, endDeg);
+      const p3 = toXY(CX, CY, R_IN,  endDeg);
+      const p4 = toXY(CX, CY, R_IN,  startDeg);
+      const lg = (endDeg - startDeg) > 180 ? 1 : 0;
+      const f = n => n.toFixed(2);
+      return [
+        `M ${f(p1.x)} ${f(p1.y)}`,
+        `A ${R_OUT} ${R_OUT} 0 ${lg} 1 ${f(p2.x)} ${f(p2.y)}`,
+        `L ${f(p3.x)} ${f(p3.y)}`,
+        `A ${R_IN} ${R_IN} 0 ${lg} 0 ${f(p4.x)} ${f(p4.y)}`,
+        'Z'
+      ].join(' ');
+    }
+
+    function el(tag, attrs) {
+      const e = document.createElementNS(NS, tag);
+      Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
+      return e;
+    }
+
+    // ── Center text ───────────────────────────────────────────────────────────
+    const svg = document.getElementById('metrics-svg');
+
+    // Draw subtle inner circle background
+    svg.appendChild(el('circle', { cx: CX, cy: CY, r: R_IN - 1, fill: '#fff', stroke: '#f1f5f9', 'stroke-width': '1' }));
+
+    const txtGroup = el('g', {});
+
+    const txtBig = el('text', {
+      x: CX, y: CY - 6,
+      'text-anchor': 'middle', 'dominant-baseline': 'auto',
+      'font-size': '30', 'font-weight': '700', fill: '#1e293b',
+      'font-family': 'system-ui,sans-serif'
+    });
+    txtBig.textContent = `${totalCollected} / ${totalMetrics}`;
+
+    const txtSub = el('text', {
+      x: CX, y: CY + 16,
+      'text-anchor': 'middle', 'dominant-baseline': 'auto',
+      'font-size': '11', fill: '#94a3b8',
+      'font-family': 'system-ui,sans-serif'
+    });
+    txtSub.textContent = 'metrics collected';
+
+    // Hover labels (swap in on mouseenter)
+    const hNum = el('text', {
+      x: CX, y: CY - 20,
+      'text-anchor': 'middle', 'dominant-baseline': 'auto',
+      'font-size': '13', 'font-weight': '700', fill: '#1e293b',
+      'font-family': 'system-ui,sans-serif', opacity: '0'
+    });
+    const hTitle = el('text', {
+      x: CX, y: CY - 2,
+      'text-anchor': 'middle', 'dominant-baseline': 'auto',
+      'font-size': '9.5', fill: '#475569',
+      'font-family': 'system-ui,sans-serif', opacity: '0'
+    });
+    const hStatus = el('text', {
+      x: CX, y: CY + 16,
+      'text-anchor': 'middle', 'dominant-baseline': 'auto',
+      'font-size': '10.5', 'font-weight': '600',
+      'font-family': 'system-ui,sans-serif', opacity: '0'
+    });
+
+    function showDefault() {
+      [txtBig, txtSub].forEach(t => t.setAttribute('opacity', '1'));
+      [hNum, hTitle, hStatus].forEach(t => t.setAttribute('opacity', '0'));
+    }
+
+    function showHover(item, dim) {
+      [txtBig, txtSub].forEach(t => t.setAttribute('opacity', '0'));
+      [hNum, hTitle, hStatus].forEach(t => t.setAttribute('opacity', '1'));
+      hNum.textContent = item.num;
+      // Break title across two tspan lines
+      while (hTitle.firstChild) hTitle.removeChild(hTitle.firstChild);
+      const words = item.title.split(' ');
+      const lines = [];
+      let cur = '';
+      words.forEach(w => {
+        if ((cur + ' ' + w).trim().length > 20 && cur) { lines.push(cur); cur = w; }
+        else cur = (cur + ' ' + w).trim();
+      });
+      if (cur) lines.push(cur);
+      lines.slice(0, 2).forEach((line, i) => {
+        const ts = el('tspan', { x: CX, dy: i === 0 ? '0' : '11' });
+        ts.textContent = line;
+        hTitle.appendChild(ts);
+      });
+      hStatus.textContent = item.data ? '● Data available' : '○ Pending';
+      hStatus.setAttribute('fill', item.data ? dim.color : '#94a3b8');
+    }
+
+    txtGroup.append(txtBig, txtSub, hNum, hTitle, hStatus);
+
+    // ── Render segments ───────────────────────────────────────────────────────
+    let angle = -90;   // start at top (12 o'clock)
+    let activeSeg = null;
+
+    const detail   = document.getElementById('detail-panel');
+    const detTitle = document.getElementById('detail-title-text');
+    const detDot   = document.getElementById('detail-dot');
+    const detBody  = document.getElementById('detail-body');
+
+    DIMENSIONS.forEach((dim, di) => {
+      if (di > 0) angle += GAP_LG;
+
+      // Track mid-angle for dim label
+      const dimStartAngle = angle;
+      const dimArcSpan = dim.items.length * arcPer + (dim.items.length - 1) * GAP_SM;
+      const dimMidAngle = dimStartAngle + dimArcSpan / 2;
+
+      dim.items.forEach((item, ii) => {
+        if (ii > 0) angle += GAP_SM;
+
+        const startA = angle;
+        const endA   = angle + arcPer;
+
+        const path = el('path', {
+          d: arcPath(startA, endA),
+          fill: item.data ? dim.color : dim.muted,
+          class: 'seg' + (item.data ? '' : ' no-data-seg'),
+          title: item.num + ' ' + item.title
+        });
+
+        path.addEventListener('mouseenter', () => showHover(item, dim));
+        path.addEventListener('mouseleave', () => {
+          if (path !== activeSeg) showDefault();
+        });
+
+        if (item.data) {
+          path.addEventListener('click', () => {
+            const opening = path !== activeSeg;
+
+            // Reset previous
+            if (activeSeg) {
+              const prevFill = activeSeg.getAttribute('data-fill');
+              activeSeg.setAttribute('fill', prevFill);
+              activeSeg.removeAttribute('filter');
+              activeSeg = null;
+            }
+
+            detail.classList.remove('visible');
+
+            if (opening) {
+              path.setAttribute('data-fill', dim.color);
+              // lighten to indicate selection
+              path.setAttribute('fill', dim.color);
+              path.setAttribute('filter', 'url(#glow)');
+              activeSeg = path;
+              detTitle.textContent = `${item.num}  ${item.title}`;
+              detDot.style.background = dim.color;
+              detBody.innerHTML = item.data;
+              detail.classList.add('visible');
+              showHover(item, dim);
+            } else {
+              showDefault();
+            }
+          });
+        }
+
+        // Store the natural fill for reset
+        path.setAttribute('data-fill', item.data ? dim.color : dim.muted);
+        svg.insertBefore(path, txtGroup);
+        angle = endA;
+      });
+
+      // Dimension arc label, outside the ring
+      const labelR = R_OUT + 22;
+      const lp = toXY(CX, CY, labelR, dimMidAngle);
+      const lbl = el('text', {
+        x: lp.x.toFixed(2), y: lp.y.toFixed(2),
+        'text-anchor': 'middle', 'dominant-baseline': 'middle',
+        'font-size': '10', 'font-weight': '700',
+        fill: dim.color, 'font-family': 'system-ui,sans-serif',
+        'pointer-events': 'none'
+      });
+      lbl.textContent = dim.label.split(' ').slice(1).join(' ');  // "Impact", "Sustainability", "Quality"
+      svg.insertBefore(lbl, txtGroup);
+    });
+
+    svg.appendChild(txtGroup);
+    showDefault();
+
+    // ── Legend ────────────────────────────────────────────────────────────────
+    const legend = document.getElementById('dim-legend');
+    DIMENSIONS.forEach(dim => {
+      const collected = dim.items.filter(i => i.data).length;
+      const div = document.createElement('div');
+      div.className = 'dim-legend-item';
+      div.innerHTML =
+        `<span class="dim-swatch" style="background:${dim.color}"></span>` +
+        `<span>${dim.label}</span>` +
+        `<span class="dim-count">${collected}/${dim.items.length}</span>`;
+      legend.appendChild(div);
+    });
+  </script>
+</body>
+</html>

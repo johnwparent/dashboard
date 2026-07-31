@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrics with Data Example - HDF5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+
+        .page-header {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .title:hover {
+            text-decoration: underline;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #586069;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .subtitle:hover {
+            color: #0366d6;
+        }
+
+        .stats {
+            margin: 20px 0;
+        }
+
+        .stats a {
+            color: #586069;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .stats a:hover {
+            color: #0366d6;
+        }
+
+        blockquote {
+            padding: 15px 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-left: 4px solid #dfe2e5;
+            background: #f6f8fa;
+            color: #586069;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .cdash-icon {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        /* Modern Sustainability Metrics Styles */
+        .sustainability-metrics-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .metrics-main-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e2e8f0;
+        }
+
+        /* Dimension Cards */
+        .metric-dimension {
+            background: #ffffff;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .metric-dimension:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Dimension Headers */
+        .dimension-header {
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .dimension-icon {
+            font-size: 32px;
+            line-height: 1;
+        }
+
+        .dimension-header h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        .impact-header {
+            background: linear-gradient(135deg, #1F6024 0%, #3F7844 33%, #5F9063 66%, #7FA883 100%);
+        }
+
+        .impact-header h3 {
+            color: #ffffff;
+        }
+
+        .sustainability-header {
+            background: linear-gradient(135deg, #1F5B60 0%, #3F7370 33%, #5F8B8F 66%, #7FA3AF 100%);
+        }
+
+        .sustainability-header h3 {
+            color: #ffffff;
+        }
+
+        .quality-header {
+            background: linear-gradient(135deg, #1F3A60 0%, #3F5270 33%, #5F6A8F 66%, #7F82AF 100%);
+        }
+
+        .quality-header h3 {
+            color: #ffffff;
+        }
+
+        /* Dimension Content */
+        .dimension-content {
+            padding: 25px 30px;
+        }
+
+        /* Metric Subsections */
+        .metric-subsection {
+            background: #f7fafc;
+            border-left: 4px solid #cbd5e0;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .metric-subsection:hover {
+            background: #edf2f7;
+            border-left-color: #4a5568;
+        }
+
+        .metric-subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .metric-subsection h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+        }
+
+        .metric-placeholder {
+            background: #ffffff;
+            border: 2px dashed #cbd5e0;
+            border-radius: 6px;
+            padding: 30px;
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            font-style: italic;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .metric-data {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 20px;
+            color: #2d3748;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .metric-data p {
+            margin: 8px 0;
+        }
+
+        .metric-data strong {
+            color: #1a202c;
+        }
+
+        /* Impact dimension specific colors */
+        .metric-dimension:has(.impact-header) .metric-subsection {
+            border-left-color: #5F9063;
+        }
+
+        .metric-dimension:has(.impact-header) .metric-subsection:hover {
+            border-left-color: #1F6024;
+            background: #e8f5e9;
+        }
+
+        /* Sustainability dimension specific colors */
+        .metric-dimension:has(.sustainability-header) .metric-subsection {
+            border-left-color: #5F8B8F;
+        }
+
+        .metric-dimension:has(.sustainability-header) .metric-subsection:hover {
+            border-left-color: #1F5B60;
+            background: #e0f2f1;
+        }
+
+        /* Quality dimension specific colors */
+        .metric-dimension:has(.quality-header) .metric-subsection {
+            border-left-color: #5F6A8F;
+        }
+
+        .metric-dimension:has(.quality-header) .metric-subsection:hover {
+            border-left-color: #1F3A60;
+            background: #e3f2fd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sustainability-metrics-container {
+                padding: 0 15px;
+            }
+
+            .metrics-main-title {
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+
+            .dimension-header {
+                padding: 15px 20px;
+                gap: 10px;
+            }
+
+            .dimension-icon {
+                font-size: 24px;
+            }
+
+            .dimension-header h3 {
+                font-size: 20px;
+            }
+
+            .dimension-content {
+                padding: 20px 15px;
+            }
+
+            .metric-subsection {
+                padding: 15px;
+            }
+
+            .metric-subsection h4 {
+                font-size: 14px;
+            }
+
+            .metric-placeholder {
+                padding: 20px;
+                font-size: 13px;
+                min-height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Repository Header Section -->
+    <h2 class="page-header text-center">
+        <a class="title" href="https://github.com/HDFGroup/hdf5" title="View Project on GitHub">hdf5</a>
+        <br />
+        <a class="subtitle" href="https://github.com/HDFGroup" title="View Owner on GitHub">
+            <span class="fa fa-user-circle"></span> HDFGroup
+        </a>
+        <span class="subtitle" title="Primary Language">
+            <span class="fa fa-code"></span> C
+        </span>
+        <a class="subtitle" href="https://opensource.org/licenses/BSD-3-Clause" title="BSD 3-Clause License">
+            <span class="fa fa-balance-scale"></span> BSD-3-Clause
+        </a>
+    </h2>
+
+    <!-- Stats Section -->
+    <p class="stats text-center">
+        <a href="https://github.com/HDFGroup/hdf5"> <span class="fa fa-github"></span>GitHub Page </a>
+        <a href="https://github.com/HDFGroup/hdf5/stargazers"> <span class="fa fa-star"></span>Community Interest: 523 stars</a>
+        <a href="https://github.com/HDFGroup/hdf5/network"> <span class="fa fa-code-fork"></span>Forks: 234 </a>
+        <a href="https://www.hdfgroup.org/"> <span class="fa fa-globe"></span>Project Website </a>
+    </p>
+
+    <!-- Description Section -->
+    <blockquote cite="https://github.com/HDFGroup/hdf5">
+        HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data.
+    </blockquote>
+
+    <!-- Metrics Section with Example Data -->
+    <div class="sustainability-metrics-container">
+        <h2 class="metrics-main-title">Metrics</h2>
+
+        <!-- Impact Dimension -->
+        <div class="metric-dimension">
+            <div class="dimension-header impact-header">
+                <span class="dimension-icon">📊</span>
+                <h3>4.1 Impact</h3>
+            </div>
+            <div class="dimension-content">
+                <div class="metric-subsection">
+                    <h4>4.1.1 Software Citation and Adoption</h4>
+                    <div class="metric-data">
+                        <p><strong>Citations:</strong> 1,234 academic papers</p>
+                        <p><strong>Downloads:</strong> 50,000+ per month</p>
+                        <p><strong>Used by:</strong> NASA, CERN, National Labs</p>
+                    </div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.1.2 Field Research Impact</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sustainability Dimension -->
+        <div class="metric-dimension">
+            <div class="dimension-header sustainability-header">
+                <span class="dimension-icon">♻️</span>
+                <h3>4.2 Sustainability</h3>
+            </div>
+            <div class="dimension-content">
+                <div class="metric-subsection">
+                    <h4>4.2.1 Codes of Conduct (CoC), Governance, and Contributor Guidelines</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.2 Open-Source Licensing and FAIR Compliance</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.3 Active Maintenance</h4>
+                    <div class="metric-data">
+                        <p><strong>Last commit:</strong> 2 days ago</p>
+                        <p><strong>Commit frequency:</strong> Daily</p>
+                        <p><strong>Active maintainers:</strong> 15</p>
+                    </div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.4 Engagement</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.5 Outreach</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.6 Welcomeness</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.7 Collaboration</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.8 Financial Sustainability</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.9 Institutional & Organizational Support</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.2.10 Project Longevity and Community Health</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quality Dimension -->
+        <div class="metric-dimension">
+            <div class="dimension-header quality-header">
+                <span class="dimension-icon">🏆</span>
+                <h3>4.3 Quality</h3>
+            </div>
+            <div class="dimension-content">
+                <div class="metric-subsection">
+                    <h4>4.3.1 Reliability and Robustness</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.3.2 Development Practices</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.3.3 Reproducibility</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.3.4 Usability</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.3.5 Accessibility</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.3.6 Maintainability and Understandability</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+                <div class="metric-subsection">
+                    <h4>4.3.7 Performance and Efficiency</h4>
+                    <div class="metric-placeholder">Metrics data will be displayed here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
