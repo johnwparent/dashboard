@@ -1,9 +1,577 @@
 {
+    "AMReX-Codes/amrex": {
+        "description": "AMReX: Software Framework for Block Structured AMR",
+        "name": "AMReX-Codes/amrex",
+        "topics": [
+            "amrex",
+            "amr",
+            "high-performance-computing",
+            "hpsf",
+            "scientific-computing",
+            "adaptive-mesh-refinement"
+        ],
+        "website": "https://amrex-codes.github.io/amrex"
+    },
+    "Alpine-DAV/ascent": {
+        "description": "A flyweight in situ visualization and analysis runtime for multi-physics HPC simulations",
+        "name": "Alpine-DAV/ascent",
+        "topics": [
+            "hpc",
+            "parallel-computing",
+            "cuda",
+            "mpi",
+            "rendering",
+            "analysis",
+            "scientific-computing",
+            "data-viz",
+            "radiuss"
+        ],
+        "website": "https://alpine-dav.github.io/ascent/"
+    },
+    "BerkeleyLab/StFT": {
+        "description": "Spatio-temporal Fourier Transformer for Long Term Dynamics Prediction",
+        "name": "BerkeleyLab/StFT",
+        "topics": null,
+        "website": "https://openreview.net/pdf?id=o9Cb0ri2oW"
+    },
+    "BerkeleyLab/caffeine": {
+        "description": "A parallel runtime library for Fortran compilers",
+        "name": "BerkeleyLab/caffeine",
+        "topics": [
+            "coarray",
+            "coarray-fortran",
+            "fortran-2018",
+            "pgas",
+            "partitioned-global-address-space",
+            "parallel-programming",
+            "runtime-library",
+            "fortran-2023",
+            "parallel-computing",
+            "parallelism"
+        ],
+        "website": "https://go.lbl.gov/caffeine"
+    },
+    "BerkeleyLab/fiats": {
+        "description": "A deep learning library for use in high-performance computing applications in modern Fortran",
+        "name": "BerkeleyLab/fiats",
+        "topics": [
+            "deep-learning",
+            "inference",
+            "artificial-intelligence",
+            "machine-learning",
+            "neural-networks",
+            "ann",
+            "artificial-neural-networks",
+            "feedforward-neural-network",
+            "neural-network",
+            "fortran-2023"
+        ],
+        "website": ""
+    },
+    "BerkeleyLab/gasnet": {
+        "description": "The main repository for the GASNet/GASNet-EX communication library",
+        "name": "BerkeleyLab/gasnet",
+        "topics": [
+            "asynchronous-programming",
+            "communication-library",
+            "distributed-computing",
+            "exascale-computing",
+            "hpc",
+            "library",
+            "networking-stack",
+            "parallel-computing",
+            "pgas",
+            "rma",
+            "active-messages"
+        ],
+        "website": "https://gasnet.lbl.gov/"
+    },
+    "BerkeleyLab/julienne": {
+        "description": "A Fortran 2023 correctness-checking framework supporting expressive idioms for writing assertions and tests",
+        "name": "BerkeleyLab/julienne",
+        "topics": [
+            "fortran2023",
+            "fortran",
+            "unit-testing",
+            "correctness-verification",
+            "assertion-framework"
+        ],
+        "website": ""
+    },
+    "BerkeleyLab/upcxx": {
+        "description": "This is the main repository for the UPC++ v1.0 Library implementation.",
+        "name": "BerkeleyLab/upcxx",
+        "topics": [
+            "asynchronous-programming",
+            "distributed-computing",
+            "exascale-computing",
+            "hpc",
+            "parallel-computing",
+            "pgas",
+            "rpc",
+            "rpc-framework",
+            "gasnet",
+            "cxx",
+            "cxx11",
+            "cxx14",
+            "cxx17",
+            "cxx20",
+            "library"
+        ],
+        "website": "https://upcxx.lbl.gov"
+    },
+    "CEED/libCEED": {
+        "description": "CEED Library: Code for Efficient Extensible Discretizations",
+        "name": "CEED/libCEED",
+        "topics": [
+            "ceed",
+            "high-order",
+            "exascale-computing",
+            "api",
+            "ecp",
+            "high-performance-computing",
+            "gpu",
+            "cuda",
+            "julia",
+            "linear-algebra",
+            "hpc"
+        ],
+        "website": "https://libceed.org"
+    },
+    "CHIP-SPV/chipStar": {
+        "description": "chipStar is a tool for compiling and running HIP/CUDA on SPIR-V via OpenCL or Level Zero APIs.",
+        "name": "CHIP-SPV/chipStar",
+        "topics": [
+            "cuda",
+            "hip",
+            "opencl",
+            "hpc",
+            "llvm",
+            "level0",
+            "spir-v"
+        ],
+        "website": ""
+    },
+    "CODARcode/Chimbuko": {
+        "description": "Performance Analysis Framework for Scientific Workflows for online Data Analysis and Performance Visualization",
+        "name": "CODARcode/Chimbuko",
+        "topics": null,
+        "website": ""
+    },
+    "E4S-Project/e4s": {
+        "description": "E4S for Spack",
+        "name": "E4S-Project/e4s",
+        "topics": null,
+        "website": "https://e4s.readthedocs.io"
+    },
+    "HDFGroup/hdf5": {
+        "description": "Official HDF5\u00ae Library Repository",
+        "name": "HDFGroup/hdf5",
+        "topics": [
+            "c",
+            "cpp",
+            "database",
+            "fortran",
+            "hdf",
+            "hdf5",
+            "java",
+            "library",
+            "nosql"
+        ],
+        "website": "https://www.hdfgroup.org/"
+    },
+    "HPCToolkit/hpctoolkit": {
+        "description": "HPCToolkit performance tools: measurement and analysis components",
+        "name": "HPCToolkit/hpctoolkit",
+        "topics": null,
+        "website": ""
+    },
+    "Lab-Notebooks/CodeScribe": {
+        "description": "AI Agent and CLI for Code Translation and Software Development in Scientific Computing",
+        "name": "Lab-Notebooks/CodeScribe",
+        "topics": null,
+        "website": "https://arxiv.org/abs/2410.24119"
+    },
+    "Libensemble/libensemble": {
+        "description": "A Python toolkit for coordinating asynchronous and dynamic ensembles of calculations.",
+        "name": "Libensemble/libensemble",
+        "topics": null,
+        "website": "https://libensemble.readthedocs.io/"
+    },
+    "OpenACCUserGroup/OpenACCV-V": {
+        "description": "OpenACC Validation and Verification Testsuite repository",
+        "name": "OpenACCUserGroup/OpenACCV-V",
+        "topics": null,
+        "website": ""
+    },
+    "OpenMP-Validation-and-Verification/OpenMP_VV": {
+        "description": "OpenMP Offloading Validation & Verification Suite; Official repository. We have migrated from bitbucket!! For documentation, results, publication and presentations, please check out our website ->",
+        "name": "OpenMP-Validation-and-Verification/OpenMP_VV",
+        "topics": [
+            "openmp",
+            "testing",
+            "testing-framework",
+            "openmp-offloading",
+            "openmp-target",
+            "compilers",
+            "verification",
+            "validation"
+        ],
+        "website": "https://crpl.cis.udel.edu/ompvvsollve/"
+    },
+    "Parallel-NetCDF/PnetCDF": {
+        "description": "Source code repository of PnetCDF library and utilities",
+        "name": "Parallel-NetCDF/PnetCDF",
+        "topics": [
+            "netcdf",
+            "mpi-io",
+            "parallel-io",
+            "pnetcdf",
+            "c",
+            "fortran"
+        ],
+        "website": "https://parallel-netcdf.github.io"
+    },
+    "SCOREC/core": {
+        "description": "parallel finite element unstructured meshes",
+        "name": "SCOREC/core",
+        "topics": [
+            "c",
+            "c-plus-plus",
+            "mpi",
+            "parallel",
+            "parallel-computing",
+            "hpc",
+            "adaptive",
+            "meshes",
+            "finite-elements",
+            "bigger-meshes",
+            "cmake",
+            "unstructured-meshes"
+        ],
+        "website": "http://scorec.github.io/core/"
+    },
+    "SCOREC/omega_h": {
+        "description": "Simplex mesh adaptivity for HPC",
+        "name": "SCOREC/omega_h",
+        "topics": [
+            "kokkos"
+        ],
+        "website": "https://scorec.github.io/omega_h/"
+    },
+    "SCOREC/pcms": {
+        "description": "PCMS: Parallel Coupler For Multimodel Simulations",
+        "name": "SCOREC/pcms",
+        "topics": [
+            "kokkos",
+            "coupling",
+            "hpc",
+            "supercomputing",
+            "adios2",
+            "spack",
+            "unstructured-meshes"
+        ],
+        "website": "https://scorec.github.io/pcms/"
+    },
+    "SCOREC/pumi-pic": {
+        "description": "support libraries for unstructured mesh particle in cell simulations on GPUs and CPUs",
+        "name": "SCOREC/pumi-pic",
+        "topics": [
+            "kokkos"
+        ],
+        "website": "https://scorec.github.io/pumi-pic/"
+    },
+    "Shaw-git/CAESAR": {
+        "description": "A Unified Framework of Foundation and Generative Models for Efficient Compression of Scientific Data",
+        "name": "Shaw-git/CAESAR",
+        "topics": null,
+        "website": null
+    },
+    "StanfordLegion/legion": {
+        "description": "The Legion Parallel Programming System",
+        "name": "StanfordLegion/legion",
+        "topics": null,
+        "website": "https://legion.stanford.edu"
+    },
+    "UO-OACISS/tau2": {
+        "description": "TAU Performance System Public Mirror (Updated every night at midnight, USA Pacific Time)",
+        "name": "UO-OACISS/tau2",
+        "topics": null,
+        "website": "http://tau.uoregon.edu"
+    },
+    "Viskores/viskores": {
+        "description": "A visualization library for many-threaded devices.",
+        "name": "Viskores/viskores",
+        "topics": [
+            "cuda",
+            "hip",
+            "hpc",
+            "kokkos",
+            "metaprogramming",
+            "sciences",
+            "visualization",
+            "vtk"
+        ],
+        "website": ""
+    },
+    "anigmetov/oineus": {
+        "description": null,
+        "name": "anigmetov/oineus",
+        "topics": null,
+        "website": null
+    },
+    "anlsys/aml": {
+        "description": "Building Blocks for Explicit Memory Management on Complex Architectures",
+        "name": "anlsys/aml",
+        "topics": null,
+        "website": "https://argo-aml.readthedocs.io/"
+    },
+    "darshan-hpc/darshan": {
+        "description": "  Darshan I/O characterization tool",
+        "name": "darshan-hpc/darshan",
+        "topics": null,
+        "website": null
+    },
+    "deephyper/deephyper": {
+        "description": "DeepHyper: A Python Package for Massively Parallel Hyperparameter Optimization in Machine Learning",
+        "name": "deephyper/deephyper",
+        "topics": [
+            "automl",
+            "scalability",
+            "neural-architecture-search",
+            "hyperparameter-optimization",
+            "python",
+            "deep-learning",
+            "hpc",
+            "machine-learning",
+            "multi-fidelity",
+            "pytorch",
+            "uncertainty-quantification",
+            "mpi",
+            "raylib"
+        ],
+        "website": "https://deephyper.readthedocs.io"
+    },
+    "diatomic/diy": {
+        "description": "data-parallel out-of-core library",
+        "name": "diatomic/diy",
+        "topics": null,
+        "website": null
+    },
+    "dyninst/dyninst": {
+        "description": "DyninstAPI: Tools for binary instrumentation, analysis, and modification.",
+        "name": "dyninst/dyninst",
+        "topics": [
+            "dyninst",
+            "stackwalker",
+            "symtab",
+            "binary-analysis"
+        ],
+        "website": "http://www.paradyn.org"
+    },
+    "ebugger/Empirical-Roofline-Toolkit": {
+        "description": "Forked from https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/",
+        "name": "ebugger/Empirical-Roofline-Toolkit",
+        "topics": null,
+        "website": null
+    },
+    "exalearn/EXARL": {
+        "description": "Scalable Framework for Reinforcement Learning",
+        "name": "exalearn/EXARL",
+        "topics": null,
+        "website": ""
+    },
+    "flang-compiler/flang": {
+        "description": "Flang is a Fortran language front-end designed for integration with LLVM.",
+        "name": "flang-compiler/flang",
+        "topics": [
+            "fortran",
+            "compiler",
+            "llvm",
+            "fortran-compiler"
+        ],
+        "website": ""
+    },
+    "ginkgo-project/ginkgo": {
+        "description": "Numerical linear algebra software package",
+        "name": "ginkgo-project/ginkgo",
+        "topics": [
+            "linear-algebra",
+            "hpc",
+            "gpu-computing",
+            "cuda",
+            "krylov-methods",
+            "preconditioning",
+            "sparse-linear-systems",
+            "spmv",
+            "hip",
+            "oneapi",
+            "dpcpp",
+            "openmp"
+        ],
+        "website": "https://gko-project.org"
+    },
     "hpctoolkit/hpctoolkit": {
         "description": "HPCToolkit performance tools: measurement and analysis components",
         "name": "hpctoolkit/hpctoolkit",
         "topics": null,
         "website": "https://gitlab.com/hpctoolkit/hpctoolkit"
+    },
+    "hypre-space/hypre": {
+        "description": "Parallel solvers for sparse linear systems featuring multigrid methods.",
+        "name": "hypre-space/hypre",
+        "topics": [
+            "math-physics",
+            "library",
+            "hpc",
+            "radiuss"
+        ],
+        "website": "https://www.llnl.gov/casc/hypre/"
+    },
+    "icl-utk-edu/magma": {
+        "description": null,
+        "name": "icl-utk-edu/magma",
+        "topics": null,
+        "website": null
+    },
+    "icl-utk-edu/papi": {
+        "description": null,
+        "name": "icl-utk-edu/papi",
+        "topics": null,
+        "website": null
+    },
+    "kokkos/kokkos": {
+        "description": "Kokkos C++ Performance Portability Programming Ecosystem: The Programming Model - Parallel Execution and Memory Abstraction",
+        "name": "kokkos/kokkos",
+        "topics": [
+            "programming-model",
+            "parallel-computing",
+            "c-plus-plus",
+            "abstraction",
+            "high-performance-computing",
+            "kokkos",
+            "hpsf"
+        ],
+        "website": "https://kokkos.org"
+    },
+    "kokkos/kokkos-kernels": {
+        "description": "Kokkos C++ Performance Portability Programming Ecosystem: Math Kernels - Provides BLAS, Sparse BLAS and Graph Kernels",
+        "name": "kokkos/kokkos-kernels",
+        "topics": [
+            "kokkos",
+            "linear-algebra",
+            "sparse-matrix",
+            "performance-portability",
+            "blas",
+            "hpsf"
+        ],
+        "website": "https://kokkos.org"
+    },
+    "llnl/libROM": {
+        "description": "Data-driven model reduction library with an emphasis on large scale parallelism and linear subspace methods",
+        "name": "llnl/libROM",
+        "topics": [
+            "scientific",
+            "simulation",
+            "modeling",
+            "model-reduction",
+            "large-scale",
+            "parallel-computing",
+            "reduced-order-models",
+            "subspace-learning",
+            "math-physics"
+        ],
+        "website": "https://www.librom.net"
+    },
+    "llnl/pylibROM": {
+        "description": "Python interface for libROM, library for reduced order models",
+        "name": "llnl/pylibROM",
+        "topics": null,
+        "website": "https://www.librom.net"
+    },
+    "llnl/sundials": {
+        "description": "Official development repository for SUNDIALS - a SUite of Nonlinear and DIfferential/ALgebraic equation Solvers. Pull requests are welcome for bug fixes and minor changes.",
+        "name": "llnl/sundials",
+        "topics": [
+            "ode-solver",
+            "dae-solver",
+            "nonlinear-equation-solver",
+            "sensitivity-analysis",
+            "time-integration",
+            "scientific-computing",
+            "parallel-computing",
+            "hpc",
+            "math-physics",
+            "radiuss",
+            "solver",
+            "high-performance-computing"
+        ],
+        "website": "https://computing.llnl.gov/projects/sundials"
+    },
+    "llnl/zfp": {
+        "description": "Compressed numerical arrays that support high-speed random access",
+        "name": "llnl/zfp",
+        "topics": [
+            "radiuss",
+            "data-viz",
+            "compression",
+            "floating-point",
+            "arrays"
+        ],
+        "website": "http://zfp.llnl.gov"
+    },
+    "llvm/llvm-project": {
+        "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+        "name": "llvm/llvm-project",
+        "topics": null,
+        "website": "http://llvm.org"
+    },
+    "mfem/mfem": {
+        "description": "Lightweight, general, scalable C++ library for finite element methods",
+        "name": "mfem/mfem",
+        "topics": [
+            "finite-elements",
+            "high-order",
+            "high-performance-computing",
+            "parallel-computing",
+            "amr",
+            "computational-science",
+            "fem",
+            "scientific-computing",
+            "hpc",
+            "math-physics",
+            "radiuss"
+        ],
+        "website": "http://mfem.org"
+    },
+    "open-mpi/ompi": {
+        "description": "Open MPI main development repository",
+        "name": "open-mpi/ompi",
+        "topics": [
+            "c",
+            "hpc",
+            "mpi",
+            "fortran",
+            "hacktoberfest",
+            "openmpi"
+        ],
+        "website": "https://www.open-mpi.org"
+    },
+    "ornladios/ADIOS2": {
+        "description": "Next generation of ADIOS developed in the Exascale Computing Program",
+        "name": "ornladios/ADIOS2",
+        "topics": [
+            "adios",
+            "cmake",
+            "exascale-computing",
+            "hdf5",
+            "hpc",
+            "io",
+            "ecp",
+            "exascale",
+            "high-performance-computing"
+        ],
+        "website": "https://adios2.readthedocs.io/en/latest/index.html"
     },
     "paraview/paraview": {
         "description": "Parallel Data Analysis and Visualization Application based on VTK.",
@@ -11,16 +579,184 @@
         "topics": null,
         "website": "https://gitlab.kitware.com/paraview/paraview"
     },
+    "patrickfan/GenAI4UQ": {
+        "description": null,
+        "name": "patrickfan/GenAI4UQ",
+        "topics": null,
+        "website": null
+    },
     "petsc/petsc": {
         "description": "PETSc, pronounced PET-see (the S is silent), is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations.",
         "name": "petsc/petsc",
         "topics": null,
         "website": "https://gitlab.com/petsc/petsc"
     },
+    "pghysels/STRUMPACK": {
+        "description": "Structured Matrix Package (LBNL)",
+        "name": "pghysels/STRUMPACK",
+        "topics": [
+            "preconditioner",
+            "linear-systems",
+            "hss",
+            "dense-matrices",
+            "matrix-computations",
+            "linear-algebra",
+            "sparse-matrix",
+            "sparse-linear-systems",
+            "hpc"
+        ],
+        "website": "http://portal.nersc.gov/project/sparse/strumpack/"
+    },
+    "pmodels/mpich": {
+        "description": "Official MPICH Repository",
+        "name": "pmodels/mpich",
+        "topics": [
+            "mpi",
+            "c",
+            "fortran",
+            "hpc"
+        ],
+        "website": "http://www.mpich.org"
+    },
+    "pnnl/neuromancer": {
+        "description": "Pytorch-based framework for solving parametric constrained optimization problems, physics-informed system identification, and parametric model predictive control. ",
+        "name": "pnnl/neuromancer",
+        "topics": [
+            "constrained-optimization",
+            "control-systems",
+            "deep-learning",
+            "differentiable-programming",
+            "dynamical-systems",
+            "pytorch",
+            "differentiable-optimization",
+            "nonlinear-dynamics",
+            "nonlinear-optimization",
+            "differentiable-control",
+            "physics-informed-ml"
+        ],
+        "website": "https://pnnl.github.io/neuromancer/"
+    },
+    "sandialabs/Albany": {
+        "description": "Sandia National Laboratories' Albany multiphysics code",
+        "name": "sandialabs/Albany",
+        "topics": [
+            "scr-1341",
+            "snl-applications",
+            "snl-science-libs"
+        ],
+        "website": ""
+    },
+    "sandialabs/pytuq": {
+        "description": "Python Toolkit for Uncertainty Quantification",
+        "name": "sandialabs/pytuq",
+        "topics": [
+            "scr-3177",
+            "uncertainty-quantification",
+            "bayesian-inference",
+            "forward-propagation",
+            "inverse-problems",
+            "model-error",
+            "regression",
+            "sparse-regression",
+            "surrogate-models",
+            "surrogates",
+            "uq",
+            "snl-data-analysis",
+            "snl-other",
+            "snl-science-libs"
+        ],
+        "website": "https://sandialabs.github.io/pytuq/"
+    },
+    "spack/spack": {
+        "description": "A flexible package manager that supports multiple versions, configurations, platforms, and compilers.",
+        "name": "spack/spack",
+        "topics": [
+            "python",
+            "spack",
+            "package-manager",
+            "hpc",
+            "build-tools",
+            "radiuss",
+            "scientific-computing",
+            "macos",
+            "linux",
+            "hpsf",
+            "windows"
+        ],
+        "website": "https://spack.io"
+    },
+    "tpeterka/ChatVis": {
+        "description": "Scientific visualization agent and benchmark",
+        "name": "tpeterka/ChatVis",
+        "topics": null,
+        "website": null
+    },
+    "trilinos/Trilinos": {
+        "description": "Primary repository for the Trilinos Project",
+        "name": "trilinos/Trilinos",
+        "topics": [
+            "snl-science-libs",
+            "sandia-national-laboratories",
+            "hpsf",
+            "scientific-computing",
+            "high-performance-computing",
+            "c-plus-plus",
+            "hpc",
+            "trilinos"
+        ],
+        "website": "https://trilinos.org/"
+    },
+    "visit-dav/visit": {
+        "description": "VisIt - Visualization and Data Analysis for Mesh-based Scientific Data",
+        "name": "visit-dav/visit",
+        "topics": [
+            "hpc",
+            "scientific-visualization",
+            "scientific-computing",
+            "visualization",
+            "data-analysis",
+            "radiuss",
+            "data-viz",
+            "python"
+        ],
+        "website": "https://visit.llnl.gov"
+    },
     "vtk/vtk": {
         "description": "Visualization Toolkit",
         "name": "vtk/vtk",
         "topics": null,
         "website": "https://gitlab.kitware.com/vtk/vtk"
+    },
+    "xiaoyeli/superlu": {
+        "description": "Supernodal sparse direct solver.  https://portal.nersc.gov/project/sparse/superlu/",
+        "name": "xiaoyeli/superlu",
+        "topics": null,
+        "website": ""
+    },
+    "xiaoyeli/superlu_dist": {
+        "description": "Distributed memory, MPI based SuperLU",
+        "name": "xiaoyeli/superlu_dist",
+        "topics": null,
+        "website": "https://portal.nersc.gov/project/sparse/superlu/"
+    },
+    "xiaoyeli/superlu_mt": {
+        "description": null,
+        "name": "xiaoyeli/superlu_mt",
+        "topics": null,
+        "website": null
+    },
+    "ytopt-team/ytopt": {
+        "description": "ytopt: machine-learning-based autotuning and hyperparameter optimization framework using Bayesian Optimization",
+        "name": "ytopt-team/ytopt",
+        "topics": [
+            "autotuning",
+            "bayesian-optimization",
+            "asynchronous-search",
+            "hyperparameter-optimization",
+            "asynchronous-and-dynamic-task-management",
+            "python",
+            "hyperparameter-tuning"
+        ],
+        "website": "https://github.com/ytopt-team/ytopt"
     }
 }

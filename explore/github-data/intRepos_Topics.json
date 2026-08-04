@@ -1,6 +1,2008 @@
 {
     "data": {
+        "AMReX-Codes/amrex": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/amrex",
+                        "topic": {
+                            "name": "amrex"
+                        },
+                        "url": "https://github.com/topics/amrex"
+                    },
+                    {
+                        "resourcePath": "/topics/amr",
+                        "topic": {
+                            "name": "amr"
+                        },
+                        "url": "https://github.com/topics/amr"
+                    },
+                    {
+                        "resourcePath": "/topics/high-performance-computing",
+                        "topic": {
+                            "name": "high-performance-computing"
+                        },
+                        "url": "https://github.com/topics/high-performance-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/hpsf",
+                        "topic": {
+                            "name": "hpsf"
+                        },
+                        "url": "https://github.com/topics/hpsf"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-computing",
+                        "topic": {
+                            "name": "scientific-computing"
+                        },
+                        "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/adaptive-mesh-refinement",
+                        "topic": {
+                            "name": "adaptive-mesh-refinement"
+                        },
+                        "url": "https://github.com/topics/adaptive-mesh-refinement"
+                    }
+                ],
+                "totalCount": 6
+            }
+        },
+        "Alpine-DAV/ascent": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/cuda",
+                        "topic": {
+                            "name": "cuda"
+                        },
+                        "url": "https://github.com/topics/cuda"
+                    },
+                    {
+                        "resourcePath": "/topics/mpi",
+                        "topic": {
+                            "name": "mpi"
+                        },
+                        "url": "https://github.com/topics/mpi"
+                    },
+                    {
+                        "resourcePath": "/topics/rendering",
+                        "topic": {
+                            "name": "rendering"
+                        },
+                        "url": "https://github.com/topics/rendering"
+                    },
+                    {
+                        "resourcePath": "/topics/analysis",
+                        "topic": {
+                            "name": "analysis"
+                        },
+                        "url": "https://github.com/topics/analysis"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-computing",
+                        "topic": {
+                            "name": "scientific-computing"
+                        },
+                        "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/data-viz",
+                        "topic": {
+                            "name": "data-viz"
+                        },
+                        "url": "https://github.com/topics/data-viz"
+                    },
+                    {
+                        "resourcePath": "/topics/radiuss",
+                        "topic": {
+                            "name": "radiuss"
+                        },
+                        "url": "https://github.com/topics/radiuss"
+                    }
+                ],
+                "totalCount": 9
+            }
+        },
+        "BerkeleyLab/StFT": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "BerkeleyLab/caffeine": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/coarray",
+                        "topic": {
+                            "name": "coarray"
+                        },
+                        "url": "https://github.com/topics/coarray"
+                    },
+                    {
+                        "resourcePath": "/topics/coarray-fortran",
+                        "topic": {
+                            "name": "coarray-fortran"
+                        },
+                        "url": "https://github.com/topics/coarray-fortran"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran-2018",
+                        "topic": {
+                            "name": "fortran-2018"
+                        },
+                        "url": "https://github.com/topics/fortran-2018"
+                    },
+                    {
+                        "resourcePath": "/topics/pgas",
+                        "topic": {
+                            "name": "pgas"
+                        },
+                        "url": "https://github.com/topics/pgas"
+                    },
+                    {
+                        "resourcePath": "/topics/partitioned-global-address-space",
+                        "topic": {
+                            "name": "partitioned-global-address-space"
+                        },
+                        "url": "https://github.com/topics/partitioned-global-address-space"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-programming",
+                        "topic": {
+                            "name": "parallel-programming"
+                        },
+                        "url": "https://github.com/topics/parallel-programming"
+                    },
+                    {
+                        "resourcePath": "/topics/runtime-library",
+                        "topic": {
+                            "name": "runtime-library"
+                        },
+                        "url": "https://github.com/topics/runtime-library"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran-2023",
+                        "topic": {
+                            "name": "fortran-2023"
+                        },
+                        "url": "https://github.com/topics/fortran-2023"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/parallelism",
+                        "topic": {
+                            "name": "parallelism"
+                        },
+                        "url": "https://github.com/topics/parallelism"
+                    }
+                ],
+                "totalCount": 10
+            }
+        },
+        "BerkeleyLab/fiats": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/deep-learning",
+                        "topic": {
+                            "name": "deep-learning"
+                        },
+                        "url": "https://github.com/topics/deep-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/inference",
+                        "topic": {
+                            "name": "inference"
+                        },
+                        "url": "https://github.com/topics/inference"
+                    },
+                    {
+                        "resourcePath": "/topics/artificial-intelligence",
+                        "topic": {
+                            "name": "artificial-intelligence"
+                        },
+                        "url": "https://github.com/topics/artificial-intelligence"
+                    },
+                    {
+                        "resourcePath": "/topics/machine-learning",
+                        "topic": {
+                            "name": "machine-learning"
+                        },
+                        "url": "https://github.com/topics/machine-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/neural-networks",
+                        "topic": {
+                            "name": "neural-networks"
+                        },
+                        "url": "https://github.com/topics/neural-networks"
+                    },
+                    {
+                        "resourcePath": "/topics/ann",
+                        "topic": {
+                            "name": "ann"
+                        },
+                        "url": "https://github.com/topics/ann"
+                    },
+                    {
+                        "resourcePath": "/topics/artificial-neural-networks",
+                        "topic": {
+                            "name": "artificial-neural-networks"
+                        },
+                        "url": "https://github.com/topics/artificial-neural-networks"
+                    },
+                    {
+                        "resourcePath": "/topics/feedforward-neural-network",
+                        "topic": {
+                            "name": "feedforward-neural-network"
+                        },
+                        "url": "https://github.com/topics/feedforward-neural-network"
+                    },
+                    {
+                        "resourcePath": "/topics/neural-network",
+                        "topic": {
+                            "name": "neural-network"
+                        },
+                        "url": "https://github.com/topics/neural-network"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran-2023",
+                        "topic": {
+                            "name": "fortran-2023"
+                        },
+                        "url": "https://github.com/topics/fortran-2023"
+                    }
+                ],
+                "totalCount": 10
+            }
+        },
+        "BerkeleyLab/gasnet": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/asynchronous-programming",
+                        "topic": {
+                            "name": "asynchronous-programming"
+                        },
+                        "url": "https://github.com/topics/asynchronous-programming"
+                    },
+                    {
+                        "resourcePath": "/topics/communication-library",
+                        "topic": {
+                            "name": "communication-library"
+                        },
+                        "url": "https://github.com/topics/communication-library"
+                    },
+                    {
+                        "resourcePath": "/topics/distributed-computing",
+                        "topic": {
+                            "name": "distributed-computing"
+                        },
+                        "url": "https://github.com/topics/distributed-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/exascale-computing",
+                        "topic": {
+                            "name": "exascale-computing"
+                        },
+                        "url": "https://github.com/topics/exascale-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/library",
+                        "topic": {
+                            "name": "library"
+                        },
+                        "url": "https://github.com/topics/library"
+                    },
+                    {
+                        "resourcePath": "/topics/networking-stack",
+                        "topic": {
+                            "name": "networking-stack"
+                        },
+                        "url": "https://github.com/topics/networking-stack"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/pgas",
+                        "topic": {
+                            "name": "pgas"
+                        },
+                        "url": "https://github.com/topics/pgas"
+                    },
+                    {
+                        "resourcePath": "/topics/rma",
+                        "topic": {
+                            "name": "rma"
+                        },
+                        "url": "https://github.com/topics/rma"
+                    },
+                    {
+                        "resourcePath": "/topics/active-messages",
+                        "topic": {
+                            "name": "active-messages"
+                        },
+                        "url": "https://github.com/topics/active-messages"
+                    }
+                ],
+                "totalCount": 11
+            }
+        },
+        "BerkeleyLab/julienne": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/fortran2023",
+                        "topic": {
+                            "name": "fortran2023"
+                        },
+                        "url": "https://github.com/topics/fortran2023"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran",
+                        "topic": {
+                            "name": "fortran"
+                        },
+                        "url": "https://github.com/topics/fortran"
+                    },
+                    {
+                        "resourcePath": "/topics/unit-testing",
+                        "topic": {
+                            "name": "unit-testing"
+                        },
+                        "url": "https://github.com/topics/unit-testing"
+                    },
+                    {
+                        "resourcePath": "/topics/correctness-verification",
+                        "topic": {
+                            "name": "correctness-verification"
+                        },
+                        "url": "https://github.com/topics/correctness-verification"
+                    },
+                    {
+                        "resourcePath": "/topics/assertion-framework",
+                        "topic": {
+                            "name": "assertion-framework"
+                        },
+                        "url": "https://github.com/topics/assertion-framework"
+                    }
+                ],
+                "totalCount": 5
+            }
+        },
+        "BerkeleyLab/upcxx": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/asynchronous-programming",
+                        "topic": {
+                            "name": "asynchronous-programming"
+                        },
+                        "url": "https://github.com/topics/asynchronous-programming"
+                    },
+                    {
+                        "resourcePath": "/topics/distributed-computing",
+                        "topic": {
+                            "name": "distributed-computing"
+                        },
+                        "url": "https://github.com/topics/distributed-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/exascale-computing",
+                        "topic": {
+                            "name": "exascale-computing"
+                        },
+                        "url": "https://github.com/topics/exascale-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/pgas",
+                        "topic": {
+                            "name": "pgas"
+                        },
+                        "url": "https://github.com/topics/pgas"
+                    },
+                    {
+                        "resourcePath": "/topics/rpc",
+                        "topic": {
+                            "name": "rpc"
+                        },
+                        "url": "https://github.com/topics/rpc"
+                    },
+                    {
+                        "resourcePath": "/topics/rpc-framework",
+                        "topic": {
+                            "name": "rpc-framework"
+                        },
+                        "url": "https://github.com/topics/rpc-framework"
+                    },
+                    {
+                        "resourcePath": "/topics/gasnet",
+                        "topic": {
+                            "name": "gasnet"
+                        },
+                        "url": "https://github.com/topics/gasnet"
+                    },
+                    {
+                        "resourcePath": "/topics/cxx",
+                        "topic": {
+                            "name": "cxx"
+                        },
+                        "url": "https://github.com/topics/cxx"
+                    },
+                    {
+                        "resourcePath": "/topics/cxx11",
+                        "topic": {
+                            "name": "cxx11"
+                        },
+                        "url": "https://github.com/topics/cxx11"
+                    },
+                    {
+                        "resourcePath": "/topics/cxx14",
+                        "topic": {
+                            "name": "cxx14"
+                        },
+                        "url": "https://github.com/topics/cxx14"
+                    },
+                    {
+                        "resourcePath": "/topics/cxx17",
+                        "topic": {
+                            "name": "cxx17"
+                        },
+                        "url": "https://github.com/topics/cxx17"
+                    },
+                    {
+                        "resourcePath": "/topics/cxx20",
+                        "topic": {
+                            "name": "cxx20"
+                        },
+                        "url": "https://github.com/topics/cxx20"
+                    },
+                    {
+                        "resourcePath": "/topics/library",
+                        "topic": {
+                            "name": "library"
+                        },
+                        "url": "https://github.com/topics/library"
+                    }
+                ],
+                "totalCount": 15
+            }
+        },
+        "CEED/libCEED": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/ceed",
+                        "topic": {
+                            "name": "ceed"
+                        },
+                        "url": "https://github.com/topics/ceed"
+                    },
+                    {
+                        "resourcePath": "/topics/high-order",
+                        "topic": {
+                            "name": "high-order"
+                        },
+                        "url": "https://github.com/topics/high-order"
+                    },
+                    {
+                        "resourcePath": "/topics/exascale-computing",
+                        "topic": {
+                            "name": "exascale-computing"
+                        },
+                        "url": "https://github.com/topics/exascale-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/api",
+                        "topic": {
+                            "name": "api"
+                        },
+                        "url": "https://github.com/topics/api"
+                    },
+                    {
+                        "resourcePath": "/topics/ecp",
+                        "topic": {
+                            "name": "ecp"
+                        },
+                        "url": "https://github.com/topics/ecp"
+                    },
+                    {
+                        "resourcePath": "/topics/high-performance-computing",
+                        "topic": {
+                            "name": "high-performance-computing"
+                        },
+                        "url": "https://github.com/topics/high-performance-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/gpu",
+                        "topic": {
+                            "name": "gpu"
+                        },
+                        "url": "https://github.com/topics/gpu"
+                    },
+                    {
+                        "resourcePath": "/topics/cuda",
+                        "topic": {
+                            "name": "cuda"
+                        },
+                        "url": "https://github.com/topics/cuda"
+                    },
+                    {
+                        "resourcePath": "/topics/julia",
+                        "topic": {
+                            "name": "julia"
+                        },
+                        "url": "https://github.com/topics/julia"
+                    },
+                    {
+                        "resourcePath": "/topics/linear-algebra",
+                        "topic": {
+                            "name": "linear-algebra"
+                        },
+                        "url": "https://github.com/topics/linear-algebra"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    }
+                ],
+                "totalCount": 11
+            }
+        },
+        "CHIP-SPV/chipStar": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/cuda",
+                        "topic": {
+                            "name": "cuda"
+                        },
+                        "url": "https://github.com/topics/cuda"
+                    },
+                    {
+                        "resourcePath": "/topics/hip",
+                        "topic": {
+                            "name": "hip"
+                        },
+                        "url": "https://github.com/topics/hip"
+                    },
+                    {
+                        "resourcePath": "/topics/opencl",
+                        "topic": {
+                            "name": "opencl"
+                        },
+                        "url": "https://github.com/topics/opencl"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/llvm",
+                        "topic": {
+                            "name": "llvm"
+                        },
+                        "url": "https://github.com/topics/llvm"
+                    },
+                    {
+                        "resourcePath": "/topics/level0",
+                        "topic": {
+                            "name": "level0"
+                        },
+                        "url": "https://github.com/topics/level0"
+                    },
+                    {
+                        "resourcePath": "/topics/spir-v",
+                        "topic": {
+                            "name": "spir-v"
+                        },
+                        "url": "https://github.com/topics/spir-v"
+                    }
+                ],
+                "totalCount": 7
+            }
+        },
+        "CODARcode/Chimbuko": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "E4S-Project/e4s": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "HDFGroup/hdf5": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/c",
+                        "topic": {
+                            "name": "c"
+                        },
+                        "url": "https://github.com/topics/c"
+                    },
+                    {
+                        "resourcePath": "/topics/cpp",
+                        "topic": {
+                            "name": "cpp"
+                        },
+                        "url": "https://github.com/topics/cpp"
+                    },
+                    {
+                        "resourcePath": "/topics/database",
+                        "topic": {
+                            "name": "database"
+                        },
+                        "url": "https://github.com/topics/database"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran",
+                        "topic": {
+                            "name": "fortran"
+                        },
+                        "url": "https://github.com/topics/fortran"
+                    },
+                    {
+                        "resourcePath": "/topics/hdf",
+                        "topic": {
+                            "name": "hdf"
+                        },
+                        "url": "https://github.com/topics/hdf"
+                    },
+                    {
+                        "resourcePath": "/topics/hdf5",
+                        "topic": {
+                            "name": "hdf5"
+                        },
+                        "url": "https://github.com/topics/hdf5"
+                    },
+                    {
+                        "resourcePath": "/topics/java",
+                        "topic": {
+                            "name": "java"
+                        },
+                        "url": "https://github.com/topics/java"
+                    },
+                    {
+                        "resourcePath": "/topics/library",
+                        "topic": {
+                            "name": "library"
+                        },
+                        "url": "https://github.com/topics/library"
+                    },
+                    {
+                        "resourcePath": "/topics/nosql",
+                        "topic": {
+                            "name": "nosql"
+                        },
+                        "url": "https://github.com/topics/nosql"
+                    }
+                ],
+                "totalCount": 9
+            }
+        },
+        "HPCToolkit/hpctoolkit": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "Lab-Notebooks/CodeScribe": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "Libensemble/libensemble": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "OpenACCUserGroup/OpenACCV-V": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "OpenMP-Validation-and-Verification/OpenMP_VV": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/openmp",
+                        "topic": {
+                            "name": "openmp"
+                        },
+                        "url": "https://github.com/topics/openmp"
+                    },
+                    {
+                        "resourcePath": "/topics/testing",
+                        "topic": {
+                            "name": "testing"
+                        },
+                        "url": "https://github.com/topics/testing"
+                    },
+                    {
+                        "resourcePath": "/topics/testing-framework",
+                        "topic": {
+                            "name": "testing-framework"
+                        },
+                        "url": "https://github.com/topics/testing-framework"
+                    },
+                    {
+                        "resourcePath": "/topics/openmp-offloading",
+                        "topic": {
+                            "name": "openmp-offloading"
+                        },
+                        "url": "https://github.com/topics/openmp-offloading"
+                    },
+                    {
+                        "resourcePath": "/topics/openmp-target",
+                        "topic": {
+                            "name": "openmp-target"
+                        },
+                        "url": "https://github.com/topics/openmp-target"
+                    },
+                    {
+                        "resourcePath": "/topics/compilers",
+                        "topic": {
+                            "name": "compilers"
+                        },
+                        "url": "https://github.com/topics/compilers"
+                    },
+                    {
+                        "resourcePath": "/topics/verification",
+                        "topic": {
+                            "name": "verification"
+                        },
+                        "url": "https://github.com/topics/verification"
+                    },
+                    {
+                        "resourcePath": "/topics/validation",
+                        "topic": {
+                            "name": "validation"
+                        },
+                        "url": "https://github.com/topics/validation"
+                    }
+                ],
+                "totalCount": 8
+            }
+        },
+        "Parallel-NetCDF/PnetCDF": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/netcdf",
+                        "topic": {
+                            "name": "netcdf"
+                        },
+                        "url": "https://github.com/topics/netcdf"
+                    },
+                    {
+                        "resourcePath": "/topics/mpi-io",
+                        "topic": {
+                            "name": "mpi-io"
+                        },
+                        "url": "https://github.com/topics/mpi-io"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-io",
+                        "topic": {
+                            "name": "parallel-io"
+                        },
+                        "url": "https://github.com/topics/parallel-io"
+                    },
+                    {
+                        "resourcePath": "/topics/pnetcdf",
+                        "topic": {
+                            "name": "pnetcdf"
+                        },
+                        "url": "https://github.com/topics/pnetcdf"
+                    },
+                    {
+                        "resourcePath": "/topics/c",
+                        "topic": {
+                            "name": "c"
+                        },
+                        "url": "https://github.com/topics/c"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran",
+                        "topic": {
+                            "name": "fortran"
+                        },
+                        "url": "https://github.com/topics/fortran"
+                    }
+                ],
+                "totalCount": 6
+            }
+        },
+        "SCOREC/core": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/c",
+                        "topic": {
+                            "name": "c"
+                        },
+                        "url": "https://github.com/topics/c"
+                    },
+                    {
+                        "resourcePath": "/topics/c-plus-plus",
+                        "topic": {
+                            "name": "c-plus-plus"
+                        },
+                        "url": "https://github.com/topics/c-plus-plus"
+                    },
+                    {
+                        "resourcePath": "/topics/mpi",
+                        "topic": {
+                            "name": "mpi"
+                        },
+                        "url": "https://github.com/topics/mpi"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel",
+                        "topic": {
+                            "name": "parallel"
+                        },
+                        "url": "https://github.com/topics/parallel"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/adaptive",
+                        "topic": {
+                            "name": "adaptive"
+                        },
+                        "url": "https://github.com/topics/adaptive"
+                    },
+                    {
+                        "resourcePath": "/topics/meshes",
+                        "topic": {
+                            "name": "meshes"
+                        },
+                        "url": "https://github.com/topics/meshes"
+                    },
+                    {
+                        "resourcePath": "/topics/finite-elements",
+                        "topic": {
+                            "name": "finite-elements"
+                        },
+                        "url": "https://github.com/topics/finite-elements"
+                    },
+                    {
+                        "resourcePath": "/topics/bigger-meshes",
+                        "topic": {
+                            "name": "bigger-meshes"
+                        },
+                        "url": "https://github.com/topics/bigger-meshes"
+                    },
+                    {
+                        "resourcePath": "/topics/cmake",
+                        "topic": {
+                            "name": "cmake"
+                        },
+                        "url": "https://github.com/topics/cmake"
+                    },
+                    {
+                        "resourcePath": "/topics/unstructured-meshes",
+                        "topic": {
+                            "name": "unstructured-meshes"
+                        },
+                        "url": "https://github.com/topics/unstructured-meshes"
+                    }
+                ],
+                "totalCount": 12
+            }
+        },
+        "SCOREC/omega_h": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/kokkos",
+                        "topic": {
+                            "name": "kokkos"
+                        },
+                        "url": "https://github.com/topics/kokkos"
+                    }
+                ],
+                "totalCount": 1
+            }
+        },
+        "SCOREC/pcms": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/kokkos",
+                        "topic": {
+                            "name": "kokkos"
+                        },
+                        "url": "https://github.com/topics/kokkos"
+                    },
+                    {
+                        "resourcePath": "/topics/coupling",
+                        "topic": {
+                            "name": "coupling"
+                        },
+                        "url": "https://github.com/topics/coupling"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/supercomputing",
+                        "topic": {
+                            "name": "supercomputing"
+                        },
+                        "url": "https://github.com/topics/supercomputing"
+                    },
+                    {
+                        "resourcePath": "/topics/adios2",
+                        "topic": {
+                            "name": "adios2"
+                        },
+                        "url": "https://github.com/topics/adios2"
+                    },
+                    {
+                        "resourcePath": "/topics/spack",
+                        "topic": {
+                            "name": "spack"
+                        },
+                        "url": "https://github.com/topics/spack"
+                    },
+                    {
+                        "resourcePath": "/topics/unstructured-meshes",
+                        "topic": {
+                            "name": "unstructured-meshes"
+                        },
+                        "url": "https://github.com/topics/unstructured-meshes"
+                    }
+                ],
+                "totalCount": 7
+            }
+        },
+        "SCOREC/pumi-pic": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/kokkos",
+                        "topic": {
+                            "name": "kokkos"
+                        },
+                        "url": "https://github.com/topics/kokkos"
+                    }
+                ],
+                "totalCount": 1
+            }
+        },
+        "Shaw-git/CAESAR": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "StanfordLegion/legion": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "UO-OACISS/tau2": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "Viskores/viskores": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/cuda",
+                        "topic": {
+                            "name": "cuda"
+                        },
+                        "url": "https://github.com/topics/cuda"
+                    },
+                    {
+                        "resourcePath": "/topics/hip",
+                        "topic": {
+                            "name": "hip"
+                        },
+                        "url": "https://github.com/topics/hip"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/kokkos",
+                        "topic": {
+                            "name": "kokkos"
+                        },
+                        "url": "https://github.com/topics/kokkos"
+                    },
+                    {
+                        "resourcePath": "/topics/metaprogramming",
+                        "topic": {
+                            "name": "metaprogramming"
+                        },
+                        "url": "https://github.com/topics/metaprogramming"
+                    },
+                    {
+                        "resourcePath": "/topics/sciences",
+                        "topic": {
+                            "name": "sciences"
+                        },
+                        "url": "https://github.com/topics/sciences"
+                    },
+                    {
+                        "resourcePath": "/topics/visualization",
+                        "topic": {
+                            "name": "visualization"
+                        },
+                        "url": "https://github.com/topics/visualization"
+                    },
+                    {
+                        "resourcePath": "/topics/vtk",
+                        "topic": {
+                            "name": "vtk"
+                        },
+                        "url": "https://github.com/topics/vtk"
+                    }
+                ],
+                "totalCount": 8
+            }
+        },
+        "anigmetov/oineus": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "anlsys/aml": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "darshan-hpc/darshan": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "deephyper/deephyper": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/automl",
+                        "topic": {
+                            "name": "automl"
+                        },
+                        "url": "https://github.com/topics/automl"
+                    },
+                    {
+                        "resourcePath": "/topics/scalability",
+                        "topic": {
+                            "name": "scalability"
+                        },
+                        "url": "https://github.com/topics/scalability"
+                    },
+                    {
+                        "resourcePath": "/topics/neural-architecture-search",
+                        "topic": {
+                            "name": "neural-architecture-search"
+                        },
+                        "url": "https://github.com/topics/neural-architecture-search"
+                    },
+                    {
+                        "resourcePath": "/topics/hyperparameter-optimization",
+                        "topic": {
+                            "name": "hyperparameter-optimization"
+                        },
+                        "url": "https://github.com/topics/hyperparameter-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/python",
+                        "topic": {
+                            "name": "python"
+                        },
+                        "url": "https://github.com/topics/python"
+                    },
+                    {
+                        "resourcePath": "/topics/deep-learning",
+                        "topic": {
+                            "name": "deep-learning"
+                        },
+                        "url": "https://github.com/topics/deep-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/machine-learning",
+                        "topic": {
+                            "name": "machine-learning"
+                        },
+                        "url": "https://github.com/topics/machine-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/multi-fidelity",
+                        "topic": {
+                            "name": "multi-fidelity"
+                        },
+                        "url": "https://github.com/topics/multi-fidelity"
+                    },
+                    {
+                        "resourcePath": "/topics/pytorch",
+                        "topic": {
+                            "name": "pytorch"
+                        },
+                        "url": "https://github.com/topics/pytorch"
+                    },
+                    {
+                        "resourcePath": "/topics/uncertainty-quantification",
+                        "topic": {
+                            "name": "uncertainty-quantification"
+                        },
+                        "url": "https://github.com/topics/uncertainty-quantification"
+                    },
+                    {
+                        "resourcePath": "/topics/mpi",
+                        "topic": {
+                            "name": "mpi"
+                        },
+                        "url": "https://github.com/topics/mpi"
+                    },
+                    {
+                        "resourcePath": "/topics/raylib",
+                        "topic": {
+                            "name": "raylib"
+                        },
+                        "url": "https://github.com/topics/raylib"
+                    }
+                ],
+                "totalCount": 13
+            }
+        },
+        "diatomic/diy": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "dyninst/dyninst": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/dyninst",
+                        "topic": {
+                            "name": "dyninst"
+                        },
+                        "url": "https://github.com/topics/dyninst"
+                    },
+                    {
+                        "resourcePath": "/topics/stackwalker",
+                        "topic": {
+                            "name": "stackwalker"
+                        },
+                        "url": "https://github.com/topics/stackwalker"
+                    },
+                    {
+                        "resourcePath": "/topics/symtab",
+                        "topic": {
+                            "name": "symtab"
+                        },
+                        "url": "https://github.com/topics/symtab"
+                    },
+                    {
+                        "resourcePath": "/topics/binary-analysis",
+                        "topic": {
+                            "name": "binary-analysis"
+                        },
+                        "url": "https://github.com/topics/binary-analysis"
+                    }
+                ],
+                "totalCount": 4
+            }
+        },
+        "ebugger/Empirical-Roofline-Toolkit": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "exalearn/EXARL": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "flang-compiler/flang": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/fortran",
+                        "topic": {
+                            "name": "fortran"
+                        },
+                        "url": "https://github.com/topics/fortran"
+                    },
+                    {
+                        "resourcePath": "/topics/compiler",
+                        "topic": {
+                            "name": "compiler"
+                        },
+                        "url": "https://github.com/topics/compiler"
+                    },
+                    {
+                        "resourcePath": "/topics/llvm",
+                        "topic": {
+                            "name": "llvm"
+                        },
+                        "url": "https://github.com/topics/llvm"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran-compiler",
+                        "topic": {
+                            "name": "fortran-compiler"
+                        },
+                        "url": "https://github.com/topics/fortran-compiler"
+                    }
+                ],
+                "totalCount": 4
+            }
+        },
+        "ginkgo-project/ginkgo": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/linear-algebra",
+                        "topic": {
+                            "name": "linear-algebra"
+                        },
+                        "url": "https://github.com/topics/linear-algebra"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/gpu-computing",
+                        "topic": {
+                            "name": "gpu-computing"
+                        },
+                        "url": "https://github.com/topics/gpu-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/cuda",
+                        "topic": {
+                            "name": "cuda"
+                        },
+                        "url": "https://github.com/topics/cuda"
+                    },
+                    {
+                        "resourcePath": "/topics/krylov-methods",
+                        "topic": {
+                            "name": "krylov-methods"
+                        },
+                        "url": "https://github.com/topics/krylov-methods"
+                    },
+                    {
+                        "resourcePath": "/topics/preconditioning",
+                        "topic": {
+                            "name": "preconditioning"
+                        },
+                        "url": "https://github.com/topics/preconditioning"
+                    },
+                    {
+                        "resourcePath": "/topics/sparse-linear-systems",
+                        "topic": {
+                            "name": "sparse-linear-systems"
+                        },
+                        "url": "https://github.com/topics/sparse-linear-systems"
+                    },
+                    {
+                        "resourcePath": "/topics/spmv",
+                        "topic": {
+                            "name": "spmv"
+                        },
+                        "url": "https://github.com/topics/spmv"
+                    },
+                    {
+                        "resourcePath": "/topics/hip",
+                        "topic": {
+                            "name": "hip"
+                        },
+                        "url": "https://github.com/topics/hip"
+                    },
+                    {
+                        "resourcePath": "/topics/oneapi",
+                        "topic": {
+                            "name": "oneapi"
+                        },
+                        "url": "https://github.com/topics/oneapi"
+                    },
+                    {
+                        "resourcePath": "/topics/dpcpp",
+                        "topic": {
+                            "name": "dpcpp"
+                        },
+                        "url": "https://github.com/topics/dpcpp"
+                    },
+                    {
+                        "resourcePath": "/topics/openmp",
+                        "topic": {
+                            "name": "openmp"
+                        },
+                        "url": "https://github.com/topics/openmp"
+                    }
+                ],
+                "totalCount": 12
+            }
+        },
         "hpctoolkit/hpctoolkit": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "hypre-space/hypre": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/math-physics",
+                        "topic": {
+                            "name": "math-physics"
+                        },
+                        "url": "https://github.com/topics/math-physics"
+                    },
+                    {
+                        "resourcePath": "/topics/library",
+                        "topic": {
+                            "name": "library"
+                        },
+                        "url": "https://github.com/topics/library"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/radiuss",
+                        "topic": {
+                            "name": "radiuss"
+                        },
+                        "url": "https://github.com/topics/radiuss"
+                    }
+                ],
+                "totalCount": 4
+            }
+        },
+        "icl-utk-edu/magma": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "icl-utk-edu/papi": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "kokkos/kokkos": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/programming-model",
+                        "topic": {
+                            "name": "programming-model"
+                        },
+                        "url": "https://github.com/topics/programming-model"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/c-plus-plus",
+                        "topic": {
+                            "name": "c-plus-plus"
+                        },
+                        "url": "https://github.com/topics/c-plus-plus"
+                    },
+                    {
+                        "resourcePath": "/topics/abstraction",
+                        "topic": {
+                            "name": "abstraction"
+                        },
+                        "url": "https://github.com/topics/abstraction"
+                    },
+                    {
+                        "resourcePath": "/topics/high-performance-computing",
+                        "topic": {
+                            "name": "high-performance-computing"
+                        },
+                        "url": "https://github.com/topics/high-performance-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/kokkos",
+                        "topic": {
+                            "name": "kokkos"
+                        },
+                        "url": "https://github.com/topics/kokkos"
+                    },
+                    {
+                        "resourcePath": "/topics/hpsf",
+                        "topic": {
+                            "name": "hpsf"
+                        },
+                        "url": "https://github.com/topics/hpsf"
+                    }
+                ],
+                "totalCount": 7
+            }
+        },
+        "kokkos/kokkos-kernels": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/kokkos",
+                        "topic": {
+                            "name": "kokkos"
+                        },
+                        "url": "https://github.com/topics/kokkos"
+                    },
+                    {
+                        "resourcePath": "/topics/linear-algebra",
+                        "topic": {
+                            "name": "linear-algebra"
+                        },
+                        "url": "https://github.com/topics/linear-algebra"
+                    },
+                    {
+                        "resourcePath": "/topics/sparse-matrix",
+                        "topic": {
+                            "name": "sparse-matrix"
+                        },
+                        "url": "https://github.com/topics/sparse-matrix"
+                    },
+                    {
+                        "resourcePath": "/topics/performance-portability",
+                        "topic": {
+                            "name": "performance-portability"
+                        },
+                        "url": "https://github.com/topics/performance-portability"
+                    },
+                    {
+                        "resourcePath": "/topics/blas",
+                        "topic": {
+                            "name": "blas"
+                        },
+                        "url": "https://github.com/topics/blas"
+                    },
+                    {
+                        "resourcePath": "/topics/hpsf",
+                        "topic": {
+                            "name": "hpsf"
+                        },
+                        "url": "https://github.com/topics/hpsf"
+                    }
+                ],
+                "totalCount": 6
+            }
+        },
+        "llnl/libROM": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/scientific",
+                        "topic": {
+                            "name": "scientific"
+                        },
+                        "url": "https://github.com/topics/scientific"
+                    },
+                    {
+                        "resourcePath": "/topics/simulation",
+                        "topic": {
+                            "name": "simulation"
+                        },
+                        "url": "https://github.com/topics/simulation"
+                    },
+                    {
+                        "resourcePath": "/topics/modeling",
+                        "topic": {
+                            "name": "modeling"
+                        },
+                        "url": "https://github.com/topics/modeling"
+                    },
+                    {
+                        "resourcePath": "/topics/model-reduction",
+                        "topic": {
+                            "name": "model-reduction"
+                        },
+                        "url": "https://github.com/topics/model-reduction"
+                    },
+                    {
+                        "resourcePath": "/topics/large-scale",
+                        "topic": {
+                            "name": "large-scale"
+                        },
+                        "url": "https://github.com/topics/large-scale"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/reduced-order-models",
+                        "topic": {
+                            "name": "reduced-order-models"
+                        },
+                        "url": "https://github.com/topics/reduced-order-models"
+                    },
+                    {
+                        "resourcePath": "/topics/subspace-learning",
+                        "topic": {
+                            "name": "subspace-learning"
+                        },
+                        "url": "https://github.com/topics/subspace-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/math-physics",
+                        "topic": {
+                            "name": "math-physics"
+                        },
+                        "url": "https://github.com/topics/math-physics"
+                    }
+                ],
+                "totalCount": 9
+            }
+        },
+        "llnl/pylibROM": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "llnl/sundials": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/ode-solver",
+                        "topic": {
+                            "name": "ode-solver"
+                        },
+                        "url": "https://github.com/topics/ode-solver"
+                    },
+                    {
+                        "resourcePath": "/topics/dae-solver",
+                        "topic": {
+                            "name": "dae-solver"
+                        },
+                        "url": "https://github.com/topics/dae-solver"
+                    },
+                    {
+                        "resourcePath": "/topics/nonlinear-equation-solver",
+                        "topic": {
+                            "name": "nonlinear-equation-solver"
+                        },
+                        "url": "https://github.com/topics/nonlinear-equation-solver"
+                    },
+                    {
+                        "resourcePath": "/topics/sensitivity-analysis",
+                        "topic": {
+                            "name": "sensitivity-analysis"
+                        },
+                        "url": "https://github.com/topics/sensitivity-analysis"
+                    },
+                    {
+                        "resourcePath": "/topics/time-integration",
+                        "topic": {
+                            "name": "time-integration"
+                        },
+                        "url": "https://github.com/topics/time-integration"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-computing",
+                        "topic": {
+                            "name": "scientific-computing"
+                        },
+                        "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/math-physics",
+                        "topic": {
+                            "name": "math-physics"
+                        },
+                        "url": "https://github.com/topics/math-physics"
+                    },
+                    {
+                        "resourcePath": "/topics/radiuss",
+                        "topic": {
+                            "name": "radiuss"
+                        },
+                        "url": "https://github.com/topics/radiuss"
+                    },
+                    {
+                        "resourcePath": "/topics/solver",
+                        "topic": {
+                            "name": "solver"
+                        },
+                        "url": "https://github.com/topics/solver"
+                    },
+                    {
+                        "resourcePath": "/topics/high-performance-computing",
+                        "topic": {
+                            "name": "high-performance-computing"
+                        },
+                        "url": "https://github.com/topics/high-performance-computing"
+                    }
+                ],
+                "totalCount": 12
+            }
+        },
+        "llnl/zfp": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/radiuss",
+                        "topic": {
+                            "name": "radiuss"
+                        },
+                        "url": "https://github.com/topics/radiuss"
+                    },
+                    {
+                        "resourcePath": "/topics/data-viz",
+                        "topic": {
+                            "name": "data-viz"
+                        },
+                        "url": "https://github.com/topics/data-viz"
+                    },
+                    {
+                        "resourcePath": "/topics/compression",
+                        "topic": {
+                            "name": "compression"
+                        },
+                        "url": "https://github.com/topics/compression"
+                    },
+                    {
+                        "resourcePath": "/topics/floating-point",
+                        "topic": {
+                            "name": "floating-point"
+                        },
+                        "url": "https://github.com/topics/floating-point"
+                    },
+                    {
+                        "resourcePath": "/topics/arrays",
+                        "topic": {
+                            "name": "arrays"
+                        },
+                        "url": "https://github.com/topics/arrays"
+                    }
+                ],
+                "totalCount": 5
+            }
+        },
+        "llvm/llvm-project": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "mfem/mfem": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/finite-elements",
+                        "topic": {
+                            "name": "finite-elements"
+                        },
+                        "url": "https://github.com/topics/finite-elements"
+                    },
+                    {
+                        "resourcePath": "/topics/high-order",
+                        "topic": {
+                            "name": "high-order"
+                        },
+                        "url": "https://github.com/topics/high-order"
+                    },
+                    {
+                        "resourcePath": "/topics/high-performance-computing",
+                        "topic": {
+                            "name": "high-performance-computing"
+                        },
+                        "url": "https://github.com/topics/high-performance-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/parallel-computing",
+                        "topic": {
+                            "name": "parallel-computing"
+                        },
+                        "url": "https://github.com/topics/parallel-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/amr",
+                        "topic": {
+                            "name": "amr"
+                        },
+                        "url": "https://github.com/topics/amr"
+                    },
+                    {
+                        "resourcePath": "/topics/computational-science",
+                        "topic": {
+                            "name": "computational-science"
+                        },
+                        "url": "https://github.com/topics/computational-science"
+                    },
+                    {
+                        "resourcePath": "/topics/fem",
+                        "topic": {
+                            "name": "fem"
+                        },
+                        "url": "https://github.com/topics/fem"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-computing",
+                        "topic": {
+                            "name": "scientific-computing"
+                        },
+                        "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/math-physics",
+                        "topic": {
+                            "name": "math-physics"
+                        },
+                        "url": "https://github.com/topics/math-physics"
+                    },
+                    {
+                        "resourcePath": "/topics/radiuss",
+                        "topic": {
+                            "name": "radiuss"
+                        },
+                        "url": "https://github.com/topics/radiuss"
+                    }
+                ],
+                "totalCount": 11
+            }
+        },
+        "open-mpi/ompi": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/c",
+                        "topic": {
+                            "name": "c"
+                        },
+                        "url": "https://github.com/topics/c"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/mpi",
+                        "topic": {
+                            "name": "mpi"
+                        },
+                        "url": "https://github.com/topics/mpi"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran",
+                        "topic": {
+                            "name": "fortran"
+                        },
+                        "url": "https://github.com/topics/fortran"
+                    },
+                    {
+                        "resourcePath": "/topics/hacktoberfest",
+                        "topic": {
+                            "name": "hacktoberfest"
+                        },
+                        "url": "https://github.com/topics/hacktoberfest"
+                    },
+                    {
+                        "resourcePath": "/topics/openmpi",
+                        "topic": {
+                            "name": "openmpi"
+                        },
+                        "url": "https://github.com/topics/openmpi"
+                    }
+                ],
+                "totalCount": 6
+            }
+        },
+        "ornladios/ADIOS2": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/adios",
+                        "topic": {
+                            "name": "adios"
+                        },
+                        "url": "https://github.com/topics/adios"
+                    },
+                    {
+                        "resourcePath": "/topics/cmake",
+                        "topic": {
+                            "name": "cmake"
+                        },
+                        "url": "https://github.com/topics/cmake"
+                    },
+                    {
+                        "resourcePath": "/topics/exascale-computing",
+                        "topic": {
+                            "name": "exascale-computing"
+                        },
+                        "url": "https://github.com/topics/exascale-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/hdf5",
+                        "topic": {
+                            "name": "hdf5"
+                        },
+                        "url": "https://github.com/topics/hdf5"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/io",
+                        "topic": {
+                            "name": "io"
+                        },
+                        "url": "https://github.com/topics/io"
+                    },
+                    {
+                        "resourcePath": "/topics/ecp",
+                        "topic": {
+                            "name": "ecp"
+                        },
+                        "url": "https://github.com/topics/ecp"
+                    },
+                    {
+                        "resourcePath": "/topics/exascale",
+                        "topic": {
+                            "name": "exascale"
+                        },
+                        "url": "https://github.com/topics/exascale"
+                    },
+                    {
+                        "resourcePath": "/topics/high-performance-computing",
+                        "topic": {
+                            "name": "high-performance-computing"
+                        },
+                        "url": "https://github.com/topics/high-performance-computing"
+                    }
+                ],
+                "totalCount": 9
+            }
+        },
+        "patrickfan/GenAI4UQ": {
             "repositoryTopics": {
                 "nodes": [],
                 "totalCount": 0
@@ -18,6 +2020,618 @@
                     }
                 ],
                 "totalCount": 1
+            }
+        },
+        "pghysels/STRUMPACK": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/preconditioner",
+                        "topic": {
+                            "name": "preconditioner"
+                        },
+                        "url": "https://github.com/topics/preconditioner"
+                    },
+                    {
+                        "resourcePath": "/topics/linear-systems",
+                        "topic": {
+                            "name": "linear-systems"
+                        },
+                        "url": "https://github.com/topics/linear-systems"
+                    },
+                    {
+                        "resourcePath": "/topics/hss",
+                        "topic": {
+                            "name": "hss"
+                        },
+                        "url": "https://github.com/topics/hss"
+                    },
+                    {
+                        "resourcePath": "/topics/dense-matrices",
+                        "topic": {
+                            "name": "dense-matrices"
+                        },
+                        "url": "https://github.com/topics/dense-matrices"
+                    },
+                    {
+                        "resourcePath": "/topics/matrix-computations",
+                        "topic": {
+                            "name": "matrix-computations"
+                        },
+                        "url": "https://github.com/topics/matrix-computations"
+                    },
+                    {
+                        "resourcePath": "/topics/linear-algebra",
+                        "topic": {
+                            "name": "linear-algebra"
+                        },
+                        "url": "https://github.com/topics/linear-algebra"
+                    },
+                    {
+                        "resourcePath": "/topics/sparse-matrix",
+                        "topic": {
+                            "name": "sparse-matrix"
+                        },
+                        "url": "https://github.com/topics/sparse-matrix"
+                    },
+                    {
+                        "resourcePath": "/topics/sparse-linear-systems",
+                        "topic": {
+                            "name": "sparse-linear-systems"
+                        },
+                        "url": "https://github.com/topics/sparse-linear-systems"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    }
+                ],
+                "totalCount": 9
+            }
+        },
+        "pmodels/mpich": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/mpi",
+                        "topic": {
+                            "name": "mpi"
+                        },
+                        "url": "https://github.com/topics/mpi"
+                    },
+                    {
+                        "resourcePath": "/topics/c",
+                        "topic": {
+                            "name": "c"
+                        },
+                        "url": "https://github.com/topics/c"
+                    },
+                    {
+                        "resourcePath": "/topics/fortran",
+                        "topic": {
+                            "name": "fortran"
+                        },
+                        "url": "https://github.com/topics/fortran"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    }
+                ],
+                "totalCount": 4
+            }
+        },
+        "pnnl/neuromancer": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/constrained-optimization",
+                        "topic": {
+                            "name": "constrained-optimization"
+                        },
+                        "url": "https://github.com/topics/constrained-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/control-systems",
+                        "topic": {
+                            "name": "control-systems"
+                        },
+                        "url": "https://github.com/topics/control-systems"
+                    },
+                    {
+                        "resourcePath": "/topics/deep-learning",
+                        "topic": {
+                            "name": "deep-learning"
+                        },
+                        "url": "https://github.com/topics/deep-learning"
+                    },
+                    {
+                        "resourcePath": "/topics/differentiable-programming",
+                        "topic": {
+                            "name": "differentiable-programming"
+                        },
+                        "url": "https://github.com/topics/differentiable-programming"
+                    },
+                    {
+                        "resourcePath": "/topics/dynamical-systems",
+                        "topic": {
+                            "name": "dynamical-systems"
+                        },
+                        "url": "https://github.com/topics/dynamical-systems"
+                    },
+                    {
+                        "resourcePath": "/topics/pytorch",
+                        "topic": {
+                            "name": "pytorch"
+                        },
+                        "url": "https://github.com/topics/pytorch"
+                    },
+                    {
+                        "resourcePath": "/topics/differentiable-optimization",
+                        "topic": {
+                            "name": "differentiable-optimization"
+                        },
+                        "url": "https://github.com/topics/differentiable-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/nonlinear-dynamics",
+                        "topic": {
+                            "name": "nonlinear-dynamics"
+                        },
+                        "url": "https://github.com/topics/nonlinear-dynamics"
+                    },
+                    {
+                        "resourcePath": "/topics/nonlinear-optimization",
+                        "topic": {
+                            "name": "nonlinear-optimization"
+                        },
+                        "url": "https://github.com/topics/nonlinear-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/differentiable-control",
+                        "topic": {
+                            "name": "differentiable-control"
+                        },
+                        "url": "https://github.com/topics/differentiable-control"
+                    },
+                    {
+                        "resourcePath": "/topics/physics-informed-ml",
+                        "topic": {
+                            "name": "physics-informed-ml"
+                        },
+                        "url": "https://github.com/topics/physics-informed-ml"
+                    }
+                ],
+                "totalCount": 11
+            }
+        },
+        "sandialabs/Albany": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/scr-1341",
+                        "topic": {
+                            "name": "scr-1341"
+                        },
+                        "url": "https://github.com/topics/scr-1341"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-applications",
+                        "topic": {
+                            "name": "snl-applications"
+                        },
+                        "url": "https://github.com/topics/snl-applications"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-science-libs",
+                        "topic": {
+                            "name": "snl-science-libs"
+                        },
+                        "url": "https://github.com/topics/snl-science-libs"
+                    }
+                ],
+                "totalCount": 3
+            }
+        },
+        "sandialabs/pytuq": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/scr-3177",
+                        "topic": {
+                            "name": "scr-3177"
+                        },
+                        "url": "https://github.com/topics/scr-3177"
+                    },
+                    {
+                        "resourcePath": "/topics/uncertainty-quantification",
+                        "topic": {
+                            "name": "uncertainty-quantification"
+                        },
+                        "url": "https://github.com/topics/uncertainty-quantification"
+                    },
+                    {
+                        "resourcePath": "/topics/bayesian-inference",
+                        "topic": {
+                            "name": "bayesian-inference"
+                        },
+                        "url": "https://github.com/topics/bayesian-inference"
+                    },
+                    {
+                        "resourcePath": "/topics/forward-propagation",
+                        "topic": {
+                            "name": "forward-propagation"
+                        },
+                        "url": "https://github.com/topics/forward-propagation"
+                    },
+                    {
+                        "resourcePath": "/topics/inverse-problems",
+                        "topic": {
+                            "name": "inverse-problems"
+                        },
+                        "url": "https://github.com/topics/inverse-problems"
+                    },
+                    {
+                        "resourcePath": "/topics/model-error",
+                        "topic": {
+                            "name": "model-error"
+                        },
+                        "url": "https://github.com/topics/model-error"
+                    },
+                    {
+                        "resourcePath": "/topics/regression",
+                        "topic": {
+                            "name": "regression"
+                        },
+                        "url": "https://github.com/topics/regression"
+                    },
+                    {
+                        "resourcePath": "/topics/sparse-regression",
+                        "topic": {
+                            "name": "sparse-regression"
+                        },
+                        "url": "https://github.com/topics/sparse-regression"
+                    },
+                    {
+                        "resourcePath": "/topics/surrogate-models",
+                        "topic": {
+                            "name": "surrogate-models"
+                        },
+                        "url": "https://github.com/topics/surrogate-models"
+                    },
+                    {
+                        "resourcePath": "/topics/surrogates",
+                        "topic": {
+                            "name": "surrogates"
+                        },
+                        "url": "https://github.com/topics/surrogates"
+                    },
+                    {
+                        "resourcePath": "/topics/uq",
+                        "topic": {
+                            "name": "uq"
+                        },
+                        "url": "https://github.com/topics/uq"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-data-analysis",
+                        "topic": {
+                            "name": "snl-data-analysis"
+                        },
+                        "url": "https://github.com/topics/snl-data-analysis"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-other",
+                        "topic": {
+                            "name": "snl-other"
+                        },
+                        "url": "https://github.com/topics/snl-other"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-science-libs",
+                        "topic": {
+                            "name": "snl-science-libs"
+                        },
+                        "url": "https://github.com/topics/snl-science-libs"
+                    }
+                ],
+                "totalCount": 14
+            }
+        },
+        "spack/spack": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/python",
+                        "topic": {
+                            "name": "python"
+                        },
+                        "url": "https://github.com/topics/python"
+                    },
+                    {
+                        "resourcePath": "/topics/spack",
+                        "topic": {
+                            "name": "spack"
+                        },
+                        "url": "https://github.com/topics/spack"
+                    },
+                    {
+                        "resourcePath": "/topics/package-manager",
+                        "topic": {
+                            "name": "package-manager"
+                        },
+                        "url": "https://github.com/topics/package-manager"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/build-tools",
+                        "topic": {
+                            "name": "build-tools"
+                        },
+                        "url": "https://github.com/topics/build-tools"
+                    },
+                    {
+                        "resourcePath": "/topics/radiuss",
+                        "topic": {
+                            "name": "radiuss"
+                        },
+                        "url": "https://github.com/topics/radiuss"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-computing",
+                        "topic": {
+                            "name": "scientific-computing"
+                        },
+                        "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/macos",
+                        "topic": {
+                            "name": "macos"
+                        },
+                        "url": "https://github.com/topics/macos"
+                    },
+                    {
+                        "resourcePath": "/topics/linux",
+                        "topic": {
+                            "name": "linux"
+                        },
+                        "url": "https://github.com/topics/linux"
+                    },
+                    {
+                        "resourcePath": "/topics/hpsf",
+                        "topic": {
+                            "name": "hpsf"
+                        },
+                        "url": "https://github.com/topics/hpsf"
+                    },
+                    {
+                        "resourcePath": "/topics/windows",
+                        "topic": {
+                            "name": "windows"
+                        },
+                        "url": "https://github.com/topics/windows"
+                    }
+                ],
+                "totalCount": 11
+            }
+        },
+        "tpeterka/ChatVis": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "trilinos/Trilinos": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/snl-science-libs",
+                        "topic": {
+                            "name": "snl-science-libs"
+                        },
+                        "url": "https://github.com/topics/snl-science-libs"
+                    },
+                    {
+                        "resourcePath": "/topics/sandia-national-laboratories",
+                        "topic": {
+                            "name": "sandia-national-laboratories"
+                        },
+                        "url": "https://github.com/topics/sandia-national-laboratories"
+                    },
+                    {
+                        "resourcePath": "/topics/hpsf",
+                        "topic": {
+                            "name": "hpsf"
+                        },
+                        "url": "https://github.com/topics/hpsf"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-computing",
+                        "topic": {
+                            "name": "scientific-computing"
+                        },
+                        "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/high-performance-computing",
+                        "topic": {
+                            "name": "high-performance-computing"
+                        },
+                        "url": "https://github.com/topics/high-performance-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/c-plus-plus",
+                        "topic": {
+                            "name": "c-plus-plus"
+                        },
+                        "url": "https://github.com/topics/c-plus-plus"
+                    },
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/trilinos",
+                        "topic": {
+                            "name": "trilinos"
+                        },
+                        "url": "https://github.com/topics/trilinos"
+                    }
+                ],
+                "totalCount": 8
+            }
+        },
+        "visit-dav/visit": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/hpc",
+                        "topic": {
+                            "name": "hpc"
+                        },
+                        "url": "https://github.com/topics/hpc"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-visualization",
+                        "topic": {
+                            "name": "scientific-visualization"
+                        },
+                        "url": "https://github.com/topics/scientific-visualization"
+                    },
+                    {
+                        "resourcePath": "/topics/scientific-computing",
+                        "topic": {
+                            "name": "scientific-computing"
+                        },
+                        "url": "https://github.com/topics/scientific-computing"
+                    },
+                    {
+                        "resourcePath": "/topics/visualization",
+                        "topic": {
+                            "name": "visualization"
+                        },
+                        "url": "https://github.com/topics/visualization"
+                    },
+                    {
+                        "resourcePath": "/topics/data-analysis",
+                        "topic": {
+                            "name": "data-analysis"
+                        },
+                        "url": "https://github.com/topics/data-analysis"
+                    },
+                    {
+                        "resourcePath": "/topics/radiuss",
+                        "topic": {
+                            "name": "radiuss"
+                        },
+                        "url": "https://github.com/topics/radiuss"
+                    },
+                    {
+                        "resourcePath": "/topics/data-viz",
+                        "topic": {
+                            "name": "data-viz"
+                        },
+                        "url": "https://github.com/topics/data-viz"
+                    },
+                    {
+                        "resourcePath": "/topics/python",
+                        "topic": {
+                            "name": "python"
+                        },
+                        "url": "https://github.com/topics/python"
+                    }
+                ],
+                "totalCount": 8
+            }
+        },
+        "xiaoyeli/superlu": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "xiaoyeli/superlu_dist": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "xiaoyeli/superlu_mt": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
+        "ytopt-team/ytopt": {
+            "repositoryTopics": {
+                "nodes": [
+                    {
+                        "resourcePath": "/topics/autotuning",
+                        "topic": {
+                            "name": "autotuning"
+                        },
+                        "url": "https://github.com/topics/autotuning"
+                    },
+                    {
+                        "resourcePath": "/topics/bayesian-optimization",
+                        "topic": {
+                            "name": "bayesian-optimization"
+                        },
+                        "url": "https://github.com/topics/bayesian-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/asynchronous-search",
+                        "topic": {
+                            "name": "asynchronous-search"
+                        },
+                        "url": "https://github.com/topics/asynchronous-search"
+                    },
+                    {
+                        "resourcePath": "/topics/hyperparameter-optimization",
+                        "topic": {
+                            "name": "hyperparameter-optimization"
+                        },
+                        "url": "https://github.com/topics/hyperparameter-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/asynchronous-and-dynamic-task-management",
+                        "topic": {
+                            "name": "asynchronous-and-dynamic-task-management"
+                        },
+                        "url": "https://github.com/topics/asynchronous-and-dynamic-task-management"
+                    },
+                    {
+                        "resourcePath": "/topics/python",
+                        "topic": {
+                            "name": "python"
+                        },
+                        "url": "https://github.com/topics/python"
+                    },
+                    {
+                        "resourcePath": "/topics/hyperparameter-tuning",
+                        "topic": {
+                            "name": "hyperparameter-tuning"
+                        },
+                        "url": "https://github.com/topics/hyperparameter-tuning"
+                    }
+                ],
+                "totalCount": 7
             }
         }
     }

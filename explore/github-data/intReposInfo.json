@@ -1,5 +1,2041 @@
 {
     "data": {
+        "AMReX-Codes/amrex": {
+            "createdAt": "2017-04-28T19:37:00Z",
+            "defaultBranchRef": {
+                "name": "development"
+            },
+            "description": "AMReX: Software Framework for Block Structured AMR",
+            "forks": {
+                "totalCount": 445
+            },
+            "homepageUrl": "https://amrex-codes.github.io/amrex",
+            "issues_Closed": {
+                "totalCount": 889
+            },
+            "issues_Open": {
+                "totalCount": 71
+            },
+            "languages": {
+                "totalCount": 16
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 200
+            },
+            "name": "amrex",
+            "nameWithOwner": "AMReX-Codes/amrex",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/25084337?v=4",
+                "login": "AMReX-Codes"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 295
+            },
+            "pullRequests_Merged": {
+                "totalCount": 3937
+            },
+            "pullRequests_Open": {
+                "totalCount": 33
+            },
+            "repositoryTopics": {
+                "totalCount": 6
+            },
+            "stargazers": {
+                "totalCount": 777
+            },
+            "url": "https://github.com/AMReX-Codes/amrex"
+        },
+        "Alpine-DAV/ascent": {
+            "cdash": "https://my.dash.org/index.php?project=AscentParaViewTests",
+            "createdAt": "2017-02-08T19:21:22Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "A flyweight in situ visualization and analysis runtime for multi-physics HPC simulations",
+            "forks": {
+                "totalCount": 71
+            },
+            "homepageUrl": "https://alpine-dav.github.io/ascent/",
+            "issues_Closed": {
+                "totalCount": 465
+            },
+            "issues_Open": {
+                "totalCount": 216
+            },
+            "languages": {
+                "totalCount": 12
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 58
+            },
+            "name": "ascent",
+            "nameWithOwner": "Alpine-DAV/ascent",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/25645886?v=4",
+                "login": "Alpine-DAV"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 79
+            },
+            "pullRequests_Merged": {
+                "totalCount": 940
+            },
+            "pullRequests_Open": {
+                "totalCount": 20
+            },
+            "repositoryTopics": {
+                "totalCount": 9
+            },
+            "stargazers": {
+                "totalCount": 254
+            },
+            "url": "https://github.com/Alpine-DAV/ascent"
+        },
+        "BerkeleyLab/StFT": {
+            "createdAt": "2025-02-11T00:49:43Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "Spatio-temporal Fourier Transformer for Long Term Dynamics Prediction",
+            "forks": {
+                "totalCount": 0
+            },
+            "homepageUrl": "https://openreview.net/pdf?id=o9Cb0ri2oW",
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 1
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 6
+            },
+            "name": "StFT",
+            "nameWithOwner": "BerkeleyLab/StFT",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18706005?v=4",
+                "login": "BerkeleyLab"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 2
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 5
+            },
+            "url": "https://github.com/BerkeleyLab/StFT"
+        },
+        "BerkeleyLab/caffeine": {
+            "createdAt": "2022-01-07T18:38:55Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "A parallel runtime library for Fortran compilers",
+            "forks": {
+                "totalCount": 17
+            },
+            "homepageUrl": "https://go.lbl.gov/caffeine",
+            "issues_Closed": {
+                "totalCount": 99
+            },
+            "issues_Open": {
+                "totalCount": 11
+            },
+            "languages": {
+                "totalCount": 3
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 10
+            },
+            "name": "caffeine",
+            "nameWithOwner": "BerkeleyLab/caffeine",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18706005?v=4",
+                "login": "BerkeleyLab"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Fortran"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 15
+            },
+            "pullRequests_Merged": {
+                "totalCount": 221
+            },
+            "pullRequests_Open": {
+                "totalCount": 3
+            },
+            "repositoryTopics": {
+                "totalCount": 10
+            },
+            "stargazers": {
+                "totalCount": 60
+            },
+            "url": "https://github.com/BerkeleyLab/caffeine"
+        },
+        "BerkeleyLab/fiats": {
+            "createdAt": "2022-09-29T17:46:47Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "A deep learning library for use in high-performance computing applications in modern Fortran",
+            "forks": {
+                "totalCount": 28
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 30
+            },
+            "issues_Open": {
+                "totalCount": 3
+            },
+            "languages": {
+                "totalCount": 4
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 16
+            },
+            "name": "fiats",
+            "nameWithOwner": "BerkeleyLab/fiats",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18706005?v=4",
+                "login": "BerkeleyLab"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Fortran"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 22
+            },
+            "pullRequests_Merged": {
+                "totalCount": 241
+            },
+            "pullRequests_Open": {
+                "totalCount": 1
+            },
+            "repositoryTopics": {
+                "totalCount": 10
+            },
+            "stargazers": {
+                "totalCount": 76
+            },
+            "url": "https://github.com/BerkeleyLab/fiats"
+        },
+        "BerkeleyLab/gasnet": {
+            "createdAt": "2026-05-05T18:16:23Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "The main repository for the GASNet/GASNet-EX communication library",
+            "forks": {
+                "totalCount": 3
+            },
+            "homepageUrl": "https://gasnet.lbl.gov/",
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 7
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 2
+            },
+            "name": "gasnet",
+            "nameWithOwner": "BerkeleyLab/gasnet",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18706005?v=4",
+                "login": "BerkeleyLab"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 11
+            },
+            "pullRequests_Open": {
+                "totalCount": 6
+            },
+            "repositoryTopics": {
+                "totalCount": 11
+            },
+            "stargazers": {
+                "totalCount": 8
+            },
+            "url": "https://github.com/BerkeleyLab/gasnet"
+        },
+        "BerkeleyLab/julienne": {
+            "createdAt": "2024-06-18T00:14:54Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "A Fortran 2023 correctness-checking framework supporting expressive idioms for writing assertions and tests",
+            "forks": {
+                "totalCount": 10
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 23
+            },
+            "issues_Open": {
+                "totalCount": 14
+            },
+            "languages": {
+                "totalCount": 2
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 4
+            },
+            "name": "julienne",
+            "nameWithOwner": "BerkeleyLab/julienne",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18706005?v=4",
+                "login": "BerkeleyLab"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Fortran"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 14
+            },
+            "pullRequests_Merged": {
+                "totalCount": 146
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 5
+            },
+            "stargazers": {
+                "totalCount": 48
+            },
+            "url": "https://github.com/BerkeleyLab/julienne"
+        },
+        "BerkeleyLab/upcxx": {
+            "createdAt": "2026-04-06T21:42:21Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "This is the main repository for the UPC++ v1.0 Library implementation.",
+            "forks": {
+                "totalCount": 1
+            },
+            "homepageUrl": "https://upcxx.lbl.gov",
+            "issues_Closed": {
+                "totalCount": 1
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 7
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 2
+            },
+            "name": "upcxx",
+            "nameWithOwner": "BerkeleyLab/upcxx",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18706005?v=4",
+                "login": "BerkeleyLab"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 4
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 15
+            },
+            "stargazers": {
+                "totalCount": 6
+            },
+            "url": "https://github.com/BerkeleyLab/upcxx"
+        },
+        "CEED/libCEED": {
+            "createdAt": "2017-12-06T17:57:40Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "CEED Library: Code for Efficient Extensible Discretizations",
+            "forks": {
+                "totalCount": 70
+            },
+            "homepageUrl": "https://libceed.org",
+            "issues_Closed": {
+                "totalCount": 329
+            },
+            "issues_Open": {
+                "totalCount": 37
+            },
+            "languages": {
+                "totalCount": 9
+            },
+            "licenseInfo": {
+                "name": "BSD 2-Clause \"Simplified\" License",
+                "nickname": null,
+                "spdxId": "BSD-2-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-2-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 93
+            },
+            "name": "libCEED",
+            "nameWithOwner": "CEED/libCEED",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/23178852?v=4",
+                "login": "CEED"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 93
+            },
+            "pullRequests_Merged": {
+                "totalCount": 1508
+            },
+            "pullRequests_Open": {
+                "totalCount": 15
+            },
+            "repositoryTopics": {
+                "totalCount": 11
+            },
+            "stargazers": {
+                "totalCount": 262
+            },
+            "url": "https://github.com/CEED/libCEED"
+        },
+        "CHIP-SPV/chipStar": {
+            "createdAt": "2021-09-15T15:40:50Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "chipStar is a tool for compiling and running HIP/CUDA on SPIR-V via OpenCL or Level Zero APIs.",
+            "forks": {
+                "totalCount": 46
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 513
+            },
+            "issues_Open": {
+                "totalCount": 31
+            },
+            "languages": {
+                "totalCount": 9
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 22
+            },
+            "name": "chipStar",
+            "nameWithOwner": "CHIP-SPV/chipStar",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/90784090?v=4",
+                "login": "CHIP-SPV"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "LLVM"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 109
+            },
+            "pullRequests_Merged": {
+                "totalCount": 686
+            },
+            "pullRequests_Open": {
+                "totalCount": 13
+            },
+            "repositoryTopics": {
+                "totalCount": 7
+            },
+            "stargazers": {
+                "totalCount": 365
+            },
+            "url": "https://github.com/CHIP-SPV/chipStar"
+        },
+        "CODARcode/Chimbuko": {
+            "createdAt": "2017-12-11T12:34:40Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Performance Analysis Framework for Scientific Workflows for online Data Analysis and Performance Visualization",
+            "forks": {
+                "totalCount": 3
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 7
+            },
+            "licenseInfo": null,
+            "mentionableUsers": {
+                "totalCount": 9
+            },
+            "name": "Chimbuko",
+            "nameWithOwner": "CODARcode/Chimbuko",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/22968668?v=4",
+                "login": "CODARcode"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "HTML"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 6
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 8
+            },
+            "url": "https://github.com/CODARcode/Chimbuko"
+        },
+        "E4S-Project/e4s": {
+            "cdash": "https://cdash.spack.io",
+            "createdAt": "2020-09-20T23:09:32Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "E4S for Spack",
+            "forks": {
+                "totalCount": 15
+            },
+            "homepageUrl": "https://e4s.readthedocs.io",
+            "issues_Closed": {
+                "totalCount": 66
+            },
+            "issues_Open": {
+                "totalCount": 12
+            },
+            "languages": {
+                "totalCount": 1
+            },
+            "licenseInfo": {
+                "name": "MIT License",
+                "nickname": null,
+                "spdxId": "MIT",
+                "url": "http://choosealicense.com/licenses/mit/"
+            },
+            "mentionableUsers": {
+                "totalCount": 15
+            },
+            "name": "e4s",
+            "nameWithOwner": "E4S-Project/e4s",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/45146401?v=4",
+                "login": "E4S-Project"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Shell"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 16
+            },
+            "pullRequests_Merged": {
+                "totalCount": 69
+            },
+            "pullRequests_Open": {
+                "totalCount": 3
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 41
+            },
+            "url": "https://github.com/E4S-Project/e4s"
+        },
+        "HDFGroup/hdf5": {
+            "createdAt": "2020-04-24T18:25:20Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "Official HDF5\u00ae Library Repository",
+            "forks": {
+                "totalCount": 341
+            },
+            "homepageUrl": "https://www.hdfgroup.org/",
+            "issues_Closed": {
+                "totalCount": 965
+            },
+            "issues_Open": {
+                "totalCount": 308
+            },
+            "languages": {
+                "totalCount": 15
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 117
+            },
+            "name": "hdf5",
+            "nameWithOwner": "HDFGroup/hdf5",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8572050?v=4",
+                "login": "HDFGroup"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 488
+            },
+            "pullRequests_Merged": {
+                "totalCount": 4708
+            },
+            "pullRequests_Open": {
+                "totalCount": 26
+            },
+            "repositoryTopics": {
+                "totalCount": 9
+            },
+            "stargazers": {
+                "totalCount": 956
+            },
+            "url": "https://github.com/HDFGroup/hdf5"
+        },
+        "HPCToolkit/hpctoolkit": {
+            "createdAt": "2015-08-17T18:25:11Z",
+            "defaultBranchRef": {
+                "name": "migration-notice"
+            },
+            "description": "HPCToolkit performance tools: measurement and analysis components",
+            "forks": {
+                "totalCount": 50
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 244
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 11
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 12
+            },
+            "name": "hpctoolkit",
+            "nameWithOwner": "HPCToolkit/hpctoolkit",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/13320457?v=4",
+                "login": "HPCToolkit"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 53
+            },
+            "pullRequests_Merged": {
+                "totalCount": 334
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 345
+            },
+            "url": "https://github.com/HPCToolkit/hpctoolkit"
+        },
+        "Lab-Notebooks/CodeScribe": {
+            "createdAt": "2024-09-26T06:06:23Z",
+            "defaultBranchRef": {
+                "name": "development"
+            },
+            "description": "AI Agent and CLI for Code Translation and Software Development in Scientific Computing",
+            "forks": {
+                "totalCount": 6
+            },
+            "homepageUrl": "https://arxiv.org/abs/2410.24119",
+            "issues_Closed": {
+                "totalCount": 5
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 4
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 4
+            },
+            "name": "CodeScribe",
+            "nameWithOwner": "Lab-Notebooks/CodeScribe",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/141457799?v=4",
+                "login": "Lab-Notebooks"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 6
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 18
+            },
+            "url": "https://github.com/Lab-Notebooks/CodeScribe"
+        },
+        "Libensemble/libensemble": {
+            "createdAt": "2016-12-12T23:43:44Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "A Python toolkit for coordinating asynchronous and dynamic ensembles of calculations.",
+            "forks": {
+                "totalCount": 30
+            },
+            "homepageUrl": "https://libensemble.readthedocs.io/",
+            "issues_Closed": {
+                "totalCount": 314
+            },
+            "issues_Open": {
+                "totalCount": 24
+            },
+            "languages": {
+                "totalCount": 5
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 26
+            },
+            "name": "libensemble",
+            "nameWithOwner": "Libensemble/libensemble",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/24534232?v=4",
+                "login": "Libensemble"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 189
+            },
+            "pullRequests_Merged": {
+                "totalCount": 1224
+            },
+            "pullRequests_Open": {
+                "totalCount": 11
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 76
+            },
+            "url": "https://github.com/Libensemble/libensemble"
+        },
+        "OpenACCUserGroup/OpenACCV-V": {
+            "createdAt": "2017-06-12T01:43:05Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "OpenACC Validation and Verification Testsuite repository",
+            "forks": {
+                "totalCount": 26
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 17
+            },
+            "issues_Open": {
+                "totalCount": 12
+            },
+            "languages": {
+                "totalCount": 7
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 17
+            },
+            "name": "OpenACCV-V",
+            "nameWithOwner": "OpenACCUserGroup/OpenACCV-V",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/25601248?v=4",
+                "login": "OpenACCUserGroup"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Fortran"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 10
+            },
+            "pullRequests_Merged": {
+                "totalCount": 79
+            },
+            "pullRequests_Open": {
+                "totalCount": 15
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 34
+            },
+            "url": "https://github.com/OpenACCUserGroup/OpenACCV-V"
+        },
+        "OpenMP-Validation-and-Verification/OpenMP_VV": {
+            "createdAt": "2018-12-13T21:20:03Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "OpenMP Offloading Validation & Verification Suite; Official repository. We have migrated from bitbucket!! For documentation, results, publication and presentations, please check out our website ->",
+            "forks": {
+                "totalCount": 25
+            },
+            "homepageUrl": "https://crpl.cis.udel.edu/ompvvsollve/",
+            "issues_Closed": {
+                "totalCount": 143
+            },
+            "issues_Open": {
+                "totalCount": 27
+            },
+            "languages": {
+                "totalCount": 9
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 37
+            },
+            "name": "OpenMP_VV",
+            "nameWithOwner": "OpenMP-Validation-and-Verification/OpenMP_VV",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/170632534?v=4",
+                "login": "OpenMP-Validation-and-Verification"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 44
+            },
+            "pullRequests_Merged": {
+                "totalCount": 695
+            },
+            "pullRequests_Open": {
+                "totalCount": 4
+            },
+            "repositoryTopics": {
+                "totalCount": 8
+            },
+            "stargazers": {
+                "totalCount": 62
+            },
+            "url": "https://github.com/OpenMP-Validation-and-Verification/OpenMP_VV"
+        },
+        "Parallel-NetCDF/PnetCDF": {
+            "createdAt": "2017-04-18T03:27:23Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Source code repository of PnetCDF library and utilities",
+            "forks": {
+                "totalCount": 33
+            },
+            "homepageUrl": "https://parallel-netcdf.github.io",
+            "issues_Closed": {
+                "totalCount": 49
+            },
+            "issues_Open": {
+                "totalCount": 5
+            },
+            "languages": {
+                "totalCount": 10
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 14
+            },
+            "name": "PnetCDF",
+            "nameWithOwner": "Parallel-NetCDF/PnetCDF",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/24639103?v=4",
+                "login": "Parallel-NetCDF"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 21
+            },
+            "pullRequests_Merged": {
+                "totalCount": 153
+            },
+            "pullRequests_Open": {
+                "totalCount": 3
+            },
+            "repositoryTopics": {
+                "totalCount": 6
+            },
+            "stargazers": {
+                "totalCount": 107
+            },
+            "url": "https://github.com/Parallel-NetCDF/PnetCDF"
+        },
+        "SCOREC/core": {
+            "createdAt": "2014-06-09T14:43:58Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "parallel finite element unstructured meshes",
+            "forks": {
+                "totalCount": 66
+            },
+            "homepageUrl": "http://scorec.github.io/core/",
+            "issues_Closed": {
+                "totalCount": 241
+            },
+            "issues_Open": {
+                "totalCount": 105
+            },
+            "languages": {
+                "totalCount": 9
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 88
+            },
+            "name": "core",
+            "nameWithOwner": "SCOREC/core",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/7839226?v=4",
+                "login": "SCOREC"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 39
+            },
+            "pullRequests_Merged": {
+                "totalCount": 135
+            },
+            "pullRequests_Open": {
+                "totalCount": 15
+            },
+            "repositoryTopics": {
+                "totalCount": 12
+            },
+            "stargazers": {
+                "totalCount": 199
+            },
+            "url": "https://github.com/SCOREC/core"
+        },
+        "SCOREC/omega_h": {
+            "createdAt": "2018-09-13T19:54:04Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Simplex mesh adaptivity for HPC",
+            "forks": {
+                "totalCount": 13
+            },
+            "homepageUrl": "https://scorec.github.io/omega_h/",
+            "issues_Closed": {
+                "totalCount": 58
+            },
+            "issues_Open": {
+                "totalCount": 27
+            },
+            "languages": {
+                "totalCount": 8
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 19
+            },
+            "name": "omega_h",
+            "nameWithOwner": "SCOREC/omega_h",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/7839226?v=4",
+                "login": "SCOREC"
+            },
+            "parent": {
+                "name": "omega_h",
+                "nameWithOwner": "sandialabs/omega_h",
+                "owner": {
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/4993680?v=4",
+                    "login": "sandialabs"
+                }
+            },
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 12
+            },
+            "pullRequests_Merged": {
+                "totalCount": 116
+            },
+            "pullRequests_Open": {
+                "totalCount": 9
+            },
+            "repositoryTopics": {
+                "totalCount": 1
+            },
+            "stargazers": {
+                "totalCount": 3
+            },
+            "url": "https://github.com/SCOREC/omega_h"
+        },
+        "SCOREC/pcms": {
+            "createdAt": "2019-02-26T17:17:48Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "PCMS: Parallel Coupler For Multimodel Simulations",
+            "forks": {
+                "totalCount": 11
+            },
+            "homepageUrl": "https://scorec.github.io/pcms/",
+            "issues_Closed": {
+                "totalCount": 128
+            },
+            "issues_Open": {
+                "totalCount": 44
+            },
+            "languages": {
+                "totalCount": 8
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 39
+            },
+            "name": "pcms",
+            "nameWithOwner": "SCOREC/pcms",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/7839226?v=4",
+                "login": "SCOREC"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 29
+            },
+            "pullRequests_Merged": {
+                "totalCount": 129
+            },
+            "pullRequests_Open": {
+                "totalCount": 12
+            },
+            "repositoryTopics": {
+                "totalCount": 7
+            },
+            "stargazers": {
+                "totalCount": 5
+            },
+            "url": "https://github.com/SCOREC/pcms"
+        },
+        "SCOREC/pumi-pic": {
+            "createdAt": "2018-05-17T15:26:56Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "support libraries for unstructured mesh particle in cell simulations on GPUs and CPUs",
+            "forks": {
+                "totalCount": 16
+            },
+            "homepageUrl": "https://scorec.github.io/pumi-pic/",
+            "issues_Closed": {
+                "totalCount": 79
+            },
+            "issues_Open": {
+                "totalCount": 19
+            },
+            "languages": {
+                "totalCount": 6
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 24
+            },
+            "name": "pumi-pic",
+            "nameWithOwner": "SCOREC/pumi-pic",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/7839226?v=4",
+                "login": "SCOREC"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 6
+            },
+            "pullRequests_Merged": {
+                "totalCount": 61
+            },
+            "pullRequests_Open": {
+                "totalCount": 6
+            },
+            "repositoryTopics": {
+                "totalCount": 1
+            },
+            "stargazers": {
+                "totalCount": 43
+            },
+            "url": "https://github.com/SCOREC/pumi-pic"
+        },
+        "Shaw-git/CAESAR": {
+            "createdAt": "2025-07-01T22:19:00Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "A Unified Framework of Foundation and Generative Models for Efficient Compression of Scientific Data",
+            "forks": {
+                "totalCount": 2
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 1
+            },
+            "languages": {
+                "totalCount": 2
+            },
+            "licenseInfo": null,
+            "mentionableUsers": {
+                "totalCount": 2
+            },
+            "name": "CAESAR",
+            "nameWithOwner": "Shaw-git/CAESAR",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/24515232?u=3b01bb888336065ab10db032fb2ce9e9e9c7b83c&v=4",
+                "login": "Shaw-git"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 0
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 6
+            },
+            "url": "https://github.com/Shaw-git/CAESAR"
+        },
+        "StanfordLegion/legion": {
+            "createdAt": "2012-11-17T00:43:58Z",
+            "defaultBranchRef": {
+                "name": "stable"
+            },
+            "description": "The Legion Parallel Programming System",
+            "forks": {
+                "totalCount": 152
+            },
+            "homepageUrl": "https://legion.stanford.edu",
+            "issues_Closed": {
+                "totalCount": 1232
+            },
+            "issues_Open": {
+                "totalCount": 298
+            },
+            "languages": {
+                "totalCount": 18
+            },
+            "licenseInfo": {
+                "name": "Apache License 2.0",
+                "nickname": null,
+                "spdxId": "Apache-2.0",
+                "url": "http://choosealicense.com/licenses/apache-2.0/"
+            },
+            "mentionableUsers": {
+                "totalCount": 64
+            },
+            "name": "legion",
+            "nameWithOwner": "StanfordLegion/legion",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/2818026?v=4",
+                "login": "StanfordLegion"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 91
+            },
+            "pullRequests_Merged": {
+                "totalCount": 102
+            },
+            "pullRequests_Open": {
+                "totalCount": 15
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 765
+            },
+            "url": "https://github.com/StanfordLegion/legion"
+        },
+        "UO-OACISS/tau2": {
+            "createdAt": "2019-01-28T23:30:34Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "TAU Performance System Public Mirror (Updated every night at midnight, USA Pacific Time)",
+            "forks": {
+                "totalCount": 21
+            },
+            "homepageUrl": "http://tau.uoregon.edu",
+            "issues_Closed": {
+                "totalCount": 13
+            },
+            "issues_Open": {
+                "totalCount": 8
+            },
+            "languages": {
+                "totalCount": 27
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 23
+            },
+            "name": "tau2",
+            "nameWithOwner": "UO-OACISS/tau2",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/44581546?v=4",
+                "login": "UO-OACISS"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 2
+            },
+            "pullRequests_Merged": {
+                "totalCount": 0
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 48
+            },
+            "url": "https://github.com/UO-OACISS/tau2"
+        },
+        "Viskores/viskores": {
+            "createdAt": "2024-05-08T12:48:38Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "A visualization library for many-threaded devices.",
+            "forks": {
+                "totalCount": 27
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 63
+            },
+            "issues_Open": {
+                "totalCount": 22
+            },
+            "languages": {
+                "totalCount": 7
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 42
+            },
+            "name": "viskores",
+            "nameWithOwner": "Viskores/viskores",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/167912025?v=4",
+                "login": "Viskores"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 41
+            },
+            "pullRequests_Merged": {
+                "totalCount": 228
+            },
+            "pullRequests_Open": {
+                "totalCount": 26
+            },
+            "repositoryTopics": {
+                "totalCount": 8
+            },
+            "stargazers": {
+                "totalCount": 79
+            },
+            "url": "https://github.com/Viskores/viskores"
+        },
+        "anigmetov/oineus": {
+            "createdAt": "2020-11-12T18:02:55Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": null,
+            "forks": {
+                "totalCount": 5
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 6
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 5
+            },
+            "name": "oineus",
+            "nameWithOwner": "anigmetov/oineus",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1506660?v=4",
+                "login": "anigmetov"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 3
+            },
+            "pullRequests_Open": {
+                "totalCount": 1
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 12
+            },
+            "url": "https://github.com/anigmetov/oineus"
+        },
+        "anlsys/aml": {
+            "createdAt": "2021-04-20T18:32:54Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Building Blocks for Explicit Memory Management on Complex Architectures",
+            "forks": {
+                "totalCount": 3
+            },
+            "homepageUrl": "https://argo-aml.readthedocs.io/",
+            "issues_Closed": {
+                "totalCount": 146
+            },
+            "issues_Open": {
+                "totalCount": 33
+            },
+            "languages": {
+                "totalCount": 5
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 7
+            },
+            "name": "aml",
+            "nameWithOwner": "anlsys/aml",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/82888806?v=4",
+                "login": "anlsys"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 6
+            },
+            "pullRequests_Merged": {
+                "totalCount": 56
+            },
+            "pullRequests_Open": {
+                "totalCount": 4
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 6
+            },
+            "url": "https://github.com/anlsys/aml"
+        },
+        "darshan-hpc/darshan": {
+            "createdAt": "2021-05-12T21:21:37Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "  Darshan I/O characterization tool",
+            "forks": {
+                "totalCount": 41
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 522
+            },
+            "issues_Open": {
+                "totalCount": 182
+            },
+            "languages": {
+                "totalCount": 14
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 22
+            },
+            "name": "darshan",
+            "nameWithOwner": "darshan-hpc/darshan",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/79541845?v=4",
+                "login": "darshan-hpc"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 46
+            },
+            "pullRequests_Merged": {
+                "totalCount": 359
+            },
+            "pullRequests_Open": {
+                "totalCount": 41
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 73
+            },
+            "url": "https://github.com/darshan-hpc/darshan"
+        },
+        "deephyper/deephyper": {
+            "createdAt": "2018-11-06T15:18:42Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "DeepHyper: A Python Package for Massively Parallel Hyperparameter Optimization in Machine Learning",
+            "forks": {
+                "totalCount": 64
+            },
+            "homepageUrl": "https://deephyper.readthedocs.io",
+            "issues_Closed": {
+                "totalCount": 203
+            },
+            "issues_Open": {
+                "totalCount": 11
+            },
+            "languages": {
+                "totalCount": 3
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 27
+            },
+            "name": "deephyper",
+            "nameWithOwner": "deephyper/deephyper",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/44810957?v=4",
+                "login": "deephyper"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 14
+            },
+            "pullRequests_Merged": {
+                "totalCount": 133
+            },
+            "pullRequests_Open": {
+                "totalCount": 3
+            },
+            "repositoryTopics": {
+                "totalCount": 13
+            },
+            "stargazers": {
+                "totalCount": 308
+            },
+            "url": "https://github.com/deephyper/deephyper"
+        },
+        "diatomic/diy": {
+            "cdash": "https://open.cdash.org/index.php?project=diy",
+            "createdAt": "2015-05-22T18:49:06Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "data-parallel out-of-core library",
+            "forks": {
+                "totalCount": 22
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 47
+            },
+            "issues_Open": {
+                "totalCount": 16
+            },
+            "languages": {
+                "totalCount": 8
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 20
+            },
+            "name": "diy",
+            "nameWithOwner": "diatomic/diy",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/11546113?v=4",
+                "login": "diatomic"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 13
+            },
+            "pullRequests_Merged": {
+                "totalCount": 19
+            },
+            "pullRequests_Open": {
+                "totalCount": 2
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 51
+            },
+            "url": "https://github.com/diatomic/diy"
+        },
+        "dyninst/dyninst": {
+            "createdAt": "2016-05-02T20:06:57Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "DyninstAPI: Tools for binary instrumentation, analysis, and modification.",
+            "forks": {
+                "totalCount": 162
+            },
+            "homepageUrl": "http://www.paradyn.org",
+            "issues_Closed": {
+                "totalCount": 631
+            },
+            "issues_Open": {
+                "totalCount": 143
+            },
+            "languages": {
+                "totalCount": 11
+            },
+            "licenseInfo": {
+                "name": "GNU Lesser General Public License v2.1",
+                "nickname": "GNU LGPLv2.1",
+                "spdxId": "LGPL-2.1",
+                "url": "http://choosealicense.com/licenses/lgpl-2.1/"
+            },
+            "mentionableUsers": {
+                "totalCount": 59
+            },
+            "name": "dyninst",
+            "nameWithOwner": "dyninst/dyninst",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/7452836?v=4",
+                "login": "dyninst"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 180
+            },
+            "pullRequests_Merged": {
+                "totalCount": 1328
+            },
+            "pullRequests_Open": {
+                "totalCount": 35
+            },
+            "repositoryTopics": {
+                "totalCount": 4
+            },
+            "stargazers": {
+                "totalCount": 832
+            },
+            "url": "https://github.com/dyninst/dyninst"
+        },
+        "ebugger/Empirical-Roofline-Toolkit": {
+            "createdAt": "2019-06-14T01:53:40Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Forked from https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/",
+            "forks": {
+                "totalCount": 5
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 1
+            },
+            "languages": {
+                "totalCount": 6
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 1
+            },
+            "name": "Empirical-Roofline-Toolkit",
+            "nameWithOwner": "ebugger/Empirical-Roofline-Toolkit",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/9132264?v=4",
+                "login": "ebugger"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Gnuplot"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 0
+            },
+            "pullRequests_Open": {
+                "totalCount": 1
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 26
+            },
+            "url": "https://github.com/ebugger/Empirical-Roofline-Toolkit"
+        },
+        "exalearn/EXARL": {
+            "createdAt": "2019-11-14T17:05:37Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Scalable Framework for Reinforcement Learning",
+            "forks": {
+                "totalCount": 5
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 168
+            },
+            "issues_Open": {
+                "totalCount": 35
+            },
+            "languages": {
+                "totalCount": 5
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 10
+            },
+            "name": "EXARL",
+            "nameWithOwner": "exalearn/EXARL",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/48214750?v=4",
+                "login": "exalearn"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 8
+            },
+            "pullRequests_Merged": {
+                "totalCount": 51
+            },
+            "pullRequests_Open": {
+                "totalCount": 5
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 10
+            },
+            "url": "https://github.com/exalearn/EXARL"
+        },
+        "flang-compiler/flang": {
+            "createdAt": "2017-05-10T19:13:24Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Flang is a Fortran language front-end designed for integration with LLVM.",
+            "forks": {
+                "totalCount": 147
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 296
+            },
+            "issues_Open": {
+                "totalCount": 265
+            },
+            "languages": {
+                "totalCount": 12
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 57
+            },
+            "name": "flang",
+            "nameWithOwner": "flang-compiler/flang",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/27519978?v=4",
+                "login": "flang-compiler"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 191
+            },
+            "pullRequests_Merged": {
+                "totalCount": 700
+            },
+            "pullRequests_Open": {
+                "totalCount": 21
+            },
+            "repositoryTopics": {
+                "totalCount": 4
+            },
+            "stargazers": {
+                "totalCount": 855
+            },
+            "url": "https://github.com/flang-compiler/flang"
+        },
+        "ginkgo-project/ginkgo": {
+            "cdash": "https://my.cdash.org/index.php?project=Ginkgo%20Project",
+            "createdAt": "2018-01-11T16:14:21Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "Numerical linear algebra software package",
+            "forks": {
+                "totalCount": 119
+            },
+            "homepageUrl": "https://gko-project.org",
+            "issues_Closed": {
+                "totalCount": 363
+            },
+            "issues_Open": {
+                "totalCount": 124
+            },
+            "languages": {
+                "totalCount": 7
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 38
+            },
+            "name": "ginkgo",
+            "nameWithOwner": "ginkgo-project/ginkgo",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/35341738?v=4",
+                "login": "ginkgo-project"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 138
+            },
+            "pullRequests_Merged": {
+                "totalCount": 1248
+            },
+            "pullRequests_Open": {
+                "totalCount": 87
+            },
+            "repositoryTopics": {
+                "totalCount": 12
+            },
+            "stargazers": {
+                "totalCount": 611
+            },
+            "url": "https://github.com/ginkgo-project/ginkgo"
+        },
         "hpctoolkit/hpctoolkit": {
             "createdAt": "2022-08-18T22:10:27.848Z",
             "defaultBranchRef": {
@@ -25,6 +2061,724 @@
                 "totalCount": 22
             },
             "url": "https://gitlab.com/hpctoolkit/hpctoolkit"
+        },
+        "hypre-space/hypre": {
+            "createdAt": "2018-11-19T20:42:15Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Parallel solvers for sparse linear systems featuring multigrid methods.",
+            "forks": {
+                "totalCount": 246
+            },
+            "homepageUrl": "https://www.llnl.gov/casc/hypre/",
+            "issues_Closed": {
+                "totalCount": 519
+            },
+            "issues_Open": {
+                "totalCount": 140
+            },
+            "languages": {
+                "totalCount": 15
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 63
+            },
+            "name": "hypre",
+            "nameWithOwner": "hypre-space/hypre",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/44828226?v=4",
+                "login": "hypre-space"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 62
+            },
+            "pullRequests_Merged": {
+                "totalCount": 822
+            },
+            "pullRequests_Open": {
+                "totalCount": 44
+            },
+            "repositoryTopics": {
+                "totalCount": 4
+            },
+            "stargazers": {
+                "totalCount": 847
+            },
+            "url": "https://github.com/hypre-space/hypre"
+        },
+        "icl-utk-edu/magma": {
+            "createdAt": "2023-04-05T15:59:59Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": null,
+            "forks": {
+                "totalCount": 42
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 21
+            },
+            "issues_Open": {
+                "totalCount": 12
+            },
+            "languages": {
+                "totalCount": 12
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 37
+            },
+            "name": "magma",
+            "nameWithOwner": "icl-utk-edu/magma",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/70462541?v=4",
+                "login": "icl-utk-edu"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Fortran"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 6
+            },
+            "pullRequests_Merged": {
+                "totalCount": 47
+            },
+            "pullRequests_Open": {
+                "totalCount": 7
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 116
+            },
+            "url": "https://github.com/icl-utk-edu/magma"
+        },
+        "icl-utk-edu/papi": {
+            "createdAt": "2023-03-27T15:47:26Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": null,
+            "forks": {
+                "totalCount": 87
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 115
+            },
+            "issues_Open": {
+                "totalCount": 41
+            },
+            "languages": {
+                "totalCount": 16
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 65
+            },
+            "name": "papi",
+            "nameWithOwner": "icl-utk-edu/papi",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/70462541?v=4",
+                "login": "icl-utk-edu"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 46
+            },
+            "pullRequests_Merged": {
+                "totalCount": 408
+            },
+            "pullRequests_Open": {
+                "totalCount": 23
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 226
+            },
+            "url": "https://github.com/icl-utk-edu/papi"
+        },
+        "kokkos/kokkos": {
+            "cdash": "https://my.cdash.org/index.php?project=Kokkos",
+            "createdAt": "2015-04-08T21:55:55Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "Kokkos C++ Performance Portability Programming Ecosystem: The Programming Model - Parallel Execution and Memory Abstraction",
+            "forks": {
+                "totalCount": 495
+            },
+            "homepageUrl": "https://kokkos.org",
+            "issues_Closed": {
+                "totalCount": 2820
+            },
+            "issues_Open": {
+                "totalCount": 503
+            },
+            "languages": {
+                "totalCount": 11
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 200
+            },
+            "name": "kokkos",
+            "nameWithOwner": "kokkos/kokkos",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/10199860?v=4",
+                "login": "kokkos"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 770
+            },
+            "pullRequests_Merged": {
+                "totalCount": 5156
+            },
+            "pullRequests_Open": {
+                "totalCount": 113
+            },
+            "repositoryTopics": {
+                "totalCount": 7
+            },
+            "stargazers": {
+                "totalCount": 2615
+            },
+            "url": "https://github.com/kokkos/kokkos"
+        },
+        "kokkos/kokkos-kernels": {
+            "cdash": "https://my.cdash.org/index.php?project=Kokkos%20Kernels",
+            "createdAt": "2017-01-10T20:49:21Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "Kokkos C++ Performance Portability Programming Ecosystem: Math Kernels - Provides BLAS, Sparse BLAS and Graph Kernels",
+            "forks": {
+                "totalCount": 121
+            },
+            "homepageUrl": "https://kokkos.org",
+            "issues_Closed": {
+                "totalCount": 785
+            },
+            "issues_Open": {
+                "totalCount": 129
+            },
+            "languages": {
+                "totalCount": 7
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 77
+            },
+            "name": "kokkos-kernels",
+            "nameWithOwner": "kokkos/kokkos-kernels",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/10199860?v=4",
+                "login": "kokkos"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 223
+            },
+            "pullRequests_Merged": {
+                "totalCount": 2031
+            },
+            "pullRequests_Open": {
+                "totalCount": 32
+            },
+            "repositoryTopics": {
+                "totalCount": 6
+            },
+            "stargazers": {
+                "totalCount": 397
+            },
+            "url": "https://github.com/kokkos/kokkos-kernels"
+        },
+        "llnl/libROM": {
+            "createdAt": "2016-03-31T20:20:55Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Data-driven model reduction library with an emphasis on large scale parallelism and linear subspace methods",
+            "forks": {
+                "totalCount": 47
+            },
+            "homepageUrl": "https://www.librom.net",
+            "issues_Closed": {
+                "totalCount": 33
+            },
+            "issues_Open": {
+                "totalCount": 36
+            },
+            "languages": {
+                "totalCount": 8
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 47
+            },
+            "name": "libROM",
+            "nameWithOwner": "llnl/libROM",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/5921419?v=4",
+                "login": "llnl"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 29
+            },
+            "pullRequests_Merged": {
+                "totalCount": 215
+            },
+            "pullRequests_Open": {
+                "totalCount": 8
+            },
+            "repositoryTopics": {
+                "totalCount": 9
+            },
+            "stargazers": {
+                "totalCount": 235
+            },
+            "url": "https://github.com/llnl/libROM"
+        },
+        "llnl/pylibROM": {
+            "createdAt": "2023-08-09T00:19:01Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "Python interface for libROM, library for reduced order models",
+            "forks": {
+                "totalCount": 3
+            },
+            "homepageUrl": "https://www.librom.net",
+            "issues_Closed": {
+                "totalCount": 2
+            },
+            "issues_Open": {
+                "totalCount": 4
+            },
+            "languages": {
+                "totalCount": 6
+            },
+            "licenseInfo": {
+                "name": "MIT License",
+                "nickname": null,
+                "spdxId": "MIT",
+                "url": "http://choosealicense.com/licenses/mit/"
+            },
+            "mentionableUsers": {
+                "totalCount": 37
+            },
+            "name": "pylibROM",
+            "nameWithOwner": "llnl/pylibROM",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/5921419?v=4",
+                "login": "llnl"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 3
+            },
+            "pullRequests_Merged": {
+                "totalCount": 21
+            },
+            "pullRequests_Open": {
+                "totalCount": 1
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 63
+            },
+            "url": "https://github.com/llnl/pylibROM"
+        },
+        "llnl/sundials": {
+            "createdAt": "2017-10-05T17:20:03Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "Official development repository for SUNDIALS - a SUite of Nonlinear and DIfferential/ALgebraic equation Solvers. Pull requests are welcome for bug fixes and minor changes.",
+            "forks": {
+                "totalCount": 161
+            },
+            "homepageUrl": "https://computing.llnl.gov/projects/sundials",
+            "issues_Closed": {
+                "totalCount": 226
+            },
+            "issues_Open": {
+                "totalCount": 37
+            },
+            "languages": {
+                "totalCount": 12
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 40
+            },
+            "name": "sundials",
+            "nameWithOwner": "llnl/sundials",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/5921419?v=4",
+                "login": "llnl"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 117
+            },
+            "pullRequests_Merged": {
+                "totalCount": 580
+            },
+            "pullRequests_Open": {
+                "totalCount": 16
+            },
+            "repositoryTopics": {
+                "totalCount": 12
+            },
+            "stargazers": {
+                "totalCount": 673
+            },
+            "url": "https://github.com/llnl/sundials"
+        },
+        "llnl/zfp": {
+            "createdAt": "2016-03-24T02:10:02Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "Compressed numerical arrays that support high-speed random access",
+            "forks": {
+                "totalCount": 166
+            },
+            "homepageUrl": "http://zfp.llnl.gov",
+            "issues_Closed": {
+                "totalCount": 130
+            },
+            "issues_Open": {
+                "totalCount": 36
+            },
+            "languages": {
+                "totalCount": 9
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 42
+            },
+            "name": "zfp",
+            "nameWithOwner": "llnl/zfp",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/5921419?v=4",
+                "login": "llnl"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 35
+            },
+            "pullRequests_Merged": {
+                "totalCount": 93
+            },
+            "pullRequests_Open": {
+                "totalCount": 6
+            },
+            "repositoryTopics": {
+                "totalCount": 5
+            },
+            "stargazers": {
+                "totalCount": 873
+            },
+            "url": "https://github.com/llnl/zfp"
+        },
+        "llvm/llvm-project": {
+            "createdAt": "2016-12-07T09:39:33Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+            "forks": {
+                "totalCount": 15585
+            },
+            "homepageUrl": "http://llvm.org",
+            "issues_Closed": {
+                "totalCount": 67844
+            },
+            "issues_Open": {
+                "totalCount": 29108
+            },
+            "languages": {
+                "totalCount": 56
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 6268
+            },
+            "name": "llvm-project",
+            "nameWithOwner": "llvm/llvm-project",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/17149993?v=4",
+                "login": "llvm"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "LLVM"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 11149
+            },
+            "pullRequests_Merged": {
+                "totalCount": 93075
+            },
+            "pullRequests_Open": {
+                "totalCount": 8499
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 39392
+            },
+            "url": "https://github.com/llvm/llvm-project"
+        },
+        "mfem/mfem": {
+            "createdAt": "2015-06-11T21:42:21Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Lightweight, general, scalable C++ library for finite element methods",
+            "forks": {
+                "totalCount": 616
+            },
+            "homepageUrl": "http://mfem.org",
+            "issues_Closed": {
+                "totalCount": 2395
+            },
+            "issues_Open": {
+                "totalCount": 88
+            },
+            "languages": {
+                "totalCount": 10
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 793
+            },
+            "name": "mfem",
+            "nameWithOwner": "mfem/mfem",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/12879105?v=4",
+                "login": "mfem"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 435
+            },
+            "pullRequests_Merged": {
+                "totalCount": 2042
+            },
+            "pullRequests_Open": {
+                "totalCount": 155
+            },
+            "repositoryTopics": {
+                "totalCount": 11
+            },
+            "stargazers": {
+                "totalCount": 2205
+            },
+            "url": "https://github.com/mfem/mfem"
+        },
+        "open-mpi/ompi": {
+            "createdAt": "2014-09-16T16:08:30Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "Open MPI main development repository",
+            "forks": {
+                "totalCount": 914
+            },
+            "homepageUrl": "https://www.open-mpi.org",
+            "issues_Closed": {
+                "totalCount": 3267
+            },
+            "issues_Open": {
+                "totalCount": 741
+            },
+            "languages": {
+                "totalCount": 12
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 324
+            },
+            "name": "ompi",
+            "nameWithOwner": "open-mpi/ompi",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/2165682?v=4",
+                "login": "open-mpi"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 1125
+            },
+            "pullRequests_Merged": {
+                "totalCount": 8984
+            },
+            "pullRequests_Open": {
+                "totalCount": 73
+            },
+            "repositoryTopics": {
+                "totalCount": 6
+            },
+            "stargazers": {
+                "totalCount": 2620
+            },
+            "url": "https://github.com/open-mpi/ompi"
+        },
+        "ornladios/ADIOS2": {
+            "cdash": "https://open.cdash.org/index.php?project=ADIOS",
+            "createdAt": "2016-12-06T16:39:55Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Next generation of ADIOS developed in the Exascale Computing Program",
+            "forks": {
+                "totalCount": 146
+            },
+            "homepageUrl": "https://adios2.readthedocs.io/en/latest/index.html",
+            "issues_Closed": {
+                "totalCount": 1220
+            },
+            "issues_Open": {
+                "totalCount": 49
+            },
+            "languages": {
+                "totalCount": 14
+            },
+            "licenseInfo": {
+                "name": "Apache License 2.0",
+                "nickname": null,
+                "spdxId": "Apache-2.0",
+                "url": "http://choosealicense.com/licenses/apache-2.0/"
+            },
+            "mentionableUsers": {
+                "totalCount": 85
+            },
+            "name": "ADIOS2",
+            "nameWithOwner": "ornladios/ADIOS2",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/3661939?v=4",
+                "login": "ornladios"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 702
+            },
+            "pullRequests_Merged": {
+                "totalCount": 3094
+            },
+            "pullRequests_Open": {
+                "totalCount": 11
+            },
+            "repositoryTopics": {
+                "totalCount": 9
+            },
+            "stargazers": {
+                "totalCount": 323
+            },
+            "url": "https://github.com/ornladios/ADIOS2"
         },
         "paraview/paraview": {
             "createdAt": "2015-02-27T10:46:15.123-05:00",
@@ -52,6 +2806,61 @@
             },
             "url": "https://gitlab.kitware.com/paraview/paraview"
         },
+        "patrickfan/GenAI4UQ": {
+            "createdAt": "2024-11-26T01:27:02Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": null,
+            "forks": {
+                "totalCount": 2
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 1
+            },
+            "licenseInfo": {
+                "name": "MIT License",
+                "nickname": null,
+                "spdxId": "MIT",
+                "url": "http://choosealicense.com/licenses/mit/"
+            },
+            "mentionableUsers": {
+                "totalCount": 1
+            },
+            "name": "GenAI4UQ",
+            "nameWithOwner": "patrickfan/GenAI4UQ",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/31777976?v=4",
+                "login": "patrickfan"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 0
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 11
+            },
+            "url": "https://github.com/patrickfan/GenAI4UQ"
+        },
         "petsc/petsc": {
             "createdAt": "2019-08-19T14:51:46.786Z",
             "defaultBranchRef": {
@@ -78,6 +2887,500 @@
             },
             "url": "https://gitlab.com/petsc/petsc"
         },
+        "pghysels/STRUMPACK": {
+            "createdAt": "2017-06-08T17:12:31Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Structured Matrix Package (LBNL)",
+            "forks": {
+                "totalCount": 50
+            },
+            "homepageUrl": "http://portal.nersc.gov/project/sparse/strumpack/",
+            "issues_Closed": {
+                "totalCount": 49
+            },
+            "issues_Open": {
+                "totalCount": 68
+            },
+            "languages": {
+                "totalCount": 10
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 18
+            },
+            "name": "STRUMPACK",
+            "nameWithOwner": "pghysels/STRUMPACK",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/29239758?u=93c4946122503b9218efa8cfb9acb09e05081f7f&v=4",
+                "login": "pghysels"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 6
+            },
+            "pullRequests_Merged": {
+                "totalCount": 20
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 9
+            },
+            "stargazers": {
+                "totalCount": 196
+            },
+            "url": "https://github.com/pghysels/STRUMPACK"
+        },
+        "pmodels/mpich": {
+            "createdAt": "2016-10-14T14:39:42Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "Official MPICH Repository",
+            "forks": {
+                "totalCount": 315
+            },
+            "homepageUrl": "http://www.mpich.org",
+            "issues_Closed": {
+                "totalCount": 3443
+            },
+            "issues_Open": {
+                "totalCount": 231
+            },
+            "languages": {
+                "totalCount": 14
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 124
+            },
+            "name": "mpich",
+            "nameWithOwner": "pmodels/mpich",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/15700567?v=4",
+                "login": "pmodels"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 745
+            },
+            "pullRequests_Merged": {
+                "totalCount": 3358
+            },
+            "pullRequests_Open": {
+                "totalCount": 71
+            },
+            "repositoryTopics": {
+                "totalCount": 4
+            },
+            "stargazers": {
+                "totalCount": 683
+            },
+            "url": "https://github.com/pmodels/mpich"
+        },
+        "pnnl/neuromancer": {
+            "createdAt": "2020-10-14T19:35:17Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Pytorch-based framework for solving parametric constrained optimization problems, physics-informed system identification, and parametric model predictive control. ",
+            "forks": {
+                "totalCount": 184
+            },
+            "homepageUrl": "https://pnnl.github.io/neuromancer/",
+            "issues_Closed": {
+                "totalCount": 84
+            },
+            "issues_Open": {
+                "totalCount": 9
+            },
+            "languages": {
+                "totalCount": 3
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 38
+            },
+            "name": "neuromancer",
+            "nameWithOwner": "pnnl/neuromancer",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/10872965?v=4",
+                "login": "pnnl"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 36
+            },
+            "pullRequests_Merged": {
+                "totalCount": 116
+            },
+            "pullRequests_Open": {
+                "totalCount": 6
+            },
+            "repositoryTopics": {
+                "totalCount": 11
+            },
+            "stargazers": {
+                "totalCount": 1353
+            },
+            "url": "https://github.com/pnnl/neuromancer"
+        },
+        "sandialabs/Albany": {
+            "cdash": "https://my.cdash.org/index.php?project=Albany",
+            "createdAt": "2014-03-20T02:32:15Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Sandia National Laboratories' Albany multiphysics code",
+            "forks": {
+                "totalCount": 88
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 694
+            },
+            "issues_Open": {
+                "totalCount": 72
+            },
+            "languages": {
+                "totalCount": 9
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 61
+            },
+            "name": "Albany",
+            "nameWithOwner": "sandialabs/Albany",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/4993680?v=4",
+                "login": "sandialabs"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 28
+            },
+            "pullRequests_Merged": {
+                "totalCount": 379
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 3
+            },
+            "stargazers": {
+                "totalCount": 331
+            },
+            "url": "https://github.com/sandialabs/Albany"
+        },
+        "sandialabs/pytuq": {
+            "createdAt": "2025-02-28T21:43:47Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "Python Toolkit for Uncertainty Quantification",
+            "forks": {
+                "totalCount": 4
+            },
+            "homepageUrl": "https://sandialabs.github.io/pytuq/",
+            "issues_Closed": {
+                "totalCount": 24
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 3
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 6
+            },
+            "name": "pytuq",
+            "nameWithOwner": "sandialabs/pytuq",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/4993680?v=4",
+                "login": "sandialabs"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 26
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 14
+            },
+            "stargazers": {
+                "totalCount": 10
+            },
+            "url": "https://github.com/sandialabs/pytuq"
+        },
+        "spack/spack": {
+            "cdash": "https://cdash.spack.io",
+            "createdAt": "2014-01-08T09:22:12Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "A flexible package manager that supports multiple versions, configurations, platforms, and compilers.",
+            "forks": {
+                "totalCount": 2321
+            },
+            "homepageUrl": "https://spack.io",
+            "issues_Closed": {
+                "totalCount": 7936
+            },
+            "issues_Open": {
+                "totalCount": 1333
+            },
+            "languages": {
+                "totalCount": 14
+            },
+            "licenseInfo": {
+                "name": "Apache License 2.0",
+                "nickname": null,
+                "spdxId": "Apache-2.0",
+                "url": "http://choosealicense.com/licenses/apache-2.0/"
+            },
+            "mentionableUsers": {
+                "totalCount": 1679
+            },
+            "name": "spack",
+            "nameWithOwner": "spack/spack",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/25539161?v=4",
+                "login": "spack"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 5236
+            },
+            "pullRequests_Merged": {
+                "totalCount": 37342
+            },
+            "pullRequests_Open": {
+                "totalCount": 433
+            },
+            "repositoryTopics": {
+                "totalCount": 11
+            },
+            "stargazers": {
+                "totalCount": 5095
+            },
+            "url": "https://github.com/spack/spack"
+        },
+        "tpeterka/ChatVis": {
+            "createdAt": "2025-09-15T19:25:58Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "Scientific visualization agent and benchmark",
+            "forks": {
+                "totalCount": 2
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 0
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 1
+            },
+            "licenseInfo": null,
+            "mentionableUsers": {
+                "totalCount": 3
+            },
+            "name": "ChatVis",
+            "nameWithOwner": "tpeterka/ChatVis",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1747481?v=4",
+                "login": "tpeterka"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "Python"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 0
+            },
+            "pullRequests_Merged": {
+                "totalCount": 1
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 3
+            },
+            "url": "https://github.com/tpeterka/ChatVis"
+        },
+        "trilinos/Trilinos": {
+            "cdash": "https://trilinos-cdash.sandia.gov",
+            "createdAt": "2015-11-16T19:39:16Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Primary repository for the Trilinos Project",
+            "forks": {
+                "totalCount": 612
+            },
+            "homepageUrl": "https://trilinos.org/",
+            "issues_Closed": {
+                "totalCount": 5408
+            },
+            "issues_Open": {
+                "totalCount": 250
+            },
+            "languages": {
+                "totalCount": 33
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 302
+            },
+            "name": "Trilinos",
+            "nameWithOwner": "trilinos/Trilinos",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8566498?v=4",
+                "login": "trilinos"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C++"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 1222
+            },
+            "pullRequests_Merged": {
+                "totalCount": 8440
+            },
+            "pullRequests_Open": {
+                "totalCount": 83
+            },
+            "repositoryTopics": {
+                "totalCount": 8
+            },
+            "stargazers": {
+                "totalCount": 1409
+            },
+            "url": "https://github.com/trilinos/Trilinos"
+        },
+        "visit-dav/visit": {
+            "cdash": "https://cdash.hpcvis.com",
+            "createdAt": "2019-01-13T23:27:26Z",
+            "defaultBranchRef": {
+                "name": "develop"
+            },
+            "description": "VisIt - Visualization and Data Analysis for Mesh-based Scientific Data",
+            "forks": {
+                "totalCount": 133
+            },
+            "homepageUrl": "https://visit.llnl.gov",
+            "issues_Closed": {
+                "totalCount": 3814
+            },
+            "issues_Open": {
+                "totalCount": 1931
+            },
+            "languages": {
+                "totalCount": 22
+            },
+            "licenseInfo": {
+                "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "nickname": "Modified BSD License",
+                "spdxId": "BSD-3-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-3-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 72
+            },
+            "name": "visit",
+            "nameWithOwner": "visit-dav/visit",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/26772601?v=4",
+                "login": "visit-dav"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 153
+            },
+            "pullRequests_Merged": {
+                "totalCount": 3533
+            },
+            "pullRequests_Open": {
+                "totalCount": 17
+            },
+            "repositoryTopics": {
+                "totalCount": 8
+            },
+            "stargazers": {
+                "totalCount": 528
+            },
+            "url": "https://github.com/visit-dav/visit"
+        },
         "vtk/vtk": {
             "createdAt": "2015-02-27T10:42:06.016-05:00",
             "defaultBranchRef": {
@@ -103,6 +3406,227 @@
                 "totalCount": 306
             },
             "url": "https://gitlab.kitware.com/vtk/vtk"
+        },
+        "xiaoyeli/superlu": {
+            "createdAt": "2016-02-04T00:21:41Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Supernodal sparse direct solver.  https://portal.nersc.gov/project/sparse/superlu/",
+            "forks": {
+                "totalCount": 99
+            },
+            "homepageUrl": "",
+            "issues_Closed": {
+                "totalCount": 64
+            },
+            "issues_Open": {
+                "totalCount": 23
+            },
+            "languages": {
+                "totalCount": 9
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 28
+            },
+            "name": "superlu",
+            "nameWithOwner": "xiaoyeli/superlu",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/11741943?u=d35cddd7d87b3f001bc0e65e0bff8053988ae7c9&v=4",
+                "login": "xiaoyeli"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 13
+            },
+            "pullRequests_Merged": {
+                "totalCount": 71
+            },
+            "pullRequests_Open": {
+                "totalCount": 5
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 329
+            },
+            "url": "https://github.com/xiaoyeli/superlu"
+        },
+        "xiaoyeli/superlu_dist": {
+            "cdash": "https://my.cdash.org/index.php?project=superlu_dist",
+            "createdAt": "2016-02-23T20:10:16Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": "Distributed memory, MPI based SuperLU",
+            "forks": {
+                "totalCount": 76
+            },
+            "homepageUrl": "https://portal.nersc.gov/project/sparse/superlu/",
+            "issues_Closed": {
+                "totalCount": 79
+            },
+            "issues_Open": {
+                "totalCount": 67
+            },
+            "languages": {
+                "totalCount": 12
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 31
+            },
+            "name": "superlu_dist",
+            "nameWithOwner": "xiaoyeli/superlu_dist",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/11741943?u=d35cddd7d87b3f001bc0e65e0bff8053988ae7c9&v=4",
+                "login": "xiaoyeli"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 11
+            },
+            "pullRequests_Merged": {
+                "totalCount": 54
+            },
+            "pullRequests_Open": {
+                "totalCount": 7
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 221
+            },
+            "url": "https://github.com/xiaoyeli/superlu_dist"
+        },
+        "xiaoyeli/superlu_mt": {
+            "createdAt": "2021-05-29T04:36:58Z",
+            "defaultBranchRef": {
+                "name": "master"
+            },
+            "description": null,
+            "forks": {
+                "totalCount": 21
+            },
+            "homepageUrl": null,
+            "issues_Closed": {
+                "totalCount": 10
+            },
+            "issues_Open": {
+                "totalCount": 9
+            },
+            "languages": {
+                "totalCount": 6
+            },
+            "licenseInfo": {
+                "name": "Other",
+                "nickname": null,
+                "spdxId": "NOASSERTION",
+                "url": "http://choosealicense.com/licenses/other/"
+            },
+            "mentionableUsers": {
+                "totalCount": 7
+            },
+            "name": "superlu_mt",
+            "nameWithOwner": "xiaoyeli/superlu_mt",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/11741943?u=d35cddd7d87b3f001bc0e65e0bff8053988ae7c9&v=4",
+                "login": "xiaoyeli"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 3
+            },
+            "pullRequests_Merged": {
+                "totalCount": 10
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 0
+            },
+            "stargazers": {
+                "totalCount": 38
+            },
+            "url": "https://github.com/xiaoyeli/superlu_mt"
+        },
+        "ytopt-team/ytopt": {
+            "createdAt": "2019-01-15T18:31:40Z",
+            "defaultBranchRef": {
+                "name": "main"
+            },
+            "description": "ytopt: machine-learning-based autotuning and hyperparameter optimization framework using Bayesian Optimization",
+            "forks": {
+                "totalCount": 17
+            },
+            "homepageUrl": "https://github.com/ytopt-team/ytopt",
+            "issues_Closed": {
+                "totalCount": 9
+            },
+            "issues_Open": {
+                "totalCount": 0
+            },
+            "languages": {
+                "totalCount": 15
+            },
+            "licenseInfo": {
+                "name": "BSD 2-Clause \"Simplified\" License",
+                "nickname": null,
+                "spdxId": "BSD-2-Clause",
+                "url": "http://choosealicense.com/licenses/bsd-2-clause/"
+            },
+            "mentionableUsers": {
+                "totalCount": 10
+            },
+            "name": "ytopt",
+            "nameWithOwner": "ytopt-team/ytopt",
+            "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/46723877?v=4",
+                "login": "ytopt-team"
+            },
+            "parent": null,
+            "primaryLanguage": {
+                "name": "C"
+            },
+            "pullRequests_Closed": {
+                "totalCount": 8
+            },
+            "pullRequests_Merged": {
+                "totalCount": 41
+            },
+            "pullRequests_Open": {
+                "totalCount": 0
+            },
+            "repositoryTopics": {
+                "totalCount": 7
+            },
+            "stargazers": {
+                "totalCount": 54
+            },
+            "url": "https://github.com/ytopt-team/ytopt"
         }
     }
 }
