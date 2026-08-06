@@ -46,7 +46,6 @@ for project in projects:
         info["pullRequests_Merged"] = {"totalCount": len(fullProject.mergerequests.list(state='merged'))}
         info["pullRequests_Open"] = {"totalCount": len(fullProject.mergerequests.list(state='opened'))}
         info["repositoryTopics"] = {"totalCount": len(fullProject.topics)}
-        info["stargazers"] = {"totalCount": fullProject.star_count}
         info["url"] = fullProject.http_url_to_repo
         
         processedProjects[project.name] = info

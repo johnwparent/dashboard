@@ -65,7 +65,6 @@ for hostUrl, hostInfo in inputLists.data.items():
                 info["owner"] = proj.get("namespace", {}).get("full_path", "")
                 info["parent"] = None
                 info["primaryLanguage"] = None
-                info["stargazers"] = {"totalCount": proj.get("star_count", 0)}
                 info["url"] = proj.get("web_url", "%s/%s" % (hostUrl, repo))
 
                 # Fetch languages
