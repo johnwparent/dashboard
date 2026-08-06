@@ -46,7 +46,6 @@ layout: default
                     <div class="dv-toolbar-group">
                         <label>Sort By:</label>
                         <select id="list-sort-select" class="dv-input" onchange="renderMainView()">
-                            <option value="stars">GitHub Stars (High to Low)</option>
                             <option value="name">Lexicographical (A-Z)</option>
                             <option value="contributors">Contributors</option>
                             <option value="lastUpdate">Recently Updated</option>
@@ -78,7 +77,6 @@ layout: default
                                 <th>Package</th>
                                 <th>Owner</th>
                                 <th>Type</th>
-                                <th>Stars</th>
                                 <th>Last Update</th>
                             </tr>
                         </thead>
@@ -158,7 +156,6 @@ layout: default
                 </div>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #1e1e1e; padding: 10px; border-radius: 6px; border: 1px solid #333;">
-                    <div><span style="display: block; font-size: 0.7rem; color: #888; text-transform: uppercase;">Stars</span><strong id="insp-stars" style="color: #fff;">0</strong></div>
                     <div><span style="display: block; font-size: 0.7rem; color: #888; text-transform: uppercase;">Contributors</span><strong id="insp-contribs" style="color: #fff;">0</strong></div>
                     <div><span style="display: block; font-size: 0.7rem; color: #888; text-transform: uppercase;">License</span><strong id="insp-license" style="color: #fff;">None</strong></div>
                     <div><span style="display: block; font-size: 0.7rem; color: #888; text-transform: uppercase;">Chain Depth</span><strong id="insp-depth" style="color: #fff;">L1</strong></div>
