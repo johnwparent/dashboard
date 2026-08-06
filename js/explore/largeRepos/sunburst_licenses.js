@@ -227,7 +227,7 @@ function draw_sunburst_licenses(areaID) {
       return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
     }
 
-    let options = ['# of Stars per Repo', '# of Forks per Repo', '# of Contributors per Repo', '# of Repos'];
+    let options = ['# of Forks per Repo', '# of Contributors per Repo', '# of Repos'];
 
     const slider = d3
       .sliderRight()
@@ -342,9 +342,7 @@ function draw_sunburst_licenses(areaID) {
       repos.forEach(function (repo) {
         // Chooses what value to use for weights
         let value = 1;
-        if (type == null || type == 0) {
-          value = obj['data'][repo]['stargazers']['totalCount'];
-        } else if (type == 1) {
+        if (type == 1) {
           value = obj['data'][repo]['forks']['totalCount'];
         } else if (type == 2) {
           value = obj['data'][repo]['mentionableUsers']['totalCount'];

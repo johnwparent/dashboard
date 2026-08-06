@@ -25,16 +25,15 @@ function draw_cluster(areaID) {
           .hierarchy(data)
           .sum(
             (d) =>
-              (d.stars * starWeight + d.forks * forkWeight + d.contributors * contributorWeight) /
+              (d.forks * forkWeight + d.contributors * contributorWeight) /
               (starWeight + forkWeight + contributorWeight),
           )
           .sort(
             (a, b) =>
-              (b.stars * starWeight +
-                b.forks * forkWeight +
+              ( b.forks * forkWeight +
                 b.contributors * contributorWeight -
-                (a.stars * starWeight + a.forks * forkWeight + a.contributors * contributorWeight)) /
-              (starWeight + forkWeight + contributorWeight),
+                (a.forks * forkWeight + a.contributors * contributorWeight)) /
+              (forkWeight + contributorWeight),
           ),
       );
 
@@ -112,7 +111,6 @@ function draw_cluster(areaID) {
         name: repoAndOwner[1],
         owner: repoAndOwner[0],
         forks: repoObj['forks']['totalCount'],
-        stars: repoObj['stargazers']['totalCount'],
         contributors: repoObj['mentionableUsers']['totalCount'],
       });
     }

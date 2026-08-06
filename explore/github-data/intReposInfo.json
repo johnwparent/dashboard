@@ -21,9 +21,6 @@
             "primaryLanguage": {
                 "name": "C++"
             },
-            "stargazers": {
-                "totalCount": 22
-            },
             "url": "https://gitlab.com/hpctoolkit/hpctoolkit"
         },
         "paraview/paraview": {
@@ -46,9 +43,6 @@
             "parent": null,
             "primaryLanguage": {
                 "name": "C++"
-            },
-            "stargazers": {
-                "totalCount": 166
             },
             "url": "https://gitlab.kitware.com/paraview/paraview"
         },
@@ -73,9 +67,6 @@
             "primaryLanguage": {
                 "name": "C"
             },
-            "stargazers": {
-                "totalCount": 184
-            },
             "url": "https://gitlab.com/petsc/petsc"
         },
         "vtk/vtk": {
@@ -98,9 +89,6 @@
             "parent": null,
             "primaryLanguage": {
                 "name": "C++"
-            },
-            "stargazers": {
-                "totalCount": 306
             },
             "url": "https://gitlab.kitware.com/vtk/vtk"
         }

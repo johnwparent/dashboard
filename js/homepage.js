@@ -88,18 +88,17 @@ fetch(`${window.config.baseUrl}/catalog/category_info.json`)
                           reposInfoObj[repo].owner.avatarUrl,
                         );
                         category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;
-                        category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
                         category[count]['gitUrl'] = reposInfoObj[repo].url;
                         category[count]['homepageUrl'] = reposInfoObj[repo].homepageUrl;
                       }
                     }
                   }
                 }
-                //sort categories by stars descending
+                //sort categories by name descending
                 topicRepos.forEach((repo) => {
                   repo.sort((a, b) => {
-                    const x = a['stars'];
-                    const y = b['stars'];
+                    const x = a['name'];
+                    const y = b['name'];
                     return x > y ? -1 : x < y ? 1 : 0;
                   });
                 });
@@ -130,10 +129,6 @@ fetch(`${window.config.baseUrl}/catalog/category_info.json`)
                           >
                             ${sanitizeHTML(repo.name)}
                           </a>
-                        </span>
-
-                        <span>
-                          <a href="${repo.gitUrl}/stargazers" title="Stargazers"> ${repo.stars} <span class="fa fa-star"></span> </a>
                         </span>
 
                         <span>

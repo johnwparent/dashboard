@@ -225,9 +225,6 @@ function renderSingleRepo(queryParam) {
         draw_line_repoCreationHistory('repoCreationHistory', queryParam);
         draw_pie_languages('languagePie', queryParam);
         draw_cloud_topics('topicCloud', queryParam);
-        if (repo.stargazers.totalCount) {
-          draw_line_repoStarHistory('repoStarHistory', queryParam);
-        }
         if (pulls) {
           draw_pie_repoPulls('piePulls', queryParam);
         }
@@ -1159,7 +1156,6 @@ function setVisibleRepo(newValue, shouldPushState) {
                           category[count]['description'] = reposInfoObj[repo].description;
                           category[count]['ownerAvatar'] = reposInfoObj[repo].owner.avatarUrl;
                           category[count]['owner'] = reposInfoObj[repo].owner.login;
-                          category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
                           category[count]['gitUrl'] = reposInfoObj[repo].url;
                           category[count]['homepageUrl'] = reposInfoObj[repo].homepageUrl;
                           if (reposInfoObj[repo].primaryLanguage) {
