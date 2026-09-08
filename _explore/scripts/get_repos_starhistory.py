@@ -1,36 +1,56 @@
+import os
 import sys
-from gh_collector import gh_data_dir, gh_queries_dir, load_data, load_repo_list, make_query_manager
+import requests
+from gh_collector import gh_data_dir, load_data, load_repo_list
 from datetime import date, timedelta
 
 ghDataDir = gh_data_dir()
 datfilepath = ghDataDir / "intRepos_StarHistory.json"
-queryPath = str(gh_queries_dir() / "repo-Stargazers.gql")
 
 repolist = load_repo_list(ghDataDir)
 dataCollector = load_data(datfilepath)
-queryMan = make_query_manager()
+
+# GraphQL's stargazers connection is forbidden for the default Actions
+# token on repos outside this one (see get_repos_info.py). The REST
+# stargazers endpoint isn't subject to that restriction, and with this
+# media type also returns each star's timestamp.
+headers = {"Accept": "application/vnd.github.star+json"}
+api_token = os.environ.get("GITHUB_API_TOKEN")
+if api_token:
+    headers["Authorization"] = "token %s" % api_token
 
 print("Gathering data across multiple paginated queries...")
 failed = 0
 for repo in repolist:
     print("\n'%s'" % (repo))
 
-    r = repo.split("/")
     try:
-        outObj = queryMan.queryGitHubFromFile(
-            queryPath,
-            {"ownName": r[0], "repoName": r[1], "numUsers": 100, "pgCursor": None},
-            paginate=True,
-            cursorVar="pgCursor",
-            keysToList=["data", "repository", "stargazers", "edges"],
-        )
+        starred_ats = []
+        page = 1
+        while True:
+            resp = requests.get(
+                "https://api.github.com/repos/%s/stargazers" % repo,
+                headers=headers,
+                params={"per_page": 100, "page": page},
+                timeout=30,
+            )
+            resp.raise_for_status()
+            batch = resp.json()
+            if not batch:
+                break
+            starred_ats.extend(item["starred_at"] for item in batch)
+            if len(batch) < 100:
+                break
+            page += 1
     except Exception as error:
         print("Warning: Could not complete '%s'" % (repo))
         print(error)
         failed += 1
         continue
 
-    dataCollector.data["data"][repo] = outObj["data"]["repository"]
+    dataCollector.data["data"][repo] = {
+        "stargazers": {"edges": [{"starredAt": s} for s in starred_ats]}
+    }
 
     print("'%s' Done!" % (repo))
 

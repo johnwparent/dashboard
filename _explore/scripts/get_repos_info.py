@@ -1,5 +1,6 @@
 import sys
 import os
+import json
 import requests
 from os import environ as env
 from urllib.parse import quote as urlquote
@@ -13,6 +14,24 @@ queryPath = str(gh_queries_dir() / "org-Repos-Info.gql")
 queryPathInd = str(gh_queries_dir() / "repo-Info.gql")
 
 dataCollector = load_data(datfilepath)
+
+
+def _stargazers_from_metrics(repoKey):
+    """Read the star count corsa-center/metrics already collected for this repo via REST.
+
+    GitHub's default Actions token forbids the GraphQL `stargazers` connection on
+    repos outside this one, so that field is no longer requested here (see
+    queries/repo-Info.gql and org-Repos-Info.gql). corsa-center/metrics collects
+    stars via the REST API instead, which isn't subject to that restriction.
+    """
+    metrics_file = ghDataDir / ("%s-metrics" % repoKey.split("/")[-1]) / "metrics.json"
+    if not metrics_file.exists():
+        return None
+    try:
+        with open(metrics_file) as f:
+            return {"totalCount": json.load(f).get("stars", 0)}
+    except Exception:
+        return None
 
 # setup cdash repo context
 cdash_mapping = {}
@@ -132,7 +151,11 @@ for hostUrl, hostInfo in inputLists.data.items():
 
         for repo in outObj["data"]["organization"]["repositories"]["nodes"]:
             repoKey = repo["nameWithOwner"]
+            old_stargazers = dataCollector.data["data"].get(repoKey, {}).get("stargazers")
             dataCollector.data["data"][repoKey] = repo
+            dataCollector.data["data"][repoKey]["stargazers"] = (
+                _stargazers_from_metrics(repoKey) or old_stargazers or {"totalCount": 0}
+            )
             seen_repos.add(repoKey)
             if repoKey in cdash_mapping:
                 dataCollector.data["data"][repoKey]["cdash"] = cdash_mapping[repoKey]
@@ -159,7 +182,11 @@ for hostUrl, hostInfo in inputLists.data.items():
             continue
 
         repoKey = outObj["data"]["repository"]["nameWithOwner"]
+        old_stargazers = dataCollector.data["data"].get(repoKey, {}).get("stargazers")
         dataCollector.data["data"][repoKey] = outObj["data"]["repository"]
+        dataCollector.data["data"][repoKey]["stargazers"] = (
+            _stargazers_from_metrics(repoKey) or old_stargazers or {"totalCount": 0}
+        )
         seen_repos.add(repoKey)
         if repoKey in cdash_mapping:
             dataCollector.data["data"][repoKey]["cdash"] = cdash_mapping[repoKey]

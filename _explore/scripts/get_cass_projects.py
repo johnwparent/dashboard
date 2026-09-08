@@ -13,6 +13,20 @@ url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
 
 file_to_update = f"./_explore/input_lists.json"
 
+# Products marked published: false in their _software/*.md (CASS/FASTMath
+# stopped stewarding them) but that we still want tracked as widely-used
+# dependencies. Keyed by .md filename without extension.
+KEEP_DESPITE_UNPUBLISHED = {"trilinos", "ginkgo", "magma"}
+
+# Known-wrong repository URLs in upstream _software/*.md files, corrected
+# locally until cass-community/cass-community.github.io is fixed directly.
+# codescribe.md still points at the pre-transfer path; dakota.md links the
+# snl-dakota org homepage rather than the dakota repo itself.
+REPO_CORRECTIONS = {
+    "akashdhruv/codescribe": "Lab-Notebooks/CodeScribe",
+    "snl-dakota": "snl-dakota/dakota",
+}
+
 # Function to get the content of a file from GitHub
 def get_file_content(file_url):
     response = requests.get(file_url)
@@ -90,6 +104,13 @@ if response.status_code == 200:
         file_url = md_file['download_url']
         content = get_file_content(file_url)
         if content:
+            product_slug = md_file['name'][:-3].lower()
+            if (
+                re.search(r'^published:\s*false\s*$', content, re.MULTILINE)
+                and product_slug not in KEEP_DESPITE_UNPUBLISHED
+            ):
+                print(f"Skipping {md_file['name']}: marked published: false")
+                continue
             lines = content.split('\n')
             for i, line in enumerate(lines):
                 if re.match(r"(.*)label: Repository(.*)", line):
@@ -126,7 +147,17 @@ if response.status_code == 200:
     for item in gitlab_list:
         github_list.append(item)
     for item in extraRepo_list:
-        github_list.append(item)       
+        github_list.append(item)
+
+    # Apply known corrections for upstream .md files with stale/wrong URLs.
+    github_list = [REPO_CORRECTIONS.get(item, item) for item in github_list]
+
+    # Multiple product pages can point at the same repo (e.g. ParaView and
+    # ParaView Catalyst both live in gitlab.kitware.com/paraview/paraview),
+    # and extraRepos entries often duplicate one already found via a .md
+    # file's own Repository link. De-dupe, preserving first-seen order.
+    github_list = list(dict.fromkeys(github_list))
+    gitlab_list = list(dict.fromkeys(gitlab_list))
 
     # Update the projects with github repo urls
     key_path = ['https://github.com', 'repos']
