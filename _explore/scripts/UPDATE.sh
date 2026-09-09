@@ -24,12 +24,32 @@ function errorCheck() {
     fi
 }
 
+# Log, but don't stop the update, for scripts that fail safely on their own
+# (they refuse to overwrite existing data when every query in the run failed,
+# e.g. a transient GitHub API hiccup) -- there's no data-loss risk in letting
+# the rest of the pipeline continue.
+function warnCheck() {
+    if [ $ret -ne 0 ]; then
+        echo "SOFT-FAIL - $1 (kept previous data, continuing)"
+        echo -e "SOFT-FAIL\t$1" >> $DATELOG
+    fi
+}
+
 # Basic script run procedure
 function runScript() {
     echo "Run - $1"
     python -u $1
     ret=$?
     errorCheck "$1"
+}
+
+# Same, but a failure doesn't abort the rest of the update. Only use this for
+# scripts that already guard against overwriting good data with a failed run.
+function runScriptSoft() {
+    echo "Run - $1"
+    python -u $1
+    ret=$?
+    warnCheck "$1"
 }
 
 # Basic script run procedure but make it Spack
@@ -56,30 +76,34 @@ runScript cleanup_inputs.py
 
 
 # --- BASIC DATA ---
-# Required before any other repo scripts (output used as repo list)
-runScript get_repos_info.py
+# Required before any other repo scripts (output used as repo list).
+# Soft: on a total failure it keeps yesterday's repo list rather than
+# emptying it, so later scripts still have something to iterate over.
+runScriptSoft get_repos_info.py
 # Required before any other member scripts (output used as member list)
-runScript get_internal_members.py
+runScriptSoft get_internal_members.py
 
 
 # --- EXTERNAL V INTERNAL ---
-runScript get_members_extrepos.py
-runScript get_repos_users.py
+runScriptSoft get_members_extrepos.py
+runScriptSoft get_repos_users.py
 
 
 # --- ADDITIONAL REPO DETAILS ---
-runScript get_repos_languages.py
-runScript get_repos_topics.py
-runScript get_repos_activitycommits.py
-runScript get_repos_activitylines.py
-runScript get_repos_dependencies.py
-runScript get_dependency_info.py
+runScriptSoft get_repos_languages.py
+runScriptSoft get_repos_topics.py
+# These two hit GitHub's per-repo /stats endpoints, which can 202 (stats not
+# yet cached) for every repo at once -- a transient, not code, problem.
+runScriptSoft get_repos_activitycommits.py
+runScriptSoft get_repos_activitylines.py
+runScriptSoft get_repos_dependencies.py
+runScriptSoft get_dependency_info.py
 
 
 # --- HISTORY FOR ALL TIME ---
-runScript get_repos_starhistory.py
-runScript get_repos_releases.py
-runScript get_repos_creationhistory.py
+runScriptSoft get_repos_starhistory.py
+runScriptSoft get_repos_releases.py
+runScriptSoft get_repos_creationhistory.py
 
 # --- SPACK DEPENDENCY INFO ---
 runSpackScript get_spack_dependencies.py --input-list ../input_lists.json
