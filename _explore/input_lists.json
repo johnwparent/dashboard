@@ -40,7 +40,6 @@
             "kokkos/kokkos",
             "kokkos/kokkos-kernels",
             "stanfordlegion/legion",
-            "ceed/libceed",
             "libensemble/libensemble",
             "llnl/librom",
             "llnl/pylibrom",
