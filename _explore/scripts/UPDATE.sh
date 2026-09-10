@@ -15,7 +15,7 @@ function finish {
 }
 trap finish EXIT
 
-# Stop and Log for failed scripts
+# Stop and log for a hard-failed script
 function errorCheck() {
     if [ $ret -ne 0 ]; then
         echo "FAILED - $1"
@@ -24,10 +24,10 @@ function errorCheck() {
     fi
 }
 
-# Log, but don't stop the update, for scripts that fail safely on their own
-# (they refuse to overwrite existing data when every query in the run failed,
-# e.g. a transient GitHub API hiccup) -- there's no data-loss risk in letting
-# the rest of the pipeline continue.
+# Log, but don't stop the update, for a soft-failed script -- one that fails
+# safely on its own (it refuses to overwrite existing data when every query
+# in the run failed, e.g. a transient GitHub API hiccup). There's no
+# data-loss risk in letting the rest of the pipeline continue.
 function warnCheck() {
     if [ $ret -ne 0 ]; then
         echo "SOFT-FAIL - $1 (kept previous data, continuing)"
@@ -35,29 +35,36 @@ function warnCheck() {
     fi
 }
 
-# Basic script run procedure
+# Run one collection script.
+#   --soft   a failure doesn't abort the rest of the update. Only use this
+#            for scripts that already guard against overwriting good data
+#            with a failed run.
+#   --spack  run under `spack python` instead of the system interpreter.
+# Flags, if any, must come before the script name.
 function runScript() {
-    echo "Run - $1"
-    python -u $1
-    ret=$?
-    errorCheck "$1"
-}
+    local soft=0 spack=0
+    while [ "$1" = "--soft" ] || [ "$1" = "--spack" ]; do
+        case "$1" in
+            --soft) soft=1 ;;
+            --spack) spack=1 ;;
+        esac
+        shift
+    done
+    local script="$1"
 
-# Same, but a failure doesn't abort the rest of the update. Only use this for
-# scripts that already guard against overwriting good data with a failed run.
-function runScriptSoft() {
-    echo "Run - $1"
-    python -u $1
+    echo "Run - $script"
+    if [ "$spack" -eq 1 ]; then
+        spack -d python "$@"
+    else
+        python -u "$@"
+    fi
     ret=$?
-    warnCheck "$1"
-}
 
-# Basic script run procedure but make it Spack
-function runSpackScript() {
-    echo "Run - $1"
-    spack -d python "$@"
-    ret=$?
-    errorCheck "$1"
+    if [ "$soft" -eq 1 ]; then
+        warnCheck "$script"
+    else
+        errorCheck "$script"
+    fi
 }
 
 # Check Python requirements
@@ -79,34 +86,34 @@ runScript cleanup_inputs.py
 # Required before any other repo scripts (output used as repo list).
 # Soft: on a total failure it keeps yesterday's repo list rather than
 # emptying it, so later scripts still have something to iterate over.
-runScriptSoft get_repos_info.py
+runScript --soft get_repos_info.py
 # Required before any other member scripts (output used as member list)
-runScriptSoft get_internal_members.py
+runScript --soft get_internal_members.py
 
 
 # --- EXTERNAL V INTERNAL ---
-runScriptSoft get_members_extrepos.py
-runScriptSoft get_repos_users.py
+runScript --soft get_members_extrepos.py
+runScript --soft get_repos_users.py
 
 
 # --- ADDITIONAL REPO DETAILS ---
-runScriptSoft get_repos_languages.py
-runScriptSoft get_repos_topics.py
+runScript --soft get_repos_languages.py
+runScript --soft get_repos_topics.py
 # These two hit GitHub's per-repo /stats endpoints, which can 202 (stats not
 # yet cached) for every repo at once -- a transient, not code, problem.
-runScriptSoft get_repos_activitycommits.py
-runScriptSoft get_repos_activitylines.py
-runScriptSoft get_repos_dependencies.py
-runScriptSoft get_dependency_info.py
+runScript --soft get_repos_activitycommits.py
+runScript --soft get_repos_activitylines.py
+runScript --soft get_repos_dependencies.py
+runScript --soft get_dependency_info.py
 
 
 # --- HISTORY FOR ALL TIME ---
-runScriptSoft get_repos_starhistory.py
-runScriptSoft get_repos_releases.py
-runScriptSoft get_repos_creationhistory.py
+runScript --soft get_repos_starhistory.py
+runScript --soft get_repos_releases.py
+runScript --soft get_repos_creationhistory.py
 
 # --- SPACK DEPENDENCY INFO ---
-runSpackScript get_spack_dependencies.py --input-list ../input_lists.json
+runScript --spack get_spack_dependencies.py --input-list ../input_lists.json
 
 # RUN THIS LAST
 runScript build_yearlist.py  # Used in case of long term cumulative data
