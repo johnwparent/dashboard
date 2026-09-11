@@ -333,7 +333,9 @@ function renderSustainabilityMetrics(metrics) {
         { num: '4.3.6', blades: 5,  short: 'Maintainability',  title: 'Maintainability and Understandability',
           subMetrics: ['Advanced Complexity Analysis','Code Quality Assessment','Documentation Quality Evaluation','Knowledge Distribution Analysis','Refactoring and Evolution Tracking'] },
         { num: '4.3.7', blades: 10, short: 'Performance',      title: 'Performance and Efficiency',
-          subMetrics: ['Performance Benchmarking Integration','Environmental Impact Assessment','Resource Utilization Analysis','Scalability Assessment','Optimization Practice Evaluation','Memory Efficiency Analysis','I/O Performance Profiling','Algorithmic Complexity Assessment','Power Measurement Integration','Performance Portability Assessment'] }
+          subMetrics: ['Performance Benchmarking Integration','Environmental Impact Assessment','Resource Utilization Analysis','Scalability Assessment','Optimization Practice Evaluation','Memory Efficiency Analysis','I/O Performance Profiling','Algorithmic Complexity Assessment','Power Measurement Integration','Performance Portability Assessment'] },
+        { num: '4.3.8', blades: 4,  short: 'Supply Chain',     title: 'Software Supply Chain Integrity',
+          subMetrics: ['SBOM Detection','Build Provenance','Dependency Vulnerability Posture','Dependency Freshness'] }
       ]
     }
   ];
@@ -576,6 +578,7 @@ const SECTION_DESCRIPTIONS = {
   '4.3.5': 'Evaluates the ability to build and run across diverse computing platforms, architectures, and deployment environments.',
   '4.3.6': 'Assesses code complexity, documentation quality, knowledge distribution among contributors, and long-term code evolution patterns.',
   '4.3.7': 'Measures computational performance, resource utilization, scalability, and environmental impact across different hardware platforms and architectures.',
+  '4.3.8': 'Assesses the transparency and verifiability of the build and distribution pipeline, including bill-of-materials publication, build provenance, and dependency currency.',
 };
 
 /**
@@ -589,6 +592,8 @@ const SUBMETRIC_DESCRIPTIONS = {
   "Comprehensive Citation Metadata": "Enhanced CITATION.cff and codemeta.json detection with validation tools and automated metadata quality assessment for machine-readable software citation.",
   "Advanced Dependency Analysis": "Multi-platform ecosystem mapping including Spack, conda-forge, PyPI, CRAN, Bioconductor, and domain-specific package managers.",
   "AI-Enhanced Training Detection": "Machine learning-powered analysis of educational content across platforms including Coursera, edX, institutional repositories, and GitHub Classroom materials.",
+  "Reverse-Dependency Analysis": "Count of downstream packages and repositories that declare this software as a dependency, via package-registry APIs (ecosyste.ms).",
+  "Package-Manager Downloads": "Download counts from the package registries the software is distributed through. Evidence of distribution rather than use, and not comparable across registries with different reporting windows.",
   // 4.1.2 Field Research Impact
   "AI-Enhanced Publication Analysis": "Large language model-powered analysis of scientific literature to identify software-enabled discoveries and methodological innovations.",
   "Comprehensive Institutional Tracking": "Advanced web scraping and API integration with major research facilities, national laboratories, and computational centers.",
@@ -708,6 +713,11 @@ const SUBMETRIC_DESCRIPTIONS = {
   "Algorithmic Complexity Assessment": "Static analysis tools to identify computational complexity, with validation through scaling studies.",
   "Power Measurement Integration": "RAPL (Running Average Power Limit) interface, NVML for GPU power, and external power meters for energy consumption validation.",
   "Performance Portability Assessment": "Consistent benchmarking across CPU architectures (x86, ARM, POWER), GPU vendors (NVIDIA, AMD, Intel), and accelerators.",
+  // 4.3.8 Software Supply Chain Integrity
+  "SBOM Detection": "Detection of a Software Bill of Materials in SPDX or CycloneDX format, either committed to the repository root or published as a release asset.",
+  "Build Provenance": "Detection of a SLSA or in-toto build attestation published alongside a release, evidencing how and where the artifact was built.",
+  "Dependency Vulnerability Posture": "Count of dependencies carrying known unpatched vulnerabilities and the interval between advisory publication and a shipped fix.",
+  "Dependency Freshness": "Aggregate age of declared dependencies relative to their current upstream releases, expressed in libyears or an equivalent measure.",
 };
 
 /**
