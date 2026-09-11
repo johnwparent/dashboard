@@ -11,10 +11,10 @@
             },
             "homepageUrl": "https://amrex-codes.github.io/amrex",
             "issues_Closed": {
-                "totalCount": 956
+                "totalCount": 981
             },
             "issues_Open": {
-                "totalCount": 153
+                "totalCount": 128
             },
             "languages": {
                 "totalCount": 16
@@ -42,16 +42,16 @@
                 "totalCount": 304
             },
             "pullRequests_Merged": {
-                "totalCount": 4064
+                "totalCount": 4090
             },
             "pullRequests_Open": {
-                "totalCount": 76
+                "totalCount": 50
             },
             "repositoryTopics": {
                 "totalCount": 6
             },
             "stargazers": {
-                "totalCount": 777
+                "totalCount": 803
             },
             "url": "https://github.com/AMReX-Codes/amrex"
         },
@@ -107,7 +107,7 @@
                 "totalCount": 9
             },
             "stargazers": {
-                "totalCount": 254
+                "totalCount": 0
             },
             "url": "https://github.com/Alpine-DAV/ascent"
         },
@@ -217,7 +217,7 @@
                 "totalCount": 10
             },
             "stargazers": {
-                "totalCount": 60
+                "totalCount": 61
             },
             "url": "https://github.com/BerkeleyLab/caffeine"
         },
@@ -272,7 +272,7 @@
                 "totalCount": 10
             },
             "stargazers": {
-                "totalCount": 76
+                "totalCount": 77
             },
             "url": "https://github.com/BerkeleyLab/fiats"
         },
@@ -327,7 +327,7 @@
                 "totalCount": 11
             },
             "stargazers": {
-                "totalCount": 8
+                "totalCount": 0
             },
             "url": "https://github.com/BerkeleyLab/gasnet"
         },
@@ -437,7 +437,7 @@
                 "totalCount": 15
             },
             "stargazers": {
-                "totalCount": 6
+                "totalCount": 7
             },
             "url": "https://github.com/BerkeleyLab/upcxx"
         },
@@ -547,7 +547,7 @@
                 "totalCount": 7
             },
             "stargazers": {
-                "totalCount": 365
+                "totalCount": 375
             },
             "url": "https://github.com/CHIP-SPV/chipStar"
         },
@@ -616,7 +616,7 @@
                 "totalCount": 82
             },
             "issues_Open": {
-                "totalCount": 25
+                "totalCount": 26
             },
             "languages": {
                 "totalCount": 5
@@ -671,7 +671,7 @@
                 "totalCount": 988
             },
             "issues_Open": {
-                "totalCount": 316
+                "totalCount": 317
             },
             "languages": {
                 "totalCount": 15
@@ -708,7 +708,7 @@
                 "totalCount": 9
             },
             "stargazers": {
-                "totalCount": 986
+                "totalCount": 987
             },
             "url": "https://github.com/HDFGroup/hdf5"
         },
@@ -763,7 +763,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 345
+                "totalCount": 0
             },
             "url": "https://github.com/HPCToolkit/hpctoolkit"
         },
@@ -818,7 +818,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 18
+                "totalCount": 19
             },
             "url": "https://github.com/Lab-Notebooks/CodeScribe"
         },
@@ -983,7 +983,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 34
+                "totalCount": 0
             },
             "url": "https://github.com/OpenACCUserGroup/OpenACCV-V"
         },
@@ -1038,7 +1038,7 @@
                 "totalCount": 8
             },
             "stargazers": {
-                "totalCount": 62
+                "totalCount": 0
             },
             "url": "https://github.com/OpenMP-Validation-and-Verification/OpenMP_VV"
         },
@@ -1081,19 +1081,19 @@
                 "name": "C"
             },
             "pullRequests_Closed": {
-                "totalCount": 22
+                "totalCount": 23
             },
             "pullRequests_Merged": {
                 "totalCount": 158
             },
             "pullRequests_Open": {
-                "totalCount": 2
+                "totalCount": 1
             },
             "repositoryTopics": {
                 "totalCount": 6
             },
             "stargazers": {
-                "totalCount": 107
+                "totalCount": 0
             },
             "url": "https://github.com/Parallel-NetCDF/PnetCDF"
         },
@@ -1148,7 +1148,7 @@
                 "totalCount": 12
             },
             "stargazers": {
-                "totalCount": 199
+                "totalCount": 0
             },
             "url": "https://github.com/SCOREC/core"
         },
@@ -1210,7 +1210,7 @@
                 "totalCount": 1
             },
             "stargazers": {
-                "totalCount": 3
+                "totalCount": 0
             },
             "url": "https://github.com/SCOREC/omega_h"
         },
@@ -1265,7 +1265,7 @@
                 "totalCount": 7
             },
             "stargazers": {
-                "totalCount": 5
+                "totalCount": 0
             },
             "url": "https://github.com/SCOREC/pcms"
         },
@@ -1320,7 +1320,7 @@
                 "totalCount": 1
             },
             "stargazers": {
-                "totalCount": 43
+                "totalCount": 0
             },
             "url": "https://github.com/SCOREC/pumi-pic"
         },
@@ -1370,7 +1370,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 6
+                "totalCount": 0
             },
             "url": "https://github.com/Shaw-git/CAESAR"
         },
@@ -1425,7 +1425,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 765
+                "totalCount": 0
             },
             "url": "https://github.com/StanfordLegion/legion"
         },
@@ -1480,7 +1480,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 48
+                "totalCount": 0
             },
             "url": "https://github.com/UO-OACISS/tau2"
         },
@@ -1529,13 +1529,13 @@
                 "totalCount": 271
             },
             "pullRequests_Open": {
-                "totalCount": 21
+                "totalCount": 22
             },
             "repositoryTopics": {
                 "totalCount": 8
             },
             "stargazers": {
-                "totalCount": 79
+                "totalCount": 0
             },
             "url": "https://github.com/Viskores/viskores"
         },
@@ -1700,7 +1700,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 73
+                "totalCount": 77
             },
             "url": "https://github.com/darshan-hpc/darshan"
         },
@@ -1755,7 +1755,7 @@
                 "totalCount": 13
             },
             "stargazers": {
-                "totalCount": 308
+                "totalCount": 309
             },
             "url": "https://github.com/deephyper/deephyper"
         },
@@ -1857,7 +1857,7 @@
                 "totalCount": 186
             },
             "pullRequests_Merged": {
-                "totalCount": 1366
+                "totalCount": 1367
             },
             "pullRequests_Open": {
                 "totalCount": 36
@@ -1866,7 +1866,7 @@
                 "totalCount": 4
             },
             "stargazers": {
-                "totalCount": 832
+                "totalCount": 0
             },
             "url": "https://github.com/dyninst/dyninst"
         },
@@ -1921,7 +1921,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 26
+                "totalCount": 0
             },
             "url": "https://github.com/ebugger/Empirical-Roofline-Toolkit"
         },
@@ -2031,7 +2031,7 @@
                 "totalCount": 4
             },
             "stargazers": {
-                "totalCount": 855
+                "totalCount": 0
             },
             "url": "https://github.com/flang-compiler/flang"
         },
@@ -2087,7 +2087,7 @@
                 "totalCount": 12
             },
             "stargazers": {
-                "totalCount": 611
+                "totalCount": 622
             },
             "url": "https://github.com/ginkgo-project/ginkgo"
         },
@@ -2142,7 +2142,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 0
+                "totalCount": 3
             },
             "url": "https://github.com/hkvinge/tagtorch"
         },
@@ -2223,7 +2223,7 @@
                 "totalCount": 4
             },
             "stargazers": {
-                "totalCount": 847
+                "totalCount": 855
             },
             "url": "https://github.com/hypre-space/hypre"
         },
@@ -2278,7 +2278,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 116
+                "totalCount": 118
             },
             "url": "https://github.com/icl-utk-edu/magma"
         },
@@ -2296,7 +2296,7 @@
                 "totalCount": 126
             },
             "issues_Open": {
-                "totalCount": 43
+                "totalCount": 44
             },
             "languages": {
                 "totalCount": 16
@@ -2324,16 +2324,16 @@
                 "totalCount": 49
             },
             "pullRequests_Merged": {
-                "totalCount": 424
+                "totalCount": 425
             },
             "pullRequests_Open": {
-                "totalCount": 21
+                "totalCount": 22
             },
             "repositoryTopics": {
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 226
+                "totalCount": 0
             },
             "url": "https://github.com/icl-utk-edu/papi"
         },
@@ -2383,13 +2383,13 @@
                 "totalCount": 5267
             },
             "pullRequests_Open": {
-                "totalCount": 118
+                "totalCount": 119
             },
             "repositoryTopics": {
                 "totalCount": 7
             },
             "stargazers": {
-                "totalCount": 2615
+                "totalCount": 2681
             },
             "url": "https://github.com/kokkos/kokkos"
         },
@@ -2439,13 +2439,13 @@
                 "totalCount": 2107
             },
             "pullRequests_Open": {
-                "totalCount": 35
+                "totalCount": 39
             },
             "repositoryTopics": {
                 "totalCount": 7
             },
             "stargazers": {
-                "totalCount": 397
+                "totalCount": 0
             },
             "url": "https://github.com/kokkos/kokkos-kernels"
         },
@@ -2500,7 +2500,7 @@
                 "totalCount": 9
             },
             "stargazers": {
-                "totalCount": 235
+                "totalCount": 0
             },
             "url": "https://github.com/llnl/libROM"
         },
@@ -2555,7 +2555,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 63
+                "totalCount": 0
             },
             "url": "https://github.com/llnl/pylibROM"
         },
@@ -2610,7 +2610,7 @@
                 "totalCount": 12
             },
             "stargazers": {
-                "totalCount": 673
+                "totalCount": 0
             },
             "url": "https://github.com/llnl/sundials"
         },
@@ -2665,7 +2665,7 @@
                 "totalCount": 5
             },
             "stargazers": {
-                "totalCount": 873
+                "totalCount": 0
             },
             "url": "https://github.com/llnl/zfp"
         },
@@ -2680,10 +2680,10 @@
             },
             "homepageUrl": "http://llvm.org",
             "issues_Closed": {
-                "totalCount": 69495
+                "totalCount": 69505
             },
             "issues_Open": {
-                "totalCount": 29341
+                "totalCount": 29339
             },
             "languages": {
                 "totalCount": 56
@@ -2695,7 +2695,7 @@
                 "url": "http://choosealicense.com/licenses/other/"
             },
             "mentionableUsers": {
-                "totalCount": 6301
+                "totalCount": 6303
             },
             "name": "llvm-project",
             "nameWithOwner": "llvm/llvm-project",
@@ -2708,19 +2708,19 @@
                 "name": "LLVM"
             },
             "pullRequests_Closed": {
-                "totalCount": 12104
+                "totalCount": 12107
             },
             "pullRequests_Merged": {
-                "totalCount": 100646
+                "totalCount": 100692
             },
             "pullRequests_Open": {
-                "totalCount": 9688
+                "totalCount": 9697
             },
             "repositoryTopics": {
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 39392
+                "totalCount": 0
             },
             "url": "https://github.com/llvm/llvm-project"
         },
@@ -2775,7 +2775,7 @@
                 "totalCount": 11
             },
             "stargazers": {
-                "totalCount": 2205
+                "totalCount": 0
             },
             "url": "https://github.com/mfem/mfem"
         },
@@ -2821,16 +2821,16 @@
                 "totalCount": 1149
             },
             "pullRequests_Merged": {
-                "totalCount": 9143
+                "totalCount": 9144
             },
             "pullRequests_Open": {
-                "totalCount": 78
+                "totalCount": 79
             },
             "repositoryTopics": {
                 "totalCount": 6
             },
             "stargazers": {
-                "totalCount": 2620
+                "totalCount": 0
             },
             "url": "https://github.com/open-mpi/ompi"
         },
@@ -2877,16 +2877,16 @@
                 "totalCount": 713
             },
             "pullRequests_Merged": {
-                "totalCount": 3132
+                "totalCount": 3134
             },
             "pullRequests_Open": {
-                "totalCount": 9
+                "totalCount": 8
             },
             "repositoryTopics": {
                 "totalCount": 9
             },
             "stargazers": {
-                "totalCount": 323
+                "totalCount": 0
             },
             "url": "https://github.com/ornladios/ADIOS2"
         },
@@ -2967,7 +2967,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 11
+                "totalCount": 0
             },
             "url": "https://github.com/patrickfan/GenAI4UQ"
         },
@@ -3048,7 +3048,7 @@
                 "totalCount": 9
             },
             "stargazers": {
-                "totalCount": 196
+                "totalCount": 0
             },
             "url": "https://github.com/pghysels/STRUMPACK"
         },
@@ -3097,13 +3097,13 @@
                 "totalCount": 3395
             },
             "pullRequests_Open": {
-                "totalCount": 77
+                "totalCount": 80
             },
             "repositoryTopics": {
                 "totalCount": 4
             },
             "stargazers": {
-                "totalCount": 683
+                "totalCount": 686
             },
             "url": "https://github.com/pmodels/mpich"
         },
@@ -3152,13 +3152,13 @@
                 "totalCount": 119
             },
             "pullRequests_Open": {
-                "totalCount": 5
+                "totalCount": 6
             },
             "repositoryTopics": {
                 "totalCount": 11
             },
             "stargazers": {
-                "totalCount": 1353
+                "totalCount": 1371
             },
             "url": "https://github.com/pnnl/neuromancer"
         },
@@ -3214,7 +3214,7 @@
                 "totalCount": 3
             },
             "stargazers": {
-                "totalCount": 331
+                "totalCount": 332
             },
             "url": "https://github.com/sandialabs/Albany"
         },
@@ -3324,7 +3324,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 0
+                "totalCount": 160
             },
             "url": "https://github.com/snl-dakota/dakota"
         },
@@ -3340,10 +3340,10 @@
             },
             "homepageUrl": "https://spack.io",
             "issues_Closed": {
-                "totalCount": 7959
+                "totalCount": 7960
             },
             "issues_Open": {
-                "totalCount": 1333
+                "totalCount": 1332
             },
             "languages": {
                 "totalCount": 13
@@ -3371,7 +3371,7 @@
                 "totalCount": 5280
             },
             "pullRequests_Merged": {
-                "totalCount": 37485
+                "totalCount": 37486
             },
             "pullRequests_Open": {
                 "totalCount": 468
@@ -3380,7 +3380,7 @@
                 "totalCount": 11
             },
             "stargazers": {
-                "totalCount": 5095
+                "totalCount": 5121
             },
             "url": "https://github.com/spack/spack"
         },
@@ -3449,7 +3449,7 @@
                 "totalCount": 5443
             },
             "issues_Open": {
-                "totalCount": 241
+                "totalCount": 242
             },
             "languages": {
                 "totalCount": 33
@@ -3480,13 +3480,13 @@
                 "totalCount": 8601
             },
             "pullRequests_Open": {
-                "totalCount": 83
+                "totalCount": 84
             },
             "repositoryTopics": {
                 "totalCount": 8
             },
             "stargazers": {
-                "totalCount": 1409
+                "totalCount": 1421
             },
             "url": "https://github.com/trilinos/Trilinos"
         },
@@ -3542,7 +3542,7 @@
                 "totalCount": 8
             },
             "stargazers": {
-                "totalCount": 528
+                "totalCount": 0
             },
             "url": "https://github.com/visit-dav/visit"
         },
@@ -3623,7 +3623,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 329
+                "totalCount": 332
             },
             "url": "https://github.com/xiaoyeli/superlu"
         },
@@ -3679,7 +3679,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 221
+                "totalCount": 0
             },
             "url": "https://github.com/xiaoyeli/superlu_dist"
         },
@@ -3734,7 +3734,7 @@
                 "totalCount": 0
             },
             "stargazers": {
-                "totalCount": 38
+                "totalCount": 0
             },
             "url": "https://github.com/xiaoyeli/superlu_mt"
         },
@@ -3789,7 +3789,7 @@
                 "totalCount": 10
             },
             "stargazers": {
-                "totalCount": 54
+                "totalCount": 0
             },
             "url": "https://github.com/ytopt-team/ytopt"
         }
