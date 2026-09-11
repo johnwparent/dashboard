@@ -1,0 +1,86 @@
+{
+  "package": "E4S-Project/e4s",
+  "impact": {
+    "4.1.1": {
+      "title": "Software Citation and Adoption",
+      "data": null
+    },
+    "4.1.2": {
+      "title": "Field Research Impact",
+      "data": null
+    }
+  },
+  "sustainability": {
+    "4.2.1": {
+      "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
+      "data": "<p><strong>Enhanced Document Detection:</strong> 1/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: <a href=\"https://github.com/E4S-Project/e4s/blob/master/CODE_OF_CONDUCT.md\">CODE_OF_CONDUCT.md</a></p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> Not yet collected</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> Not yet collected</p>\n<p><strong>Governance Effectiveness Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
+    },
+    "4.2.2": {
+      "title": "Open-Source Licensing and FAIR Compliance",
+      "data": "<p><strong>Enhanced License Detection:</strong> \u2713</p>\n<p class=\"sub-detail\">License: MIT</p>\n<p class=\"sub-detail\">Category: Permissive</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> Not yet collected</p>\n<p><strong>OSI License Validation:</strong> Yes \u2713</p>\n<p><strong>License Exception Handling:</strong> Not yet collected</p>\n<p><strong>FAIR Metadata Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 2/5</p>"
+    },
+    "4.2.3": {
+      "title": "Active Maintenance",
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 3 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 253 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Inactive \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> v25.11 (253 days ago), 1/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 13 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 3/6</p>"
+    },
+    "4.2.4": {
+      "title": "Engagement",
+      "data": "<p><strong>Response Time Tracking:</strong> 2199 hours \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> 2224 hours \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> 80% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 1.33 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 7 hours</p>\n<p><strong>Score:</strong> 2/7</p>"
+    },
+    "4.2.5": {
+      "title": "Outreach",
+      "data": null
+    },
+    "4.2.6": {
+      "title": "Welcomeness",
+      "data": null
+    },
+    "4.2.7": {
+      "title": "Collaboration",
+      "data": null
+    },
+    "4.2.8": {
+      "title": "Financial Sustainability",
+      "data": null
+    },
+    "4.2.9": {
+      "title": "Institutional & Organizational Support",
+      "data": null
+    },
+    "4.2.10": {
+      "title": "Project Longevity and Community Health",
+      "data": null
+    }
+  },
+  "quality": {
+    "4.3.1": {
+      "title": "Reliability and Robustness",
+      "data": null
+    },
+    "4.3.2": {
+      "title": "Development Practices",
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 2/5 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> Not yet collected</p>\n<p><strong>Code Review Quality Analysis:</strong> Not yet collected</p>\n<p><strong>Development Tool Integration:</strong> Not yet collected</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
+    },
+    "4.3.3": {
+      "title": "Reproducibility",
+      "data": "<p><strong>FAIR4RS Compliance Assessment:</strong> \u2717</p>\n<p><strong>Containerization Excellence:</strong> \u2717</p>\n<p><strong>Version Control Best Practices:</strong> \u2717</p><p class=\"sub-detail\">v25.11, v25.06</p>\n<p><strong>Environment Management:</strong> \u2717</p>\n<p><strong>Reproducibility Documentation:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
+    },
+    "4.3.4": {
+      "title": "Usability",
+      "data": null
+    },
+    "4.3.5": {
+      "title": "Accessibility",
+      "data": "<p><strong>Portable Build System Detection:</strong> \u2717</p>\n<p><strong>Container Availability Assessment:</strong> \u2717</p>\n<p><strong>Architecture Compatibility Analysis:</strong> Not yet collected</p>\n<p><strong>Platform Documentation Evaluation:</strong> Not yet collected</p>\n<p><strong>Deployment Environment Testing:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
+    },
+    "4.3.6": {
+      "title": "Maintainability and Understandability",
+      "data": null
+    },
+    "4.3.7": {
+      "title": "Performance and Efficiency",
+      "data": null
+    }
+  },
+  "generated_at": "2026-07-26T05:32:14Z"
+}
