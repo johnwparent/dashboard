@@ -80,6 +80,11 @@
             "firstCommitAt": "2016-12-12T23:43:44Z",
             "initBeforeGitHubRepo": true
         },
+        "Multilevel-NN/torchbraid": {
+            "createdAt": "2020-06-12T15:51:32Z",
+            "firstCommitAt": "2020-01-22T14:49:32Z",
+            "initBeforeGitHubRepo": true
+        },
         "OpenACCUserGroup/OpenACCV-V": {
             "createdAt": "2017-06-12T01:43:05Z",
             "firstCommitAt": "2017-06-12T01:43:06Z",
@@ -185,6 +190,11 @@
             "firstCommitAt": "2017-07-13T02:05:45Z",
             "initBeforeGitHubRepo": true
         },
+        "hkvinge/tagtorch": {
+            "createdAt": "2026-06-10T22:11:48Z",
+            "firstCommitAt": "2026-06-10T22:11:49Z",
+            "initBeforeGitHubRepo": false
+        },
         "hpctoolkit/hpctoolkit": {
             "createdAt": "2022-08-18T22:10:27.848Z",
             "firstCommitAt": "2022-08-18T21:50:53Z",
@@ -255,6 +265,11 @@
             "firstCommitAt": "2016-09-29T21:14:24Z",
             "initBeforeGitHubRepo": true
         },
+        "paraview/paraview": {
+            "createdAt": "2015-02-27T10:46:15.123-05:00",
+            "firstCommitAt": "2026-06-10T22:11:49Z",
+            "initBeforeGitHubRepo": false
+        },
         "patrickfan/GenAI4UQ": {
             "createdAt": "2024-11-26T01:27:02Z",
             "firstCommitAt": "2024-11-26T01:27:02Z",
@@ -289,6 +304,11 @@
             "createdAt": "2025-02-28T21:43:47Z",
             "firstCommitAt": "2025-02-28T21:43:48Z",
             "initBeforeGitHubRepo": false
+        },
+        "snl-dakota/dakota": {
+            "createdAt": "2021-08-17T16:32:56Z",
+            "firstCommitAt": "2010-10-25T21:05:53Z",
+            "initBeforeGitHubRepo": true
         },
         "spack/spack": {
             "createdAt": "2014-01-08T09:22:12Z",

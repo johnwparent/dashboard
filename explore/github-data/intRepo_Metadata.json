@@ -159,10 +159,10 @@
         "website": ""
     },
     "E4S-Project/e4s": {
-        "description": "E4S for Spack",
+        "description": "E4S",
         "name": "E4S-Project/e4s",
         "topics": null,
-        "website": "https://e4s.readthedocs.io"
+        "website": "https://e4s.io/"
     },
     "HDFGroup/hdf5": {
         "description": "Official HDF5\u00ae Library Repository",
@@ -197,6 +197,12 @@
         "name": "Libensemble/libensemble",
         "topics": null,
         "website": "https://libensemble.readthedocs.io/"
+    },
+    "Multilevel-NN/torchbraid": {
+        "description": "A layer-parallel neural network technology built on PyTorch",
+        "name": "Multilevel-NN/torchbraid",
+        "topics": null,
+        "website": null
     },
     "OpenACCUserGroup/OpenACCV-V": {
         "description": "OpenACC Validation and Verification Testsuite repository",
@@ -411,6 +417,12 @@
         ],
         "website": "https://gko-project.org"
     },
+    "hkvinge/tagtorch": {
+        "description": "TAGTorch: A PyTorch Library for Geometry, Topology, and Symmetry-Aware Machine Learning",
+        "name": "hkvinge/tagtorch",
+        "topics": null,
+        "website": null
+    },
     "hpctoolkit/hpctoolkit": {
         "description": "HPCToolkit performance tools: measurement and analysis components",
         "name": "hpctoolkit/hpctoolkit",
@@ -463,7 +475,8 @@
             "sparse-matrix",
             "performance-portability",
             "blas",
-            "hpsf"
+            "hpsf",
+            "snl-science-libs"
         ],
         "website": "https://kokkos.org"
     },
@@ -667,6 +680,12 @@
         ],
         "website": "https://sandialabs.github.io/pytuq/"
     },
+    "snl-dakota/dakota": {
+        "description": "The core Dakota project",
+        "name": "snl-dakota/dakota",
+        "topics": null,
+        "website": ""
+    },
     "spack/spack": {
         "description": "A flexible package manager that supports multiple versions, configurations, platforms, and compilers.",
         "name": "spack/spack",
@@ -753,9 +772,12 @@
             "bayesian-optimization",
             "asynchronous-search",
             "hyperparameter-optimization",
-            "asynchronous-and-dynamic-task-management",
             "python",
-            "hyperparameter-tuning"
+            "hyperparameter-tuning",
+            "asynchronous-bayesian-optimization",
+            "hpo",
+            "agentichpo",
+            "autotune"
         ],
         "website": "https://github.com/ytopt-team/ytopt"
     }
