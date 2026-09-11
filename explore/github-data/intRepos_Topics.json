@@ -757,6 +757,12 @@
                 "totalCount": 0
             }
         },
+        "Multilevel-NN/torchbraid": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
         "OpenACCUserGroup/OpenACCV-V": {
             "repositoryTopics": {
                 "nodes": [],
@@ -1426,6 +1432,12 @@
                 "totalCount": 12
             }
         },
+        "hkvinge/tagtorch": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
         "hpctoolkit/hpctoolkit": {
             "repositoryTopics": {
                 "nodes": [],
@@ -1579,9 +1591,16 @@
                             "name": "hpsf"
                         },
                         "url": "https://github.com/topics/hpsf"
+                    },
+                    {
+                        "resourcePath": "/topics/snl-science-libs",
+                        "topic": {
+                            "name": "snl-science-libs"
+                        },
+                        "url": "https://github.com/topics/snl-science-libs"
                     }
                 ],
-                "totalCount": 6
+                "totalCount": 7
             }
         },
         "llnl/libROM": {
@@ -2344,6 +2363,12 @@
                 "totalCount": 14
             }
         },
+        "snl-dakota/dakota": {
+            "repositoryTopics": {
+                "nodes": [],
+                "totalCount": 0
+            }
+        },
         "spack/spack": {
             "repositoryTopics": {
                 "nodes": [
@@ -2610,13 +2635,6 @@
                         "url": "https://github.com/topics/hyperparameter-optimization"
                     },
                     {
-                        "resourcePath": "/topics/asynchronous-and-dynamic-task-management",
-                        "topic": {
-                            "name": "asynchronous-and-dynamic-task-management"
-                        },
-                        "url": "https://github.com/topics/asynchronous-and-dynamic-task-management"
-                    },
-                    {
                         "resourcePath": "/topics/python",
                         "topic": {
                             "name": "python"
@@ -2629,9 +2647,37 @@
                             "name": "hyperparameter-tuning"
                         },
                         "url": "https://github.com/topics/hyperparameter-tuning"
+                    },
+                    {
+                        "resourcePath": "/topics/asynchronous-bayesian-optimization",
+                        "topic": {
+                            "name": "asynchronous-bayesian-optimization"
+                        },
+                        "url": "https://github.com/topics/asynchronous-bayesian-optimization"
+                    },
+                    {
+                        "resourcePath": "/topics/hpo",
+                        "topic": {
+                            "name": "hpo"
+                        },
+                        "url": "https://github.com/topics/hpo"
+                    },
+                    {
+                        "resourcePath": "/topics/agentichpo",
+                        "topic": {
+                            "name": "agentichpo"
+                        },
+                        "url": "https://github.com/topics/agentichpo"
+                    },
+                    {
+                        "resourcePath": "/topics/autotune",
+                        "topic": {
+                            "name": "autotune"
+                        },
+                        "url": "https://github.com/topics/autotune"
                     }
                 ],
-                "totalCount": 7
+                "totalCount": 10
             }
         }
     }
