@@ -1,9 +1,11 @@
 {
   "package": "tpeterka/ChatVis",
+  "stars": 3,
+  "forks": 2,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": null
+      "data": "<p><strong>Dependent Packages:</strong> 2</p>\n<p><strong>GitHub Stars:</strong> 3</p>\n<p><strong>GitHub Forks:</strong> 2</p>\n<p><strong>Citation Score:</strong> 7.1/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
@@ -13,74 +15,78 @@
   "sustainability": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
-      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> Not yet collected</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> Not yet collected</p>\n<p><strong>Governance Effectiveness Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 21.21/100 (poor) \u2717</p>\n<p class=\"sub-detail\">Time To Close: 0/100</p>\n<p class=\"sub-detail\">Issue Age: 0/100</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 0/100</p>\n<p class=\"sub-detail\">Project Popularity: 1/100</p>\n<p class=\"sub-detail\">Documentation Usability: 30/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 100/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
-      "data": "<p><strong>Enhanced License Detection:</strong> \u2717</p>\n<p class=\"sub-detail\">License: Unknown</p>\n<p class=\"sub-detail\">Category: None</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> Not yet collected</p>\n<p><strong>OSI License Validation:</strong> Unknown \u2717</p>\n<p><strong>License Exception Handling:</strong> Not yet collected</p>\n<p><strong>FAIR Metadata Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Enhanced License Detection:</strong> \u2717</p>\n<p class=\"sub-detail\">License: Unknown</p>\n<p class=\"sub-detail\">Category: None</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> 0/4 principles satisfied \u2717</p>\n<p><strong>OSI License Validation:</strong> Unknown \u2717</p>\n<p><strong>License Exception Handling:</strong> License could not be identified from the API or the text \u2717</p>\n<p><strong>FAIR Metadata Assessment:</strong> No CITATION.cff found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 0 commits (52 weeks) \u2717</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Unknown \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> No releases, 0/yr \u2717</p>\n<p><strong>Multi-Channel Communication Activity:</strong> Not yet collected</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 1/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 18 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 67 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Increasing \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> No releases, 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 3 (bus factor: 1)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 3/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
-      "data": "<p><strong>Response Time Tracking:</strong> None \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> None \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> None \u2717</p>\n<p><strong>Support Request Closure Analysis:</strong> None \u2717</p>\n<p><strong>Engagement Quality Metrics:</strong> Not yet collected</p>\n<p><strong>Communication Pattern Analysis:</strong> Not yet collected</p>\n<p><strong>Community Participation Assessment:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/7</p>"
+      "data": "<p><strong>Response Time Tracking:</strong> None \u2717</p>\n<p><strong>Issue Resolution Analysis:</strong> None \u2717</p>\n<p><strong>Pull Request Flow Assessment:</strong> 100% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> None \u2717</p>\n<p><strong>Engagement Quality Metrics:</strong> None \u2717</p>\n<p><strong>Communication Pattern Analysis:</strong> No issues to assess \u2717</p>\n<p><strong>Community Participation Assessment:</strong> 100% of 1 issues and PRs opened from outside the maintainer group \u2713</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 1 hours</p>\n<p><strong>Score:</strong> 2/7</p>"
     },
     "4.2.5": {
       "title": "Outreach",
-      "data": null
+      "data": "<p><strong>New Contributor Tracking:</strong> 3 in last 1 year \u2713</p>\n<p><strong>Contributor Retention Analysis:</strong> 66.7% of new contributors returned \u2713</p>\n<p><strong>Contributor Lifecycle Mapping:</strong> 1 one-time / 0 casual / 2 repeat \u2717</p>\n<p><strong>Contribution Type Diversity:</strong> Not yet collected</p>\n<p><strong>Good First Issue Effectiveness:</strong> No newcomer-labelled issues \u2717</p>\n<p><strong>External Event Participation:</strong> Not yet collected</p>\n<p><strong>Training Material Integration:</strong> Not yet collected</p>\n<p><strong>Onboarding Infrastructure Assessment:</strong> 0/4 resources \u2717</p>\n<p><strong>Score:</strong> 2/8</p>"
     },
     "4.2.6": {
       "title": "Welcomeness",
-      "data": null
+      "data": "<p><strong>CHAOSS Community Experience Metrics:</strong> Not yet collected</p>\n<p><strong>Response Quality and Tone Analysis:</strong> Not yet collected</p>\n<p><strong>Communication Sentiment Analysis:</strong> Not yet collected</p>\n<p><strong>Contributor Journey Mapping:</strong> Not yet collected</p>\n<p><strong>Language and Communication Review:</strong> Not yet collected</p>\n<p><strong>Leadership Role Representation:</strong> Not yet collected</p>\n<p><strong>Decision-Making Visibility:</strong> 1 public channel(s) \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Score:</strong> 0/7</p>"
     },
     "4.2.7": {
       "title": "Collaboration",
-      "data": null
+      "data": "<p><strong>Advanced Dependency Analysis:</strong> Not packaged in any indexed ecosystem \u2717</p>\n<p><strong>Cross-project Reference Detection:</strong> Not yet collected</p>\n<p><strong>Interoperability Assessment:</strong> Not yet collected</p>\n<p><strong>Collaboration Network Analysis:</strong> No downstream dependents found \u2717</p>\n<p><strong>Standards Compliance Tracking:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.8": {
       "title": "Financial Sustainability",
-      "data": null
+      "data": "<p><strong>Enhanced Funding Documentation Analysis:</strong> No funding documentation found \u2717</p>\n<p><strong>Institutional Affiliation Tracking:</strong> 1 organizations across 1/3 top contributors \u2717</p>\n<p class=\"sub-detail\">Kitware</p>\n<p><strong>NIH R50 Award Tracking:</strong> Not yet collected</p>\n<p><strong>Corporate Sponsorship Detection:</strong> No sponsorship signals found \u2717</p>\n<p><strong>Funding Portfolio Analysis:</strong> 0 distinct funding source(s) \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.9": {
       "title": "Institutional & Organizational Support",
-      "data": null
+      "data": "<p><strong>RSE Position Detection:</strong> Not yet collected</p>\n<p><strong>Institutional Support Tracking:</strong> 1 distinct organizations backing contributors \u2717</p>\n<p class=\"sub-detail\">Kitware (1)</p>\n<p><strong>Career Development Indicators:</strong> Not yet collected</p>\n<p><strong>NIH R50 Award Integration:</strong> Not yet collected</p>\n<p><strong>Institutional Policy Analysis:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": null
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 1/3 dimensions active \u2717</p>\n<p class=\"sub-detail\">18 commits and 0 release(s) in the last year; active in 9/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">3 contributors; top contributor 52.9% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Increasing \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Emerging \u2717</p>\n<p class=\"sub-detail\">Project age: first commit 2025-09-18 (1.0 yrs); GitHub repo created 2025-09-15 (1.0 yrs)</p>\n<p><strong>Score:</strong> 2/5</p>"
     }
   },
   "quality": {
     "4.3.1": {
       "title": "Reliability and Robustness",
-      "data": null
+      "data": "<p><strong>Advanced Static Analysis:</strong> No defect-analysis tooling found beyond CodeQL \u2717</p>\n<p><strong>Enhanced Security Analysis:</strong> No CodeQL workflow found \u2717</p>\n<p><strong>CERT Guidelines Compliance:</strong> No hardening settings found in the build files or CI \u2717</p>\n<p class=\"sub-detail\">Practice indicators, not audited conformance</p>\n<p><strong>Test Coverage Excellence:</strong> No Codecov data found \u2717</p>\n<p><strong>Reliability Trend Analysis:</strong> Project does not record defect reports by type or label \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.2": {
       "title": "Development Practices",
-      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 0/6 \u2717</p>\n<p><strong>Testing Framework Excellence:</strong> Not yet collected</p>\n<p><strong>Code Review Quality Analysis:</strong> Not yet collected</p>\n<p><strong>Development Tool Integration:</strong> Not yet collected</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 1/4 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 0/4 indicators \u2717</p>\n<p><strong>Code Review Quality Analysis:</strong> 0.0% of 1 merged PRs reviewed \u2717</p>\n<p><strong>Development Tool Integration:</strong> 0/4 tools \u2717</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 0/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 1/3 met</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.3.3": {
       "title": "Reproducibility",
-      "data": "<p><strong>FAIR4RS Compliance Assessment:</strong> \u2717</p>\n<p><strong>Containerization Excellence:</strong> \u2717</p>\n<p><strong>Version Control Best Practices:</strong> \u2717</p>\n<p><strong>Environment Management:</strong> \u2717</p>\n<p><strong>Reproducibility Documentation:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>FAIR4RS Compliance Assessment:</strong> \u2717</p>\n<p><strong>Containerization Excellence:</strong> \u2717</p>\n<p><strong>Version Control Best Practices:</strong> \u2717</p>\n<p><strong>Environment Management:</strong> \u2713</p><p class=\"sub-detail\">pip lock (requirements.txt)</p>\n<p><strong>Reproducibility Documentation:</strong> \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.3.4": {
       "title": "Usability",
-      "data": null
+      "data": "<p><strong>User Experience Assessment:</strong> Not yet collected</p>\n<p><strong>Documentation Completeness Analysis:</strong> README covers 0/4 core sections \u2717</p>\n<p><strong>Accessibility Feature Detection:</strong> Not yet collected</p>\n<p><strong>Installation Success Tracking:</strong> No package-manager install path found \u2717</p>\n<p><strong>Usage Analytics Integration:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.5": {
       "title": "Accessibility",
-      "data": "<p><strong>Portable Build System Detection:</strong> \u2717</p>\n<p><strong>Container Availability Assessment:</strong> \u2717</p>\n<p><strong>Architecture Compatibility Analysis:</strong> Not yet collected</p>\n<p><strong>Platform Documentation Evaluation:</strong> Not yet collected</p>\n<p><strong>Deployment Environment Testing:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Portable Build System Detection:</strong> \u2717</p>\n<p><strong>Container Availability Assessment:</strong> \u2717</p>\n<p><strong>Architecture Compatibility Analysis:</strong> No CI architectures detected \u2717</p>\n<p><strong>Platform Documentation Evaluation:</strong> No supported platforms named in the README \u2717</p>\n<p><strong>Deployment Environment Testing:</strong> No CI runner environments detected \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.6": {
       "title": "Maintainability and Understandability",
-      "data": null
+      "data": "<p><strong>Advanced Complexity Analysis:</strong> 29 source files, mean 2.3 KB, 0.0% over 100 KB, depth 5 \u2713</p>\n<p class=\"sub-detail\">Structural proxy: file size and nesting, not static analysis</p>\n<p><strong>Code Quality Assessment:</strong> 0 test files for 29 source files (0.00 ratio) \u2717</p>\n<p><strong>Documentation Quality Evaluation:</strong> 30 documentation files (1.03 ratio) \u2713</p>\n<p><strong>Knowledge Distribution Analysis:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">Top contributor: 52.9% of commits (3 total contributors)</p>\n<p><strong>Refactoring and Evolution Tracking:</strong> 0 of 18 recent commits \u2717</p>\n<p><strong>Score:</strong> 2/5</p>"
     },
     "4.3.7": {
       "title": "Performance and Efficiency",
       "data": null
+    },
+    "4.3.8": {
+      "title": "Software Supply Chain Integrity",
+      "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-07-26T05:32:14Z"
+  "generated_at": "2026-09-11T17:28:56Z"
 }
