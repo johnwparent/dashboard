@@ -16,3 +16,5 @@ gem 'base64'
 gem 'bigdecimal'
 #[github-pages]
 gem 'github-pages', '> 230', group: :jekyll_plugins
+
+gem "openssl", "~> 3.1.2"
