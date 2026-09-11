@@ -363,15 +363,21 @@ function renderSustainabilityMetrics(metrics) {
     const m = text.match(/Score:\s*(\d+)\/(\d+)/);
     if (!m) return null;
     const raw = +m[1], denom = +m[2];
-    let failing = 0, na = 0;
+    let failing = 0, na = 0, rows = 0;
     div.querySelectorAll('p').forEach(p => {
       if (p.classList.contains('sub-detail')) return;
       if (!p.querySelector('strong')) return;
       if (SCORE_KEYS.has(p.querySelector('strong').textContent.replace(':', '').trim().toLowerCase())) return;
+      rows++;
       if (p.textContent.includes('✗')) failing++;
       else if (/\bN\/A\b|not applicable/i.test(p.textContent)) na++;
     });
-    if (denom <= 20) return { filled: raw, failing, na, total: denom, label: `${raw}/${denom}` };
+    // The collector's own denominator only counts sub-metrics it actually
+    // scored -- a sub-metric it hasn't implemented yet ("Not yet collected")
+    // has a row here but isn't part of that count. Widen the wheel to the
+    // number of sub-metric rows actually present so those still claim a
+    // (gray, not-collected) slot instead of shrinking the whole wheel.
+    if (denom <= 20) return { filled: raw, failing, na, total: Math.max(denom, rows), label: `${raw}/${denom}` };
     const total = countSubItems(html);
     return { filled: Math.round(raw / denom * total), failing: 0, na: 0, total, label: `${raw}/${denom}` };
   }
@@ -401,7 +407,25 @@ function renderSustainabilityMetrics(metrics) {
   }
 
   // ── Build HTML ───────────────────────────────────────────────────────────────
-  let html = '<div class="pw-metrics-container"><h2 class="metrics-main-title">Metrics</h2>';
+  // The collection pipeline runs on its own schedule, separate from the
+  // dashboard's daily data refresh, so this can lag well behind "today" --
+  // show it rather than let stale data pass as current.
+  let lastUpdatedHTML = '';
+  if (metrics && metrics.generated_at) {
+    const generatedDate = new Date(metrics.generated_at);
+    if (!isNaN(generatedDate)) {
+      const dateLabel = generatedDate.toLocaleDateString('en-US', {
+        year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'
+      });
+      lastUpdatedHTML = `<div class="metrics-last-updated">Data last updated ${dateLabel}</div>`;
+    }
+  }
+
+  let html = `<div class="pw-metrics-container">
+    <div class="metrics-header">
+      <h2 class="metrics-main-title">Metrics</h2>
+      ${lastUpdatedHTML}
+    </div>`;
 
   DIMENSIONS.forEach(dim => {
     const dimData = metrics ? metrics[dim.id] : null;

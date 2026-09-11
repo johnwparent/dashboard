@@ -143,14 +143,25 @@
   max-width: none !important;
 }
 
+.metrics-header {
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #e2e8f0;
+}
+
 .metrics-main-title {
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   color: #1a202c;
-  margin-bottom: 40px;
-  padding-bottom: 15px;
-  border-bottom: 3px solid #e2e8f0;
+  margin: 0;
+}
+
+.metrics-last-updated {
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 8px;
 }
 
 /* Dimension Cards */
@@ -311,9 +322,12 @@
     padding: 0 15px;
   }
 
+  .metrics-header {
+    margin-bottom: 30px;
+  }
+
   .metrics-main-title {
     font-size: 26px;
-    margin-bottom: 30px;
   }
 
   .dimension-header {

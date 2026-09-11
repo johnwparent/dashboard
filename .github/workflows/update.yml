@@ -57,17 +57,37 @@ jobs:
             exit 0
           fi
 
-          echo "Clearing existing metrics files before download"
-          rm -rf explore/github-data/*-metrics/
+          GENERATED_AT=$(gh run view "$RUN_ID" --repo corsa-center/metrics --json createdAt --jq .createdAt)
 
-          echo "Downloading sustainability-metrics artifact from run $RUN_ID"
+          STAGING=$(mktemp -d)
+          echo "Downloading sustainability-metrics artifact from run $RUN_ID (generated $GENERATED_AT)"
           gh run download "$RUN_ID" \
             --repo corsa-center/metrics \
             --name sustainability-metrics \
-            --dir explore/github-data
+            --dir "$STAGING"
 
+          # Only replace the packages this artifact actually contains. It can
+          # cover a subset of all tracked packages -- e.g. a manual debug run
+          # scoped with --software, or collect-and-sync.yml's own job timeout
+          # cutting a full run short before every package finishes -- so a
+          # blanket delete-then-replace here would silently wipe good,
+          # already-published data for every package the run didn't get to.
           echo "Packages updated:"
-          ls -d explore/github-data/*-metrics/ 2>/dev/null || echo "  (none)"
+          shopt -s nullglob
+          for pkg_dir in "$STAGING"/*-metrics/; do
+            pkg_name=$(basename "$pkg_dir")
+            # Stamp with the source run's own creation time rather than "now"
+            # -- that's when this data was actually produced, which is what
+            # the dashboard's "last updated" display should reflect even if
+            # this daily job runs on a day the metrics pipeline didn't.
+            jq -a --arg t "$GENERATED_AT" '.generated_at = $t' \
+              "$pkg_dir/metrics.json" > "$pkg_dir/metrics.json.tmp" \
+              && mv "$pkg_dir/metrics.json.tmp" "$pkg_dir/metrics.json"
+            rm -rf "explore/github-data/$pkg_name"
+            cp -r "$pkg_dir" "explore/github-data/$pkg_name"
+            echo "  $pkg_name"
+          done
+          rm -rf "$STAGING"
 
       - name: Run update script
         run:
