@@ -24145,6 +24145,16 @@
             "login": "aleksandar-amd",
             "name": "Aleksandar Spasojevic"
         },
+        "aleksandard-daki": {
+            "avatarUrl": "https://avatars.githubusercontent.com/u/206232615?u=f2839f844511d9ca7c3526555d0048e8135ebfb6&v=4",
+            "contributedLabRepositories": {
+                "nodes": [
+                    "kokkos/kokkos"
+                ]
+            },
+            "login": "aleksandard-daki",
+            "name": null
+        },
         "aleksandr-urakov": {
             "avatarUrl": "https://avatars.githubusercontent.com/u/36888353?v=4",
             "contributedLabRepositories": {
