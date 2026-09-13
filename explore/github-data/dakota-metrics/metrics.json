@@ -23,7 +23,7 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 495 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 1 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> vstable_2026_09_04 (7 days ago), 7/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 28 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 2 channels \u2713</p>\n<p class=\"sub-detail\">GitHub Discussions, Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 2 of 7 previously active contributors stopped (29%) \u2713</p>\n<p><strong>Score:</strong> 5/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 495 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 2 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> vstable_2026_09_04 (8 days ago), 7/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 28 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 2 channels \u2713</p>\n<p class=\"sub-detail\">GitHub Discussions, Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 2 of 7 previously active contributors stopped (29%) \u2713</p>\n<p><strong>Score:</strong> 5/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -51,7 +51,7 @@
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 3/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">495 commits and 7 release(s) in the last year; active in 47/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 2 \u2717</p>\n<p class=\"sub-detail\">28 contributors; top contributor 33.7% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Declining \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2010-10-25 (15.9 yrs); GitHub repo created 2021-08-17 (5.1 yrs)</p>\n<p><strong>Score:</strong> 3/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 3/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">495 commits and 7 release(s) in the last year; active in 48/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 2 \u2717</p>\n<p class=\"sub-detail\">28 contributors; top contributor 33.7% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Declining \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2010-10-25 (15.9 yrs); GitHub repo created 2021-08-17 (5.1 yrs)</p>\n<p><strong>Score:</strong> 3/5</p>"
     }
   },
   "quality": {
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-13T02:14:59Z"
 }

@@ -2091,9 +2091,7 @@
         "AnirudhMathur12": {
             "avatarUrl": "https://avatars.githubusercontent.com/u/126768505?u=04021743af59e1d19c4ea6d228929c29a04b3441&v=4",
             "contributedLabRepositories": {
-                "nodes": [
-                    "llvm/llvm-project"
-                ]
+                "nodes": []
             },
             "login": "AnirudhMathur12",
             "name": "Anirudh Mathur"
@@ -24145,6 +24143,16 @@
             "login": "aleksandar-amd",
             "name": "Aleksandar Spasojevic"
         },
+        "aleksandard-daki": {
+            "avatarUrl": "https://avatars.githubusercontent.com/u/206232615?u=f2839f844511d9ca7c3526555d0048e8135ebfb6&v=4",
+            "contributedLabRepositories": {
+                "nodes": [
+                    "kokkos/kokkos"
+                ]
+            },
+            "login": "aleksandard-daki",
+            "name": null
+        },
         "aleksandr-urakov": {
             "avatarUrl": "https://avatars.githubusercontent.com/u/36888353?v=4",
             "contributedLabRepositories": {
@@ -26232,6 +26240,16 @@
             },
             "login": "aniragil",
             "name": "Gil Rapaport"
+        },
+        "anirudhmathur12": {
+            "avatarUrl": "https://avatars.githubusercontent.com/u/126768505?u=04021743af59e1d19c4ea6d228929c29a04b3441&v=4",
+            "contributedLabRepositories": {
+                "nodes": [
+                    "llvm/llvm-project"
+                ]
+            },
+            "login": "anirudhmathur12",
+            "name": "Anirudh Mathur"
         },
         "anjankumar-g-k": {
             "avatarUrl": "https://avatars.githubusercontent.com/u/87826626?v=4",
@@ -36405,6 +36423,16 @@
             },
             "login": "cowtoolz",
             "name": "W. Turner Abney"
+        },
+        "cparrott73": {
+            "avatarUrl": "https://avatars.githubusercontent.com/u/17834684?v=4",
+            "contributedLabRepositories": {
+                "nodes": [
+                    "kokkos/kokkos"
+                ]
+            },
+            "login": "cparrott73",
+            "name": "Chris Parrott"
         },
         "cpiaseque": {
             "avatarUrl": "https://avatars.githubusercontent.com/u/77356738?u=b3454d40620da751e3d6456fa3f1afa136938fa4&v=4",
@@ -67356,6 +67384,7 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "kokkos/kokkos",
+                    "kokkos/kokkos-kernels",
                     "trilinos/Trilinos"
                 ]
             },
