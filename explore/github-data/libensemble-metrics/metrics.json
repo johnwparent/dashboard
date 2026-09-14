@@ -1,11 +1,11 @@
 {
   "package": "Libensemble/libensemble",
-  "stars": 76,
-  "forks": 31,
+  "stars": 0,
+  "forks": 0,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Dependent Packages:</strong> 31</p>\n<p><strong>GitHub Stars:</strong> 76</p>\n<p><strong>GitHub Forks:</strong> 31</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 1 dependent packages, 22 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 1,774,553</p>\n<p class=\"sub-detail\">conda 1,773,541 (total), pypi 1,012 (last-month)</p>\n<p><strong>Citation Score:</strong> 22.5/100</p>"
+      "data": "<p><strong>Reverse-Dependency Analysis:</strong> 1 dependent packages, 22 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 1,774,553</p>\n<p class=\"sub-detail\">conda 1,773,541 (total), pypi 1,012 (last-month)</p>\n<p><strong>Citation Score:</strong> 0.0/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
@@ -19,11 +19,11 @@
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
-      "data": "<p><strong>Enhanced License Detection:</strong> \u2713</p>\n<p class=\"sub-detail\">License: BSD-3-Clause</p>\n<p class=\"sub-detail\">Category: Permissive</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> 0/4 principles satisfied \u2717</p>\n<p><strong>OSI License Validation:</strong> Yes \u2713</p>\n<p><strong>License Exception Handling:</strong> License could not be identified from the API or the text \u2717</p>\n<p><strong>FAIR Metadata Assessment:</strong> No CITATION.cff found \u2717</p>\n<p><strong>Score:</strong> 2/5</p>"
+      "data": "<p><strong>Enhanced License Detection:</strong> \u2717</p>\n<p class=\"sub-detail\">License: Unknown</p>\n<p class=\"sub-detail\">Category: None</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> 0/4 principles satisfied \u2717</p>\n<p><strong>OSI License Validation:</strong> Unknown \u2717</p>\n<p><strong>License Exception Handling:</strong> License could not be identified from the API or the text \u2717</p>\n<p><strong>FAIR Metadata Assessment:</strong> No CITATION.cff found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 390 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 53 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Increasing \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> v1.6.1 (53 days ago), 2/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 18 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 4 channels \u2713</p>\n<p class=\"sub-detail\">GitHub Discussions, Wiki, Mailing list, Chat (Slack/Discord/Matrix)</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 5/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 0 commits (52 weeks) \u2717</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Unknown \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> No releases, 0/yr \u2717</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 0 channels \u2717</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 1/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -51,7 +51,7 @@
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 3/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">390 commits and 2 release(s) in the last year; active in 26/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 2 \u2717</p>\n<p class=\"sub-detail\">18 contributors; top contributor 34.5% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Increasing \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2016-12-12 (9.7 yrs); GitHub repo created 2016-12-12 (9.7 yrs)</p>\n<p><strong>Score:</strong> 4/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 0/3 dimensions active \u2717</p>\n<p class=\"sub-detail\">0 commits and 0 release(s) in the last year; active in 0/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 0 \u2717</p>\n<p class=\"sub-detail\">0 contributors; top contributor 0% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Unknown \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Unknown \u2717</p>\n<p class=\"sub-detail\">Project age: age unknown</p>\n<p><strong>Score:</strong> 1/5</p>"
     }
   },
   "quality": {
@@ -61,7 +61,7 @@
     },
     "4.3.2": {
       "title": "Development Practices",
-      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 3/5 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 0/4 indicators \u2717</p>\n<p><strong>Code Review Quality Analysis:</strong> No merged PRs to sample \u2717</p>\n<p><strong>Development Tool Integration:</strong> 0/4 tools \u2717</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 0/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 0/3 met</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 0/6 \u2717</p>\n<p><strong>Testing Framework Excellence:</strong> 0/4 indicators \u2717</p>\n<p><strong>Code Review Quality Analysis:</strong> No merged PRs to sample \u2717</p>\n<p><strong>Development Tool Integration:</strong> 0/4 tools \u2717</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 0/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 0/3 met</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.3": {
       "title": "Reproducibility",
@@ -77,7 +77,7 @@
     },
     "4.3.6": {
       "title": "Maintainability and Understandability",
-      "data": "<p><strong>Advanced Complexity Analysis:</strong> No source files identified \u2717</p>\n<p class=\"sub-detail\">Structural proxy: file size and nesting, not static analysis</p>\n<p><strong>Code Quality Assessment:</strong> No source files identified \u2717</p>\n<p><strong>Documentation Quality Evaluation:</strong> 0 documentation files (0.00 ratio) \u2717</p>\n<p><strong>Knowledge Distribution Analysis:</strong> Bus factor 2 \u2717</p>\n<p class=\"sub-detail\">Top contributor: 34.5% of commits (18 total contributors)</p>\n<p><strong>Refactoring and Evolution Tracking:</strong> No commits sampled \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Advanced Complexity Analysis:</strong> No source files identified \u2717</p>\n<p class=\"sub-detail\">Structural proxy: file size and nesting, not static analysis</p>\n<p><strong>Code Quality Assessment:</strong> No source files identified \u2717</p>\n<p><strong>Documentation Quality Evaluation:</strong> 0 documentation files (0.00 ratio) \u2717</p>\n<p><strong>Knowledge Distribution Analysis:</strong> Bus factor 0 \u2717</p>\n<p class=\"sub-detail\">Top contributor: 0% of commits (0 total contributors)</p>\n<p><strong>Refactoring and Evolution Tracking:</strong> No commits sampled \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.7": {
       "title": "Performance and Efficiency",
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p class=\"sub-detail\">OpenSSF Scorecard: 4.8/10 \u2014 practices this section does not measure directly</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-13T02:14:59Z"
 }
