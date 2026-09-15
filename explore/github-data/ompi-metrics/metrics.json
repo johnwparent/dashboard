@@ -5,7 +5,7 @@
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Reverse-Dependency Analysis:</strong> 59 dependent packages, 80 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 1,252,530</p>\n<p class=\"sub-detail\">conda 28,060 (total), pypi 34,753 (last-month), conda 636,422 (total), conda 552,826 (total), conda 469 (total)</p>\n<p><strong>Citation Score:</strong> 0.0/100</p>"
+      "data": "<p><strong>Reverse-Dependency Analysis:</strong> 59 dependent packages, 80 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 1,252,530</p>\n<p class=\"sub-detail\">conda 28,060 (total), pypi 34,753 (last-month), conda 552,826 (total), conda 636,422 (total), conda 469 (total)</p>\n<p><strong>Citation Score:</strong> 0.0/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p class=\"sub-detail\">OpenSSF Scorecard: 7/10 \u2014 practices this section does not measure directly</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-13T02:14:59Z"
 }
