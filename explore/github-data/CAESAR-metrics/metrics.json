@@ -5,14 +5,14 @@
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Formal Citations:</strong> 9</p>\n<p><strong>Citation Score:</strong> 20.0/100</p>"
+      "data": "<p><strong>Informal Mentions:</strong> 100</p>\n<p><strong>Citation Score:</strong> 20.0/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
       "data": null
     }
   },
-  "sustainability": {
+  "ecosystem": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
       "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 0.0/100 (critical) \u2717</p>\n<p class=\"sub-detail\">Project Popularity: 0/100</p>\n<p class=\"sub-detail\">Documentation Usability: 0/100</p>\n<p class=\"sub-detail\">Time To Close: 0/100</p>\n<p class=\"sub-detail\">Issue Age: 0/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 0/100</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 0/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-15T21:13:34Z"
 }

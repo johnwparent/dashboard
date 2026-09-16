@@ -5,14 +5,14 @@
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Reverse-Dependency Analysis:</strong> 59 dependent packages, 80 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 1,252,530</p>\n<p class=\"sub-detail\">conda 28,060 (total), pypi 34,753 (last-month), conda 636,422 (total), conda 552,826 (total), conda 469 (total)</p>\n<p><strong>Citation Score:</strong> 0.0/100</p>"
+      "data": "<p><strong>Reverse-Dependency Analysis:</strong> 59 dependent packages, 80 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 1,249,330</p>\n<p class=\"sub-detail\">conda 28,060 (total), pypi 31,553 (last-month), conda 552,826 (total), conda 636,422 (total), conda 469 (total)</p>\n<p><strong>Citation Score:</strong> 0.0/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
       "data": null
     }
   },
-  "sustainability": {
+  "ecosystem": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
       "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Scorecard:</strong> <a href=\"https://scorecard.dev/viewer/?uri=github.com/open-mpi/ompi\">7/10</a> (7/11 checks passed) \u2713</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#cii-best-practices\">CII-Best-Practices</a>: 0/10 \u2014 no effort to earn an OpenSSF best practices badge detected</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#security-policy\">Security-Policy</a>: 0/10 \u2014 security policy file not detected</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#fuzzing\">Fuzzing</a>: 0/10 \u2014 project is not fuzzed</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#pinned-dependencies\">Pinned-Dependencies</a>: 0/10 \u2014 dependency not pinned by hash detected -- score normalized to 0</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 0.0/100 (critical) \u2717</p>\n<p class=\"sub-detail\">Project Popularity: 0/100</p>\n<p class=\"sub-detail\">Documentation Usability: 0/100</p>\n<p class=\"sub-detail\">Time To Close: 0/100</p>\n<p class=\"sub-detail\">Issue Age: 0/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 0/100</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 0/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p class=\"sub-detail\">OpenSSF Scorecard: 7/10 \u2014 practices this section does not measure directly</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-15T21:13:34Z"
 }

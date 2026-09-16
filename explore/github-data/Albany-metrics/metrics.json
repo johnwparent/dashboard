@@ -1,21 +1,21 @@
 {
   "package": "sandialabs/Albany",
   "stars": 332,
-  "forks": 98,
+  "forks": 99,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Dependent Packages:</strong> 98</p>\n<p><strong>GitHub Stars:</strong> 332</p>\n<p><strong>GitHub Forks:</strong> 98</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 0 dependent packages, 0 dependent repositories</p>\n<p><strong>Citation Score:</strong> 29.9/100</p>"
+      "data": "<p><strong>Dependent Packages:</strong> 99</p>\n<p><strong>GitHub Stars:</strong> 332</p>\n<p><strong>GitHub Forks:</strong> 99</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 0 dependent packages, 0 dependent repositories</p>\n<p><strong>Citation Score:</strong> 29.9/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
       "data": null
     }
   },
-  "sustainability": {
+  "ecosystem": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
-      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 46.21/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Time To Close: 20/100</p>\n<p class=\"sub-detail\">Issue Age: 20/100</p>\n<p class=\"sub-detail\">Documentation Usability: 54/100</p>\n<p class=\"sub-detail\">Project Popularity: 61/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 75/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 92/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> CODEOWNERS defined \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 46.23/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Time To Close: 20/100</p>\n<p class=\"sub-detail\">Issue Age: 20/100</p>\n<p class=\"sub-detail\">Documentation Usability: 54/100</p>\n<p class=\"sub-detail\">Project Popularity: 61/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 75/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 92/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> CODEOWNERS defined \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
@@ -23,7 +23,7 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 437 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 0 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> Old_master_support_end (2333 days ago), 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 64 (bus factor: 3)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 3 of 9 previously active contributors stopped (33%) \u2713</p>\n<p><strong>Score:</strong> 3/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 436 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 0 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> Old_master_support_end (2337 days ago), 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 64 (bus factor: 3)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 3 of 9 previously active contributors stopped (33%) \u2713</p>\n<p><strong>Score:</strong> 3/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -51,7 +51,7 @@
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">437 commits and 0 release(s) in the last year; active in 43/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 3 \u2713</p>\n<p class=\"sub-detail\">64 contributors; top contributor 29.5% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Declining \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2010-09-30 (15.9 yrs); GitHub repo created 2014-03-20 (12.5 yrs)</p>\n<p><strong>Score:</strong> 4/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">436 commits and 0 release(s) in the last year; active in 41/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 3 \u2713</p>\n<p class=\"sub-detail\">64 contributors; top contributor 29.5% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Declining \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2010-09-30 (16.0 yrs); GitHub repo created 2014-03-20 (12.5 yrs)</p>\n<p><strong>Score:</strong> 4/5</p>"
     }
   },
   "quality": {
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-15T21:13:34Z"
 }

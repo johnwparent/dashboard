@@ -12,7 +12,7 @@
       "data": null
     }
   },
-  "sustainability": {
+  "ecosystem": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
       "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 42.4/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Issue Age: 0/100</p>\n<p class=\"sub-detail\">Project Popularity: 8/100</p>\n<p class=\"sub-detail\">Time To Close: 20/100</p>\n<p class=\"sub-detail\">Release Frequency: 40/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 40/100</p>\n<p class=\"sub-detail\">Documentation Usability: 66/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 100/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
@@ -23,7 +23,7 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 208 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 15 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> 2026.02 (200 days ago), 1/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 3 (bus factor: 1)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 4/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 208 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 19 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> 2026.02 (204 days ago), 1/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 3 (bus factor: 1)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 4/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -51,7 +51,7 @@
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">208 commits and 1 release(s) in the last year; active in 22/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">3 contributors; top contributor 96.9% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Stable \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Growing \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2024-09-26 (2.0 yrs); GitHub repo created 2024-09-26 (2.0 yrs)</p>\n<p><strong>Score:</strong> 4/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">208 commits and 1 release(s) in the last year; active in 17/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">3 contributors; top contributor 96.9% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Stable \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Growing \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2024-09-26 (2.0 yrs); GitHub repo created 2024-09-26 (2.0 yrs)</p>\n<p><strong>Score:</strong> 4/5</p>"
     }
   },
   "quality": {
@@ -77,7 +77,7 @@
     },
     "4.3.6": {
       "title": "Maintainability and Understandability",
-      "data": "<p><strong>Advanced Complexity Analysis:</strong> No source files identified \u2717</p>\n<p class=\"sub-detail\">Structural proxy: file size and nesting, not static analysis</p>\n<p><strong>Code Quality Assessment:</strong> No source files identified \u2717</p>\n<p><strong>Documentation Quality Evaluation:</strong> 0 documentation files (0.00 ratio) \u2717</p>\n<p><strong>Knowledge Distribution Analysis:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">Top contributor: 96.9% of commits (3 total contributors)</p>\n<p><strong>Refactoring and Evolution Tracking:</strong> No commits sampled \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Advanced Complexity Analysis:</strong> 17 source files, mean 11.9 KB, 0.0% over 100 KB, depth 3 \u2713</p>\n<p class=\"sub-detail\">Structural proxy: file size and nesting, not static analysis</p>\n<p><strong>Code Quality Assessment:</strong> 0 test files for 17 source files (0.00 ratio) \u2717</p>\n<p><strong>Documentation Quality Evaluation:</strong> 10 documentation files (0.59 ratio) \u2713</p>\n<p><strong>Knowledge Distribution Analysis:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">Top contributor: 96.9% of commits (3 total contributors)</p>\n<p><strong>Refactoring and Evolution Tracking:</strong> 5 of 100 recent commits \u2713</p>\n<p class=\"sub-detail\">Remove stale references from README; remove stale setup script; Clean up, remove deprecated, fix scaffolding</p>\n<p><strong>Score:</strong> 3/5</p>"
     },
     "4.3.7": {
       "title": "Performance and Efficiency",
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-15T21:13:34Z"
 }
