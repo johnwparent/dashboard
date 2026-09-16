@@ -5,14 +5,14 @@
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Dependent Packages:</strong> 5</p>\n<p><strong>GitHub Stars:</strong> 10</p>\n<p><strong>GitHub Forks:</strong> 5</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 0 dependent packages, 0 dependent repositories</p>\n<p><strong>Citation Score:</strong> 11.7/100</p>"
+      "data": "<p><strong>Formal Citations:</strong> 1</p>\n<p><strong>Dependent Packages:</strong> 5</p>\n<p><strong>GitHub Stars:</strong> 10</p>\n<p><strong>GitHub Forks:</strong> 5</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 0 dependent packages, 0 dependent repositories</p>\n<p><strong>Citation Score:</strong> 17.6/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
       "data": null
     }
   },
-  "sustainability": {
+  "ecosystem": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
       "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 45.62/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Project Popularity: 4/100</p>\n<p class=\"sub-detail\">Issue Age: 20/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 29/100</p>\n<p class=\"sub-detail\">Release Frequency: 40/100</p>\n<p class=\"sub-detail\">Time To Close: 60/100</p>\n<p class=\"sub-detail\">Documentation Usability: 62/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 84/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
@@ -23,7 +23,7 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 0 commits (52 weeks) \u2717</p>\n<p class=\"sub-detail\">Last Commit: 994 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Inactive \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> develop_v0.9 (1703 days ago), 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 14 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 1/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 0 commits (52 weeks) \u2717</p>\n<p class=\"sub-detail\">Last Commit: 999 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Inactive \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> develop_v0.9 (1707 days ago), 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 14 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 1/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-15T21:13:34Z"
 }

@@ -1,21 +1,21 @@
 {
   "package": "hypre-space/hypre",
-  "stars": 855,
+  "stars": 856,
   "forks": 256,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Dependent Packages:</strong> 256</p>\n<p><strong>GitHub Stars:</strong> 855</p>\n<p><strong>GitHub Forks:</strong> 256</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 17 dependent packages, 11 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 992,963</p>\n<p class=\"sub-detail\">conda 992,963 (total)</p>\n<p><strong>Citation Score:</strong> 30.0/100</p>"
+      "data": "<p><strong>Dependent Packages:</strong> 256</p>\n<p><strong>GitHub Stars:</strong> 856</p>\n<p><strong>GitHub Forks:</strong> 256</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 17 dependent packages, 11 dependent repositories</p>\n<p><strong>Package-Manager Downloads:</strong> 992,963</p>\n<p class=\"sub-detail\">conda 992,963 (total)</p>\n<p><strong>Citation Score:</strong> 30.0/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
       "data": null
     }
   },
-  "sustainability": {
+  "ecosystem": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
-      "data": "<p><strong>Enhanced Document Detection:</strong> 1/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: <a href=\"https://github.com/hypre-space/hypre/blob/master/CONTRIBUTING.md\">CONTRIBUTING.md</a></p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Scorecard:</strong> <a href=\"https://scorecard.dev/viewer/?uri=github.com/hypre-space/hypre\">6.5/10</a> (6/11 checks passed) \u2717</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#cii-best-practices\">CII-Best-Practices</a>: 0/10 \u2014 no effort to earn an OpenSSF best practices badge detected</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#pinned-dependencies\">Pinned-Dependencies</a>: 0/10 \u2014 dependency not pinned by hash detected -- score normalized to 0</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#security-policy\">Security-Policy</a>: 0/10 \u2014 security policy file not detected</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#fuzzing\">Fuzzing</a>: 0/10 \u2014 project is not fuzzed</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#sast\">SAST</a>: 1/10 \u2014 SAST tool is not run on all commits -- score normalized to 1</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 75.18/100 (good) \u2713</p>\n<p class=\"sub-detail\">Issue Age: 40/100</p>\n<p class=\"sub-detail\">Time To Close: 60/100</p>\n<p class=\"sub-detail\">Release Frequency: 60/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 75/100</p>\n<p class=\"sub-detail\">Documentation Usability: 85/100</p>\n<p class=\"sub-detail\">Project Popularity: 95/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 96/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> docs updated 50 days ago \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>Enhanced Document Detection:</strong> 1/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: <a href=\"https://github.com/hypre-space/hypre/blob/master/CONTRIBUTING.md\">CONTRIBUTING.md</a></p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Scorecard:</strong> <a href=\"https://scorecard.dev/viewer/?uri=github.com/hypre-space/hypre\">6.5/10</a> (6/11 checks passed) \u2717</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#cii-best-practices\">CII-Best-Practices</a>: 0/10 \u2014 no effort to earn an OpenSSF best practices badge detected</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#pinned-dependencies\">Pinned-Dependencies</a>: 0/10 \u2014 dependency not pinned by hash detected -- score normalized to 0</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#security-policy\">Security-Policy</a>: 0/10 \u2014 security policy file not detected</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#fuzzing\">Fuzzing</a>: 0/10 \u2014 project is not fuzzed</p>\n<p class=\"sub-detail\"><a href=\"https://github.com/ossf/scorecard/blob/c395761df6afe1a69e476bc60a013a94bcbc153f/docs/checks.md#sast\">SAST</a>: 1/10 \u2014 SAST tool is not run on all commits -- score normalized to 1</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 75.46/100 (good) \u2713</p>\n<p class=\"sub-detail\">Issue Age: 40/100</p>\n<p class=\"sub-detail\">Time To Close: 60/100</p>\n<p class=\"sub-detail\">Release Frequency: 60/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 78/100</p>\n<p class=\"sub-detail\">Documentation Usability: 85/100</p>\n<p class=\"sub-detail\">Project Popularity: 95/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 96/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> docs updated 55 days ago \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
@@ -23,11 +23,11 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 166 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 3 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> v3.2.0 (18 days ago), 3/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 54 (bus factor: 3)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 4 of 9 previously active contributors stopped (44%) \u2713</p>\n<p><strong>Score:</strong> 5/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 164 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 7 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> v3.2.0 (22 days ago), 3/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 54 (bus factor: 3)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 4 of 9 previously active contributors stopped (44%) \u2713</p>\n<p><strong>Score:</strong> 5/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
-      "data": "<p><strong>Response Time Tracking:</strong> 1 hours \u2713</p>\n<p><strong>Issue Resolution Analysis:</strong> 236 hours \u2713</p>\n<p><strong>Pull Request Flow Assessment:</strong> 97% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 0.88 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> 2 comments per issue (median) \u2713</p>\n<p><strong>Communication Pattern Analysis:</strong> 60% of issues answered within a week \u2717</p>\n<p><strong>Community Participation Assessment:</strong> 100% of 60 issues and PRs opened from outside the maintainer group \u2713</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 86 hours</p>\n<p><strong>Score:</strong> 6/7</p>"
+      "data": "<p><strong>Response Time Tracking:</strong> 1 hours \u2713</p>\n<p><strong>Issue Resolution Analysis:</strong> 171 hours \u2713</p>\n<p><strong>Pull Request Flow Assessment:</strong> 97% \u2713</p>\n<p><strong>Support Request Closure Analysis:</strong> 1.00 \u2713</p>\n<p><strong>Engagement Quality Metrics:</strong> 2 comments per issue (median) \u2713</p>\n<p><strong>Communication Pattern Analysis:</strong> 57% of issues answered within a week \u2717</p>\n<p><strong>Community Participation Assessment:</strong> 100% of 60 issues and PRs opened from outside the maintainer group \u2713</p>\n<p class=\"sub-detail\">Median PR Cycle Time: 86 hours</p>\n<p><strong>Score:</strong> 6/7</p>"
     },
     "4.2.5": {
       "title": "Outreach",
@@ -51,7 +51,7 @@
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 3/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">166 commits and 3 release(s) in the last year; active in 42/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 3 \u2713</p>\n<p class=\"sub-detail\">54 contributors; top contributor 26.4% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Stable \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 1996-08-08 (30.1 yrs); GitHub repo created 2018-11-19 (7.8 yrs)</p>\n<p><strong>Score:</strong> 5/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 3/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">164 commits and 3 release(s) in the last year; active in 42/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 3 \u2713</p>\n<p class=\"sub-detail\">54 contributors; top contributor 26.4% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Stable \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 1996-08-08 (30.1 yrs); GitHub repo created 2018-11-19 (7.8 yrs)</p>\n<p><strong>Score:</strong> 5/5</p>"
     }
   },
   "quality": {
@@ -61,7 +61,7 @@
     },
     "4.3.2": {
       "title": "Development Practices",
-      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 2/5 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 1/4 indicators \u2717</p>\n<p class=\"sub-detail\">Test suite directory</p>\n<p><strong>Code Review Quality Analysis:</strong> 91.7% of 48 merged PRs reviewed \u2713</p>\n<p><strong>Development Tool Integration:</strong> 0/4 tools \u2717</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 1/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 3/3 met</p>\n<p><strong>Score:</strong> 2/5</p>"
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 1/5 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 1/4 indicators \u2717</p>\n<p class=\"sub-detail\">Test suite directory</p>\n<p><strong>Code Review Quality Analysis:</strong> 91.7% of 48 merged PRs reviewed \u2713</p>\n<p><strong>Development Tool Integration:</strong> 0/4 tools \u2717</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 1/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 3/3 met</p>\n<p><strong>Score:</strong> 2/5</p>"
     },
     "4.3.3": {
       "title": "Reproducibility",
@@ -88,5 +88,5 @@
       "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p class=\"sub-detail\">OpenSSF Scorecard: 6.5/10 \u2014 practices this section does not measure directly</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-09-15T21:13:34Z"
 }

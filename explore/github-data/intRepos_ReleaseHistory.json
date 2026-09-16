@@ -895,6 +895,11 @@
             "releases": {
                 "nodes": [
                     {
+                        "name": "Fix errors with NAG",
+                        "publishedAt": "2026-09-15T21:19:01Z",
+                        "tagName": "4.1.2"
+                    },
+                    {
                         "name": "Minor Fixes, Feature, and Expanded CI Coverage",
                         "publishedAt": "2026-08-19T04:02:33Z",
                         "tagName": "4.1.1"
