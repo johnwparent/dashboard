@@ -662,6 +662,17 @@
                 "login": "abranhe"
             }
         },
+        "actions/attest-build-provenance": {
+            "languages": {
+                "nodes": []
+            },
+            "name": "attest-build-provenance",
+            "nameWithOwner": "actions/attest-build-provenance",
+            "owner": {
+                "isVerified": true,
+                "login": "actions"
+            }
+        },
         "actions/cache": {
             "languages": {
                 "nodes": [
@@ -1008,6 +1019,22 @@
             "nameWithOwner": "alexheretic/ab-glyph",
             "owner": {
                 "login": "alexheretic"
+            }
+        },
+        "anchore/sbom-action": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3178c6",
+                        "name": "TypeScript"
+                    }
+                ]
+            },
+            "name": "sbom-action",
+            "nameWithOwner": "anchore/sbom-action",
+            "owner": {
+                "isVerified": true,
+                "login": "anchore"
             }
         },
         "annotated-types/annotated-types": {
@@ -2642,22 +2669,6 @@
             "nameWithOwner": "jsdaniell/create-json",
             "owner": {
                 "login": "jsdaniell"
-            }
-        },
-        "julia-actions/cache": {
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3178c6",
-                        "name": "TypeScript"
-                    }
-                ]
-            },
-            "name": "cache",
-            "nameWithOwner": "julia-actions/cache",
-            "owner": {
-                "isVerified": false,
-                "login": "julia-actions"
             }
         },
         "julia-actions/julia-buildpkg": {
@@ -4613,6 +4624,21 @@
                 "login": "redis"
             }
         },
+        "richardkiss/vpa": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "vpa",
+            "nameWithOwner": "richardkiss/vpa",
+            "owner": {
+                "login": "richardkiss"
+            }
+        },
         "rkyv/bytecheck": {
             "languages": {
                 "nodes": [
@@ -5786,21 +5812,6 @@
             "owner": {
                 "isVerified": false,
                 "login": "uqfoundation"
-            }
-        },
-        "uraimo/run-on-arch-action": {
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
-                    }
-                ]
-            },
-            "name": "run-on-arch-action",
-            "nameWithOwner": "uraimo/run-on-arch-action",
-            "owner": {
-                "login": "uraimo"
             }
         },
         "urllib3/urllib3": {
