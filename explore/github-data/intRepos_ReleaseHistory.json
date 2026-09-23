@@ -895,6 +895,11 @@
             "releases": {
                 "nodes": [
                     {
+                        "name": "Fix errors with NAG",
+                        "publishedAt": "2026-09-15T21:19:01Z",
+                        "tagName": "4.1.2"
+                    },
+                    {
                         "name": "Minor Fixes, Feature, and Expanded CI Coverage",
                         "publishedAt": "2026-08-19T04:02:33Z",
                         "tagName": "4.1.1"
@@ -3512,6 +3517,11 @@
         "llvm/llvm-project": {
             "releases": {
                 "nodes": [
+                    {
+                        "name": "LLVM 23.1.2",
+                        "publishedAt": "2026-09-22T06:49:10Z",
+                        "tagName": "llvmorg-23.1.2"
+                    },
                     {
                         "name": "LLVM 23.1.1",
                         "publishedAt": "2026-09-08T10:58:49Z",
