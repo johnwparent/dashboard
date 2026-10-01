@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHIP-SPV/chipStar — Metrics Report</title>
+<style>
+:root { --fg:#1f2328; --muted:#59636e; --bg:#fff; --line:#d1d9e0; --pass:#1a7f37;
+        --fail:#cf222e; --note:#9a6700; --chip:#f6f8fa; --link:#0969da; }
+@media (prefers-color-scheme: dark) {
+  :root { --fg:#e6edf3; --muted:#9198a1; --bg:#0d1117; --line:#3d444d; --pass:#3fb950;
+          --fail:#f85149; --note:#d29922; --chip:#151b23; --link:#4493f8; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+a { color: var(--link); overflow-wrap: anywhere; }
+h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; padding-bottom: .3rem; border-bottom: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; display:flex; gap:.75rem; align-items:baseline; flex-wrap:wrap; }
+.meta, .muted { color: var(--muted); }
+.box { border: 1px solid var(--line); border-radius: 6px; padding: .75rem 1rem; margin: 1rem 0; background: var(--chip); }
+.box p { margin: .25rem 0; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: .3rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+td.num { text-align: right; white-space: nowrap; }
+.score { font-size: .85rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+ul.rows { list-style: none; padding: 0; margin: 0; }
+ul.rows > li { display: grid; grid-template-columns: 5.5rem 1fr; gap: .5rem;
+               padding: .45rem 0; border-bottom: 1px solid var(--line); }
+.mark { font-size: .8rem; font-weight: 600; padding-top: .15rem; }
+.pass { color: var(--pass); } .fail { color: var(--fail); } .unscored { color: var(--muted); }
+.detail, .threshold, .override { margin: .15rem 0 0; font-size: .9rem; }
+.detail { color: var(--muted); }
+.threshold { color: var(--muted); }
+.threshold b { color: var(--fg); font-weight: 600; }
+.override { color: var(--note); }
+nav ol { columns: 2 16rem; padding-left: 1.25rem; margin: .5rem 0; }
+@media (max-width: 40rem) { ul.rows > li { grid-template-columns: 1fr; gap: 0; } }
+</style></head><body><main>
+<h1>Sustainability metrics report: CHIP-SPV/chipStar</h1>
+<p class="meta">Collected 2026-09-30 14:44 UTC</p>
+<div class="box">
+<p><b>How to read this report.</b> Each row is one sub-metric from the CASS Sustainability Metrics Report, exactly as the dashboard shows it. <span class="pass">✓ met</span> and <span class="fail">✗ not met</span> compare the measured value with the threshold listed under it. <span class="unscored">Not scored</span> rows were reported but not judged — not yet collected, not applicable, or too little data — and are left out of the section score, which is ✓ rows out of ✓ and ✗ rows. Grey lines under a row are the evidence it was based on.</p>
+</div>
+<h2>Scores</h2>
+<p>A dimension score is the average of the percentage each of its collectors reports, not a count of the ✓ rows below. The overall score is the weighted sum of the three dimension scores.</p>
+<table><thead><tr><th>Dimension</th><th class="num">Score</th><th class="num">Weight</th><th>Averaged over</th></tr></thead><tbody>
+<tr><td>Impact</td><td class="num">25</td><td class="num">0.33</td><td>No collector returned a score</td></tr>
+<tr><td>Ecosystem</td><td class="num">50</td><td class="num">0.34</td><td>Governance documents (4.2.1) 0; Licensing (4.2.2) 67; Active maintenance (4.2.3) 80; CHAOSS health score (4.2.1) 71; OpenSSF Best Practices badge (4.3.2) 30; Engagement (4.2.4) 57; Outreach (4.2.5) 60; Financial sustainability (4.2.8) 50; Welcomeness (4.2.6) 100; Collaboration (4.2.7) 0; FAIR licensing (4.2.2) 33</td></tr>
+<tr><td>Quality</td><td class="num">50</td><td class="num">0.33</td><td>CI/CD (4.3.2) 50; Reproducibility (4.3.3) 27; Accessibility (4.3.5) 18; Static analysis (4.3.1) 0; Development tooling (4.3.2) 67; Deployment environments (4.3.5) 67; Usability (4.3.4) 100; Maintainability (4.3.6) 75; Reliability (4.3.1) 67; Supply chain integrity (4.3.8) 33</td></tr>
+<tr><td><b>Overall</b></td><td class="num"><b>42</b></td><td></td><td></td></tr></tbody></table>
+<nav><h2>Sections</h2><ol>
+<li><a href="#s4-1-1">4.1.1 Software Citation and Adoption</a></li>
+<li><a href="#s4-1-2">4.1.2 Field Research Impact</a></li>
+<li><a href="#s4-2-1">4.2.1 Codes of Conduct (CoC), Governance, and Contributor Guidelines</a> <span class="muted">(1/4)</span></li>
+<li><a href="#s4-2-2">4.2.2 Open-Source Licensing and FAIR Compliance</a> <span class="muted">(3/5)</span></li>
+<li><a href="#s4-2-3">4.2.3 Active Maintenance</a> <span class="muted">(6/6)</span></li>
+<li><a href="#s4-2-4">4.2.4 Engagement</a> <span class="muted">(4/7)</span></li>
+<li><a href="#s4-2-5">4.2.5 Outreach</a> <span class="muted">(3/5)</span></li>
+<li><a href="#s4-2-6">4.2.6 Welcomeness</a> <span class="muted">(1/1)</span></li>
+<li><a href="#s4-2-7">4.2.7 Collaboration</a> <span class="muted">(0/1)</span></li>
+<li><a href="#s4-2-8">4.2.8 Financial Sustainability</a> <span class="muted">(2/4)</span></li>
+<li><a href="#s4-2-9">4.2.9 Institutional &amp; Organizational Support</a> <span class="muted">(1/1)</span></li>
+<li><a href="#s4-2-10">4.2.10 Project Longevity and Community Health</a> <span class="muted">(4/5)</span></li>
+<li><a href="#s4-3-1">4.3.1 Reliability and Robustness</a> <span class="muted">(2/5)</span></li>
+<li><a href="#s4-3-2">4.3.2 Development Practices</a> <span class="muted">(3/5)</span></li>
+<li><a href="#s4-3-3">4.3.3 Reproducibility</a> <span class="muted">(3/5)</span></li>
+<li><a href="#s4-3-4">4.3.4 Usability</a> <span class="muted">(1/2)</span></li>
+<li><a href="#s4-3-5">4.3.5 Accessibility</a> <span class="muted">(4/5)</span></li>
+<li><a href="#s4-3-6">4.3.6 Maintainability and Understandability</a> <span class="muted">(3/5)</span></li>
+<li><a href="#s4-3-7">4.3.7 Performance and Efficiency</a></li>
+<li><a href="#s4-3-8">4.3.8 Software Supply Chain Integrity</a> <span class="muted">(1/3)</span></li>
+</ol></nav>
+<h2>Impact dimension</h2>
+<h3 id="s4-1-1">4.1.1 Software Citation and Adoption</h3>
+<ul class="rows">
+<li><span class="mark unscored">Not scored</span><div><b>GitHub Stars:</b> 382</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>GitHub Forks:</b> 46</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Citation Score:</b> 25.0/100</div></li>
+</ul>
+<h3 id="s4-1-2">4.1.2 Field Research Impact</h3>
+<p class="muted">Not yet collected.</p>
+<h2>Ecosystem dimension</h2>
+<h3 id="s4-2-1">4.2.1 Codes of Conduct (CoC), Governance, and Contributor Guidelines<span class="score">Score 1/4</span></h3>
+<ul class="rows">
+<li><span class="mark fail">✗ not met</span><div><b>Enhanced Document Detection:</b> 0/3<div class="detail">Code of Conduct: Not found</div><div class="detail">Governance: Not found</div><div class="detail">Contributing Guidelines: Not found</div><div class="threshold"><b>Threshold:</b> 2 — of {CoC, Governance, Contributing}, minimum found</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Governance Keyword Analysis:</b> 0/4 concepts documented<div class="threshold"><b>Threshold:</b> 2 — of 4 governance concept groups, minimum documented</div></div></li>
+<li><span class="mark unscored">Not scored</span><div><b>OpenSSF Badge Integration:</b> Not yet collected</div></li>
+<li><span class="mark pass">✓ met</span><div><b>CHAOSS Governance Metrics:</b> 70.69/100 (good)<div class="detail">Issues Inclusivity: 8/100</div><div class="detail">Project Popularity: 54/100</div><div class="detail">Release Frequency: 60/100</div><div class="detail">Time To Close: 80/100</div><div class="detail">Documentation Usability: 85/100</div><div class="detail">Change Request Closure Ratio: 92/100</div><div class="detail">Issue Age: 100/100</div><div class="threshold"><b>Threshold:</b> 60 — weighted CHAOSS health score /100, minimum</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Governance Effectiveness Assessment:</b> no CODEOWNERS<div class="threshold"><b>Threshold:</b> stale days = 1095 — three years</div></div></li>
+</ul>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>OpenSSF Scorecard:</b> min score = 7.0 — OpenSSF Scorecard score /10, minimum</p>
+<h3 id="s4-2-2">4.2.2 Open-Source Licensing and FAIR Compliance<span class="score">Score 3/5</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>Enhanced License Detection:</b> <div class="detail">License: MIT</div><div class="detail">Category: Permissive</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Automated FAIR4RS Assessment:</b> 2/4 principles satisfied<div class="detail">Accessible, Reusable</div><div class="threshold"><b>Threshold:</b> 3 — of 4 FAIR principles satisfied, minimum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>OSI License Validation:</b> Yes (via MIT in licence text)</div></li>
+<li><span class="mark pass">✓ met</span><div><b>License Exception Handling:</b> Reported as &quot;NOASSERTION&quot;; licence clauses match MIT</div></li>
+<li><span class="mark fail">✗ not met</span><div><b>FAIR Metadata Assessment:</b> No CITATION.cff found<div class="threshold"><b>Threshold:</b> 4 — of 6 CITATION.cff fields present, minimum</div></div></li>
+</ul>
+<h3 id="s4-2-3">4.2.3 Active Maintenance<span class="score">Score 6/6</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>Commit Activity Pattern Analysis:</b> Active — 986 commits (52 weeks)<div class="detail">Last Commit: 0 days ago</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Maintenance Mode Indicator Detection:</b> No maintenance flags</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Activity Trend Monitoring:</b> Increasing<div class="threshold"><b>Threshold:</b> stable or increasing</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Release Pattern Assessment:</b> v1.3.0 (132 days ago), 3/yr<div class="detail">Contributors: 19 (bus factor: 1)</div><div class="threshold"><b>Threshold:</b> 1 — releases in the last year, minimum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Multi-Channel Communication Activity:</b> 4 channels<div class="detail">GitHub Discussions, Wiki, GitHub Issues, Forum</div><div class="threshold"><b>Threshold:</b> min channels = 2 — distinct channels found, minimum</div><div class="threshold">min community issues = 5 — issues opened from outside the maintainer group in the last 365 days before the issue tracker counts as a channel</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Contributor Abandonment Forecasting:</b> 2 of 5 previously active contributors stopped (40%)<div class="threshold"><b>Threshold:</b> 0.5 — departure rate, maximum</div></div></li>
+</ul>
+<h3 id="s4-2-4">4.2.4 Engagement<span class="score">Score 4/7</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>Response Time Tracking:</b> 29 hours<div class="threshold"><b>Threshold:</b> 168 — median hours to first response, maximum (one week, strictly under)</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Issue Resolution Analysis:</b> over half still open, for 100 issues opened 30-365 days ago (53 still open)<div class="threshold"><b>Threshold:</b> 720 — median hours to close, maximum (30 days, strictly under), over issues opened between a year ago and this many hours ago</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Pull Request Flow Assessment:</b> 90%<div class="threshold"><b>Threshold:</b> 50 — PR merge rate %, minimum (strictly over)</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Support Request Closure Analysis:</b> 203 opened, 166 closed 30-365 days ago (1.22 opened per closed)<div class="threshold"><b>Threshold:</b> 2.0 — issues opened per issue closed, over the same window as Issue Resolution, maximum (strictly under)</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Engagement Quality Metrics:</b> 1 comments per issue (median)<div class="threshold"><b>Threshold:</b> 2 — median comments per issue, minimum</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Communication Pattern Analysis:</b> 60% of community issues answered within a week<div class="threshold"><b>Threshold:</b> response window hours = 168 — &quot;timely&quot; response window (one week)</div><div class="threshold">min timely response share = 0.7 — share of issues answered within the window, minimum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Community Participation Assessment:</b> 20% of 60 issues and PRs opened from outside the maintainer group<div class="detail">Median PR Cycle Time: 28 hours</div><div class="threshold"><b>Threshold:</b> 0.15 — share of issues/PRs from outside the maintainer group, minimum</div></div></li>
+</ul>
+<h3 id="s4-2-5">4.2.5 Outreach<span class="score">Score 3/5</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>New Contributor Tracking:</b> 4 in last 1 year</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Contributor Retention Analysis:</b> 50.0% of new contributors returned<div class="threshold"><b>Threshold:</b> retained min commits = 2 — commits within the recent window to count as &quot;retained&quot;</div><div class="threshold">min retention rate pct = 50 — share of new contributors who return, minimum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Contributor Lifecycle Mapping:</b> 4 one-time / 5 casual / 10 repeat<div class="threshold"><b>Threshold:</b> casual max commits = 4 — commits at or below this bucket as &quot;casual&quot; rather than &quot;repeat&quot;</div><div class="threshold">min repeat contributors = 3 — repeat contributors, minimum</div></div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Contribution Type Diversity:</b> Not yet collected</div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Good First Issue Effectiveness:</b> No newcomer-labelled issues</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>External Event Participation:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Training Material Integration:</b> Not yet collected</div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Onboarding Infrastructure Assessment:</b> 1/4 resources<div class="detail">Getting-started guide</div><div class="threshold"><b>Threshold:</b> 3 — of 4 onboarding resources, minimum found</div></div></li>
+</ul>
+<h3 id="s4-2-6">4.2.6 Welcomeness<span class="score">Score 1/1</span></h3>
+<ul class="rows">
+<li><span class="mark unscored">Not scored</span><div><b>CHAOSS Community Experience Metrics:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Response Quality and Tone Analysis:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Communication Sentiment Analysis:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Contributor Journey Mapping:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Language and Communication Review:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Leadership Role Representation:</b> Not yet collected</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Decision-Making Visibility:</b> 5 public channel(s)<div class="detail">GitHub Discussions, Wiki, GitHub Pages, Forum, Roadmap</div><div class="threshold"><b>Threshold:</b> 2 — public decision-making channels/documents found, minimum (one alone -- e.g. a wiki nobody writes in -- says little)</div></div></li>
+</ul>
+<h3 id="s4-2-7">4.2.7 Collaboration<span class="score">Score 0/1</span></h3>
+<ul class="rows">
+<li><span class="mark fail">✗ not met</span><div><b>Advanced Dependency Analysis:</b> Not packaged in any indexed ecosystem<div class="threshold"><b>Threshold:</b> 2 — distinct packaging ecosystems, minimum</div></div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Cross-project Reference Detection:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Interoperability Assessment:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Collaboration Network Analysis:</b> No downstream dependents found in registries; source-level dependents not audited<div class="threshold"><b>Threshold:</b> min dependent packages = 10</div><div class="threshold">min dependent repos = 50</div></div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Standards Compliance Tracking:</b> Not yet collected</div></li>
+</ul>
+<h3 id="s4-2-8">4.2.8 Financial Sustainability<span class="score">Score 2/4</span></h3>
+<ul class="rows">
+<li><span class="mark fail">✗ not met</span><div><b>Enhanced Funding Documentation Analysis:</b> No funding documentation found</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Institutional Affiliation Tracking:</b> 10 organizations across 10/19 top contributors<div class="detail">Argonne, Argonne National Laboratory, CSC - IT Center for Science, PGLC, Preferred Networks (@pfnet)</div><div class="threshold"><b>Threshold:</b> 3 — distinct organizations among top contributors, minimum</div></div></li>
+<li><span class="mark unscored">Not scored</span><div><b>NIH R50 Award Tracking:</b> Not yet collected</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Corporate Sponsorship Detection:</b> organization-owned repository</div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Funding Portfolio Analysis:</b> 0 distinct funding source(s)<div class="threshold"><b>Threshold:</b> 2 — distinct funding sources, minimum</div></div></li>
+</ul>
+<h3 id="s4-2-9">4.2.9 Institutional &amp; Organizational Support<span class="score">Score 1/1</span></h3>
+<ul class="rows">
+<li><span class="mark unscored">Not scored</span><div><b>RSE Position Detection:</b> Not yet collected</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Institutional Support Tracking:</b> 10 distinct organizations backing contributors<div class="detail">Argonne (1), Argonne National Laboratory (1), CSC - IT Center for Science (1), PGLC (1), Preferred Networks (@pfnet) (1)</div></div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Career Development Indicators:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>NIH R50 Award Integration:</b> Not yet collected</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Institutional Policy Analysis:</b> Not yet collected</div></li>
+</ul>
+<h3 id="s4-2-10">4.2.10 Project Longevity and Community Health<span class="score">Score 4/5</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>Comprehensive Activity Analysis:</b> 3/3 dimensions active<div class="detail">986 commits and 3 release(s) in the last year; active in 49/52 weeks</div><div class="threshold"><b>Threshold:</b> min dimensions = 2 — of 3 dimensions active, minimum</div><div class="threshold">min active weeks = 26 — of 52 weeks with a commit, minimum</div><div class="threshold">min releases last year = 1 — releases in the last year, minimum</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Contributor Viability Assessment:</b> Bus factor 1<div class="detail">19 contributors; top contributor 87.8% of commits</div><div class="threshold"><b>Threshold:</b> 3 — bus factor, minimum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Maintenance Mode Detection:</b> No warning indicators<div class="threshold"><b>Threshold:</b> max days since push = 365 — days since last push before it&#x27;s a warning sign</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Community Health Trends:</b> Increasing<div class="threshold"><b>Threshold:</b> stable or increasing</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Project Lifecycle Assessment:</b> Mature<div class="detail">Project age: first commit 2021-08-09 (5.1 yrs); GitHub repo created 2021-09-15 (5.0 yrs)</div><div class="threshold"><b>Threshold:</b> Growing or Mature</div></div></li>
+</ul>
+<h2>Quality dimension</h2>
+<h3 id="s4-3-1">4.3.1 Reliability and Robustness<span class="score">Score 2/5</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>Advanced Static Analysis:</b> clang-tidy<div class="threshold"><b>Threshold:</b> 1 — defect-analysis tools found beyond CodeQL, minimum</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Enhanced Security Analysis:</b> No CodeQL workflow found</div></li>
+<li><span class="mark fail">✗ not met</span><div><b>CERT Guidelines Compliance:</b> No hardening settings found in the build files or CI<div class="detail">Practice indicators, not audited conformance</div><div class="threshold"><b>Threshold:</b> 1 — secure-coding hardening indicators found, minimum</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Test Coverage Excellence:</b> No Codecov data found<div class="threshold"><b>Threshold:</b> 80 — Codecov line coverage %, minimum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Reliability Trend Analysis:</b> 5 defect reports in the last year vs 5 the year before (stable, by label)<div class="threshold"><b>Threshold:</b> min trend volume = 5 — combined recent+previous defect reports, minimum (below this the comparison is noise)</div><div class="threshold">trend tolerance = 1.25 — recent:previous ratio at or under which the trend still counts as stable</div><div class="threshold">significance = 0.05 — one-sided binomial p-value a rising/falling split must be under to count as a trend</div><div class="threshold">passing directions = stable or improving — trend direction must be one of these to meet the threshold</div></div></li>
+</ul>
+<h3 id="s4-3-2">4.3.2 Development Practices<span class="score">Score 3/5</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>CI/CD Effectiveness Assessment:</b> 3/6<div class="threshold"><b>Threshold:</b> max cycle time hours = 168</div><div class="threshold">max execution time hours = 1 — average workflow run time, maximum (strictly under)</div><div class="threshold">min success rate pct = 60 — overall workflow success rate, minimum (strictly over)</div><div class="threshold">min deployments per year = 1 — DORA &quot;elite&quot; deployment frequency floor</div><div class="threshold">min releases per year = 1 — GitHub releases per year, minimum</div><div class="threshold">max time to failure hours = 1 — average failed-run duration, maximum (strictly under)</div><div class="threshold">min score = 0 — orchestrator&#x27;s own gate, strictly over this (score/max_score shown alongside)</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Testing Framework Excellence:</b> 2/4 indicators<div class="detail">Test suite directory, CTest / CMake testing</div><div class="threshold"><b>Threshold:</b> 2 — of 4 testing indicators, minimum found</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Code Review Quality Analysis:</b> 0.0% of 46 merged PRs reviewed<div class="threshold"><b>Threshold:</b> 70.0 — merged PRs reviewed %, minimum (leaves room for trivial/automated merges)</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Development Tool Integration:</b> 2/4 tools<div class="detail">Code formatter config, Linter config</div><div class="threshold"><b>Threshold:</b> 2 — of 4 dev tooling indicators, minimum found</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Community Contribution Facilitation:</b> OpenSSF Badge not registered<div class="detail">Governance criteria: 0/3 met</div><div class="detail">Security criteria: 0/2 met</div><div class="detail">Quality criteria: 3/3 met</div><div class="threshold"><b>Threshold:</b> 100 — OpenSSF badge progress %, minimum (must be 100 -- fully registered)</div></div></li>
+</ul>
+<h3 id="s4-3-3">4.3.3 Reproducibility<span class="score">Score 3/5</span></h3>
+<ul class="rows">
+<li><span class="mark fail">✗ not met</span><div><b>FAIR4RS Compliance Assessment:</b> </div></li>
+<li><span class="mark pass">✓ met</span><div><b>Containerization Excellence:</b> <div class="detail">Dockerfile</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Version Control Best Practices:</b> <div class="detail">v1.3.0, v1.3-RC2</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Environment Management:</b> </div></li>
+<li><span class="mark pass">✓ met</span><div><b>Reproducibility Documentation:</b> <div class="detail">Install / build guide</div></div></li>
+</ul>
+<h3 id="s4-3-4">4.3.4 Usability<span class="score">Score 1/2</span></h3>
+<ul class="rows">
+<li><span class="mark unscored">Not scored</span><div><b>User Experience Assessment:</b> Not yet collected</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Documentation Completeness Analysis:</b> README covers 4/4 core sections; docs/ present; documentation site published<div class="detail">Installation, Usage, Examples, Support</div><div class="threshold"><b>Threshold:</b> 3 — of 4 core README sections, minimum (waived if a thinner README is backed by a doc directory and a published documentation site)</div></div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Accessibility Feature Detection:</b> Not yet collected</div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Installation Success Tracking:</b> No package-manager install path found</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Usage Analytics Integration:</b> Not yet collected</div></li>
+</ul>
+<h3 id="s4-3-5">4.3.5 Accessibility<span class="score">Score 4/5</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>Portable Build System Detection:</b> <div class="detail">CMake</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Container Availability Assessment:</b> <div class="detail">Docker</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Architecture Compatibility Analysis:</b> x86-64 plus ARM64<div class="threshold"><b>Threshold:</b> 1 — non-x86 architectures explicitly tested, minimum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Platform Documentation Evaluation:</b> 2 platforms named: HPC systems, Linux<div class="threshold"><b>Threshold:</b> 2 — supported platforms named in the README, minimum</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Deployment Environment Testing:</b> 1 environment: Linux<div class="threshold"><b>Threshold:</b> 2 — distinct CI runner OS families, minimum</div></div></li>
+</ul>
+<h3 id="s4-3-6">4.3.6 Maintainability and Understandability<span class="score">Score 3/5</span></h3>
+<ul class="rows">
+<li><span class="mark pass">✓ met</span><div><b>Advanced Complexity Analysis:</b> 435 source files, mean 13.0 KB, 1.8% over 100 KB, depth 5<div class="detail">Structural proxy: file size and nesting, not static analysis</div><div class="threshold"><b>Threshold:</b> large file bytes = 100000 — a source file past this size is hard to reason about in one sitting</div><div class="threshold">max large file share = 0.05 — share of source files that may be oversized, maximum (HDF5 sits at 5.1%, ADIOS2 at 2.2%, zfp at 0.0% -- separates the portfolio roughly where it naturally splits)</div><div class="threshold">max tree depth = 10 — directory nesting depth, maximum</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Code Quality Assessment:</b> 91 test files for 435 source files (0.21 ratio)<div class="threshold"><b>Threshold:</b> 0.2 — test files per source file, minimum ratio</div></div></li>
+<li><span class="mark pass">✓ met</span><div><b>Documentation Quality Evaluation:</b> 29 documentation files (0.07 ratio)<div class="threshold"><b>Threshold:</b> 0.05 — doc files per source file, minimum ratio (waived if a doc generator is configured)</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Knowledge Distribution Analysis:</b> Bus factor 1<div class="detail">Top contributor: 87.8% of commits (19 total contributors)</div><div class="threshold"><b>Threshold:</b> 3 — bus factor, minimum -- same value as 4.2.10&#x27;s Contributor Viability Assessment, kept as its own key for the same reason as 4.2.10&#x27;s Community Health Trends above</div></div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Refactoring and Evolution Tracking:</b> 2 of 300 recent commits<div class="detail">Aurora CI cleanup and status (#1574); Aurora CI: Adding a cleanup so we don&#x27;t hit disk quota (#1564)</div><div class="threshold"><b>Threshold:</b> 0.02 — share of recent commits showing refactoring intent, minimum (calibrated against the portfolio: HDF5 2.7%, ADIOS2 2.0%, zfp 3.0% over 300 commits -- asks whether sustained structural work happens at all, not whether it&#x27;s common)</div></div></li>
+</ul>
+<h3 id="s4-3-7">4.3.7 Performance and Efficiency</h3>
+<p class="muted">Not yet collected.</p>
+<h3 id="s4-3-8">4.3.8 Software Supply Chain Integrity<span class="score">Score 1/3</span></h3>
+<ul class="rows">
+<li><span class="mark fail">✗ not met</span><div><b>SBOM Detection:</b> No SBOM found</div></li>
+<li><span class="mark fail">✗ not met</span><div><b>Build Provenance:</b> No build provenance found</div></li>
+<li><span class="mark pass">✓ met</span><div><b>Dependency Vulnerability Posture:</b> No dependency lockfile found at the repository root</div></li>
+<li><span class="mark unscored">Not scored</span><div><b>Dependency Freshness:</b> Not yet collected</div></li>
+</ul>
+</main></body></html>

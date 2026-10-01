@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>paraview/paraview — Metrics Report</title>
+<style>
+:root { --fg:#1f2328; --muted:#59636e; --bg:#fff; --line:#d1d9e0; --pass:#1a7f37;
+        --fail:#cf222e; --note:#9a6700; --chip:#f6f8fa; --link:#0969da; }
+@media (prefers-color-scheme: dark) {
+  :root { --fg:#e6edf3; --muted:#9198a1; --bg:#0d1117; --line:#3d444d; --pass:#3fb950;
+          --fail:#f85149; --note:#d29922; --chip:#151b23; --link:#4493f8; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+a { color: var(--link); overflow-wrap: anywhere; }
+h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; padding-bottom: .3rem; border-bottom: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; display:flex; gap:.75rem; align-items:baseline; flex-wrap:wrap; }
+.meta, .muted { color: var(--muted); }
+.box { border: 1px solid var(--line); border-radius: 6px; padding: .75rem 1rem; margin: 1rem 0; background: var(--chip); }
+.box p { margin: .25rem 0; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: .3rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+td.num { text-align: right; white-space: nowrap; }
+.score { font-size: .85rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+ul.rows { list-style: none; padding: 0; margin: 0; }
+ul.rows > li { display: grid; grid-template-columns: 5.5rem 1fr; gap: .5rem;
+               padding: .45rem 0; border-bottom: 1px solid var(--line); }
+.mark { font-size: .8rem; font-weight: 600; padding-top: .15rem; }
+.pass { color: var(--pass); } .fail { color: var(--fail); } .unscored { color: var(--muted); }
+.detail, .threshold, .override { margin: .15rem 0 0; font-size: .9rem; }
+.detail { color: var(--muted); }
+.threshold { color: var(--muted); }
+.threshold b { color: var(--fg); font-weight: 600; }
+.override { color: var(--note); }
+nav ol { columns: 2 16rem; padding-left: 1.25rem; margin: .5rem 0; }
+@media (max-width: 40rem) { ul.rows > li { grid-template-columns: 1fr; gap: 0; } }
+</style></head><body><main>
+<h1>Sustainability metrics report: paraview/paraview</h1>
+<p class="meta">Collected 2026-09-30 14:46 UTC</p>
+<div class="box">
+<p><b>How to read this report.</b> Each row is one sub-metric from the CASS Sustainability Metrics Report, exactly as the dashboard shows it. <span class="pass">✓ met</span> and <span class="fail">✗ not met</span> compare the measured value with the threshold listed under it. <span class="unscored">Not scored</span> rows were reported but not judged — not yet collected, not applicable, or too little data — and are left out of the section score, which is ✓ rows out of ✓ and ✗ rows. Grey lines under a row are the evidence it was based on.</p>
+</div>
+<h2>Scores</h2>
+<p>A dimension score is the average of the percentage each of its collectors reports, not a count of the ✓ rows below. The overall score is the weighted sum of the three dimension scores.</p>
+<table><thead><tr><th>Dimension</th><th class="num">Score</th><th class="num">Weight</th><th>Averaged over</th></tr></thead><tbody>
+<tr><td>Impact</td><td class="num">0</td><td class="num">0.33</td><td>No collector returned a score</td></tr>
+<tr><td>Ecosystem</td><td class="num">0</td><td class="num">0.34</td><td>No collector returned a score</td></tr>
+<tr><td>Quality</td><td class="num">0</td><td class="num">0.33</td><td>No collector returned a score</td></tr>
+<tr><td><b>Overall</b></td><td class="num"><b>0</b></td><td></td><td></td></tr></tbody></table>
+<nav><h2>Sections</h2><ol>
+<li><a href="#s4-1-1">4.1.1 Software Citation and Adoption</a></li>
+<li><a href="#s4-1-2">4.1.2 Field Research Impact</a></li>
+<li><a href="#s4-2-1">4.2.1 Codes of Conduct (CoC), Governance, and Contributor Guidelines</a></li>
+<li><a href="#s4-2-2">4.2.2 Open-Source Licensing and FAIR Compliance</a></li>
+<li><a href="#s4-2-3">4.2.3 Active Maintenance</a></li>
+<li><a href="#s4-2-4">4.2.4 Engagement</a></li>
+<li><a href="#s4-2-5">4.2.5 Outreach</a></li>
+<li><a href="#s4-2-6">4.2.6 Welcomeness</a></li>
+<li><a href="#s4-2-7">4.2.7 Collaboration</a></li>
+<li><a href="#s4-2-8">4.2.8 Financial Sustainability</a></li>
+<li><a href="#s4-2-9">4.2.9 Institutional &amp; Organizational Support</a></li>
+<li><a href="#s4-2-10">4.2.10 Project Longevity and Community Health</a></li>
+<li><a href="#s4-3-1">4.3.1 Reliability and Robustness</a></li>
+<li><a href="#s4-3-2">4.3.2 Development Practices</a></li>
+<li><a href="#s4-3-3">4.3.3 Reproducibility</a></li>
+<li><a href="#s4-3-4">4.3.4 Usability</a></li>
+<li><a href="#s4-3-5">4.3.5 Accessibility</a></li>
+<li><a href="#s4-3-6">4.3.6 Maintainability and Understandability</a></li>
+<li><a href="#s4-3-7">4.3.7 Performance and Efficiency</a></li>
+<li><a href="#s4-3-8">4.3.8 Software Supply Chain Integrity</a></li>
+</ol></nav>
+<h2>Impact dimension</h2>
+<h3 id="s4-1-1">4.1.1 Software Citation and Adoption</h3>
+<p class="muted">Not yet collected.</p>
+<h3 id="s4-1-2">4.1.2 Field Research Impact</h3>
+<p class="muted">Not yet collected.</p>
+<h2>Ecosystem dimension</h2>
+<h3 id="s4-2-1">4.2.1 Codes of Conduct (CoC), Governance, and Contributor Guidelines</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Enhanced Document Detection:</b> 2 — of {CoC, Governance, Contributing}, minimum found</p>
+<p class="threshold"><b>Governance Keyword Analysis:</b> 2 — of 4 governance concept groups, minimum documented</p>
+<p class="threshold"><b>OpenSSF Scorecard:</b> min score = 7.0 — OpenSSF Scorecard score /10, minimum</p>
+<p class="threshold"><b>CHAOSS Governance Metrics:</b> 60 — weighted CHAOSS health score /100, minimum</p>
+<p class="threshold"><b>Governance Effectiveness Assessment:</b> stale days = 1095 — three years</p>
+<h3 id="s4-2-2">4.2.2 Open-Source Licensing and FAIR Compliance</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Automated FAIR4RS Assessment:</b> 3 — of 4 FAIR principles satisfied, minimum</p>
+<p class="threshold"><b>FAIR Metadata Assessment:</b> 4 — of 6 CITATION.cff fields present, minimum</p>
+<h3 id="s4-2-3">4.2.3 Active Maintenance</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Activity Trend Monitoring:</b> stable or increasing</p>
+<p class="threshold"><b>Release Pattern Assessment:</b> 1 — releases in the last year, minimum</p>
+<p class="threshold"><b>Multi-Channel Communication Activity:</b> min channels = 2 — distinct channels found, minimum; min community issues = 5 — issues opened from outside the maintainer group in the last 365 days before the issue tracker counts as a channel</p>
+<p class="threshold"><b>Contributor Abandonment Forecasting:</b> 0.5 — departure rate, maximum</p>
+<h3 id="s4-2-4">4.2.4 Engagement</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Response Time Tracking:</b> 168 — median hours to first response, maximum (one week, strictly under)</p>
+<p class="threshold"><b>Issue Resolution Analysis:</b> 720 — median hours to close, maximum (30 days, strictly under), over issues opened between a year ago and this many hours ago</p>
+<p class="threshold"><b>Pull Request Flow Assessment:</b> 50 — PR merge rate %, minimum (strictly over)</p>
+<p class="threshold"><b>Support Request Closure Analysis:</b> 2.0 — issues opened per issue closed, over the same window as Issue Resolution, maximum (strictly under)</p>
+<p class="threshold"><b>Engagement Quality Metrics:</b> 2 — median comments per issue, minimum</p>
+<p class="threshold"><b>Communication Pattern Analysis:</b> response window hours = 168 — &quot;timely&quot; response window (one week); min timely response share = 0.7 — share of issues answered within the window, minimum</p>
+<p class="threshold"><b>Community Participation Assessment:</b> 0.15 — share of issues/PRs from outside the maintainer group, minimum</p>
+<h3 id="s4-2-5">4.2.5 Outreach</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Contributor Retention Analysis:</b> retained min commits = 2 — commits within the recent window to count as &quot;retained&quot;; min retention rate pct = 50 — share of new contributors who return, minimum</p>
+<p class="threshold"><b>Contributor Lifecycle Mapping:</b> casual max commits = 4 — commits at or below this bucket as &quot;casual&quot; rather than &quot;repeat&quot;; min repeat contributors = 3 — repeat contributors, minimum</p>
+<p class="threshold"><b>Onboarding Infrastructure Assessment:</b> 3 — of 4 onboarding resources, minimum found</p>
+<h3 id="s4-2-6">4.2.6 Welcomeness</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Decision-Making Visibility:</b> 2 — public decision-making channels/documents found, minimum (one alone -- e.g. a wiki nobody writes in -- says little)</p>
+<h3 id="s4-2-7">4.2.7 Collaboration</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Advanced Dependency Analysis:</b> 2 — distinct packaging ecosystems, minimum</p>
+<p class="threshold"><b>Collaboration Network Analysis:</b> min dependent packages = 10; min dependent repos = 50</p>
+<h3 id="s4-2-8">4.2.8 Financial Sustainability</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Institutional Affiliation Tracking:</b> 3 — distinct organizations among top contributors, minimum</p>
+<p class="threshold"><b>Funding Portfolio Analysis:</b> 2 — distinct funding sources, minimum</p>
+<h3 id="s4-2-9">4.2.9 Institutional &amp; Organizational Support</h3>
+<p class="muted">Not yet collected.</p>
+<h3 id="s4-2-10">4.2.10 Project Longevity and Community Health</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Comprehensive Activity Analysis:</b> min dimensions = 2 — of 3 dimensions active, minimum; min active weeks = 26 — of 52 weeks with a commit, minimum; min releases last year = 1 — releases in the last year, minimum</p>
+<p class="threshold"><b>Contributor Viability Assessment:</b> 3 — bus factor, minimum</p>
+<p class="threshold"><b>Maintenance Mode Detection:</b> max days since push = 365 — days since last push before it&#x27;s a warning sign</p>
+<p class="threshold"><b>Community Health Trends:</b> stable or increasing</p>
+<p class="threshold"><b>Project Lifecycle Assessment:</b> Growing or Mature</p>
+<h2>Quality dimension</h2>
+<h3 id="s4-3-1">4.3.1 Reliability and Robustness</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Test Coverage Excellence:</b> 80 — Codecov line coverage %, minimum</p>
+<p class="threshold"><b>Advanced Static Analysis:</b> 1 — defect-analysis tools found beyond CodeQL, minimum</p>
+<p class="threshold"><b>CERT Guidelines Compliance:</b> 1 — secure-coding hardening indicators found, minimum</p>
+<p class="threshold"><b>Reliability Trend Analysis:</b> min trend volume = 5 — combined recent+previous defect reports, minimum (below this the comparison is noise); trend tolerance = 1.25 — recent:previous ratio at or under which the trend still counts as stable; significance = 0.05 — one-sided binomial p-value a rising/falling split must be under to count as a trend; passing directions = stable or improving — trend direction must be one of these to meet the threshold</p>
+<h3 id="s4-3-2">4.3.2 Development Practices</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>CI/CD Effectiveness Assessment:</b> max cycle time hours = 168; max execution time hours = 1 — average workflow run time, maximum (strictly under); min success rate pct = 60 — overall workflow success rate, minimum (strictly over); min deployments per year = 1 — DORA &quot;elite&quot; deployment frequency floor; min releases per year = 1 — GitHub releases per year, minimum; max time to failure hours = 1 — average failed-run duration, maximum (strictly under); min score = 0 — orchestrator&#x27;s own gate, strictly over this (score/max_score shown alongside)</p>
+<p class="threshold"><b>Testing Framework Excellence:</b> 2 — of 4 testing indicators, minimum found</p>
+<p class="threshold"><b>Code Review Quality Analysis:</b> 70.0 — merged PRs reviewed %, minimum (leaves room for trivial/automated merges)</p>
+<p class="threshold"><b>Development Tool Integration:</b> 2 — of 4 dev tooling indicators, minimum found</p>
+<p class="threshold"><b>Community Contribution Facilitation:</b> 100 — OpenSSF badge progress %, minimum (must be 100 -- fully registered)</p>
+<h3 id="s4-3-3">4.3.3 Reproducibility</h3>
+<p class="muted">Not yet collected.</p>
+<h3 id="s4-3-4">4.3.4 Usability</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Documentation Completeness Analysis:</b> 3 — of 4 core README sections, minimum (waived if a thinner README is backed by a doc directory and a published documentation site)</p>
+<h3 id="s4-3-5">4.3.5 Accessibility</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Deployment Environment Testing:</b> 2 — distinct CI runner OS families, minimum</p>
+<p class="threshold"><b>Architecture Compatibility Analysis:</b> 1 — non-x86 architectures explicitly tested, minimum</p>
+<p class="threshold"><b>Platform Documentation Evaluation:</b> 2 — supported platforms named in the README, minimum</p>
+<h3 id="s4-3-6">4.3.6 Maintainability and Understandability</h3>
+<p class="muted">Not yet collected.</p>
+<p class="threshold">Other thresholds in this section, for rows not shown above:</p>
+<p class="threshold"><b>Knowledge Distribution Analysis:</b> 3 — bus factor, minimum -- same value as 4.2.10&#x27;s Contributor Viability Assessment, kept as its own key for the same reason as 4.2.10&#x27;s Community Health Trends above</p>
+<p class="threshold"><b>Advanced Complexity Analysis:</b> large file bytes = 100000 — a source file past this size is hard to reason about in one sitting; max large file share = 0.05 — share of source files that may be oversized, maximum (HDF5 sits at 5.1%, ADIOS2 at 2.2%, zfp at 0.0% -- separates the portfolio roughly where it naturally splits); max tree depth = 10 — directory nesting depth, maximum</p>
+<p class="threshold"><b>Code Quality Assessment:</b> 0.2 — test files per source file, minimum ratio</p>
+<p class="threshold"><b>Documentation Quality Evaluation:</b> 0.05 — doc files per source file, minimum ratio (waived if a doc generator is configured)</p>
+<p class="threshold"><b>Refactoring and Evolution Tracking:</b> 0.02 — share of recent commits showing refactoring intent, minimum (calibrated against the portfolio: HDF5 2.7%, ADIOS2 2.0%, zfp 3.0% over 300 commits -- asks whether sustained structural work happens at all, not whether it&#x27;s common)</p>
+<h3 id="s4-3-7">4.3.7 Performance and Efficiency</h3>
+<p class="muted">Not yet collected.</p>
+<h3 id="s4-3-8">4.3.8 Software Supply Chain Integrity</h3>
+<p class="muted">Not yet collected.</p>
+</main></body></html>
