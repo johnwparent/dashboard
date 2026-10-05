@@ -1,11 +1,9 @@
 {
   "package": "BerkeleyLab/upcxx",
-  "stars": 7,
-  "forks": 1,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Dependent Packages:</strong> 1</p>\n<p><strong>GitHub Stars:</strong> 7</p>\n<p><strong>GitHub Forks:</strong> 1</p>\n<p><strong>Reverse-Dependency Analysis:</strong> 1 dependent packages, 0 dependent repositories</p>\n<p><strong>Citation Score:</strong> 4.5/100</p>"
+      "data": "<p><strong>Dependent Packages:</strong> 1</p>\n<p><strong>GitHub Stars:</strong> 6</p>\n<p><strong>GitHub Forks:</strong> 1</p>\n<p><strong>Citation Score:</strong> 4.5/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
@@ -15,7 +13,7 @@
   "sustainability": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
-      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 54.41/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Issue Age: 0/100</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Project Popularity: 3/100</p>\n<p class=\"sub-detail\">Documentation Usability: 70/100</p>\n<p class=\"sub-detail\">Time To Close: 100/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 100/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 100/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 54.36/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Issue Age: 0/100</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Project Popularity: 2/100</p>\n<p class=\"sub-detail\">Documentation Usability: 70/100</p>\n<p class=\"sub-detail\">Time To Close: 100/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 100/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 100/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
@@ -23,7 +21,7 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 62 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 31 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> upcxx-2025.10.0 (157 days ago), 18/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 12 (bus factor: 1)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 0 of 2 previously active contributors stopped (0%) \u2713</p>\n<p><strong>Score:</strong> 4/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 62 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 21 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Declining \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> upcxx-2025.10.0 (146 days ago), 18/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 12 (bus factor: 1)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 1 channel \u2717</p>\n<p class=\"sub-detail\">Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 0 of 2 previously active contributors stopped (0%) \u2713</p>\n<p><strong>Score:</strong> 4/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -51,7 +49,7 @@
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">62 commits and 18 release(s) in the last year; active in 10/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">12 contributors; top contributor 53.0% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Declining \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2017-05-25 (9.3 yrs); GitHub repo created 2026-04-06 (0.4 yrs)</p>\n<p><strong>Score:</strong> 3/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">62 commits and 18 release(s) in the last year; active in 11/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 1 \u2717</p>\n<p class=\"sub-detail\">12 contributors; top contributor 53.0% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Declining \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2017-05-25 (9.3 yrs); GitHub repo created 2026-04-06 (0.4 yrs)</p>\n<p><strong>Score:</strong> 3/5</p>"
     }
   },
   "quality": {
@@ -82,11 +80,7 @@
     "4.3.7": {
       "title": "Performance and Efficiency",
       "data": null
-    },
-    "4.3.8": {
-      "title": "Software Supply Chain Integrity",
-      "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-08-31T19:18:33Z"
 }
