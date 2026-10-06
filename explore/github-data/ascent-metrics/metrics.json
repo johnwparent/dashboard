@@ -1,11 +1,9 @@
 {
   "package": "Alpine-DAV/ascent",
-  "stars": 0,
-  "forks": 0,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Reverse-Dependency Analysis:</strong> 4 dependent packages, 0 dependent repositories</p>\n<p><strong>Citation Score:</strong> 0.0/100</p>"
+      "data": "<p><strong>Citation Score:</strong> 0.0/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
@@ -15,7 +13,7 @@
   "sustainability": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
-      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 56.16/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Time To Close: 20/100</p>\n<p class=\"sub-detail\">Release Frequency: 40/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 53/100</p>\n<p class=\"sub-detail\">Project Popularity: 55/100</p>\n<p class=\"sub-detail\">Issue Age: 60/100</p>\n<p class=\"sub-detail\">Documentation Usability: 66/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 96/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 55.57/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Time To Close: 20/100</p>\n<p class=\"sub-detail\">Release Frequency: 40/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 47/100</p>\n<p class=\"sub-detail\">Project Popularity: 55/100</p>\n<p class=\"sub-detail\">Issue Age: 60/100</p>\n<p class=\"sub-detail\">Documentation Usability: 66/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 96/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
@@ -23,7 +21,7 @@
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 73 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 15 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> v0.9.5 (365 days ago), 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 50 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 2 channels \u2713</p>\n<p class=\"sub-detail\">GitHub Discussions, Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 5 of 11 previously active contributors stopped (46%) \u2713</p>\n<p><strong>Score:</strong> 5/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 76 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 4 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> v0.9.5 (354 days ago), 1/yr \u2713</p>\n<p class=\"sub-detail\">Contributors: 50 (bus factor: 2)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 2 channels \u2713</p>\n<p class=\"sub-detail\">GitHub Discussions, Wiki</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 5 of 11 previously active contributors stopped (46%) \u2713</p>\n<p><strong>Score:</strong> 6/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -43,25 +41,25 @@
     },
     "4.2.8": {
       "title": "Financial Sustainability",
-      "data": "<p><strong>Enhanced Funding Documentation Analysis:</strong> No funding documentation found \u2717</p>\n<p><strong>Institutional Affiliation Tracking:</strong> 10 organizations across 12/25 top contributors \u2713</p>\n<p class=\"sub-detail\">Kitware, Inc., LLNL, Lawrence Livermore National Laboratory, CSCS</p>\n<p><strong>NIH R50 Award Tracking:</strong> Not yet collected</p>\n<p><strong>Corporate Sponsorship Detection:</strong> organization-owned repository \u2713</p>\n<p><strong>Funding Portfolio Analysis:</strong> 0 distinct funding source(s) \u2717</p>\n<p><strong>Score:</strong> 2/5</p>"
+      "data": "<p><strong>Enhanced Funding Documentation Analysis:</strong> No funding documentation found \u2717</p>\n<p><strong>Institutional Affiliation Tracking:</strong> 9 organizations across 11/25 top contributors \u2713</p>\n<p class=\"sub-detail\">Kitware, Inc., LLNL, Lawrence Livermore National Laboratory, CSCS</p>\n<p><strong>NIH R50 Award Tracking:</strong> Not yet collected</p>\n<p><strong>Corporate Sponsorship Detection:</strong> organization-owned repository \u2713</p>\n<p><strong>Funding Portfolio Analysis:</strong> 0 distinct funding source(s) \u2717</p>\n<p><strong>Score:</strong> 2/5</p>"
     },
     "4.2.9": {
       "title": "Institutional & Organizational Support",
-      "data": "<p><strong>RSE Position Detection:</strong> Not yet collected</p>\n<p><strong>Institutional Support Tracking:</strong> 10 distinct organizations backing contributors \u2713</p>\n<p class=\"sub-detail\">Kitware (3), Inc. (2), LLNL (2), Lawrence Livermore National Laboratory (2), CSCS (1)</p>\n<p><strong>Career Development Indicators:</strong> Not yet collected</p>\n<p><strong>NIH R50 Award Integration:</strong> Not yet collected</p>\n<p><strong>Institutional Policy Analysis:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>RSE Position Detection:</strong> Not yet collected</p>\n<p><strong>Institutional Support Tracking:</strong> 9 distinct organizations backing contributors \u2713</p>\n<p class=\"sub-detail\">Kitware (3), Inc. (2), LLNL (2), Lawrence Livermore National Laboratory (2), CSCS (1)</p>\n<p><strong>Career Development Indicators:</strong> Not yet collected</p>\n<p><strong>NIH R50 Award Integration:</strong> Not yet collected</p>\n<p><strong>Institutional Policy Analysis:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">73 commits and 0 release(s) in the last year; active in 29/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 2 \u2717</p>\n<p class=\"sub-detail\">50 contributors; top contributor 42.6% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Stable \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2017-01-10 (9.7 yrs); GitHub repo created 2017-02-08 (9.6 yrs)</p>\n<p><strong>Score:</strong> 4/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 3/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">76 commits and 1 release(s) in the last year; active in 31/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 2 \u2717</p>\n<p class=\"sub-detail\">50 contributors; top contributor 42.6% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Stable \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 2017-01-10 (9.6 yrs); GitHub repo created 2017-02-08 (9.6 yrs)</p>\n<p><strong>Score:</strong> 4/5</p>"
     }
   },
   "quality": {
     "4.3.1": {
       "title": "Reliability and Robustness",
-      "data": "<p><strong>Advanced Static Analysis:</strong> No defect-analysis tooling found beyond CodeQL \u2717</p>\n<p><strong>Enhanced Security Analysis:</strong> No CodeQL workflow found \u2717</p>\n<p><strong>CERT Guidelines Compliance:</strong> No hardening settings found in the build files or CI \u2717</p>\n<p class=\"sub-detail\">Practice indicators, not audited conformance</p>\n<p><strong>Test Coverage Excellence:</strong> No Codecov data found \u2717</p>\n<p><strong>Reliability Trend Analysis:</strong> 7 defect reports in the last year vs 42 the year before (improving, by label) \u2713</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>Advanced Static Analysis:</strong> No defect-analysis tooling found beyond CodeQL \u2717</p>\n<p><strong>Enhanced Security Analysis:</strong> No CodeQL workflow found \u2717</p>\n<p><strong>CERT Guidelines Compliance:</strong> No hardening settings found in the build files or CI \u2717</p>\n<p class=\"sub-detail\">Practice indicators, not audited conformance</p>\n<p><strong>Test Coverage Excellence:</strong> No Codecov data found \u2717</p>\n<p><strong>Reliability Trend Analysis:</strong> 7 defect reports in the last year vs 44 the year before (improving, by label) \u2713</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.3.2": {
       "title": "Development Practices",
-      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 1/6 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 0/4 indicators \u2717</p>\n<p><strong>Code Review Quality Analysis:</strong> 79.2% of 48 merged PRs reviewed \u2713</p>\n<p><strong>Development Tool Integration:</strong> 1/4 tools \u2717</p>\n<p class=\"sub-detail\">Dependency automation</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 0/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 3/3 met</p>\n<p><strong>Score:</strong> 2/5</p>"
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 2/6 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 0/4 indicators \u2717</p>\n<p><strong>Code Review Quality Analysis:</strong> 79.2% of 48 merged PRs reviewed \u2713</p>\n<p><strong>Development Tool Integration:</strong> 1/4 tools \u2717</p>\n<p class=\"sub-detail\">Dependency automation</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 0/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 3/3 met</p>\n<p><strong>Score:</strong> 2/5</p>"
     },
     "4.3.3": {
       "title": "Reproducibility",
@@ -82,11 +80,7 @@
     "4.3.7": {
       "title": "Performance and Efficiency",
       "data": null
-    },
-    "4.3.8": {
-      "title": "Software Supply Chain Integrity",
-      "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-08-31T19:18:33Z"
 }

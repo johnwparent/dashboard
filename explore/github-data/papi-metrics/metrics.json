@@ -1,11 +1,9 @@
 {
   "package": "icl-utk-edu/papi",
-  "stars": 0,
-  "forks": 0,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
-      "data": "<p><strong>Reverse-Dependency Analysis:</strong> 19 dependent packages, 0 dependent repositories</p>\n<p><strong>Citation Score:</strong> 0.0/100</p>"
+      "data": "<p><strong>Citation Score:</strong> 0.0/100</p>"
     },
     "4.1.2": {
       "title": "Field Research Impact",
@@ -15,15 +13,15 @@
   "sustainability": {
     "4.2.1": {
       "title": "Codes of Conduct (CoC), Governance, and Contributor Guidelines",
-      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 55.21/100 (fair) \u2717</p>\n<p class=\"sub-detail\">Time To Close: 20/100</p>\n<p class=\"sub-detail\">Issue Age: 40/100</p>\n<p class=\"sub-detail\">Project Popularity: 56/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 57/100</p>\n<p class=\"sub-detail\">Documentation Usability: 58/100</p>\n<p class=\"sub-detail\">Release Frequency: 60/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 90/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
+      "data": "<p><strong>Enhanced Document Detection:</strong> 0/3 \u2717</p>\n<p class=\"sub-detail\">Code of Conduct: Not found</p>\n<p class=\"sub-detail\">Governance: Not found</p>\n<p class=\"sub-detail\">Contributing Guidelines: Not found</p>\n<p><strong>Governance Keyword Analysis:</strong> 0/4 concepts documented \u2717</p>\n<p><strong>OpenSSF Badge Integration:</strong> Not yet collected</p>\n<p><strong>CHAOSS Governance Metrics:</strong> 0.0/100 (critical) \u2717</p>\n<p class=\"sub-detail\">Project Popularity: 0/100</p>\n<p class=\"sub-detail\">Documentation Usability: 0/100</p>\n<p class=\"sub-detail\">Time To Close: 0/100</p>\n<p class=\"sub-detail\">Issue Age: 0/100</p>\n<p class=\"sub-detail\">Change Request Closure Ratio: 0/100</p>\n<p class=\"sub-detail\">Release Frequency: 0/100</p>\n<p class=\"sub-detail\">Issues Inclusivity: 0/100</p>\n<p><strong>Governance Effectiveness Assessment:</strong> No governance ownership or upkeep found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.2": {
       "title": "Open-Source Licensing and FAIR Compliance",
-      "data": "<p><strong>Enhanced License Detection:</strong> \u2713</p>\n<p class=\"sub-detail\">License: Other</p>\n<p class=\"sub-detail\">Category: Unknown</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> 0/4 principles satisfied \u2717</p>\n<p><strong>OSI License Validation:</strong> Unknown \u2717</p>\n<p><strong>License Exception Handling:</strong> License could not be identified from the API or the text \u2717</p>\n<p><strong>FAIR Metadata Assessment:</strong> No CITATION.cff found \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>Enhanced License Detection:</strong> \u2717</p>\n<p class=\"sub-detail\">License: Unknown</p>\n<p class=\"sub-detail\">Category: None</p>\n<p><strong>Automated FAIR4RS Assessment:</strong> 0/4 principles satisfied \u2717</p>\n<p><strong>OSI License Validation:</strong> Unknown \u2717</p>\n<p><strong>License Exception Handling:</strong> License could not be identified from the API or the text \u2717</p>\n<p><strong>FAIR Metadata Assessment:</strong> No CITATION.cff found \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.2.3": {
       "title": "Active Maintenance",
-      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 269 commits (52 weeks) \u2713</p>\n<p class=\"sub-detail\">Last Commit: 0 days ago</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Stable \u2713</p>\n<p><strong>Release Pattern Assessment:</strong> papi-7-2-0-t (442 days ago), 0/yr \u2717</p>\n<p class=\"sub-detail\">Contributors: 65 (bus factor: 3)</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 3 channels \u2713</p>\n<p class=\"sub-detail\">Wiki, Mailing list, Forum</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> 15 of 17 previously active contributors stopped (88%) \u2717</p>\n<p><strong>Score:</strong> 4/6</p>"
+      "data": "<p><strong>Commit Activity Pattern Analysis:</strong> Active \u2014 0 commits (52 weeks) \u2717</p>\n<p><strong>Maintenance Mode Indicator Detection:</strong> No maintenance flags \u2713</p>\n<p><strong>Activity Trend Monitoring:</strong> Unknown \u2717</p>\n<p><strong>Release Pattern Assessment:</strong> No releases, 0/yr \u2717</p>\n<p><strong>Multi-Channel Communication Activity:</strong> 0 channels \u2717</p>\n<p><strong>Contributor Abandonment Forecasting:</strong> Not enough contributor history to assess \u2717</p>\n<p><strong>Score:</strong> 1/6</p>"
     },
     "4.2.4": {
       "title": "Engagement",
@@ -51,7 +49,7 @@
     },
     "4.2.10": {
       "title": "Project Longevity and Community Health",
-      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 2/3 dimensions active \u2713</p>\n<p class=\"sub-detail\">269 commits and 0 release(s) in the last year; active in 48/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 3 \u2713</p>\n<p class=\"sub-detail\">65 contributors; top contributor 32.7% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Stable \u2713</p>\n<p><strong>Project Lifecycle Assessment:</strong> Mature \u2713</p>\n<p class=\"sub-detail\">Project age: first commit 1999-02-10 (27.6 yrs); GitHub repo created 2023-03-27 (3.5 yrs)</p>\n<p><strong>Score:</strong> 5/5</p>"
+      "data": "<p><strong>Comprehensive Activity Analysis:</strong> 0/3 dimensions active \u2717</p>\n<p class=\"sub-detail\">0 commits and 0 release(s) in the last year; active in 0/52 weeks</p>\n<p><strong>Contributor Viability Assessment:</strong> Bus factor 0 \u2717</p>\n<p class=\"sub-detail\">0 contributors; top contributor 0% of commits</p>\n<p><strong>Maintenance Mode Detection:</strong> No warning indicators \u2713</p>\n<p><strong>Community Health Trends:</strong> Unknown \u2717</p>\n<p><strong>Project Lifecycle Assessment:</strong> Unknown \u2717</p>\n<p class=\"sub-detail\">Project age: age unknown</p>\n<p><strong>Score:</strong> 1/5</p>"
     }
   },
   "quality": {
@@ -61,7 +59,7 @@
     },
     "4.3.2": {
       "title": "Development Practices",
-      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 2/6 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 0/4 indicators \u2717</p>\n<p><strong>Code Review Quality Analysis:</strong> No merged PRs to sample \u2717</p>\n<p><strong>Development Tool Integration:</strong> 0/4 tools \u2717</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 0/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 0/3 met</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>CI/CD Effectiveness Assessment:</strong> 1/6 \u2713</p>\n<p><strong>Testing Framework Excellence:</strong> 0/4 indicators \u2717</p>\n<p><strong>Code Review Quality Analysis:</strong> No merged PRs to sample \u2717</p>\n<p><strong>Development Tool Integration:</strong> 0/4 tools \u2717</p>\n<p><strong>Community Contribution Facilitation:</strong> OpenSSF Badge not registered \u2717</p>\n<p class=\"sub-detail\">Governance criteria: 0/3 met</p>\n<p class=\"sub-detail\">Security criteria: 0/2 met</p>\n<p class=\"sub-detail\">Quality criteria: 0/3 met</p>\n<p><strong>Score:</strong> 1/5</p>"
     },
     "4.3.3": {
       "title": "Reproducibility",
@@ -77,16 +75,12 @@
     },
     "4.3.6": {
       "title": "Maintainability and Understandability",
-      "data": "<p><strong>Advanced Complexity Analysis:</strong> No source files identified \u2717</p>\n<p class=\"sub-detail\">Structural proxy: file size and nesting, not static analysis</p>\n<p><strong>Code Quality Assessment:</strong> No source files identified \u2717</p>\n<p><strong>Documentation Quality Evaluation:</strong> 0 documentation files (0.00 ratio) \u2717</p>\n<p><strong>Knowledge Distribution Analysis:</strong> Bus factor 3 \u2713</p>\n<p class=\"sub-detail\">Top contributor: 32.7% of commits (65 total contributors)</p>\n<p><strong>Refactoring and Evolution Tracking:</strong> No commits sampled \u2717</p>\n<p><strong>Score:</strong> 1/5</p>"
+      "data": "<p><strong>Advanced Complexity Analysis:</strong> No source files identified \u2717</p>\n<p class=\"sub-detail\">Structural proxy: file size and nesting, not static analysis</p>\n<p><strong>Code Quality Assessment:</strong> No source files identified \u2717</p>\n<p><strong>Documentation Quality Evaluation:</strong> 0 documentation files (0.00 ratio) \u2717</p>\n<p><strong>Knowledge Distribution Analysis:</strong> Bus factor 0 \u2717</p>\n<p class=\"sub-detail\">Top contributor: 0% of commits (0 total contributors)</p>\n<p><strong>Refactoring and Evolution Tracking:</strong> No commits sampled \u2717</p>\n<p><strong>Score:</strong> 0/5</p>"
     },
     "4.3.7": {
       "title": "Performance and Efficiency",
       "data": null
-    },
-    "4.3.8": {
-      "title": "Software Supply Chain Integrity",
-      "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-08-31T19:18:33Z"
 }
