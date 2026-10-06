@@ -1,7 +1,5 @@
 {
   "package": "SCOREC/pumi-pic",
-  "stars": 0,
-  "forks": 0,
   "impact": {
     "4.1.1": {
       "title": "Software Citation and Adoption",
@@ -31,7 +29,7 @@
     },
     "4.2.5": {
       "title": "Outreach",
-      "data": "<p><strong>New Contributor Tracking:</strong> 0 in last 1 year \u2717</p>\n<p><strong>Contributor Retention Analysis:</strong> No new contributors to measure \u2717</p>\n<p><strong>Contributor Lifecycle Mapping:</strong> 0 one-time / 0 casual / 0 repeat \u2717</p>\n<p><strong>Contribution Type Diversity:</strong> Not yet collected</p>\n<p><strong>Good First Issue Effectiveness:</strong> 1 open, 6 closed \u2713</p>\n<p><strong>External Event Participation:</strong> Not yet collected</p>\n<p><strong>Training Material Integration:</strong> Not yet collected</p>\n<p><strong>Onboarding Infrastructure Assessment:</strong> 0/4 resources \u2717</p>\n<p><strong>Score:</strong> 1/8</p>"
+      "data": "<p><strong>New Contributor Tracking:</strong> 0 in last 1 year \u2717</p>\n<p><strong>Contributor Retention Analysis:</strong> No new contributors to measure \u2717</p>\n<p><strong>Contributor Lifecycle Mapping:</strong> 0 one-time / 0 casual / 0 repeat \u2717</p>\n<p><strong>Contribution Type Diversity:</strong> Not yet collected</p>\n<p><strong>Good First Issue Effectiveness:</strong> No newcomer-labelled issues \u2717</p>\n<p><strong>External Event Participation:</strong> Not yet collected</p>\n<p><strong>Training Material Integration:</strong> Not yet collected</p>\n<p><strong>Onboarding Infrastructure Assessment:</strong> 0/4 resources \u2717</p>\n<p><strong>Score:</strong> 0/8</p>"
     },
     "4.2.6": {
       "title": "Welcomeness",
@@ -82,11 +80,7 @@
     "4.3.7": {
       "title": "Performance and Efficiency",
       "data": null
-    },
-    "4.3.8": {
-      "title": "Software Supply Chain Integrity",
-      "data": "<p><strong>SBOM Detection:</strong> No SBOM found \u2717</p>\n<p><strong>Build Provenance:</strong> No build provenance found \u2717</p>\n<p><strong>Dependency Vulnerability Posture:</strong> Not yet collected</p>\n<p><strong>Dependency Freshness:</strong> Not yet collected</p>\n<p><strong>Score:</strong> 0/2</p>"
     }
   },
-  "generated_at": "2026-09-11T17:28:56Z"
+  "generated_at": "2026-08-31T19:18:33Z"
 }
