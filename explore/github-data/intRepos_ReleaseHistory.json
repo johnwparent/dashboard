@@ -4,6 +4,11 @@
             "releases": {
                 "nodes": [
                     {
+                        "name": "AMReX 26.10",
+                        "publishedAt": "2026-10-01T15:24:28Z",
+                        "tagName": "26.10"
+                    },
+                    {
                         "name": "AMReX 26.09",
                         "publishedAt": "2026-09-01T18:33:11Z",
                         "tagName": "26.09"
@@ -485,6 +490,11 @@
             "releases": {
                 "nodes": [
                     {
+                        "name": "0.9.6",
+                        "publishedAt": "2026-10-08T01:08:28Z",
+                        "tagName": "v0.9.6"
+                    },
+                    {
                         "name": "0.9.5",
                         "publishedAt": "2025-09-11T05:39:56Z",
                         "tagName": "v0.9.5"
@@ -576,6 +586,11 @@
         "BerkeleyLab/caffeine": {
             "releases": {
                 "nodes": [
+                    {
+                        "name": "0.8.2",
+                        "publishedAt": "2026-10-01T06:58:13Z",
+                        "tagName": "0.8.2"
+                    },
                     {
                         "name": "0.8.0",
                         "publishedAt": "2026-06-25T21:21:05Z",
@@ -894,6 +909,11 @@
         "BerkeleyLab/julienne": {
             "releases": {
                 "nodes": [
+                    {
+                        "name": "Fix errors with NAG",
+                        "publishedAt": "2026-09-15T21:19:01Z",
+                        "tagName": "4.1.2"
+                    },
                     {
                         "name": "Minor Fixes, Feature, and Expanded CI Coverage",
                         "publishedAt": "2026-08-19T04:02:33Z",
@@ -1216,6 +1236,11 @@
         "CEED/libCEED": {
             "releases": {
                 "nodes": [
+                    {
+                        "name": "v1.0.0",
+                        "publishedAt": "2026-10-07T17:53:41Z",
+                        "tagName": "v1.0.0"
+                    },
                     {
                         "name": "v1.0.0-rc.3",
                         "publishedAt": "2026-05-12T13:03:28Z",
@@ -1638,6 +1663,16 @@
             "releases": {
                 "nodes": [
                     {
+                        "name": "JSS-Paper-Release",
+                        "publishedAt": "2026-10-02T15:04:26Z",
+                        "tagName": "2026.10.v2"
+                    },
+                    {
+                        "name": "JSS Paper Release",
+                        "publishedAt": "2026-10-01T20:54:14Z",
+                        "tagName": "2026.10"
+                    },
+                    {
                         "name": "Demo Video Release",
                         "publishedAt": "2026-02-23T05:24:55Z",
                         "tagName": "2026.02"
@@ -1911,6 +1946,16 @@
         "StanfordLegion/legion": {
             "releases": {
                 "nodes": [
+                    {
+                        "name": "Version 26.09.1 (October 4, 2026)",
+                        "publishedAt": "2026-10-04T00:37:31Z",
+                        "tagName": "legion-26.09.1"
+                    },
+                    {
+                        "name": "Version 26.09.0 (September 30, 2026)",
+                        "publishedAt": "2026-09-30T19:48:06Z",
+                        "tagName": "legion-26.09.0"
+                    },
                     {
                         "name": "Version 26.06.0 (June 30, 2026)",
                         "publishedAt": "2026-07-02T00:15:22Z",
@@ -3513,6 +3558,16 @@
             "releases": {
                 "nodes": [
                     {
+                        "name": "LLVM 23.1.3",
+                        "publishedAt": "2026-10-06T14:53:00Z",
+                        "tagName": "llvmorg-23.1.3"
+                    },
+                    {
+                        "name": "LLVM 23.1.2",
+                        "publishedAt": "2026-09-22T06:49:10Z",
+                        "tagName": "llvmorg-23.1.2"
+                    },
+                    {
                         "name": "LLVM 23.1.1",
                         "publishedAt": "2026-09-08T10:58:49Z",
                         "tagName": "llvmorg-23.1.1"
@@ -4581,6 +4636,11 @@
             "releases": {
                 "nodes": [
                     {
+                        "name": "STRUMPACK v8.1.0",
+                        "publishedAt": "2026-10-05T22:53:56Z",
+                        "tagName": "v8.1.0"
+                    },
+                    {
                         "name": "STRUMPACK v8.0.0",
                         "publishedAt": "2024-11-06T19:31:48Z",
                         "tagName": "v8.0.0"
@@ -4666,6 +4726,11 @@
         "pmodels/mpich": {
             "releases": {
                 "nodes": [
+                    {
+                        "name": "MPICH 5.0.2 Released",
+                        "publishedAt": "2026-09-28T17:42:19Z",
+                        "tagName": "v5.0.2"
+                    },
                     {
                         "name": "",
                         "publishedAt": "2026-04-10T15:24:18Z",
@@ -4951,29 +5016,29 @@
             "releases": {
                 "nodes": [
                     {
-                        "name": "stable_2026_09_04",
-                        "publishedAt": "2026-09-04T10:02:58Z",
-                        "tagName": "vstable_2026_09_04"
+                        "name": "stable_2026_10_07",
+                        "publishedAt": "2026-10-07T09:38:36Z",
+                        "tagName": "vstable_2026_10_07"
                     },
                     {
-                        "name": "stable_2026_09_03",
-                        "publishedAt": "2026-09-03T10:03:35Z",
-                        "tagName": "vstable_2026_09_03"
+                        "name": "stable_2026_10_06",
+                        "publishedAt": "2026-10-06T09:17:03Z",
+                        "tagName": "vstable_2026_10_06"
                     },
                     {
-                        "name": "stable_2026_09_02",
-                        "publishedAt": "2026-09-02T10:04:19Z",
-                        "tagName": "vstable_2026_09_02"
+                        "name": "stable_2026_10_05",
+                        "publishedAt": "2026-10-05T09:48:14Z",
+                        "tagName": "vstable_2026_10_05"
                     },
                     {
-                        "name": "stable_2026_09_01",
-                        "publishedAt": "2026-09-01T10:04:06Z",
-                        "tagName": "vstable_2026_09_01"
+                        "name": "stable_2026_10_04",
+                        "publishedAt": "2026-10-04T10:24:59Z",
+                        "tagName": "vstable_2026_10_04"
                     },
                     {
-                        "name": "stable_2026_08_31",
-                        "publishedAt": "2026-08-31T10:02:42Z",
-                        "tagName": "vstable_2026_08_31"
+                        "name": "stable_2026_10_02",
+                        "publishedAt": "2026-10-02T11:06:41Z",
+                        "tagName": "vstable_2026_10_02"
                     },
                     {
                         "name": "6.24.0",
@@ -5645,6 +5710,11 @@
         "xiaoyeli/superlu_dist": {
             "releases": {
                 "nodes": [
+                    {
+                        "name": "v9.3.0",
+                        "publishedAt": "2026-09-24T19:24:22Z",
+                        "tagName": "v9.3.0"
+                    },
                     {
                         "name": "v9.2.1",
                         "publishedAt": "2025-12-09T19:55:07Z",
