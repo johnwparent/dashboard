@@ -631,6 +631,21 @@
                 "login": "Textualize"
             }
         },
+        "TheMrMilchmann/setup-msvc-dev": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3178c6",
+                        "name": "TypeScript"
+                    }
+                ]
+            },
+            "name": "setup-msvc-dev",
+            "nameWithOwner": "TheMrMilchmann/setup-msvc-dev",
+            "owner": {
+                "login": "TheMrMilchmann"
+            }
+        },
         "VACUMM/sphinx-fortran": {
             "languages": {
                 "nodes": [
@@ -1184,6 +1199,22 @@
                 "login": "bandframework"
             }
         },
+        "beartype/plum": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "plum",
+            "nameWithOwner": "beartype/plum",
+            "owner": {
+                "isVerified": false,
+                "login": "beartype"
+            }
+        },
         "benjaminp/six": {
             "languages": {
                 "nodes": [
@@ -1234,8 +1265,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#3178c6",
+                        "name": "TypeScript"
                     }
                 ]
             },
@@ -2644,22 +2675,6 @@
                 "login": "jsdaniell"
             }
         },
-        "julia-actions/cache": {
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3178c6",
-                        "name": "TypeScript"
-                    }
-                ]
-            },
-            "name": "cache",
-            "nameWithOwner": "julia-actions/cache",
-            "owner": {
-                "isVerified": false,
-                "login": "julia-actions"
-            }
-        },
         "julia-actions/julia-buildpkg": {
             "languages": {
                 "nodes": []
@@ -2968,6 +2983,22 @@
                 "login": "madsmtm"
             }
         },
+        "mamba-org/setup-micromamba": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3178c6",
+                        "name": "TypeScript"
+                    }
+                ]
+            },
+            "name": "setup-micromamba",
+            "nameWithOwner": "mamba-org/setup-micromamba",
+            "owner": {
+                "isVerified": false,
+                "login": "mamba-org"
+            }
+        },
         "manicmaniac/inline": {
             "languages": {
                 "nodes": [
@@ -3222,6 +3253,22 @@
                 "login": "mknejp"
             }
         },
+        "mlflow/mlflow": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "mlflow",
+            "nameWithOwner": "mlflow/mlflow",
+            "owner": {
+                "isVerified": false,
+                "login": "mlflow"
+            }
+        },
         "mpi4py/mpi4py": {
             "languages": {
                 "nodes": [
@@ -3360,6 +3407,22 @@
             "nameWithOwner": "netromdk/vermin",
             "owner": {
                 "login": "netromdk"
+            }
+        },
+        "networkx/networkx": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "networkx",
+            "nameWithOwner": "networkx/networkx",
+            "owner": {
+                "isVerified": false,
+                "login": "networkx"
             }
         },
         "ngentile92/indices": {
@@ -4006,6 +4069,22 @@
                 "login": "pydata"
             }
         },
+        "pydot/pydot": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "pydot",
+            "nameWithOwner": "pydot/pydot",
+            "owner": {
+                "isVerified": false,
+                "login": "pydot"
+            }
+        },
         "pygments/pygments": {
             "languages": {
                 "nodes": [
@@ -4113,6 +4192,22 @@
             },
             "name": "pip",
             "nameWithOwner": "pypa/pip",
+            "owner": {
+                "isVerified": true,
+                "login": "pypa"
+            }
+        },
+        "pypa/pipx": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "pipx",
+            "nameWithOwner": "pypa/pipx",
             "owner": {
                 "isVerified": true,
                 "login": "pypa"
@@ -4613,6 +4708,21 @@
                 "login": "redis"
             }
         },
+        "richardkiss/vpa": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "vpa",
+            "nameWithOwner": "richardkiss/vpa",
+            "owner": {
+                "login": "richardkiss"
+            }
+        },
         "rkyv/bytecheck": {
             "languages": {
                 "nodes": [
@@ -4627,6 +4737,21 @@
             "owner": {
                 "isVerified": false,
                 "login": "rkyv"
+            }
+        },
+        "rlalik/setup-cpp-compiler": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#89e051",
+                        "name": "Shell"
+                    }
+                ]
+            },
+            "name": "setup-cpp-compiler",
+            "nameWithOwner": "rlalik/setup-cpp-compiler",
+            "owner": {
+                "login": "rlalik"
             }
         },
         "robinraju/release-downloader": {
@@ -5256,6 +5381,17 @@
                 "login": "softwareforgood"
             }
         },
+        "spack/setup-spack": {
+            "languages": {
+                "nodes": []
+            },
+            "name": "setup-spack",
+            "nameWithOwner": "spack/setup-spack",
+            "owner": {
+                "isVerified": true,
+                "login": "spack"
+            }
+        },
         "sphinx-contrib/googleanalytics": {
             "languages": {
                 "nodes": [
@@ -5786,21 +5922,6 @@
             "owner": {
                 "isVerified": false,
                 "login": "uqfoundation"
-            }
-        },
-        "uraimo/run-on-arch-action": {
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
-                    }
-                ]
-            },
-            "name": "run-on-arch-action",
-            "nameWithOwner": "uraimo/run-on-arch-action",
-            "owner": {
-                "login": "uraimo"
             }
         },
         "urllib3/urllib3": {
