@@ -777,7 +777,8 @@
             "asynchronous-bayesian-optimization",
             "hpo",
             "agentichpo",
-            "autotune"
+            "autotune",
+            "asynchronous-hyperparameter-optimization"
         ],
         "website": "https://github.com/ytopt-team/ytopt"
     }
