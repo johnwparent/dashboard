@@ -2675,9 +2675,16 @@
                             "name": "autotune"
                         },
                         "url": "https://github.com/topics/autotune"
+                    },
+                    {
+                        "resourcePath": "/topics/asynchronous-hyperparameter-optimization",
+                        "topic": {
+                            "name": "asynchronous-hyperparameter-optimization"
+                        },
+                        "url": "https://github.com/topics/asynchronous-hyperparameter-optimization"
                     }
                 ],
-                "totalCount": 10
+                "totalCount": 11
             }
         }
     }
