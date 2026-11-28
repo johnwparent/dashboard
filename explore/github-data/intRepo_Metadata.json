@@ -480,6 +480,12 @@
         ],
         "website": "https://kokkos.org"
     },
+    "liuyangzhuan/ButterflyPACK": {
+        "description": null,
+        "name": "liuyangzhuan/ButterflyPACK",
+        "topics": null,
+        "website": null
+    },
     "llnl/libROM": {
         "description": "Data-driven model reduction library with an emphasis on large scale parallelism and linear subspace methods",
         "name": "llnl/libROM",
@@ -777,7 +783,11 @@
             "asynchronous-bayesian-optimization",
             "hpo",
             "agentichpo",
-            "autotune"
+            "autotune",
+            "asynchronous-hyperparameter-optimization",
+            "agentic-ai",
+            "agentic-workflow",
+            "agentic-hpo"
         ],
         "website": "https://github.com/ytopt-team/ytopt"
     }
